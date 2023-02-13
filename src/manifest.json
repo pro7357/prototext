@@ -1,0 +1,16 @@
+{
+	"name": "ProtoText",
+	"short_name": "prototext",
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "portrait",
+	"background_color": "#282c34",
+	"theme_color": "#282c34",
+	"icons": [
+		{
+		  "src": "/assets/logo.png",
+		  "type": "image/png",
+		  "sizes": "256x256"
+		}
+	 ]
+ }

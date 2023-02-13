@@ -1,0 +1,28 @@
+{
+	"name": "prototext",
+	"productName": "ProtoText",
+	"version": "1.7.0",
+	"description": "A minimal Text Editing application",
+	"keywords": [
+		"text editor",
+		"localization",
+		"dnd"
+	],
+	"author": "Artemy <letter2artemy@gmail.com>",
+	"license": "CC0-1.0",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron .",
+		"build": "electron-packager . ProtoText --app-bundle-id prototext --platform=darwin --arch=x64 --overwrite --icon ./build/assets/logo.icns --extend-info packager.plist --out=releases",
+		"build:win64": "electron-packager . ProtoText --platform=win32 --arch=x64 --icon=./build/assets/logo.ico --out=releases",
+		"build:linux": "electron-packager . ProtoText --platform=linux --arch=x64 --icon=./build/assets/logo.png --out=releases"
+	},
+	"devDependencies": {
+		"electron": "^10.0.0",
+		"electron-packager": "15.5.0"
+	},
+	"dependencies": {
+		"bing-translate-api": "^2.8.0",
+		"crypto": "^1.0.1"
+	}
+}

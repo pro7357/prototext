@@ -1,0 +1,30 @@
+{
+	"private": true,
+	"name": "prototext",
+	"version": "1.7.0",
+	"description": "Since 22 October 2022",
+	"scripts": {
+		"start": "preact watch -c ./preact.config.dev.js -p 3333 --template src/index.html",
+		"build:desktop": "preact build -c ./preact.config.desktop.js --no-sw --no-esm --no-prerender --dest electron/build/ --template src/index.html",
+		"website": "preact watch --src ./website/src -c ./website/preact.config.dev.js -p 3335 --template ./website/src/index.html",
+		"build:website": "preact build --src ./website/src -c ./website/preact.config.build.js --no-sw --no-esm --no-prerender --dest ./website/dst/ --template ./website/src/index.html"
+	},
+	"engines": {
+		"node": ">=12.2.0"
+	},
+	"dependencies": {
+		"clsx": "^1.1.0",
+		"dotenv": "^16.0.3",
+		"event-hooks-webpack-plugin": "^2.2.0",
+		"openai": "^3.1.0",
+		"preact": "^10.5.15",
+		"preact-cli": "^3.3.1",
+		"preact-render-to-string": "^5.1.2",
+		"react-jss": "^10.9.0",
+		"react-redux": "^7.2.0",
+		"redux": "^4.0.5",
+		"redux-devtools-extension": "^2.13.8",
+		"webpack": "^4.38.0",
+		"webpack-cli": "^4.2.0"
+	}
+}

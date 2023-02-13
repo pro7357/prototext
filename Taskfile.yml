@@ -1,0 +1,121 @@
+version: '3'
+
+dotenv: ['.env']
+
+
+vars:
+  MAC_INTEL_BUILD_DIR: "./electron/releases/ProtoText-darwin-x64"
+  MAC_INTEL_BUILD_ZIP: "{{.MAC_INTEL_BUILD_DIR}}/ProtoText-MacOS-Intel.zip"
+  WIN_BUILD_DIR: "./electron/releases/ProtoText-win32-x64"
+  WIN_BUILD_ZIP: "{{.WIN_BUILD_DIR}}/ProtoText-Windows-x64.zip"
+  ALL_WEBSITE_FILES: "./website/dst/*"
+
+
+tasks:
+
+  up:
+    cmds:
+      - pm2 start 'npm start' --name 'prototext-frontend'
+
+  down:
+    cmds:
+      - pm2 kill
+
+
+  reset:
+    cmds:
+      - task down
+      - task up
+
+
+  app:
+    cmds:
+      - npm run build:desktop
+      - cd electron && npm start
+
+
+  bapp:
+    cmds:
+      - npm run build:desktop
+      - cd electron && npm run build
+
+
+  papp:
+    desc: Pack for MacOS
+    cmds:
+      - rm -rf ./electron/releases/ProtoText-darwin-x64
+      - cd electron && npm run build
+
+
+  pwapp:
+    desc: Pack for Windows
+    cmds:
+      - rm -rf ./electron/releases/ProtoText-win32-x64
+      - cd electron && npm run build:win64
+
+
+  plapp:
+    desc: Pack for Linux
+    cmds:
+      - rm -rf ./electron/releases/ProtoText-linux-x64
+      - cd electron && npm run build:linux
+
+
+  sapp:
+    cmds:
+      - cd electron && npm start
+
+
+  logapp:
+    cmds:
+      - pm2 log prototext-frontend
+
+
+  rapp:
+    desc: Buld, Zip, Publish
+    cmds:
+
+      # Build React app & pack MacOS Intel App
+      # - task: bapp
+
+      # Pack Windows x64 App
+      # - task: pwapp
+
+      # Zip Mac Intel
+      # - ditto -c -k --sequesterRsrc --keepParent {{.MAC_INTEL_BUILD_DIR}} {{.MAC_INTEL_BUILD_ZIP}}
+
+      # Zip Windows x64
+      # - ditto -c -k --sequesterRsrc --keepParent {{.WIN_BUILD_DIR}} {{.WIN_BUILD_ZIP}}
+
+      # Send all to the server via SSH
+      # - scp {{.MAC_INTEL_BUILD_ZIP}} $SSH_USER@$SSH_IP:~/$SSH_DIR/releases/
+      # - scp {{.WIN_BUILD_ZIP}} $SSH_USER@$SSH_IP:~/$SSH_DIR/releases/
+
+
+  # Website
+
+  upsite:
+    cmds:
+      - pm2 start 'npm run website' --name 'prototext-website'
+
+  logsite:
+    cmds:
+      - pm2 log prototext-website
+
+  restartsite:
+    cmds:
+      - pm2 restart prototext-website
+
+  bsite:
+    cmds:
+      - npm run build:website
+
+  psite:
+    desc: Publish website
+    cmds:
+
+      # Build site
+      - task: bsite
+
+      # Send all to the server via SSH
+      - scp -r {{.ALL_WEBSITE_FILES}} $SSH_USER@$SSH_IP:~/$SSH_DIR/
