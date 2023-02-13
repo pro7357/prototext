@@ -1,0 +1,299 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "My content",
+                "style": 7
+              },
+              {
+                "content": "Personal business app",
+                "id": "xris1a"
+              },
+              {
+                "style": 9,
+                "content": "Create an app to help people manage their personal business activities and finances.",
+                "id": "cmpl-6fgnAlgv8tSYSOm0O3cI0N0Fj9YEW"
+              },
+              {
+                "content": "Growing vegetables in the northern climate",
+                "id": "bguidq"
+              },
+              {
+                "style": 9,
+                "content": "Plant hardy varieties of vegetables such as kale, spinach, and turnips that can thrive in cold weather.",
+                "id": "cmpl-6fgncTbLSt5wg1AXNRbHNloZjnuTs"
+              },
+              {
+                "content": "I want to watch a comedy movie.",
+                "id": "uc8x2d"
+              },
+              {
+                "style": 9,
+                "content": "Watch \"The Hangover\" or \"Bridesmaids.\"",
+                "id": "cmpl-6fgo2BvmKVUo6XjbZpA1GC8NAVcZ4"
+              }
+            ]
+          },
+          {
+            "id": "j2tflh",
+            "content": [
+              {
+                "content": "Mi contenido",
+                "id": "e22srd"
+              },
+              {
+                "content": "Aplicación personal de negocios",
+                "id": "9hfqkt"
+              },
+              {
+                "content": "Cree una aplicación para ayudar a las personas a administrar sus actividades comerciales y finanzas personales.",
+                "id": "9r6a36"
+              },
+              {
+                "content": "Cultivo de hortalizas en el clima del norte.",
+                "id": "jlsv5s"
+              },
+              {
+                "content": "Plante variedades resistentes de verduras como la col rizada, las espinacas y los nabos que puedan prosperar en climas fríos.",
+                "id": "qpvhp7"
+              },
+              {
+                "content": "Quiero ver una película de comedia.",
+                "id": "rkw2pf"
+              },
+              {
+                "content": "Mira \"The Hangover\" o \"Bridesmaids\".",
+                "id": "e3cudf"
+              }
+            ]
+          },
+          {
+            "id": "4b521p",
+            "content": [
+              {
+                "content": "",
+                "id": "8y9f27"
+              },
+              {
+                "content": "",
+                "id": "qzfy57"
+              },
+              {
+                "content": "",
+                "id": "2zd1ko"
+              },
+              {
+                "content": "",
+                "id": "jibda7"
+              },
+              {
+                "content": "",
+                "id": "lysenc"
+              },
+              {
+                "content": "",
+                "id": "7sdwel"
+              },
+              {
+                "content": "",
+                "id": "f351js"
+              }
+            ]
+          },
+          {
+            "id": "nn7fja",
+            "content": [
+              {
+                "content": "",
+                "id": "jgvi4c"
+              },
+              {
+                "content": "",
+                "id": "irt265"
+              },
+              {
+                "content": "",
+                "id": "jabgon"
+              },
+              {
+                "content": "",
+                "id": "xkwar8"
+              },
+              {
+                "content": "",
+                "id": "h80j0s"
+              },
+              {
+                "content": "",
+                "id": "aoa1vu"
+              },
+              {
+                "content": "",
+                "id": "0zt2vt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "Prompts",
+                "style": 7
+              },
+              {
+                "content": "Explain this",
+                "id": "voy33c"
+              },
+              {
+                "content": "Continue",
+                "id": "ormb57"
+              },
+              {
+                "content": "Say this in other words",
+                "id": "5yom2f"
+              },
+              {
+                "content": "Summarize the following text in one short sentence",
+                "id": "0nwlha"
+              },
+              {
+                "content": "Recommend me ideas on this topic in one short sentence",
+                "id": "egjfft"
+              }
+            ]
+          },
+          {
+            "id": "bg5ot0",
+            "content": [
+              {
+                "content": "Запросы",
+                "id": "vkfa54"
+              },
+              {
+                "content": "Объясните это",
+                "id": "a1tmh2"
+              },
+              {
+                "content": "Дальше",
+                "id": "imd6th"
+              },
+              {
+                "content": "Скажите это другими словами",
+                "id": "kiiue6"
+              },
+              {
+                "content": "Кратко изложите следующий текст в одном коротком предложении",
+                "id": "ek4p1g"
+              },
+              {
+                "content": "Порекомендуйте мне идеи на эту тему в одном коротком предложении",
+                "id": "v24lxm"
+              }
+            ]
+          },
+          {
+            "id": "g5u4lz",
+            "content": [
+              {
+                "content": "",
+                "id": "yr2jx9"
+              },
+              {
+                "content": "",
+                "id": "73iyt8"
+              },
+              {
+                "content": "",
+                "id": "bqkdaz"
+              },
+              {
+                "content": "",
+                "id": "zxrvmk"
+              },
+              {
+                "content": "",
+                "id": "cmuu38"
+              },
+              {
+                "content": "",
+                "id": "tinwdp"
+              }
+            ]
+          },
+          {
+            "id": "hd77ao",
+            "content": [
+              {
+                "content": "",
+                "id": "u7rmcm"
+              },
+              {
+                "content": "",
+                "id": "h3qilt"
+              },
+              {
+                "content": "",
+                "id": "k7xspm"
+              },
+              {
+                "content": "",
+                "id": "wgttox"
+              },
+              {
+                "content": "",
+                "id": "4h5r7z"
+              },
+              {
+                "content": "",
+                "id": "0ywo6w"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en",
+      "es",
+      "de",
+      "ar"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 3,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": false,
+    "outputDirectory": "/Users/artemy/Desktop/prototext",
+    "outputFilename": "",
+    "isSchematicPreview": false
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

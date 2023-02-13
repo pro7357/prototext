@@ -1,0 +1,314 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "Computer Science",
+                "style": 7
+              },
+              {
+                "content": "Computerphile",
+                "id": "ic4up9",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/user/Computerphile",
+                "id": "m0y2jr",
+                "style": 8
+              },
+              {
+                "content": "A channel that explains computer science topics in an easy-to-understand manner for a general audience.",
+                "id": "qrntn0"
+              },
+              {
+                "content": "CS50",
+                "id": "sc602r",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/user/cs50tv",
+                "id": "np5f2m",
+                "style": 8
+              },
+              {
+                "content": "The channel for Harvard University's CS50 Introduction to Computer Science course. Topics include algorithms, cryptography, web development, and more.",
+                "id": "tlbugj"
+              },
+              {
+                "content": "FreeCodeCamp",
+                "id": "i80g85",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ",
+                "id": "xkla6u",
+                "style": 8
+              },
+              {
+                "content": "A channel dedicated to teaching people how to code. It covers various topics including web development, data structures and algorithms, and more.",
+                "id": "8hn6dx"
+              },
+              {
+                "content": "Corey Schafer",
+                "id": "rs30a9",
+                "style": 6
+              },
+              {
+                "id": "k0o4l9",
+                "style": 8,
+                "content": "https://www.youtube.com/user/schafer5"
+              },
+              {
+                "content": "A software engineer and educator who creates tutorials on topics such as Python programming, web development, and data analysis.",
+                "id": "9m5yzk"
+              },
+              {
+                "content": "TechLead",
+                "id": "ar8usm",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/channel/UC4xKdmAXFh4ACyhpiQ_3qBw",
+                "id": "kadnpb",
+                "style": 8
+              },
+              {
+                "content": "A channel run by a tech lead with over a decade of experience. He covers a wide range of topics, including software engineering, product management, and career advice.",
+                "id": "rh7ej8"
+              },
+              {
+                "content": "The Coding Train",
+                "id": "9zkje3",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/user/shiffman",
+                "id": "37ldx9",
+                "style": 8
+              },
+              {
+                "content": "A channel dedicated to explaining programming concepts using simple, easy-to-follow examples. Topics include computer graphics, machine learning, and more.",
+                "id": "t023tm"
+              },
+              {
+                "content": "Clever programmer",
+                "id": "eq79zf",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ",
+                "id": "l57ieq",
+                "style": 8
+              },
+              {
+                "content": "A channel focused on teaching people how to code and build projects using technologies like Python, Django, and React.",
+                "id": "yebanq"
+              },
+              {
+                "content": "Eduonix Learning Solutions",
+                "id": "1rqe9f",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/user/eduonix",
+                "id": "asmk0l",
+                "style": 8
+              },
+              {
+                "content": "A channel with a wide range of tutorials on topics such as web development, data science, and more.",
+                "id": "rx978d"
+              },
+              {
+                "content": "Simple Programmer",
+                "id": "ozelu6",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/user/simpleprogrammer",
+                "id": "cim82p",
+                "style": 8
+              },
+              {
+                "content": "A channel dedicated to helping software developers advance their careers. Topics include programming, career advice, and more.",
+                "id": "wy07he"
+              },
+              {
+                "content": "Linus Tech Tips",
+                "id": "4xn3oc",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/user/LinusTechTips",
+                "id": "gq7qdv",
+                "style": 8
+              },
+              {
+                "content": "A channel that covers the latest in computer hardware, as well as software tutorials and tech news.",
+                "id": "6c39le"
+              },
+              {
+                "content": "Code Conquest",
+                "id": "mci25s",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/user/CodeConquest",
+                "id": "yjhnjy",
+                "style": 8
+              },
+              {
+                "content": "A channel dedicated to helping beginners learn programming concepts and build their coding skills.",
+                "id": "mdoivn"
+              },
+              {
+                "content": "Learn Code",
+                "id": "dw3nv9",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/user/learncodeacademy",
+                "id": "mk4gmr",
+                "style": 8
+              },
+              {
+                "content": "A channel focused on teaching people how to code, with a strong emphasis on web development and front-end development.",
+                "id": "ir9c6k"
+              },
+              {
+                "content": "Code Bullet",
+                "id": "36u5ea",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q",
+                "id": "jkz4oc",
+                "style": 8
+              },
+              {
+                "content": "A channel that focuses on teaching computer science concepts through short, easy-to-follow video tutorials. Topics include algorithms, data structures, and more.",
+                "id": "f53jtv"
+              },
+              {
+                "content": "Programming with Mosh",
+                "id": "l0zj3u",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/user/programmingwithmosh",
+                "id": "nlrz8k",
+                "style": 8
+              },
+              {
+                "content": "A channel run by a software engineer and educator who creates tutorials on topics such as programming, software engineering, and web development.",
+                "id": "izir1g"
+              },
+              {
+                "content": "The Net Ninja",
+                "id": "g0lbtn",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg",
+                "id": "q17owm",
+                "style": 8
+              },
+              {
+                "content": "A channel dedicated to teaching people how to code, with a focus on web development using technologies like React, Node.js, and more.",
+                "id": "pyjmxw"
+              },
+              {
+                "content": "Traversy Media",
+                "id": "2vfbzf",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/user/TechGuyWeb",
+                "id": "ulch40",
+                "style": 8
+              },
+              {
+                "content": "A channel dedicated to web development and programming tutorials, with a focus on technologies like JavaScript, React, and Node.js.",
+                "id": "n47kj8"
+              },
+              {
+                "content": "Dev Ed",
+                "id": "4evnn3",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q",
+                "id": "r6c30z",
+                "style": 8
+              },
+              {
+                "content": "A channel that focuses on teaching web development, with a focus on technologies like JavaScript, React, and HTML/CSS.",
+                "id": "j9wiim"
+              },
+              {
+                "content": "Coding Tutorials 360",
+                "id": "3g94j1",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/channel/UCbW18JZRgko_mOGm5er8YzA",
+                "id": "rf3ncj",
+                "style": 8
+              },
+              {
+                "content": "A channel dedicated to teaching people how to code, with a focus on technologies like Python, Java, and C++.",
+                "id": "g7o4rw"
+              },
+              {
+                "content": "Derek Banas",
+                "id": "p2xsu9",
+                "style": 6
+              },
+              {
+                "content": "https://www.youtube.com/user/derekbanas",
+                "id": "p6bdxx",
+                "style": 8
+              },
+              {
+                "content": "A software engineer and educator who creates tutorials on a wide range of topics, including programming, software engineering, and more.",
+                "id": "pxq176"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 500,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 0,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": true,
+    "outputDirectory": "~/Desktop/prototext/output",
+    "outputFilename": "test",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

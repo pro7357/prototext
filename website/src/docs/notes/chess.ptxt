@@ -1,0 +1,104 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "Тактика и стратегия",
+                "style": 7
+              },
+              {
+                "content": "Контроль важных полей.",
+                "id": "cbx7m1"
+              },
+              {
+                "content": "Развитие фигур и защита короля.",
+                "id": "gx4vq7"
+              },
+              {
+                "content": "Открытые линии для атаки.",
+                "id": "77zl8t"
+              },
+              {
+                "content": "Поиск финальных комбинаций.",
+                "id": "xmn84v"
+              },
+              {
+                "content": "Обманные маневры и предостережение противника.",
+                "id": "oi0nd1"
+              },
+              {
+                "content": "Применение форсированных изменений расстановки.",
+                "id": "tjzbgz"
+              },
+              {
+                "content": "Управление временем и создание срочных задач для противника.",
+                "id": "s0ftrt"
+              },
+              {
+                "content": "Поиск и выполнение взятий на проходе.",
+                "id": "b4l6yc"
+              },
+              {
+                "content": "Использование пешечных масс в качестве орудия атаки или защиты.",
+                "id": "ef6yzt"
+              },
+              {
+                "content": "Установление и удержание превосходства в фигурах.",
+                "id": "8dscv9"
+              },
+              {
+                "content": "Создание и использование двойных или пустых ферзей.",
+                "id": "xyz4p7"
+              },
+              {
+                "content": "Определение и использование неуязвимых позиций.",
+                "id": "0r6c0r"
+              },
+              {
+                "content": "Использование элемента удивления и неожиданных ходов.",
+                "id": "tyan3v"
+              },
+              {
+                "content": "Использование короля в качестве атакующей фигуры, когда это безопасно.",
+                "id": "ipjkqe"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 3,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": false,
+    "outputDirectory": "/Users/artemy/Desktop/prototext",
+    "outputFilename": "",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

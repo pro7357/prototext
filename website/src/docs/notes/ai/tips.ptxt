@@ -1,0 +1,150 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "i2b64l",
+        "content": [
+          {
+            "id": "0iysi6",
+            "content": [
+              {
+                "content": "Tips",
+                "id": "6fnt5p",
+                "style": 7,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": true,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Use precise and concise language to avoid ambiguity.",
+                "id": "p8xyi1"
+              },
+              {
+                "content": "Avoid asking questions that are too general.",
+                "id": "bjxy98"
+              },
+              {
+                "content": "Use proper grammar and spelling.",
+                "id": "8u18wk"
+              },
+              {
+                "content": "Provide enough context.",
+                "id": "o9qvdd",
+                "style": -1,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Set a task definition or goal for AI.",
+                "id": "25v994",
+                "style": -1,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Provide enough details.",
+                "id": "ztrqzm",
+                "style": -1,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Do more iterations.",
+                "id": "voosko",
+                "style": -1,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "jzjzjq",
+        "content": [
+          {
+            "id": "zktf4e",
+            "content": [
+              {
+                "content": "Links",
+                "id": "6yf1v4",
+                "style": 7
+              },
+              {
+                "content": "https://platform.openai.com/examples",
+                "id": "dtvup4",
+                "style": 8
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 3,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": false,
+    "outputDirectory": "/Users/artemy/Desktop/prototext",
+    "outputFilename": "",
+    "isSchematicPreview": false
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

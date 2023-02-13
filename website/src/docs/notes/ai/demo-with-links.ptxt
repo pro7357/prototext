@@ -1,0 +1,141 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "jekx8m",
+        "content": [
+          {
+            "id": "lvnaji",
+            "content": [
+              {
+                "content": "Main Page",
+                "id": "r678z0",
+                "style": 7
+              },
+              {
+                "content": "Page: Fruits.",
+                "id": "gxobar",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "initial-page",
+                    "initial-block"
+                  ],
+                  "indices": [
+                    0,
+                    0
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fadnhk",
+        "content": [
+          {
+            "id": "xam1ud",
+            "content": [
+              {
+                "content": "Prompts",
+                "id": "o9lmd3",
+                "style": 7
+              },
+              {
+                "content": "List the most popular",
+                "id": "573gub"
+              },
+              {
+                "content": "Continue",
+                "id": "f577wq"
+              },
+              {
+                "content": "What is off-topic in this list",
+                "id": "fb6q6z"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "Fruits",
+                "style": 7
+              },
+              {
+                "content": "Apple",
+                "id": "839rtj"
+              },
+              {
+                "content": "Orange",
+                "id": "tcg2xv"
+              },
+              {
+                "content": "Oak",
+                "id": "oii915"
+              },
+              {
+                "content": "Lemon",
+                "id": "1u9fcd"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m24j5u",
+        "content": [
+          {
+            "id": "6fol3j",
+            "content": [
+              {
+                "content": "Books",
+                "id": "gvszhu",
+                "style": 7
+              },
+              {
+                "style": 9,
+                "content": "1. Harry Potter and the Sorcerer’s Stone by J.K. Rowling 2. To Kill a Mockingbird by Harper Lee\n3. The Lord of the Rings by J.R.R. Tolkien\n4. The Alchemist by Paulo Coelho\n5. Pride and Prejudice by Jane Austen\n6. The Hobbit by J.R.R. Tolkien\n7. The Catcher in the Rye by J.D. Salinger\n8. The Hunger Games by Suzanne Collins\n9. 1984 by George Orwell\n10. The Great Gatsby by F. Scott Fitzgerald 11. Animal Farm by George Orwell\n12. The Chronicles of Narnia by C.S. Lewis\n13. Little Women by Louisa May Alcott\n14. The Fault in Our Stars by John Green\n15. Charlotte's Web by E.B. White",
+                "id": "cmpl-6i4qfZG58hEFY4j17G99PL8OrQTFI"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 0,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": true,
+    "outputDirectory": "~/Desktop/prototext/output",
+    "outputFilename": "test",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

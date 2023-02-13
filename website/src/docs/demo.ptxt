@@ -1,0 +1,1255 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "Page 1",
+                "style": 7,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": true,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Subheading",
+                "id": "hr7zu8",
+                "style": 6,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Ordinary text",
+                "id": "izyiej",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "AI's response",
+                "id": "lkhmg5",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Important",
+                "id": "5i77yt",
+                "style": 1,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Question",
+                "id": "ku8c3x",
+                "style": 2,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Positive",
+                "id": "wkwmye",
+                "style": 3,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Negative",
+                "id": "ukqt57",
+                "style": 4,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Muted",
+                "id": "thdwrh",
+                "style": 5,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": true,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "External & internal links, Tags",
+                "id": "sp8t64",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "mzlzvq",
+            "content": [
+              {
+                "content": "",
+                "id": "10kka4"
+              },
+              {
+                "content": "",
+                "id": "fwye1g"
+              },
+              {
+                "content": "",
+                "id": "ztkpej"
+              },
+              {
+                "content": "",
+                "id": "70h9tq"
+              },
+              {
+                "content": "",
+                "id": "1v73dz"
+              },
+              {
+                "content": "",
+                "id": "gjulfa"
+              },
+              {
+                "content": "",
+                "id": "ml2fss"
+              },
+              {
+                "content": "",
+                "id": "i5d10g"
+              },
+              {
+                "content": "",
+                "id": "0povve"
+              },
+              {
+                "content": "",
+                "id": "pt9k01"
+              }
+            ]
+          },
+          {
+            "id": "sdsz33",
+            "content": [
+              {
+                "content": "",
+                "id": "vzjuq6"
+              },
+              {
+                "content": "",
+                "id": "enlj67"
+              },
+              {
+                "content": "",
+                "id": "lewegr"
+              },
+              {
+                "content": "",
+                "id": "hqdr50"
+              },
+              {
+                "content": "",
+                "id": "8xdil6"
+              },
+              {
+                "content": "",
+                "id": "wfl6jo"
+              },
+              {
+                "content": "",
+                "id": "753nwl"
+              },
+              {
+                "content": "",
+                "id": "xxnraz"
+              },
+              {
+                "content": "",
+                "id": "0g2i4e"
+              },
+              {
+                "content": "",
+                "id": "5rffc8"
+              }
+            ]
+          },
+          {
+            "id": "evexv1",
+            "content": [
+              {
+                "content": "",
+                "id": "o6kvb3"
+              },
+              {
+                "content": "",
+                "id": "8qmmo9"
+              },
+              {
+                "content": "",
+                "id": "jlk2hg"
+              },
+              {
+                "content": "",
+                "id": "tytqi9"
+              },
+              {
+                "content": "",
+                "id": "fi4fj6"
+              },
+              {
+                "content": "",
+                "id": "lmm4w7"
+              },
+              {
+                "content": "",
+                "id": "inki4b"
+              },
+              {
+                "content": "",
+                "id": "gsp9tl"
+              },
+              {
+                "content": "",
+                "id": "cgzm3v"
+              },
+              {
+                "content": "",
+                "id": "npsnb8"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dabxf4",
+        "content": [
+          {
+            "id": "wpkugp",
+            "content": [
+              {
+                "content": "Page 2",
+                "id": "t3iv9v",
+                "style": 7
+              },
+              {
+                "content": "Image",
+                "id": "zqihvx",
+                "style": 8,
+                "link": {
+                  "filePath": "/Users/artemy/Desktop/prototext/notes/private/cookbook/assets/167612924107434258da3ce.jpg"
+                },
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isFileLink": "/Users/artemy/Desktop/prototext/notes/private/cookbook/assets/167612924107434258da3ce.jpg",
+                  "isAssetLink": false,
+                  "isImage": true,
+                  "isVideoFile": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Video",
+                "id": "px0g2f",
+                "style": 8,
+                "link": {
+                  "filePath": "/Users/artemy/Desktop/prototext/notes/private/portfolio/assets/1673294742030cdc7f2c1e1.webm"
+                },
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isFileLink": "/Users/artemy/Desktop/prototext/notes/private/portfolio/assets/1673294742030cdc7f2c1e1.webm",
+                  "isAssetLink": false,
+                  "isImage": false,
+                  "isVideoFile": true,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Any other file",
+                "id": "rcv3qz",
+                "style": 8,
+                "link": {
+                  "filePath": "/Users/artemy/Desktop/Other/3d/bed_stufio.blend"
+                },
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isFileLink": "/Users/artemy/Desktop/Other/3d/bed_stufio.blend",
+                  "isAssetLink": false,
+                  "isImage": false,
+                  "isVideoFile": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "ctq3rp",
+            "content": [
+              {
+                "content": "",
+                "id": "dot0rz"
+              },
+              {
+                "content": "",
+                "id": "q4rq2e"
+              },
+              {
+                "content": "",
+                "id": "dly0hr"
+              },
+              {
+                "content": "",
+                "id": "awz48h"
+              }
+            ]
+          },
+          {
+            "id": "2v28ms",
+            "content": [
+              {
+                "content": "",
+                "id": "0t2fk6"
+              },
+              {
+                "content": "",
+                "id": "c8plxo"
+              },
+              {
+                "content": "",
+                "id": "0wg6ge"
+              },
+              {
+                "content": "",
+                "id": "ukpk9h"
+              }
+            ]
+          },
+          {
+            "id": "wbfg8r",
+            "content": [
+              {
+                "content": "",
+                "id": "ek1ulg"
+              },
+              {
+                "content": "",
+                "id": "hq7rvg"
+              },
+              {
+                "content": "",
+                "id": "34sktz"
+              },
+              {
+                "content": "",
+                "id": "rpy7tt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hii0ra",
+        "content": [
+          {
+            "id": "28mu1m",
+            "content": [
+              {
+                "content": "Page 1",
+                "id": "l5f9r4",
+                "style": 7,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": true,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Subheading",
+                "id": "k59ewe",
+                "style": 6,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Important",
+                "id": "m6i0bk",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                },
+                "style": 1
+              },
+              {
+                "content": "Negative",
+                "id": "m6i0bk",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                },
+                "style": 4
+              },
+              {
+                "content": "Ordinary",
+                "id": "70boiq",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Subheading",
+                "id": "k59ewe",
+                "style": 6,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Text",
+                "id": "m6i0bk",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Text",
+                "id": "m6i0bk",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "vzj9tw",
+            "content": [
+              {
+                "content": "Página 1",
+                "id": "t8ynrf"
+              },
+              {
+                "content": "Subrúbrica 1.1",
+                "id": "uh9k03"
+              },
+              {
+                "content": "Texto 1.1.1",
+                "id": "7ol7gp"
+              },
+              {
+                "content": "Texto 1.1.2",
+                "id": "xe0fuw"
+              },
+              {
+                "content": "Texto 1.1.3",
+                "id": "xsjaoo"
+              },
+              {
+                "content": "Subpartida 1.2",
+                "id": "gi0i4e"
+              },
+              {
+                "content": "Texto 1.2.1",
+                "id": "zlpx36"
+              },
+              {
+                "content": "Texto 1.2.2",
+                "id": "ez1ie5"
+              }
+            ]
+          },
+          {
+            "id": "kj3q5t",
+            "content": [
+              {
+                "content": "صفحة 1",
+                "id": "pwygy8"
+              },
+              {
+                "content": "العنوان الفرعي 1.1",
+                "id": "4owebf"
+              },
+              {
+                "content": "النص 1.1.1",
+                "id": "x8jhsy"
+              },
+              {
+                "content": "النص 1.1.2",
+                "id": "dowrem"
+              },
+              {
+                "content": "النص 1.1.3",
+                "id": "ihlczr"
+              },
+              {
+                "content": "العنوان الفرعي 1.2",
+                "id": "b62103"
+              },
+              {
+                "content": "النص 1.2.1",
+                "id": "m2xtpg"
+              },
+              {
+                "content": "النص 2.2.1",
+                "id": "au8j2k"
+              }
+            ]
+          },
+          {
+            "id": "fkjbrw",
+            "content": [
+              {
+                "content": "पृष्ठ 1",
+                "id": "hn2j23"
+              },
+              {
+                "content": "उपशीर्षक 1.1",
+                "id": "yx6bwy"
+              },
+              {
+                "content": "पाठ 1.1.1",
+                "id": "g9qx89"
+              },
+              {
+                "content": "पाठ 1.1.2",
+                "id": "1etb8f"
+              },
+              {
+                "content": "पाठ 1.1.3",
+                "id": "fes5g9"
+              },
+              {
+                "content": "उपशीर्षक 1.2",
+                "id": "pjhgln"
+              },
+              {
+                "content": "पाठ 1.2.1",
+                "id": "tqjk6d"
+              },
+              {
+                "content": "पाठ 1.2.2",
+                "id": "cbj3yx"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3g39x7",
+        "content": [
+          {
+            "id": "pr8gfo",
+            "content": [
+              {
+                "style": 7,
+                "content": "Page 2",
+                "id": "gzmhcd",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": true,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "style": 6,
+                "content": "Subheading",
+                "id": "iynea8",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Question",
+                "id": "owqhnr",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                },
+                "style": 2
+              },
+              {
+                "content": "Positive",
+                "id": "fugigz",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                },
+                "style": 3
+              },
+              {
+                "content": "Muted",
+                "id": "yg50eo",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                },
+                "style": 5
+              },
+              {
+                "style": 6,
+                "content": "Subheading",
+                "id": "p2yeos",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Text",
+                "id": "h6k7kn",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Text",
+                "id": "yyaqew",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "37uxow",
+            "content": [
+              {
+                "content": "",
+                "id": "zl68sk"
+              },
+              {
+                "content": "",
+                "id": "esikb6"
+              },
+              {
+                "content": "",
+                "id": "ksrgjz"
+              },
+              {
+                "content": "",
+                "id": "7spxqj"
+              },
+              {
+                "content": "",
+                "id": "aq6ryo"
+              },
+              {
+                "content": "",
+                "id": "r5nny3"
+              },
+              {
+                "content": "",
+                "id": "j5mdax"
+              },
+              {
+                "content": "",
+                "id": "9583ui"
+              }
+            ]
+          },
+          {
+            "id": "nqgr22",
+            "content": [
+              {
+                "content": "",
+                "id": "5dyk43"
+              },
+              {
+                "content": "",
+                "id": "uktyk1"
+              },
+              {
+                "content": "",
+                "id": "x2rka1"
+              },
+              {
+                "content": "",
+                "id": "m5eoss"
+              },
+              {
+                "content": "",
+                "id": "cace03"
+              },
+              {
+                "content": "",
+                "id": "9wy6j0"
+              },
+              {
+                "content": "",
+                "id": "pwuro4"
+              },
+              {
+                "content": "",
+                "id": "c76vnk"
+              }
+            ]
+          },
+          {
+            "id": "ke02um",
+            "content": [
+              {
+                "content": "",
+                "id": "fz9us0"
+              },
+              {
+                "content": "",
+                "id": "2rp9v3"
+              },
+              {
+                "content": "",
+                "id": "3xwzgb"
+              },
+              {
+                "content": "",
+                "id": "ib0ms9"
+              },
+              {
+                "content": "",
+                "id": "x1zktl"
+              },
+              {
+                "content": "",
+                "id": "aydmkq"
+              },
+              {
+                "content": "",
+                "id": "q352zi"
+              },
+              {
+                "content": "",
+                "id": "j9fsrv"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ihmfzk",
+        "content": [
+          {
+            "id": "i5ixrn",
+            "content": [
+              {
+                "content": "Links",
+                "id": "gbgtm4",
+                "style": 7,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": true,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Page: Page 1.",
+                "id": "9fnsuu",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "hii0ra",
+                    "l5f9r4"
+                  ],
+                  "indices": [
+                    1,
+                    0
+                  ]
+                },
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isInternalLink": [
+                    "hii0ra",
+                    "l5f9r4"
+                  ],
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Page: Page 1.\nBlock: Subheading 1.1",
+                "id": "v3ey9p",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "hii0ra",
+                    "k59ewe"
+                  ],
+                  "indices": [
+                    2,
+                    1
+                  ]
+                },
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isInternalLink": [
+                    "hii0ra",
+                    "k59ewe"
+                  ],
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "Page: Page 2.\nBlock: Subheading 2.2",
+                "id": "tgbnd3",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "3g39x7",
+                    "p2yeos"
+                  ],
+                  "indices": [
+                    2,
+                    5
+                  ]
+                },
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isInternalLink": [
+                    "3g39x7",
+                    "p2yeos"
+                  ],
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "https://example.com/",
+                "id": "hpmbbr",
+                "style": 8,
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": true,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              },
+              {
+                "content": "tag1, tag2",
+                "id": "fpwdnx",
+                "style": 8
+              }
+            ]
+          },
+          {
+            "id": "edh04u",
+            "content": [
+              {
+                "content": "",
+                "id": "ccfraj"
+              },
+              {
+                "content": "",
+                "id": "cnqxhd"
+              },
+              {
+                "content": "",
+                "id": "rjo8za"
+              },
+              {
+                "content": "",
+                "id": "nt1f4j"
+              },
+              {
+                "content": "",
+                "id": "g8zut5"
+              },
+              {
+                "content": "",
+                "id": "2kb6lg"
+              }
+            ]
+          },
+          {
+            "id": "zf4fla",
+            "content": [
+              {
+                "content": "",
+                "id": "w4w8md"
+              },
+              {
+                "content": "",
+                "id": "ol1af1"
+              },
+              {
+                "content": "",
+                "id": "x3g2gg"
+              },
+              {
+                "content": "",
+                "id": "fen5ad"
+              },
+              {
+                "content": "",
+                "id": "6w31nw"
+              },
+              {
+                "content": "",
+                "id": "fe8es4"
+              }
+            ]
+          },
+          {
+            "id": "gwv6pv",
+            "content": [
+              {
+                "content": "",
+                "id": "y1onav"
+              },
+              {
+                "content": "",
+                "id": "75jd4z"
+              },
+              {
+                "content": "",
+                "id": "o4k93z"
+              },
+              {
+                "content": "",
+                "id": "v5j803"
+              },
+              {
+                "content": "",
+                "id": "8boz9b"
+              },
+              {
+                "content": "",
+                "id": "p8qss3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "84c14c",
+        "content": [
+          {
+            "id": "oexpz4",
+            "content": [
+              {
+                "content": "Media",
+                "id": "1d6o84",
+                "style": 7,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": true,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false,
+                  "isAiResponse": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "frqc9o",
+            "content": [
+              {
+                "content": "",
+                "id": "0hi139"
+              }
+            ]
+          },
+          {
+            "id": "t5k3sk",
+            "content": [
+              {
+                "content": "",
+                "id": "vqywjf"
+              }
+            ]
+          },
+          {
+            "id": "m5sq9s",
+            "content": [
+              {
+                "content": "",
+                "id": "wx3nja"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en",
+      "es",
+      "ar",
+      "hi"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 1,
+    "allowLocales": false,
+    "allowBlockStyles": true,
+    "allowMergePages": false,
+    "outputDirectory": "",
+    "outputFilename": "demo",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": true,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": true,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

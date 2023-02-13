@@ -1,0 +1,1073 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "Когнитивные искажения",
+                "style": 7,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": true,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Когда много информации",
+                "id": "gf9bh4",
+                "style": 6,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Охотнее замечаем то, что ранее запоминали либо часто встречали.",
+                "id": "dhyxgo",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Странные, смешные, внешне привлекательные, антропоморфные вещи привлекают внимание больше, чем привычные, несмешные.",
+                "id": "4hckui",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Замечаем, когда что-то изменилось.",
+                "id": "q69mq5",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Привлекают частности, подтверждающие существующие убеждения.",
+                "id": "uqxru0",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Гораздо лучше замечаем изъяны в других, чем в себе.",
+                "id": "f7t9kc",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Когда не хватает смысла",
+                "id": "4kpxjj",
+                "style": 6,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Обнаруживаем истории и закономерности даже в скудных данных.",
+                "id": "7y334r",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Заполняем пробелы в информации известными признаками из стереотипов, обобщений и прошлого опыта.",
+                "id": "7svys7",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Больше ценим знакомые, симпатичные вещи и людей, чем незнакомые, несимпатичные.",
+                "id": "gk60hh",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Упрощаем числа и вероятности, чтобы о них было легче думать.",
+                "id": "yzld8k",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Думаем, что знаем, о чём думают другие.",
+                "id": "w1r42g",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Проецируем наш текущий образ мыслей в прошлое и будущее.",
+                "id": "6deqhx",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Когда быстро реагируем",
+                "id": "lqig8k",
+                "style": 6,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Чтобы действовать, должны быть уверены в способности что-то изменить и чувствовать важность своих поступков.",
+                "id": "0i0mvd",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Предпочитаем фокусироваться на немедленных и близких результатах.",
+                "id": "u4uqq6",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Предпочитаем завершать то, во что ранее уже вложили время и усилия.",
+                "id": "0s6hie",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Склонны сохранять личную автономию и текущий статус в группе, избегая необратимых решений.",
+                "id": "sbjdbm",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Предпочитаем просто выглядящие и однозначные варианты выбора более сложным и неопределённым.",
+                "id": "0iwr3p",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Когда запоминаем и вспоминаем",
+                "id": "vaj1kb",
+                "style": 6,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Редактируем и усиливаем воспоминания после случившихся событий.",
+                "id": "f4b47e",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Отбрасываем частности для построения и закрепления обобщений.",
+                "id": "0ifuvs",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Упрощаем события и списки до отдельных ключевых моментов и элементов.",
+                "id": "3ir157",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "По-разному храним воспоминания в зависимости от ситуации получения опыта.",
+                "id": "sg9rcc",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Источники",
+                "id": "2ohkty",
+                "style": 6,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "https://en.wikipedia.org/wiki/List_of_cognitive_biases",
+                "id": "aepk06",
+                "style": 8,
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": true,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "https://ru.wikipedia.org/wiki/Список_когнитивных_искажений",
+                "id": "5l86vv",
+                "style": 8,
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": true,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "https://ezhikov.medium.com/cognitive-bias-cheat-sheet-5bb0664b67b5",
+                "id": "4cil81",
+                "style": 8,
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": true,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "https://betterhumans.pub/cognitive-bias-cheat-sheet-55a472476b18",
+                "id": "rzho00",
+                "style": 8,
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": true,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "http://infographer.ru/wp-content/uploads/2016/11/cognitive-bias-codex-ru.png",
+                "id": "o26dll",
+                "style": 8,
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": true,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Книги",
+                "id": "rywz1j",
+                "style": 6,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Книга: «Думай медленно. Решай быстро» Даниэль Канеман",
+                "id": "npxaj0",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "r63qz8",
+                    "e5rr6q"
+                  ],
+                  "indices": [
+                    4,
+                    0
+                  ]
+                },
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isInternalLink": [
+                    "r63qz8",
+                    "e5rr6q"
+                  ],
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "i4geh2",
+        "content": [
+          {
+            "id": "431lf7",
+            "content": [
+              {
+                "content": "Выводы о работе мозга",
+                "id": "hzimat",
+                "style": 7,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": true,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Путь наименьшего сопротивления. Стратегия экономии времени и энергии.",
+                "id": "9oxqd0",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Выявление информационных совпадений, отличий, противоречий.",
+                "id": "gwekgm",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Инерция идей. Человек заложник своего прошлого, любой давности, даже самой наименьшей. Как только приходит новая идея – она начинает создавать инерцию собственным существованием. Преодолеть инерцию = применить усилия, критику, расширение информационных источников, ввести случайные факторы (случайные веса в компьютерных нейронных сетях).",
+                "id": "jaj667",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Речевая модель как основа всего, начиная с самоидентификации, понятия внутреннего «я» и всех понятий физического мира. Мозг каскадом выражает одно понятие через другое от очевидного материального до высоких абстракций.",
+                "id": "q9ly9p",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Внимание селективно, предвзято.",
+                "id": "38nmnk",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Память имеет сетевую природу. По-моему есть красивая аналогия с грозовым облаком, где так называемый «лидер» молнии, сгусток плазмы произрастает внутри поля ровно там где это физически наиболее актуально. Участвует всё поле, все заряды всех частиц, и что не менее важно сам сгусток плазмы трансформирует поле своим существованием, своей динамикой. Это всё весьма взаимно. Молния в некотором смысле рисует сама себя в реальном времени.",
+                "id": "m8zx6x",
+                "style": 1,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Антропоморфизм. Перенесение человеческого образа и его свойств на неодушевлённые предметы и животных, растения, природные явления, сверхъестественных существ, абстрактные понятия и другое.",
+                "id": "f4ebj1",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Итерация как метод улучшения любых ментальных представлений. Опять же по аналогии с компьютерными алгоритмами – чем больше итераций, тем качественнее, оптимальнее результат, он становится ближе в отношении к некоему идеальному.",
+                "id": "tsmk3d",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Фундаментальные понятия: «свобода» и «ограничение». Интересно что они актуальны на всех осязаемых уровнях организации материи, в том числе на молекулярном, клеточном уровнях в мозге и так далее по слоям усложнения вплоть до понятия «мысль».",
+                "id": "d6mlwd",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Книги",
+                "id": "t4wr6d",
+                "style": 6,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "«Логика случая», Евгений Кунин.\n«Logic of Chance, The: The Nature and Origin of Biological Evolution». Eugene V. Koonin",
+                "id": "zpg26r",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "https://www.amazon.com/Logic-Chance-Biological-Evolution-paperback/dp/0133381064",
+                "id": "pkuvq5",
+                "style": 8,
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": true,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Книга: «Думай медленно. Решай быстро.» Даниэль Канеман",
+                "id": "dz951w",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "r63qz8",
+                    "e5rr6q"
+                  ],
+                  "indices": [
+                    4,
+                    0
+                  ]
+                },
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isInternalLink": [
+                    "r63qz8",
+                    "e5rr6q"
+                  ],
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hapcft",
+        "content": [
+          {
+            "id": "007t85",
+            "content": [
+              {
+                "content": "Выводы по моему желанию исследовать предмет",
+                "id": "xzwwbb",
+                "style": 7,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": true,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Информации о работе мозга и о когнитивных искажениях крайне много. Существуют различные по качеству и актуальности источники.",
+                "id": "vot9sk",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Проще не станет, поэтому нужно  запомнить хотя бы самое важное, применимое на практике, чтобы корректировать жизненные предустановки, представления, ожидания, ментальные модели, чтобы принимать более взвешенные, корректные, если надо быстрые и смелые решения.",
+                "id": "ih6v1x",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Желание привнести что-то новое в науку, в моей ситуации – это всё равно что изобретать новые иероглифы, когда их и без тебя так много что за целую жизнь не выучить. Для вклада необходимо быть в курсе всех наиболее важных написанных на эту тему книг, статей.",
+                "id": "2gq5uf",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Зачем мне это?",
+                "id": "qfvobl",
+                "style": 6,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "1. Признать наличие ошибок и собственной предвзятости во всём.\nЭто несомненно плюс в развитии критического мышления, которое помогает ориентироваться в социуме более реалистично.",
+                "id": "9fnyd8",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "r63qz8",
+        "content": [
+          {
+            "id": "d23puj",
+            "content": [
+              {
+                "content": "Думай медленно. Решай быстро",
+                "id": "e5rr6q",
+                "style": 7,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": true,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Даниэль Канеман",
+                "id": "y3lexx",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "id": "csgsqj",
+                "style": 6,
+                "content": "Краткое содержание книги",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": true,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Взаимодействие двух систем – сквозная тема этой книги, так что стоит вкратце изложить ее содержание. Итак, пока мы бодрствуем, работают обе системы – Система 1 и Система 2. Система 1 работает автоматически, а Система 2 находится в комфортном режиме минимальных усилий, иначе говоря, задействована лишь малая часть ее возможностей. Система 1 постоянно генерирует для Системы 2 предложения: впечатления, предчувствия, намерения и чувства. Если Система 2 их одобряет, то впечатления и предчувствия превращаются в убеждения, а импульсы – в намеренные действия. Когда все проходит гладко – а так случается почти всегда, – Система 2 принимает предложения Системы 1 совсем или почти без изменений. Как правило, вы верите своим впечатлениям и действуете согласно своим желаниям, и обычно это вполне приемлемо.",
+                "id": "1di2rb",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Когда Система 1 сталкивается с трудностями, она обращается к Системе 2 для решения текущей проблемы с помощью более подробной и целенаправленной обработки. Систему 2 мобилизуют при возникновении вопроса, на который у Системы 1 нет ответа, как, вероятно, случилось с вами при виде примера на умножение 17 × 24. Осознанный прилив внимания также ощущается, если вас застали врасплох. Система 2 приходит в действие, когда обнаруживается событие, нарушающее модель окружающего мира в представлении Системы 1. В ее мире лампочки не подпрыгивают, кошки не лают, а гориллы не ходят по баскетбольным площадкам. Эксперимент с гориллой показывает, что для обнаружения неожиданных раздражителей требуется внимание. Удивление или неожиданность задействует и направляет ваше внимание: вы пристально вглядываетесь и пытаетесь найти в памяти объяснение удивительному событию. Система 2 отвечает за постоянный контроль вашего поведения – именно благодаря ему вы способны оставаться вежливым в ярости и внимательным, когда ведете машину ночью. Система 2 мобилизуется, если обнаруживает, что вы вот-вот совершите ошибку. Вспомните, как вы едва не выпалили что-то оскорбительное – и как трудно вам было взять себя в руки. В общем, основная часть того, что вы (ваша Система 2) думаете и делаете, порождается Системой 1, но в случае трудностей Система 2 перехватывает управление, и обычно последнее слово остается за ней.",
+                "id": "vtjna7",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Разделение труда между Системой 1 и Системой 2 очень эффективно: оно дает наилучшую производительность при минимуме усилий. Большую часть времени все работает хорошо, потому что Система 1, как правило, отлично выполняет свои функции: формирует точные модели ситуаций и краткосрочные прогнозы, а также быстро и чаще всего уместно реагирует на возникающие задачи. Однако у Системы 1 есть и свои искажения, систематические ошибки, которые она склонна совершать в определенных обстоятельствах. Как будет показано, временами она отвечает не на заданные, а на более легкие вопросы и плохо разбирается в логике и статистике. Еще одно ограничение Системы 1 состоит в том, что ее нельзя отключить. Увидев на экране слово на знакомом языке, вы его прочитаете – если только ваше внимание не поглощено полностью чем-то другим.",
+                "id": "d1jk3b",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "https://dmitrovsky.mskobr.ru/files/KANEMAN%20DumMed.pdf",
+                "id": "uebg3b",
+                "style": 8,
+                "type": {
+                  "isLink": true,
+                  "isTextBlock": false,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": true,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "78azdw",
+        "content": [
+          {
+            "id": "cj7rb0",
+            "content": [
+              {
+                "content": "Народная мудрость",
+                "id": "as4jtb",
+                "style": 7,
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": true,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              },
+              {
+                "content": "Не откладывай на завтра то, что можно не делать никогда.",
+                "id": "caoqj7",
+                "type": {
+                  "isLink": false,
+                  "isTextBlock": true,
+                  "isHeading": false,
+                  "isSubHeading": false,
+                  "isMuted": false,
+                  "isWebLink": false,
+                  "isYouTubeVideo": false,
+                  "isTags": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "vomm5v",
+        "content": [
+          {
+            "id": "6s57a2",
+            "content": [
+              {
+                "content": "ChatGPT",
+                "id": "7tchv5",
+                "style": 7
+              },
+              {
+                "content": "Зачем человеку нужно помнить о когнитивных искажениях?",
+                "id": "qe1el8",
+                "style": 6
+              },
+              {
+                "content": "Понимание когнитивных искажений может помочь человеку в их идентификации и контроле. Это может способствовать более точному и реалистичному пониманию собственных мыслей и чувств, а также способствовать более эффективному управлению собственным поведением и принятию решений.",
+                "id": "s6h4wl"
+              },
+              {
+                "content": "Какая компьютерная программа могла бы помочь человеку с этим? Опиши её.",
+                "id": "5t6kit",
+                "style": 6
+              },
+              {
+                "content": "Есть несколько компьютерных программ, которые могут помочь человеку с идентификацией и контролем когнитивных искажений. Одна из них это технология когнитивной перестройки (Cognitive restructuring), которая может быть представлена в виде компьютерной программы для поддержки терапии. Эта программа может предоставлять инструменты для идентификации и контроля когнитивных искажений, а также может предлагать различные упражнения и техники, которые могут помочь человеку изменить негативные мысли и чувства. Это может включать в себя техники создания альтернативных мыслей, проведения экспериментов с мыслями и технику преобразования перспективы.",
+                "id": "9ktj44",
+                "style": 3
+              },
+              {
+                "content": "На какие простые группы можно разделить все когнитивные искажения?",
+                "id": "sg7e9k",
+                "style": 6
+              },
+              {
+                "content": "Когнитивные искажения можно разделить на несколько основных групп:",
+                "id": "hdxueo"
+              },
+              {
+                "content": "Переоценка: это когнитивное искажение, которое проявляется в том, что человек переоценивает отрицательные события или свои недостатки.",
+                "id": "6anzah"
+              },
+              {
+                "content": "Недооценка: это когнитивное искажение, которое проявляется в том, что человек недооценивает свои сильные стороны или положительные события.",
+                "id": "qfk7rb"
+              },
+              {
+                "content": "Ложная категоризация: это когнитивное искажение, которое проявляется в том, что человек неверно категоризирует события или свои действия.",
+                "id": "j0ei76"
+              },
+              {
+                "content": "Общиеизации: это когнитивное искажение, которое проявляется в том, что человек делает общие и необоснованные выводы на основе одного или нескольких инцидентов.",
+                "id": "8wkf72"
+              },
+              {
+                "content": "Мышление в черно-белых категориях: это когнитивное искажение, которое проявляется в том, что человек смотрит на мир и людей в категориях \"хорошо\" и \"плохо\", \"правильно\" и \"неправильно\" без учета контекста и специфики ситуации.",
+                "id": "t2badg"
+              },
+              {
+                "content": "Неадекватная ответственность: это когнитивное искажение, которое проявляется в том, что человек неадекватно берет на себя ответственность за события, которые не зависят от него, или же отказывается от ответственности за свои действия.",
+                "id": "ld3iq2"
+              },
+              {
+                "content": "Мышление в условностях: это когнитивное искажение, которое проявляется в том, что человек ставит себе условия и ограничения, которые делают его жизнь сложнее и мешают достижению целей.",
+                "id": "8963rm"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 700
+  },
+  "exporter": {
+    "format": 3,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": false,
+    "outputDirectory": "/Users/artemy/Desktop/prototext",
+    "outputFilename": "",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": false,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": false
+  },
+  "encryption": null
+}

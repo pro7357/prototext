@@ -1,0 +1,334 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "jiavxo",
+        "content": [
+          {
+            "id": "s1rt4m",
+            "content": [
+              {
+                "content": "Project",
+                "id": "q9ja6j",
+                "style": 7
+              },
+              {
+                "content": "Description",
+                "id": "hfp633",
+                "style": 6
+              },
+              {
+                "content": "...",
+                "id": "14jps8"
+              },
+              {
+                "content": "Goals",
+                "id": "ipayq2",
+                "style": 6
+              },
+              {
+                "content": "...",
+                "id": "itx6xw"
+              }
+            ]
+          },
+          {
+            "id": "op5r9h",
+            "content": [
+              {
+                "content": "",
+                "id": "e4sb8w"
+              },
+              {
+                "content": "",
+                "id": "xrij6f"
+              },
+              {
+                "content": "",
+                "id": "zl45ox"
+              },
+              {
+                "content": "",
+                "id": "69tcub"
+              },
+              {
+                "content": "",
+                "id": "cafdsv"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "z6909j",
+        "content": [
+          {
+            "id": "2x96yc",
+            "content": [
+              {
+                "content": "Draft",
+                "id": "zwmh5c",
+                "style": 7
+              },
+              {
+                "content": "Raw stream of thoughts...",
+                "id": "sw93tj"
+              }
+            ]
+          },
+          {
+            "id": "6xyuxj",
+            "content": [
+              {
+                "content": "",
+                "id": "hji7it"
+              },
+              {
+                "content": "",
+                "id": "prizwh"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "eko3kr",
+        "content": [
+          {
+            "id": "f51d6j",
+            "content": [
+              {
+                "content": "Bugs",
+                "id": "9114m5",
+                "style": 7
+              },
+              {
+                "content": "Important task",
+                "id": "8eheh7",
+                "style": 1
+              },
+              {
+                "content": "Less important task",
+                "id": "8eheh7",
+                "style": 2
+              },
+              {
+                "content": "Common task",
+                "id": "8eheh7"
+              }
+            ]
+          },
+          {
+            "id": "0s4drq",
+            "content": [
+              {
+                "content": "",
+                "id": "xsbodf"
+              },
+              {
+                "content": "",
+                "id": "kr5wbn"
+              },
+              {
+                "content": "",
+                "id": "kr5wbn"
+              },
+              {
+                "content": "",
+                "id": "kr5wbn"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "0pbyn2",
+        "content": [
+          {
+            "id": "dt96es",
+            "content": [
+              {
+                "content": "Enhancements",
+                "id": "3szsk5",
+                "style": 7
+              },
+              {
+                "content": "",
+                "id": "385mtu"
+              }
+            ]
+          },
+          {
+            "id": "2z07mg",
+            "content": [
+              {
+                "content": "",
+                "id": "gwrbjj"
+              },
+              {
+                "content": "",
+                "id": "7gojo8"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "log9jb",
+        "content": [
+          {
+            "id": "an6cpp",
+            "content": [
+              {
+                "content": "Questions",
+                "id": "o7cr67",
+                "style": 7
+              },
+              {
+                "content": "",
+                "id": "bp4izo"
+              }
+            ]
+          },
+          {
+            "id": "wnhoy2",
+            "content": [
+              {
+                "content": "",
+                "id": "dzqh5e"
+              },
+              {
+                "content": "",
+                "id": "16dpnz"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u7gvcg",
+        "content": [
+          {
+            "id": "0jsnbs",
+            "content": [
+              {
+                "content": "Help wanted",
+                "id": "1bohxr",
+                "style": 7
+              },
+              {
+                "content": "",
+                "id": "ahkeeq"
+              }
+            ]
+          },
+          {
+            "id": "g4ben0",
+            "content": [
+              {
+                "content": "",
+                "id": "2uqvii"
+              },
+              {
+                "content": "",
+                "id": "s75vdx"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lb1mdn",
+        "content": [
+          {
+            "id": "88voja",
+            "content": [
+              {
+                "content": "Cancelled",
+                "id": "hqwgem",
+                "style": 7
+              },
+              {
+                "content": "",
+                "id": "k4ru20"
+              }
+            ]
+          },
+          {
+            "id": "abfgyf",
+            "content": [
+              {
+                "content": "",
+                "id": "o30dnp"
+              },
+              {
+                "content": "",
+                "id": "xzew5b"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "f5efyw",
+        "content": [
+          {
+            "id": "r1infi",
+            "content": [
+              {
+                "content": "Completed",
+                "id": "1to4m8",
+                "style": 7
+              },
+              {
+                "content": "",
+                "id": "h2z8vt"
+              }
+            ]
+          },
+          {
+            "id": "r7cw5n",
+            "content": [
+              {
+                "content": "",
+                "id": "19ljvx"
+              },
+              {
+                "content": "",
+                "id": "llm51l"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en",
+      "es"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 1,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": true,
+    "outputDirectory": "/Users/artemy/Documents/Projects/csapp/frontend/apps/admin/pages/Frontsite/sections/data",
+    "outputFilename": "features",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

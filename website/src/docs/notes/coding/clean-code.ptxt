@@ -1,0 +1,702 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "Clean code",
+                "style": 7
+              },
+              {
+                "id": "s9arni",
+                "content": "Robert C. Martin"
+              },
+              {
+                "content": "Code is clean if it can be understood easily – by everyone on the team. Clean code can be read and enhanced by a developer other than its original author. With understandability comes readability, changeability, extensibility and maintainability.",
+                "id": "452yfj"
+              },
+              {
+                "style": 6,
+                "content": "General rules",
+                "id": "67sn3h"
+              },
+              {
+                "content": "1. Follow standard conventions.",
+                "id": "dal52z"
+              },
+              {
+                "content": "2. Keep it simple stupid. Simpler is always better. Reduce complexity as much as possible.",
+                "id": "sxl4go"
+              },
+              {
+                "content": "3. Boy scout rule. Leave the campground cleaner than you found it.",
+                "id": "wvy9z9"
+              },
+              {
+                "content": "4. Always find root cause. Always look for the root cause of a problem.",
+                "id": "u15jju"
+              },
+              {
+                "style": 6,
+                "content": "Design rules",
+                "id": "rbze7p"
+              },
+              {
+                "content": "1. Keep configurable data at high levels.",
+                "id": "ece41s"
+              },
+              {
+                "content": "2. Prefer polymorphism to if/else or switch/case.",
+                "id": "ci99rh"
+              },
+              {
+                "content": "3. Separate multi-threading code.",
+                "id": "wfa82d"
+              },
+              {
+                "content": "4. Prevent over-configurability.",
+                "id": "09tolp"
+              },
+              {
+                "content": "5. Use dependency injection.",
+                "id": "fjsh38"
+              },
+              {
+                "content": "6. Follow Law of Demeter. A class should know only its direct dependencies.",
+                "id": "ptx2lf"
+              },
+              {
+                "style": 6,
+                "content": "Understandability tips",
+                "id": "9ktvfu"
+              },
+              {
+                "content": "1. Be consistent. If you do something a certain way, do all similar things in the same way.",
+                "id": "mpp3k3"
+              },
+              {
+                "content": "2. Use explanatory variables.",
+                "id": "rpkyso"
+              },
+              {
+                "content": "3. Encapsulate boundary conditions. Boundary conditions are hard to keep track of. Put the processing for them in one place.",
+                "id": "swhm4d"
+              },
+              {
+                "content": "4. Prefer dedicated value objects to primitive type.",
+                "id": "4k0auo"
+              },
+              {
+                "content": "5. Avoid logical dependency. Don't write methods which works correctly depending on something else in the same class.",
+                "id": "pxldmb"
+              },
+              {
+                "content": "6. Avoid negative conditionals.",
+                "id": "76srw3"
+              },
+              {
+                "style": 6,
+                "content": "Names rules",
+                "id": "vz48ph"
+              },
+              {
+                "content": "1. Choose descriptive and unambiguous names.",
+                "id": "1dcm8h"
+              },
+              {
+                "content": "2. Make meaningful distinction.",
+                "id": "rni32a"
+              },
+              {
+                "content": "3. Use pronounceable names.",
+                "id": "3sc7n7"
+              },
+              {
+                "content": "4. Use searchable names.",
+                "id": "zqpnko"
+              },
+              {
+                "content": "5. Replace magic numbers with named constants.",
+                "id": "g57k7t"
+              },
+              {
+                "content": "6. Avoid encodings. Don't append prefixes or type information.",
+                "id": "xy7q3c"
+              },
+              {
+                "style": 6,
+                "content": "Functions rules",
+                "id": "hz6adt"
+              },
+              {
+                "content": "1. Small.",
+                "id": "q08l8d"
+              },
+              {
+                "content": "2. Do one thing.",
+                "id": "l6kpyl"
+              },
+              {
+                "content": "3. Use descriptive names.",
+                "id": "cggb3b"
+              },
+              {
+                "content": "4. Prefer fewer arguments.",
+                "id": "mfm18c"
+              },
+              {
+                "content": "5. Have no side effects.",
+                "id": "cwsi5y"
+              },
+              {
+                "content": "6. Don't use flag arguments. Split method into several independent methods that can be called from the client without the flag.",
+                "id": "to36lc"
+              },
+              {
+                "style": 6,
+                "content": "Comments rules",
+                "id": "q3dg8q"
+              },
+              {
+                "content": "1. Always try to explain yourself in code.",
+                "id": "m2nm2k"
+              },
+              {
+                "content": "2. Don't be redundant.",
+                "id": "9hjrmg"
+              },
+              {
+                "content": "3. Don't add obvious noise.",
+                "id": "bl9emh"
+              },
+              {
+                "content": "4. Don't use closing brace comments.",
+                "id": "uq5q4r"
+              },
+              {
+                "content": "5. Don't comment out code. Just remove.",
+                "id": "elwg2a"
+              },
+              {
+                "content": "6. Use as explanation of intent.",
+                "id": "s5li57"
+              },
+              {
+                "content": "7. Use as clarification of code.",
+                "id": "5jbtb4"
+              },
+              {
+                "content": "8. Use as warning of consequences.",
+                "id": "xo236u"
+              },
+              {
+                "style": 6,
+                "content": "Source code structure",
+                "id": "fsnbxc"
+              },
+              {
+                "content": "1. Separate concepts vertically.",
+                "id": "dgjvaa"
+              },
+              {
+                "content": "2. Related code should appear vertically dense.",
+                "id": "z40rsz"
+              },
+              {
+                "content": "3. Declare variables close to their usage.",
+                "id": "fleb9v"
+              },
+              {
+                "content": "4. Dependent functions should be close.",
+                "id": "3mac88"
+              },
+              {
+                "content": "5. Keep lines short.",
+                "id": "jz8dv1"
+              },
+              {
+                "content": "6. Don't use horizontal alignment.",
+                "id": "e88nhr"
+              },
+              {
+                "content": "7. Use white space to associate related things and disassociate weakly related.",
+                "id": "gs876f"
+              },
+              {
+                "style": 6,
+                "content": "Objects and data structures",
+                "id": "00zoma"
+              },
+              {
+                "content": "1. Hide internal structure.",
+                "id": "uqitkq"
+              },
+              {
+                "content": "2. Prefer data structures.",
+                "id": "4j0prb"
+              },
+              {
+                "content": "3. Avoid hybrids structures (half object and half data).",
+                "id": "4rassz"
+              },
+              {
+                "content": "4. Should be small.",
+                "id": "35wybf"
+              },
+              {
+                "content": "5. Do one thing.",
+                "id": "14cnqh"
+              },
+              {
+                "content": "6. Small number of instance variables.",
+                "id": "2yrv0x"
+              },
+              {
+                "content": "7. Base class should know nothing about their derivatives.",
+                "id": "kqbb18"
+              },
+              {
+                "content": "8. Better to have many functions than to pass some code into a function to select a behavior.",
+                "id": "ckm18n"
+              },
+              {
+                "content": "9. Prefer non-static methods to static methods.",
+                "id": "nzkht3"
+              },
+              {
+                "style": 6,
+                "content": "Tests",
+                "id": "nuvc5k"
+              },
+              {
+                "content": "1. One assert per test.",
+                "id": "h8jd72"
+              },
+              {
+                "content": "2. Readable.",
+                "id": "8xbnnn"
+              },
+              {
+                "content": "3. Fast.",
+                "id": "n5jvdq"
+              },
+              {
+                "content": "4. Independent.",
+                "id": "aqj1xx"
+              },
+              {
+                "content": "5. Repeatable.",
+                "id": "e7jzrx"
+              },
+              {
+                "style": 6,
+                "content": "Code smells",
+                "id": "evjq10"
+              },
+              {
+                "content": "1. Rigidity. The software is difficult to change. A small change causes a cascade of subsequent changes.",
+                "id": "iuf9a1"
+              },
+              {
+                "content": "2. Fragility. The software breaks in many places due to a single change.",
+                "id": "oowp6e"
+              },
+              {
+                "content": "3. Immobility. You cannot reuse parts of the code in other projects because of involved risks and high effort.",
+                "id": "xacisi"
+              },
+              {
+                "content": "4. Needless Complexity.",
+                "id": "xcdb4v"
+              },
+              {
+                "content": "5. Needless Repetition.",
+                "id": "xrgd0j"
+              },
+              {
+                "content": "6. Opacity. The code is hard to understand.",
+                "id": "iushj1"
+              }
+            ]
+          },
+          {
+            "id": "7grz2q",
+            "content": [
+              {
+                "content": "Чистый код",
+                "id": "5mtz52"
+              },
+              {
+                "content": "Роберт Мартин",
+                "id": "brmrs4",
+                "isTranslating": true
+              },
+              {
+                "content": "Чистый код легко понимается всей командой и может быть улучшен другими разработчиками, что обеспечивает читаемость, изменяемость, расширяемость и поддерживаемость.",
+                "id": "gnv729"
+              },
+              {
+                "content": "Общие правила",
+                "id": "xvq3ki"
+              },
+              {
+                "content": "1. Следуй стандартным соглашениям в команде, на проекте.",
+                "id": "wva6za"
+              },
+              {
+                "content": "2. Упрощай. Чем проще, тем лучше.",
+                "id": "mcsnr2"
+              },
+              {
+                "content": "3. Не засоряй ранее написанный код, наоборот, делай его всегда чуточку чище.",
+                "id": "eppfia"
+              },
+              {
+                "content": "4. Всегда ищи первопричину проблем.",
+                "id": "ruz142"
+              },
+              {
+                "content": "Правила проектирования",
+                "id": "wfskoj"
+              },
+              {
+                "content": "1. Храни данные конфигурации на высоком уровне.",
+                "id": "e6xiss"
+              },
+              {
+                "content": "2. Используй по возможности полиморфизм вместо if-else или switch-case.",
+                "id": "mr3yei"
+              },
+              {
+                "content": "3. Разделяй  многопоточный код.",
+                "id": "rkz8p3"
+              },
+              {
+                "content": "4. Предотвращай чрезмерную конфигурируемость.",
+                "id": "fb5o5d"
+              },
+              {
+                "content": "5. Используй внедрение зависимостей.",
+                "id": "vh6gmx"
+              },
+              {
+                "content": "6. Объект (класс) должен взаимодействовать только со своими непосредственными зависимостями. Например, если у класса A есть ссылка на класс B, и класс B имеет ссылку на класс C, то класс A не должен взаимодействовать с классом C напрямую.",
+                "id": "g3thjc"
+              },
+              {
+                "content": "Как сделать код более понятным",
+                "id": "6lrbub"
+              },
+              {
+                "content": "1. Будь последовательным. Если ты делаешь что-то определенным образом, делай все подобные вещи одинаково.",
+                "id": "lndays"
+              },
+              {
+                "content": "2. Используй понятные, читаемые переменные.",
+                "id": "km00gw"
+              },
+              {
+                "content": "3. Инкапсулируй граничные условия, т.е. проверки на границах допустимых значений входящих и исходящих данных и обработку исключений, внутри класса. Помести обработку для них в одно место.",
+                "id": "nlqeqj"
+              },
+              {
+                "content": "4. Используйте чаще специализированные объекты значений вместо примитивных.",
+                "id": "6das21"
+              },
+              {
+                "content": "5. Избегай логической зависимости. Не пиши методы, которые работают правильно в зависимости от чего-то другого в том же классе.",
+                "id": "dll1hk"
+              },
+              {
+                "content": "6. Избегай отрицательных условий.",
+                "id": "ac12yg"
+              },
+              {
+                "content": "Правила именования",
+                "id": "g9fls0"
+              },
+              {
+                "content": "1. Выбирай описательные и однозначные названия.",
+                "id": "af8xd1"
+              },
+              {
+                "content": "2. Делай различие в именах осмысленным, существенным, значимым.",
+                "id": "cr4ngq"
+              },
+              {
+                "content": "3. Используй легко произносимые имена.",
+                "id": "itr835"
+              },
+              {
+                "content": "4. Используй имена пригодные для поиска.",
+                "id": "a33ao1"
+              },
+              {
+                "content": "5. Замени числа именованными константами. Например, DAYS_IN_YEAR для числа \"365\".",
+                "id": "ikhrne"
+              },
+              {
+                "content": "6. Избегай шифрования. Не добавляйте префиксы или сведения о типе данных.",
+                "id": "9nijvr"
+              },
+              {
+                "content": "Правила функций",
+                "id": "klnu1j"
+              },
+              {
+                "content": "1. Функция должна быть компактной.",
+                "id": "om8mbk"
+              },
+              {
+                "content": "2. Функция должна решать только одну маленькую задачу.",
+                "id": "yf6o1u"
+              },
+              {
+                "content": "3. Функция должна иметь описательное имя и содержание. Хорошей функции комментарии не нужны.",
+                "id": "8jx669"
+              },
+              {
+                "content": "4. Используйте меньше аргументов.",
+                "id": "ks7oeg"
+              },
+              {
+                "content": "5. Избегайте побочных эффектов.",
+                "id": "8l9gf7"
+              },
+              {
+                "content": "6. Не используй флаг-аргументы. Раздели метод на несколько независимых методов, которые могут быть вызваны из клиента без флага.",
+                "id": "9zhg2m"
+              },
+              {
+                "content": "Правила комментариев",
+                "id": "afiudy"
+              },
+              {
+                "content": "1. Хороший код самодокументирован, т.е.  не нуждается вкомментариях.",
+                "id": "4dkpm8"
+              },
+              {
+                "content": "2. Не пиши лишнего. Это тратит время.",
+                "id": "l31swk"
+              },
+              {
+                "content": "3. Не говори об очевидном, это шум.",
+                "id": "vw1y4i"
+              },
+              {
+                "content": "4. Не пиши закрывающие комментарии к фигурной скобке и т.п.",
+                "id": "c3a5vl"
+              },
+              {
+                "content": "5. Не храни закомментированный код. Просто удали его. В случае если он тебе вновь понадобится, ты сможешь найти его в истории коммитов.",
+                "id": "57gu2h"
+              },
+              {
+                "content": "6. Описывай намерения, цели.",
+                "id": "wqdosb"
+              },
+              {
+                "content": "7. Объясняй работу сложного кода.",
+                "id": "vpre7n"
+              },
+              {
+                "content": "8. Предупреждай о важных последствиях.",
+                "id": "1luh95"
+              },
+              {
+                "content": "Структура исходного кода",
+                "id": "rnbgl8"
+              },
+              {
+                "content": "1. Разделяй и размещай все концепты и идеи вертикально, последовательно.",
+                "id": "i21yu2"
+              },
+              {
+                "content": "2. Размещай родственный код вертикально ближе друг к другу, не разбрасывай.",
+                "id": "wk6gav"
+              },
+              {
+                "content": "3. Объявляй переменные ближе к их использованию.",
+                "id": "xthsam"
+              },
+              {
+                "content": "4. Размещай зависимые функции ближе друг к другу.",
+                "id": "qwvvx9"
+              },
+              {
+                "content": "5. Пиши короткие строки.",
+                "id": "qt1yzs"
+              },
+              {
+                "content": "6. Не используй горизонтальное выравнивание.",
+                "id": "nczo5z"
+              },
+              {
+                "content": "7. Используй пустое пространство, чтобы визуально связать родственные вещи и отделить иные.",
+                "id": "c1jhns"
+              },
+              {
+                "content": "Объекты и структуры данных",
+                "id": "6k380g"
+              },
+              {
+                "content": "1. Скрывай внутреннюю структуру.",
+                "id": "dmrf2s"
+              },
+              {
+                "content": "2. Используй структуры данных (специализированные, стандартные, негибридные?).",
+                "id": "dtax95"
+              },
+              {
+                "content": "3. Избегай гибридных структур. Например, объект + данные.",
+                "id": "exim90"
+              },
+              {
+                "content": "4. Должны быть небольшими.",
+                "id": "m9ykix"
+              },
+              {
+                "content": "5. Должны решать одну задачу.",
+                "id": "7bxhhr"
+              },
+              {
+                "content": "6. имеют небольшое количество переменных экземпляра.",
+                "id": "axk280"
+              },
+              {
+                "content": "7. Базовый класс не должен ничего знать о своих производных.",
+                "id": "zvngr7"
+              },
+              {
+                "content": "8. Лучше иметь много функций, чем передавать какой-то код в функцию для выбора поведения.",
+                "id": "l2v5bj"
+              },
+              {
+                "content": "9. Предпочитайте нестатические методы статическим методам.",
+                "id": "4yk6hl"
+              },
+              {
+                "content": "Тесты",
+                "id": "9rcj9l"
+              },
+              {
+                "content": "1. Один тест = одна проверка результата.",
+                "id": "lrrpm7"
+              },
+              {
+                "content": "2. Читабельный.",
+                "id": "mtek6w"
+              },
+              {
+                "content": "3. Быстро.",
+                "id": "tqoi17"
+              },
+              {
+                "content": "4. Независимый.",
+                "id": "v8ppsw"
+              },
+              {
+                "content": "5. Повторяемый.",
+                "id": "pjd9af"
+              },
+              {
+                "content": "Запахи кода",
+                "id": "omh7fe"
+              },
+              {
+                "content": "1. Программное обеспечение трудно изменить. Небольшое изменение вызывает каскад последующих изменений.",
+                "id": "ahho3h"
+              },
+              {
+                "content": "2. Программное обеспечение ломается во многих местах из-за одного изменения.",
+                "id": "e4kut8"
+              },
+              {
+                "content": "3. Ты не можешь повторно использовать части кода в других проектах из-за связанных с этим рисков и больших усилий.",
+                "id": "5zcpht"
+              },
+              {
+                "content": "4. Избыточное усложнение.",
+                "id": "rgnqhq"
+              },
+              {
+                "content": "5. Бесполезная повторяемость.",
+                "id": "t5oged"
+              },
+              {
+                "content": "6. Непрозрачность. Код трудно понять.",
+                "id": "8zt1p3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "txnhtg",
+        "content": [
+          {
+            "id": "r3f0iz",
+            "content": [
+              {
+                "content": "Resources",
+                "id": "zb16pa",
+                "style": 7
+              },
+              {
+                "content": "https://refactoring.guru/",
+                "id": "061dtw",
+                "style": 8
+              }
+            ]
+          },
+          {
+            "id": "dvjc12",
+            "content": [
+              {
+                "content": "Ссылки",
+                "id": "1x4jhq"
+              },
+              {
+                "content": "https://refactoring.guru/ru",
+                "id": "u0fuhk"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en",
+      "ru"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 3,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": false,
+    "outputDirectory": "/Users/artemy/Desktop/prototext",
+    "outputFilename": "",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

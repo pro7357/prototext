@@ -15,7 +15,7 @@ Thumbs.db
 _*
 *.zip
 electron/releases
-website
+website/dst
 size-plugin.json
 package-lock.json
 .env

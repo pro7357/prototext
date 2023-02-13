@@ -1,0 +1,96 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "Prompts",
+                "style": 7
+              },
+              {
+                "content": "Explain this",
+                "id": "voy33c"
+              },
+              {
+                "content": "Continue",
+                "id": "zwpole"
+              },
+              {
+                "content": "Rephrase this",
+                "id": "o65qgl"
+              },
+              {
+                "content": "Say this in other words",
+                "id": "5yom2f"
+              },
+              {
+                "content": "Summarize the following text in one short sentence",
+                "id": "0nwlha"
+              },
+              {
+                "content": "Recommend me ideas on this topic",
+                "id": "egjfft"
+              },
+              {
+                "content": "Recommend me ideas on this topic in one short sentence",
+                "id": "5ggbt3"
+              },
+              {
+                "content": "Recommend me ideas on this topic in one short sentence",
+                "id": "egjfft"
+              },
+              {
+                "content": "Translate this into English",
+                "id": "3nj9yo"
+              },
+              {
+                "content": "Correct this to standard English",
+                "id": "0byrct"
+              },
+              {
+                "content": "Find semantic repetitions here",
+                "id": "gqbehh"
+              },
+              {
+                "content": "Suggest alternative solutions for",
+                "id": "nzd4p7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 3,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": false,
+    "outputDirectory": "/Users/artemy/Desktop/prototext",
+    "outputFilename": "",
+    "isSchematicPreview": false
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

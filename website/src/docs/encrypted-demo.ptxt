@@ -1,0 +1,56 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "uztyax",
+                "style": 7,
+                "content": "7e4c83c8574d3f48e449eaf2e5"
+              },
+              {
+                "id": "rabzav",
+                "content": "7e18c2cf46527e5af20cf2e9b17d50c4b12e3aa099e980eac0efefbd4fee8ff7049ef593a14e98392d1012d73a9c53fa9525fbd7246f29604f3954c2ac4267f401"
+              },
+              {
+                "content": "0918cfda424a7a5da44df9f2a13e09d4ba263aba90e790e0c3",
+                "id": "ow7brt"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 1,
+    "allowLocales": false,
+    "allowBlockStyles": false,
+    "allowMergePages": true,
+    "isSchematicPreview": false
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": {
+    "controlHash": "fa8c6ce26bce968e7af2cf808fff45a2391d2e4961f22e499c6606807412b234"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "9pru05",
+        "content": [
+          {
+            "id": "qx47jc",
+            "content": [
+              {
+                "content": "Blocks",
+                "id": "l57zzv",
+                "style": 7
+              },
+              {
+                "content": "Write down your raw thoughts as small content blocks to find a structure and set priorities.",
+                "id": "grflt4",
+                "style": 6
+              },
+              {
+                "content": "ProtoText provides a minimalistic interface to create, style and move blocks between pages by using intuitive keyboard shortcuts.",
+                "id": "gaelkf"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "8doior",
+        "content": [
+          {
+            "id": "yimeik",
+            "content": [
+              {
+                "content": "Links",
+                "id": "zkb5do",
+                "style": 7
+              },
+              {
+                "content": "Connect blocks, pages, and documents into an information network. Filter content by text or tags.",
+                "id": "4jfobs",
+                "style": 6
+              },
+              {
+                "content": "The magic of Zettelkasten starts after you enter \"@\"\nin an empty block.",
+                "id": "ybll2w"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "content": "AI",
+                "id": "zlm1x1",
+                "style": 7
+              },
+              {
+                "content": "Ask for ChatGPT.\nApply tasks to your content.",
+                "id": "gjtrb9",
+                "style": 6
+              },
+              {
+                "content": "Use the Internal Links feature to give AI large and complex tasks 👍\nA tutorial video is coming soon...",
+                "id": "nr619p"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4jrle1",
+        "content": [
+          {
+            "id": "0a2le0",
+            "content": [
+              {
+                "content": "Translation",
+                "id": "v30yw4"
+              },
+              {
+                "content": "Translate content into any languages without losing connection with the original text blocks.",
+                "id": "5hagwm",
+                "style": 6
+              },
+              {
+                "content": "All pages of your content can be localized synchronously in a special app mode. You can see it in the screenshot below.",
+                "id": "i4483c"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2rau5m",
+        "content": [
+          {
+            "id": "fhcfry",
+            "content": [
+              {
+                "content": "Presentation",
+                "id": "0ljsrp",
+                "style": 7
+              },
+              {
+                "content": "Present content blocks as full-screen slides and switch them using the arrow keys.",
+                "id": "0wba5e",
+                "style": 6
+              },
+              {
+                "content": "Use the \"Internal Links\" and \"Tags\" features to create multiple presentations for different purposes and viewers.",
+                "id": "xff2i8"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lxu5zx",
+        "content": [
+          {
+            "id": "8rv9wd",
+            "content": [
+              {
+                "content": "Export",
+                "id": "6ypd6f",
+                "style": 7
+              },
+              {
+                "content": "Export data\nkeeping semantic formatting.",
+                "id": "2yx48r",
+                "style": 6
+              },
+              {
+                "content": "The \"Proto\" prefix in the app name means the beginning stage of content production. The text you are reading here was exported from a ProtoText document.",
+                "id": "px3qh9"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "j5k0pi",
+        "content": [
+          {
+            "id": "ofrcj6",
+            "content": [
+              {
+                "content": "Protection",
+                "id": "n9z5dn",
+                "style": 7
+              },
+              {
+                "content": "Create secret encrypted documents.",
+                "id": "vw653o",
+                "style": 6
+              },
+              {
+                "content": "But remember that if you forget the secret phrase, there is no way to recover the data. ⚠️",
+                "id": "uk0rr1"
+              },
+              {
+                "content": "If you are a serious programmer or an ethical hacker, please try to hack the demo file \"https://prototext.app/docs/encrypted-demo.ptxt\" and explain how this is possible. I promise the first person to send $💯 in BTC.",
+                "id": "n690r8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 600,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 1,
+    "allowLocales": false,
+    "allowBlockStyles": false,
+    "allowMergePages": true,
+    "outputDirectory": "/Users/artemy/Documents/Projects/prototext/website/src/pages/Home/components/data",
+    "outputFilename": "features",
+    "isSchematicPreview": false
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}
