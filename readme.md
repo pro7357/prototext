@@ -1,30 +1,54 @@
+
+
+![App. Screenshot from MacOS](https://bitbucket.org/svgsprite/prototext/src/master/website/src/assets/screenshots/promo)
+
+
 ## Installation
 
+#### Get it
+
 ```sh
-# get it
 git clone git@bitbucket.org:svgsprite/prototext.git
 cd prototext
-
-# install dependencies
-npm install && cd electron npm install
-
-# start dev on localhost:3333
-task up
-task logapp
-
-# bild JS and run electron
-task app
-
-# build for MacOS [Window, Linux]
-task bapp
-task bwapp
-task blapp
-
-# see more commands in the Taskfile.yml
 ```
 
-Please note: This codebase was created in a macOS environment. There may be some issues in other environments.
 
+#### Install dependencies
+
+```sh
+npm install && cd electron npm install
+```
+
+
+#### Check the availability of the necessary dev tools on your computer
+- [Go lang to use Taskfile](https://go.dev/doc/install)
+- [Taskfile](https://taskfile.dev/)
+- [NodeJS](https://nodejs.org/en/download/releases/)
+
+
+#### Start development on localhost:3333
+
+```sh
+task up
+task logApp
+```
+
+
+#### Build React App & start Electron
+
+```sh
+task app
+```
+
+
+#### See more commands in the Taskfile.yml
+
+```sh
+task
+```
+
+
+>Please note: This codebase was created in a MacOS environment. There may be some issues in other environments.
 
 ## License
 
