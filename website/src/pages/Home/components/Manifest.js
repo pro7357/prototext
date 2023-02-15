@@ -38,7 +38,7 @@ export default props => {
 	return (
 		<Section className={classes.root} isCentred id='manifest'>
 
-			<Heading>Manifest</Heading>
+			<Heading isHuge isWarm>Manifest</Heading>
 
 			<div className={classes.cards}>
 				{data.map(item => {
@@ -72,6 +72,7 @@ const useStyles = createUseStyles(theme => ({
 
 	card: {
 		backgroundColor: theme.background.defualt,
+		color: theme.text.active,
 		boxShadow: `0 5px 48px ${theme.shadow.default}`,
 		padding: [40,30],
 		borderRadius: theme.round,

@@ -47,7 +47,10 @@ const useStyles = createUseStyles(theme => ({
 	huge: {
 		textTransform: 'uppercase',
 		letterSpacing: '0.1em',
-		fontSize: '3.3em'
+		fontSize: '2.5em',
+		[theme.desktop]: {
+			fontSize: '3.3em',
+		}
 	},
 
 	colorful: {

@@ -118,8 +118,8 @@ tasks:
   publishApp:
     desc: Send releases to the server via SSH & update the public app info.
     cmds:
-      - scp -r {{.PUBLIC_RELEASES_DIR}}/* $SSH_USER@$SSH_IP:~/$SSH_DIR/releases
-      - scp -r {{.PUBLIC_APP_INFO_FILE}} $SSH_USER@$SSH_IP:~/$SSH_DIR/
+      - rsync -ru --size-only -P {{.PUBLIC_RELEASES_DIR}}/* $SSH_USER@$SSH_IP:~/$SSH_DIR/releases
+      - rsync -ru --size-only -P {{.PUBLIC_APP_INFO_FILE}} $SSH_USER@$SSH_IP:~/$SSH_DIR/
 
 
 
@@ -150,8 +150,6 @@ tasks:
 
 
   publishSite:
-    desc: Publish Website.
+    desc: Publish Website. # Send all website files from "dst" dir to the server via SSH.
     cmds:
-
-      # Send all website files in the "dst" folder to the server via SSH.
-      - scp -r {{.PUBLIC_WEBSITE_DIR}}/* $SSH_USER@$SSH_IP:~/$SSH_DIR/
+      - rsync -ru --size-only -P {{.PUBLIC_WEBSITE_DIR}}/* $SSH_USER@$SSH_IP:~/$SSH_DIR/

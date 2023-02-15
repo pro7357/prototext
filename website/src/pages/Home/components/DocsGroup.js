@@ -15,7 +15,8 @@ export default props => {
 		title,
 		data,
 		isNarrow,
-		isDownloadable
+		isDownloadable,
+		renderExtraItem
 	} = props
 
 	const classes = useStyles()
@@ -119,6 +120,12 @@ export default props => {
 
 	}
 
+	if(typeof renderExtraItem === 'function') {
+		finishExample(
+			renderExtraItem()
+		)
+	}
+
 	return (
 		<Section className={classes.root} isCentred isWide isVFlex>
 
@@ -138,7 +145,13 @@ export default props => {
 const useStyles = createUseStyles(theme => ({
 
 	root: {
-		gap: 60
+		gap: 60,
+		paddingLeft: 0,
+		paddingRight: 0,
+		[theme.desktop]: {
+			paddingLeft: 24,
+			paddingRight: 24,
+		}
 	},
 
 	examples: {
@@ -148,15 +161,21 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	example: {
-		width: 'calc((100% / 2) - 48px / 2)',
 		display: 'flex',
+		width: '100%',
 		flexDirection: 'column',
 		gap: 20,
 		marginBottom: 16,
+		[theme.desktop]: {
+			width: 'calc((100% / 2) - 48px / 2)',
+		}
 	},
 
 	narrowExample: {
-		width: 'calc((100% / 4) - 48px * 3 / 4)',
+		width: '100%',
+		[theme.desktop]: {
+			width: 'calc((100% / 4) - 48px * 3 / 4)',
+		}
 	},
 
 	exampleHeading: {
@@ -210,4 +229,4 @@ const useStyles = createUseStyles(theme => ({
 		textAlign: 'left'
 	}
 
-}),{name: 'examples-group'})
+}),{name: 'docs-group'})

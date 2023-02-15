@@ -2,6 +2,8 @@
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
+import IconExternalLink from 'app/components/shared/Icons/IconExternalLink'
+
 
 export default props => {
 
@@ -12,6 +14,7 @@ export default props => {
 		isInline,
 		isNotable,
 		isButton,
+		// isExternal,
 		className,
 	} = props
 
@@ -30,6 +33,7 @@ export default props => {
 			)}
 		>
 			{children}
+			{/* {isExternal && <IconExternalLink/>} */}
 		</a>
 	)
 }

@@ -25,9 +25,10 @@ export default props => {
 			side='right'
 			footerContent={<>
 				{(localizationMode) && (
-					<>
+					<div>
 						{!localeConfigMode && (
 							<TextButton
+
 								onClick={() => {
 									switchEditorMode('localeConfig',true)
 								}}
@@ -45,7 +46,7 @@ export default props => {
 								Finish locale editing
 							</TextButton>
 						)}
-					</>
+					</div>
 				)}
 			</>}
 		/>

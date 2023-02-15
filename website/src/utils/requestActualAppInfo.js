@@ -20,7 +20,7 @@ export default async props => {
 	let response
 
 	try {
-		let response = await fetch(url, options)
+		response = await fetch(url, options)
 		response = await response.json()
 	} catch (err) {
 		console.log(err.message)

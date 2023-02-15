@@ -51,7 +51,7 @@ export default props => {
 		let fakeGhost = node.cloneNode(true)
 
 		if(isLocalizationView && fakeGhost) {
-			let selectNode = fakeGhost.children[0].children[0]
+			let selectNode = fakeGhost.children[0].children[1]
 			if(selectNode) {
 				selectNode.value = localeCode
 			}

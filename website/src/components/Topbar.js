@@ -54,12 +54,12 @@ export default connect(mapStateToProps)(props => {
 		>
 
 			<div className={classes.leftSide}>
-				<b>ProtoText.app</b>
-				<Link isInternal isButton url='#downloads'>Downloads</Link>
+				<Link isInternal isButton url='#app'><b>ProtoText.app</b></Link>
 				<Link isInternal isButton url='#features'>Features</Link>
-				<Link isInternal isButton url='#examples'>Examples</Link>
+				<Link isInternal isButton url='#use-cases'>Use cases</Link>
 				<Link isInternal isButton url='#manifest'>Prices</Link>
-				<Link isButton url='https://discord.com/channels/1075098555846504539/1075100646979686510'>Discord</Link>
+				<Link isInternal isButton url='#shared-documents'>Shared docs</Link>
+				<Link isExternal isButton url='https://discord.com/channels/1075098555846504539'>Discord</Link>
 			</div>
 
 			<div className={classes.rightSide}>

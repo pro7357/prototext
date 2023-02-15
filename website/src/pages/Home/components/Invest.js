@@ -118,11 +118,6 @@ export default props => {
 				</Tags>
 			</UIBlock>
 
-
-			<div className={classes.thk}>
-				<b>Thank you</b> and best of luck with your journey of self-discovery!
-			</div>
-
 		</Section>
 	)
 }
@@ -131,7 +126,8 @@ export default props => {
 const useStyles = createUseStyles(theme => ({
 
 	root: {
-		gap: 24
+		gap: 24,
+		// alignItems: 'start'
 	},
 
 	uiBlock: {
@@ -178,11 +174,6 @@ const useStyles = createUseStyles(theme => ({
 			}
 		}
 	},
-
-	thk: {
-		marginTop: 4,
-		textAlign: 'left'
-	}
 
 
 }),{name: 'invest'})

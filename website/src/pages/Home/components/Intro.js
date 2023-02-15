@@ -24,7 +24,7 @@ export default connect(mapStateToProps)(props => {
 	const classes = useStyles()
 
 	return (
-		<Section className={classes.root} isCentred id='downloads'>
+		<Section className={classes.root} isCentred id='app'>
 
 			<div className={classes.appIcon}>
 				<img

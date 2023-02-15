@@ -47,7 +47,6 @@ const useStyles = createUseStyles(theme => ({
 
 	compact: {
 		padding: 0,
-		paddingBottom: 0,
 	},
 
 	wide: {

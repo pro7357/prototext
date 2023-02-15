@@ -13,9 +13,7 @@ export default props => {
 		<div className={classes.root}>
 			<Topbar/>
 			{props.children}
-			<Section>
 				<Footer/>
-			</Section>
 		</div>
 	)
 

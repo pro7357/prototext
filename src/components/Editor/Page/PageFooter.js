@@ -99,7 +99,7 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	deleteButton: {
-		minWidth: '33%',
+		// minWidth: '33%',
 	},
 
 	rigthDeleteButton: {
