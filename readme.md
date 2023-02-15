@@ -1,6 +1,6 @@
 
 
-![App. Screenshot from MacOS](https://bitbucket.org/svgsprite/prototext/src/master/website/src/assets/screenshots/promo/1.jpg)
+![App. Screenshot from MacOS](https://prototext.app/assets/screenshots/promo/1.jpg)
 
 
 ## Installation
