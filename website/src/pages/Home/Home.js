@@ -2,9 +2,11 @@
 import Intro from './components/Intro'
 import Download from './components/Download'
 import Features from './components/Features'
-import UseCases from './components/UseCases'
+import Examples from './components/Examples'
 import Manifest from './components/Manifest'
 import Invest from './components/Invest'
+
+import publicData from './components/data/public'
 
 export default props => {
 
@@ -17,11 +19,11 @@ export default props => {
 
 			<Features/>
 
-			<UseCases/>
+			<Examples publicData={publicData}/>
 
 			<Manifest/>
 
-			<Invest/>
+			<Invest publicData={publicData}/>
 
 		</>
 	)

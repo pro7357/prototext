@@ -5,13 +5,20 @@ import clsx from 'clsx'
 
 import Section from 'components/Section'
 import Heading from 'components/Heading'
+import ExamplesGroup from './ExamplesGroup'
 
 
 export default connect(mapStateToProps)(props => {
 
 	const {
-		theme
+		theme,
+		publicData
 	} = props
+
+	const rwExamples = publicData[3]
+	const templates = publicData[4]
+	const notes = publicData[5]
+	const dir = 'docs'
 
 	const classes = useStyles()
 
@@ -20,16 +27,26 @@ export default connect(mapStateToProps)(props => {
 
 			<Heading isHuge isWarm>Examples</Heading>
 
-			{/* <Heading>Real-World use cases</Heading>
+			<ExamplesGroup
+				title='Useful notes'
+				data={notes}
+				dir={dir+'/notes'}
+				isDownloadable
+			/>
 
-			<h2>“The Second Brain”</h2>
-			<h2>Writing a large multilingual text</h2>
-			<h2>Making a personal dynamic visual Portfolio</h2>
-			<h2>Creating a secret document</h2>
-			<h2>Project workflow or ToDo list</h2>
-			<h2>Content managment system for developers</h2>
+			{/* <ExamplesGroup
+				title='Real-World Examples'
+				data={rwExamples}
+				dir={dir+'/real-worl-examples'}
+			/> */}
 
-			<Heading>Public templates</Heading> */}
+			<ExamplesGroup
+				title='Templates'
+				data={templates}
+				dir={dir+'/templates'}
+				isNarrow
+				isDownloadable
+			/>
 
 		</Section>
 	)

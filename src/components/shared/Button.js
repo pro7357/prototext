@@ -12,6 +12,7 @@ export default props => {
 		isNotable,   // blue
 		isDangerous, // red
 		isLarge,
+		isCompact,
 		children,
 		url,
 		className
@@ -27,6 +28,7 @@ export default props => {
 				isNotable && classes.notable,
 				isDangerous && classes.dangerous,
 				isLarge && classes.large,
+				isCompact && classes.compact,
 				className
 			)}
 			onClick={e => {
@@ -106,6 +108,11 @@ const useStyles = createUseStyles(theme => ({
 
 	large: {
 		padding: 10,
+	},
+
+	compact: {
+		display: 'inline-block',
+		width: 'auto'
 	}
 
 }),{name: 'btn'})

@@ -10,9 +10,16 @@ import Textarea from 'app/components/shared/Textarea'
 import Tags from 'app/components/shared/Tags'
 import Tag from 'app/components/shared/Tag'
 
-import data from './data/public'
 
 export default props => {
+
+	const {
+		publicData
+	} = props
+
+	const goals = publicData[0]
+	const completedTasks = publicData[1]
+	const expanses = publicData[2]
 
 	const coins = [
 		{
@@ -62,7 +69,7 @@ export default props => {
 				className={classes.uiBlock}
 			>
 				<Tags>
-					{data[0].map((goal, goalIndex) => {
+					{goals.map((goal, goalIndex) => {
 						if(goalIndex === 0) {
 							return null
 						}
@@ -80,7 +87,7 @@ export default props => {
 				className={clsx(classes.uiBlock, classes.completedTaskTags)}
 			>
 				<Tags>
-					{data[1].map((task, taskIndex) => {
+					{completedTasks.map((task, taskIndex) => {
 						if(taskIndex === 0) {
 							return null
 						}
@@ -98,13 +105,13 @@ export default props => {
 				className={clsx(classes.uiBlock, classes.expansesTags)}
 			>
 				<Tags>
-					{data[2].map((task, taskIndex) => {
-						if(taskIndex === 0) {
+					{expanses.map((expanse, expanseIndex) => {
+						if(expanseIndex === 0) {
 							return null
 						}
 						return (
 							<Tag isStatic>
-								{task.v}
+								{expanse.v}
 							</Tag>
 						)
 					})}

@@ -60,7 +60,8 @@ const useStyles = createUseStyles(theme => ({
 
 	flex: {
 		display: 'flex',
-		gap: 16
+		gap: 16,
+		alignItems: 'center'
 	},
 
 	hFlex: {
