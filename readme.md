@@ -23,6 +23,9 @@ task blapp
 # see more commands in the Taskfile.yml
 ```
 
+Please note: This codebase was created in a macOS environment. There may be some issues in other environments.
+
+
 ## License
 
 CC BY-NC

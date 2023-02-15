@@ -18,7 +18,9 @@ export default connect(mapStateToProps)(props => {
 	return (
 		<Section className={classes.root} isCentred isWide>
 
-			<Heading isHuge isWarm>Real-World<br/>Examples</Heading>
+			<Heading isHuge isWarm>Examples</Heading>
+
+			{/* <Heading>Real-World use cases</Heading>
 
 			<h2>“The Second Brain”</h2>
 			<h2>Writing a large multilingual text</h2>
@@ -26,6 +28,8 @@ export default connect(mapStateToProps)(props => {
 			<h2>Creating a secret document</h2>
 			<h2>Project workflow or ToDo list</h2>
 			<h2>Content managment system for developers</h2>
+
+			<Heading>Public templates</Heading> */}
 
 		</Section>
 	)

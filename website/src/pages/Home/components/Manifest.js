@@ -4,6 +4,7 @@ import clsx from 'clsx'
 
 import Section from 'components/Section'
 import Heading from 'components/Heading'
+import Link from 'components/Link'
 
 
 export default props => {
@@ -35,7 +36,7 @@ export default props => {
 	]
 
 	return (
-		<Section className={classes.root} isCentred>
+		<Section className={classes.root} isCentred id='manifest'>
 
 			<Heading>Manifest</Heading>
 
@@ -74,7 +75,10 @@ const useStyles = createUseStyles(theme => ({
 		boxShadow: `0 5px 48px ${theme.shadow.default}`,
 		padding: [40,30],
 		borderRadius: theme.round,
-		flexBasis: '20%',
+		flexBasis: '100%',
+		[theme.desktop]: {
+			flexBasis: '20%',
+		}
 	}
 
 }),{name: 'manifest'})

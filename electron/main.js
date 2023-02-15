@@ -6,6 +6,8 @@ const path = require('path')
 const os = require('os')
 const isMac = process.platform === 'darwin'
 
+const packageJson = require('./package.json')
+
 const {
 	defOutputDirectory
 } = require('./constants/index')
@@ -59,7 +61,7 @@ app.on('open-file', (event, filePath) => {
 
 app.setAboutPanelOptions({
     applicationName: 'ProtoText',
-    applicationVersion: '1.7.0',
+    applicationVersion: packageJson.version,
     version: (new Date()).toISOString().slice(0,10),
     credits: "letter2artemy@gmail.com",
     copyright: false

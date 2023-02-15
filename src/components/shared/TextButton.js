@@ -64,8 +64,20 @@ const useStyles = createUseStyles(theme => ({
 		cursor: 'pointer',
 		fontSize: 16,
 		whiteSpace: 'nowrap',
+		position: 'relative',
+		display: 'table',
 		'&:hover': {
-			textDecoration: 'underline'
+			color: theme.textButton.notable.color,
+			'&:before': {
+				content: '" "',
+				position: 'absolute',
+				zIndex: 0,
+				display: 'block',
+				width: '100%',
+				bottom: 0,
+				left: 0,
+				borderBottom: `1px solid ${theme.textButton.notable.color}`,
+			},
 		}
 	},
 

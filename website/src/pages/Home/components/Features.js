@@ -21,7 +21,7 @@ export default connect(mapStateToProps)(props => {
 	const classes = useStyles()
 
 	return (
-		<Section className={classes.root} isCentred isWide>
+		<Section className={classes.root} isCentred isWide id='features'>
 
 			<Heading className={classes.heading} isHuge isCold>Features</Heading>
 
@@ -100,7 +100,10 @@ const useStyles = createUseStyles(theme => ({
 		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
-		gap: 180,
+		gap: 80,
+		[theme.desktop]: {
+			gap: 180,
+		}
 	},
 
 	feature: {

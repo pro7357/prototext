@@ -8,6 +8,7 @@ export default props => {
 	const {
 		id,
 		onClick,
+		isDisabled,
 		isNotable,   // blue
 		isDangerous, // red
 		isLarge,
@@ -30,7 +31,7 @@ export default props => {
 			)}
 			onClick={e => {
 
-				if(!onClick) return false
+				if(!onClick || isDisabled) return false
 
 				if(isDangerous) {
 					if (window.confirm('Do you really want to do it?')) {
@@ -41,7 +42,7 @@ export default props => {
 				onClick(e)
 			}}
 		>
-			{url
+			{(url && !isDisabled)
 				? (
 					<a className={classes.link} href={url} target='_blank'>
 						{children}

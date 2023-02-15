@@ -68,7 +68,9 @@ const collectContentRecursivelly = props => {
 			targetLocale.content.reduce((blocks, localizedBlock, blockIndex) => {
 
 				const originalBlock = originalLocale.content[blockIndex]
-				const normalizedBlock = originalBlock
+				const normalizedBlock = {
+					...originalBlock
+				}
 
 				const style = normalizedBlock.style
 				const link = normalizedBlock.link

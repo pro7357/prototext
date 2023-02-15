@@ -1,6 +1,9 @@
 
 const path = require('path')
 const webpack = require('webpack')
+const packageJson = require('../package.json')
+
+const { APP_VERSION } = process.env
 
 module.exports = (config, isBuild) => {
 
@@ -16,6 +19,7 @@ module.exports = (config, isBuild) => {
 	config.plugins.push(
 		new webpack.DefinePlugin({
 			isBuild,
+			APP_VERSION: JSON.stringify(packageJson.version)
 		})
 	)
 

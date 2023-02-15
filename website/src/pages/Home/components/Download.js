@@ -2,11 +2,16 @@
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 import { connect } from 'react-redux'
-import { useState } from 'preact/hooks'
+import { useEffect, useState } from 'preact/hooks'
 
 import Modal from 'components/Modal'
 import Section from 'components/Section'
 import Button from 'app/components/shared/Button'
+import Link from 'components/Link'
+
+import requestActualAppInfo from 'utils/requestActualAppInfo'
+
+
 
 export default connect(mapStateToProps)(props => {
 
@@ -14,11 +19,25 @@ export default connect(mapStateToProps)(props => {
 		theme
 	} = props
 
+	useEffect(async () => {
+		let response = await requestActualAppInfo()
+		console.log('requestActualAppInfo response',response)
+		if(!response) {
+			alert('Unable to get the actual app version')
+			return
+		}
+		setVersions(response.versions)
+	}, [])
+
 	let isDark = theme === 0
 
 	const [modalContentIndex, setModalContentIndex] = useState(false)
 	const openModal = (index) => setModalContentIndex(index)
 	const closeModal = () => setModalContentIndex(false)
+
+	const [versions, setVersions] = useState()
+
+	let actualVersion = versions ? versions.actual : APP_VERSION
 
 
 	const classes = useStyles()
@@ -28,16 +47,16 @@ export default connect(mapStateToProps)(props => {
 
 			<Button
 				className={classes.buildBtn}
-				url='/releases/ProtoText-darwin-x64/ProtoText.zip'
+				url={`/releases/ProtoText-MacOS-Intel-v${actualVersion}.zip`}
 				isNotable
 				isLarge
 			>
-				Download for Mac
+				Download for Mac Intel
 			</Button>
 
 			<Button
 				className={classes.buildBtn}
-				url='/releases/ProtoText-win32-x64/ProtoText.zip'
+				url={`/releases/ProtoText-Windows-v${actualVersion}.zip`}
 				isNotable
 				isLarge
 			>
@@ -85,7 +104,50 @@ export default connect(mapStateToProps)(props => {
 
 				{modalContentIndex === 0 && (
 					<div className={classes.installationGuideInModal}>
-						Coming soon...
+
+						<div className={classes.authorsNote}>
+
+							<h3>Dear user,</h3>
+
+							<ol>
+								<li><p>I'm an undefined developer without certifications from Apple or Microsoft. I offer you my open-source app to check and install. Your operating system may block it for security reasons, but rest assured that the app is safe. You have the option to scan it with an antivirus or build your own version from the source code.</p></li>
+								<li><p>The app is already multifunctional but still very young. This means that you may encounter some bugs. Please send your bug reports to this <Link url='https://discord.com/channels/1075098555846504539/1075100646979686510' isNotable isInline>Discord channel</Link>.</p></li>
+								<li><p>ProtoText is connected to the official OpenAI API. This means that you will need an official <Link url='https://platform.openai.com/account/api-keys' isNotable isInline>API key</Link> for ChatGPT.</p></li>
+							</ol>
+
+
+						</div>
+
+						<div className={classes.macNote}>
+
+							<h3>MacOS</h3>
+
+							<ol>
+								<li><p>Download</p></li>
+								<li><p>Unpack it anywhere</p></li>
+								<li><p>Open the PtotoText.app file</p></li>
+							</ol>
+
+							<p>How to solve the problem with an unidentified developer?</p>
+
+							<p>
+								<Link isNotable url='https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac'>Official Apple support page</Link>
+							</p>
+
+						</div>
+
+						<div className={classes.winNote}>
+
+							<h3>Windows</h3>
+
+							<ol>
+								<li><p>Download</p></li>
+								<li><p>Unpack it anywhere</p></li>
+								<li><p>Open the PtotoText.exe file</p></li>
+							</ol>
+
+						</div>
+
 					</div>
 				)}
 
@@ -117,27 +179,30 @@ const useStyles = createUseStyles(theme => ({
 		gap: 16,
 		flexWrap: 'wrap',
 		paddingTop: 4,
-		// paddingBottom: 0
 	},
 
 	buildBtn: {
-		// flex: 1,
-		width: 'calc(50% - 16px)'
+		[theme.desktop]: {
+			width: 'calc(50% - 16px)'
+		}
 	},
 
 	bitbucketBtn: {
-		// flex: 1,
-		width: 'calc(100% / 3 - 16px)'
+		[theme.desktop]: {
+			width: 'calc(100% / 3 - 16px)'
+		}
 	},
 
 	usageGuideBtn: {
-		// flex: 1,
-		width: 'calc(100% / 3 - 16px)'
+		[theme.desktop]: {
+			width: 'calc(100% / 3 - 16px)'
+		}
 	},
 
 	intallationGuideBtn: {
-		// flex: 1,
-		width: 'calc(100% / 3 - 16px)'
+		[theme.desktop]: {
+			width: 'calc(100% / 3 - 16px)'
+		}
 	},
 
 	usageGuideInModal: {
@@ -148,7 +213,33 @@ const useStyles = createUseStyles(theme => ({
 		}
 	},
 
+	installationGuideInModal: {
+		display: 'flex',
+		gap: 24,
+		width: '100%',
+		flexWrap: 'wrap',
+		'& > div': {
+			width: '100%',
+		}
+	},
 
+	authorsNote: {
+		[theme.desktop]: {
+			flexBasis: '50%',
+		}
+	},
+
+	macNote: {
+		[theme.desktop]: {
+			flexBasis: 'calc(25% - 24px)',
+		}
+	},
+
+	winNote: {
+		[theme.desktop]: {
+			flexBasis: 'calc(25% - 24px)',
+		}
+	}
 
 
 }),{name: 'download'})

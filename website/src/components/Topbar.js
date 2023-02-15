@@ -5,6 +5,7 @@ import clsx from 'clsx'
 
 import { toggleTheme } from 'theme/theme.actions'
 import TextButton from 'app/components/shared/TextButton'
+import Link from './Link'
 import { useEffect, useRef } from 'preact/hooks'
 
 let scrolled
@@ -52,11 +53,20 @@ export default connect(mapStateToProps)(props => {
 			}}
 		>
 
-			<b>ProtoText.app</b>
+			<div className={classes.leftSide}>
+				<b>ProtoText.app</b>
+				<Link isInternal isButton url='#downloads'>Downloads</Link>
+				<Link isInternal isButton url='#features'>Features</Link>
+				<Link isInternal isButton url='#examples'>Examples</Link>
+				<Link isInternal isButton url='#manifest'>Prices</Link>
+				<Link isButton url='https://discord.com/channels/1075098555846504539/1075100646979686510'>Discord</Link>
+			</div>
 
-			<TextButton onClick={toggleTheme} >
-				{theme?'Dark':'Light'} theme
-			</TextButton>
+			<div className={classes.rightSide}>
+				<TextButton onClick={toggleTheme}>
+					{theme?'Dark':'Light'} theme
+				</TextButton>
+			</div>
 
 		</div>
 	)
@@ -75,11 +85,14 @@ const useStyles = createUseStyles(theme => ({
 		width: '100%',
 		padding: [24,24],
 		display: 'flex',
+		flexWrap: 'wrap',
+		gap: 8,
 		alignItems: 'center',
 		justifyContent: 'space-between',
 		backgroundColor: theme.background.default,
 		position: 'fixed',
 		zIndex: 2,
+		fontSize: 16,
 		top: 0,
 		left: 0,
 		right: 0,
@@ -87,13 +100,29 @@ const useStyles = createUseStyles(theme => ({
 		transition: `padding 500ms ease`
 	},
 
+	leftSide: {
+		display: 'none',
+		[theme.desktop]: {
+			display: 'flex',
+			gap: 16,
+			alignItems: 'center',
+			flexWrap: 'wrap',
+		}
+	},
+
+	rightSide: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		width: '100%',
+		[theme.desktop]: {
+			width: 'auto'
+		}
+	},
+
 	compact: {
 		padding: [8,24]
 	},
-
-	appIcon: {
-		width: 48
-	}
 
 
 }),{name: 'header'})

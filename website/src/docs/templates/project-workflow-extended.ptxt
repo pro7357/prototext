@@ -314,8 +314,8 @@
     "allowLocales": true,
     "allowBlockStyles": true,
     "allowMergePages": true,
-    "outputDirectory": "/Users/artemy/Documents/Projects/csapp/frontend/apps/admin/pages/Frontsite/sections/data",
-    "outputFilename": "features",
+    "outputDirectory": "",
+    "outputFilename": "",
     "isSchematicPreview": true
   },
   "presenter": {

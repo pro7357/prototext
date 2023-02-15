@@ -1,0 +1,310 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "ff0ko5",
+            "content": [
+              {
+                "content": "Cognitive biases",
+                "id": "9omhtk",
+                "style": 7
+              },
+              {
+                "content": "When there is a lot of information",
+                "id": "yqmxt3",
+                "style": 6
+              },
+              {
+                "content": "Tend to notice more what we previously remembered or frequently encountered.",
+                "id": "gx4fyj"
+              },
+              {
+                "content": "Weird, funny, visually appealing, anthropomorphic things tend to attract attention more than the familiar, unfunny ones.",
+                "id": "pui32n"
+              },
+              {
+                "content": "We notice when something has changed.",
+                "id": "g7697t"
+              },
+              {
+                "content": "Details that confirm existing beliefs tend to be appealing.",
+                "id": "ijwl1k"
+              },
+              {
+                "content": "We tend to notice flaws in others much better than in ourselves.",
+                "id": "u34m6g"
+              },
+              {
+                "content": "When there is not enough meaning",
+                "id": "fshgwz",
+                "style": 6
+              },
+              {
+                "content": "We discover stories and patterns even in scarce data.",
+                "id": "fio49j"
+              },
+              {
+                "content": "We fill in gaps in information with familiar features from stereotypes, generalizations, and past experience.",
+                "id": "w05lfp"
+              },
+              {
+                "content": "We value familiar, likable things and people more than unfamiliar, unlikable ones.",
+                "id": "2lt5c2"
+              },
+              {
+                "content": "We simplify numbers and probabilities to make them easier to think about.",
+                "id": "p7vie8"
+              },
+              {
+                "content": "We think we know what others are thinking.",
+                "id": "by8ame"
+              },
+              {
+                "content": "We project our current frame of mind onto the past and future.",
+                "id": "zu3dro"
+              },
+              {
+                "content": "When we react quickly",
+                "id": "z5r6lu",
+                "style": 6
+              },
+              {
+                "content": "In order to act, we need to be confident in our ability to make a change and feel the importance of our actions.",
+                "id": "gqkfr2"
+              },
+              {
+                "content": "Tend to prefer focusing on immediate and tangible outcomes rather than long-term and abstract result.",
+                "id": "8nxso2"
+              },
+              {
+                "content": "Prefer to complete what we have already invested time and effort in.",
+                "id": "oq0zfx"
+              },
+              {
+                "content": "We tend to preserve personal autonomy and current status in a group by avoiding irrevocable decisions.",
+                "id": "oilhsm"
+              },
+              {
+                "content": "We tend to prefer simple and straightforward options over more complex and ambiguous ones.",
+                "id": "56m3ax"
+              },
+              {
+                "content": "When we remember and recall",
+                "id": "buaifo",
+                "style": 6
+              },
+              {
+                "content": "We tend to edit and enhance memories after events have taken place.",
+                "id": "ff5iou"
+              },
+              {
+                "content": "We tend to disregard specifics in order to construct and solidify generalizations.",
+                "id": "yhium2"
+              },
+              {
+                "content": "We simplify events and lists to individual key moments and elements.",
+                "id": "7zldso"
+              },
+              {
+                "content": "We store memories differently depending on the context in which the experience was acquired.",
+                "id": "ei3dqb"
+              },
+              {
+                "content": "Sources",
+                "id": "r48ocr",
+                "style": 6
+              },
+              {
+                "content": "https://en.wikipedia.org/wiki/List_of_cognitive_biases",
+                "id": "1yd7kr",
+                "style": 8
+              },
+              {
+                "content": "https://betterhumans.pub/cognitive-bias-cheat-sheet-55a472476b18",
+                "id": "quljzn",
+                "style": 8
+              },
+              {
+                "content": "https://en.wikipedia.org/wiki/Cognitive_bias#/media/File:Cognitive_bias_codex_en.svg",
+                "id": "8eudwt",
+                "style": 8
+              },
+              {
+                "content": "Books",
+                "id": "bhtn1j",
+                "style": 6
+              },
+              {
+                "content": "«Thinking, Fast and Slow» Daniel Kahneman",
+                "id": "p6vs1u"
+              }
+            ]
+          },
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "Когнитивные искажения"
+              },
+              {
+                "content": "Когда много информации",
+                "id": "gf9bh4"
+              },
+              {
+                "content": "Охотнее замечаем то, что ранее запоминали либо часто встречали.",
+                "id": "dhyxgo"
+              },
+              {
+                "content": "Странные, смешные, внешне привлекательные, антропоморфные вещи привлекают внимание больше, чем привычные, несмешные.",
+                "id": "4hckui"
+              },
+              {
+                "content": "Замечаем, когда что-то изменилось.",
+                "id": "q69mq5"
+              },
+              {
+                "content": "Привлекают частности, подтверждающие существующие убеждения.",
+                "id": "uqxru0"
+              },
+              {
+                "content": "Гораздо лучше замечаем изъяны в других, чем в себе.",
+                "id": "f7t9kc"
+              },
+              {
+                "content": "Когда не хватает смысла",
+                "id": "4kpxjj"
+              },
+              {
+                "content": "Обнаруживаем истории и закономерности даже в скудных данных.",
+                "id": "7y334r"
+              },
+              {
+                "content": "Заполняем пробелы в информации известными признаками из стереотипов, обобщений и прошлого опыта.",
+                "id": "7svys7"
+              },
+              {
+                "content": "Больше ценим знакомые, симпатичные вещи и людей, чем незнакомые, несимпатичные.",
+                "id": "gk60hh"
+              },
+              {
+                "content": "Упрощаем числа и вероятности, чтобы о них было легче думать.",
+                "id": "yzld8k"
+              },
+              {
+                "content": "Думаем, что знаем, о чём думают другие.",
+                "id": "w1r42g"
+              },
+              {
+                "content": "Проецируем наш текущий образ мыслей в прошлое и будущее.",
+                "id": "6deqhx"
+              },
+              {
+                "content": "Когда быстро реагируем",
+                "id": "lqig8k"
+              },
+              {
+                "content": "Чтобы действовать, должны быть уверены в способности что-то изменить и чувствовать важность своих поступков.",
+                "id": "0i0mvd"
+              },
+              {
+                "content": "Предпочитаем фокусироваться на немедленных и близких результатах.",
+                "id": "u4uqq6"
+              },
+              {
+                "content": "Предпочитаем завершать то, во что ранее уже вложили время и усилия.",
+                "id": "0s6hie"
+              },
+              {
+                "content": "Склонны сохранять личную автономию и текущий статус в группе, избегая необратимых решений.",
+                "id": "sbjdbm"
+              },
+              {
+                "content": "Предпочитаем просто выглядящие и однозначные варианты выбора более сложным и неопределённым.",
+                "id": "0iwr3p"
+              },
+              {
+                "content": "Когда запоминаем и вспоминаем",
+                "id": "vaj1kb"
+              },
+              {
+                "content": "Редактируем и усиливаем воспоминания после случившихся событий.",
+                "id": "f4b47e"
+              },
+              {
+                "content": "Отбрасываем частности для построения и закрепления обобщений.",
+                "id": "0ifuvs"
+              },
+              {
+                "content": "Упрощаем события и списки до отдельных ключевых моментов и элементов.",
+                "id": "3ir157"
+              },
+              {
+                "content": "По-разному храним воспоминания в зависимости от ситуации получения опыта.",
+                "id": "sg9rcc"
+              },
+              {
+                "content": "Источники",
+                "id": "2ohkty"
+              },
+              {
+                "content": "https://en.wikipedia.org/wiki/List_of_cognitive_biases",
+                "id": "aepk06",
+                "style": 8
+              },
+              {
+                "content": "https://ezhikov.medium.com/cognitive-bias-cheat-sheet-5bb0664b67b5",
+                "id": "4cil81",
+                "style": 8
+              },
+              {
+                "content": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Cognitive_biases_diagram_RU.png",
+                "id": "mksslk"
+              },
+              {
+                "content": "Книги",
+                "id": "rywz1j"
+              },
+              {
+                "content": "Книга: «Думай медленно. Решай быстро» Даниэль Канеман",
+                "id": "npxaj0",
+                "style": 8
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en",
+      "ru"
+    ],
+    "pageWidth": 700,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 3,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": false,
+    "outputDirectory": "",
+    "outputFilename": "",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": false,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": false
+  },
+  "encryption": null
+}

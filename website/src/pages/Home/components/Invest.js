@@ -137,11 +137,16 @@ const useStyles = createUseStyles(theme => ({
 
 	crypto: {
 		display: 'flex',
+		flexWrap: 'wrap',
+		justifyContent: 'center',
 		gap: 16,
 		width: '100%',
 		'& textarea': {
 			minHeight: '100%',
 			height: 'auto'
+		},
+		[theme.desktop]: {
+			flexWrap: 'nowrap'
 		}
 	},
 
@@ -150,16 +155,20 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	completedTaskTags: {
-		opacity: .55,
-		'&:hover': {
-			opacity: 1
+		[theme.desktop]: {
+			opacity: .55,
+			'&:hover': {
+				opacity: 1
+			}
 		}
 	},
 
 	expansesTags: {
-		opacity: .35,
-		'&:hover': {
-			opacity: 1
+		[theme.desktop]: {
+			opacity: .35,
+			'&:hover': {
+				opacity: 1
+			}
 		}
 	},
 

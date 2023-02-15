@@ -1166,59 +1166,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "84c14c",
-        "content": [
-          {
-            "id": "oexpz4",
-            "content": [
-              {
-                "content": "Media",
-                "id": "1d6o84",
-                "style": 7,
-                "type": {
-                  "isLink": false,
-                  "isTextBlock": true,
-                  "isHeading": true,
-                  "isSubHeading": false,
-                  "isMuted": false,
-                  "isWebLink": false,
-                  "isYouTubeVideo": false,
-                  "isTags": false,
-                  "isAiResponse": false
-                }
-              }
-            ]
-          },
-          {
-            "id": "frqc9o",
-            "content": [
-              {
-                "content": "",
-                "id": "0hi139"
-              }
-            ]
-          },
-          {
-            "id": "t5k3sk",
-            "content": [
-              {
-                "content": "",
-                "id": "vqywjf"
-              }
-            ]
-          },
-          {
-            "id": "m5sq9s",
-            "content": [
-              {
-                "content": "",
-                "id": "wx3nja"
-              }
-            ]
-          }
-        ]
       }
     ],
     "localeOptions": [

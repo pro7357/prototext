@@ -682,7 +682,7 @@
     "allowLocales": true,
     "allowBlockStyles": true,
     "allowMergePages": false,
-    "outputDirectory": "/Users/artemy/Desktop/prototext",
+    "outputDirectory": "",
     "outputFilename": "",
     "isSchematicPreview": true
   },

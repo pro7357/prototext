@@ -4,6 +4,7 @@ import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
 import Section from 'components/Section'
+import Link from 'components/Link'
 import Modal from 'components/Modal'
 import { useState } from 'preact/hooks'
 
@@ -23,7 +24,7 @@ export default connect(mapStateToProps)(props => {
 	const classes = useStyles()
 
 	return (
-		<Section className={classes.root} isCentred>
+		<Section className={classes.root} isCentred id='downloads'>
 
 			<div className={classes.appIcon}>
 				<img
@@ -69,7 +70,7 @@ export default connect(mapStateToProps)(props => {
 
 							</ol>
 							<i className={classes.refs}>
-								Photo by <a href="https://unsplash.com/fr/@jankolar">Jan Antonin Kolar</a> on <a href="https://unsplash.com/photos/lRoX0shwjUQ">Unsplash</a>
+								Photo by <Link isInline url="https://unsplash.com/fr/@jankolar">Jan Antonin Kolar</Link> on <Link isInline url="https://unsplash.com/photos/lRoX0shwjUQ">Unsplash</Link>
 							</i>
 						</div>
 						<div className={classes.secondCol}>
@@ -150,6 +151,7 @@ const useStyles = createUseStyles(theme => ({
 			borderBottom: `1px solid ${theme.text.default}`,
 		},
 		'&:hover': {
+			color: theme.textButton.notable.color,
 			'&:before': {
 				borderColor: theme.textButton.notable.color
 			},
@@ -182,21 +184,6 @@ const useStyles = createUseStyles(theme => ({
 
 	refs: {
 		fontSize: 14,
-		'& a': {
-			textDecoration: 'none',
-			color: 'inherit',
-			position: 'relative',
-			'&:before': {
-				content: '" "',
-				position: 'absolute',
-				zIndex: 0,
-				display: 'block',
-				width: '100%',
-				bottom: 0,
-				left: 0,
-				borderBottom: `1px solid ${theme.text.default}`,
-			},
-		}
 	},
 
 	aboutMeInModal: {

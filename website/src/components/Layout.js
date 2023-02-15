@@ -46,6 +46,12 @@ const useStyles = createUseStyles(theme => ({
 			fontSize: 32
 		},
 
+		h3: {
+			margin: [0,0,12,0],
+			padding: 0,
+			fontSize: 22
+		},
+
 		p: {
 			margin: [0,0,12,0],
 			padding: 0
@@ -70,11 +76,15 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	root: {
+		overflowX: 'hidden',
 		display: 'flex',
 		flexGrow: 1,
 		alignItems: 'center',
 		flexDirection: 'column',
-		gap: 40,
+		gap: 20,
+		[theme.desktop]: {
+			gap: 40,
+		}
 	},
 
 

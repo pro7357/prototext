@@ -1,1 +1,184 @@
-{"editor":{"content":[{"id":"draft","content":[{"id":"original-locale","content":[{"id":1,"content":"Project","style":7},{"id":2,"content":"Description","style":6},{"content":"...","id":"2lo2o4","style":0},{"content":"Goals","id":"1t8ot9","style":6},{"content":"...","id":"8p37mm"}]},{"id":"locale-1","content":[{"id":1,"content":"Bosquejo"},{"id":2,"content":""},{"content":"","id":"vvoerh"},{"content":"","id":"ji6uit"},{"content":"","id":"3rwarh"}]}]},{"id":"z6909j","content":[{"id":"2x96yc","content":[{"content":"Workflow","id":"zwmh5c","style":7},{"content":"Uncompleted task.","id":"l1k65q","style":4,"link":{"ids":["wygnoo","jzh64g"],"indices":[2,2],"preview":["Something #1","Thing #2"]}},{"content":"Completed task.","id":"zg0h4e","style":3},{"content":"Important remark or task.","id":"l5j32r","style":1},{"content":"Question.","id":"a7psjg","style":2},{"content":"An indefinite task or reflection.","id":"ruq7du"},{"content":"Cancelled idea.","id":"qots1b","style":5}]},{"id":"6xyuxj","content":[{"content":"","id":"hji7it"},{"content":"","id":"x93ogk"},{"content":"","id":"u2odqm"},{"content":"","id":"fd9qwn"},{"content":"","id":"7dqlnp"},{"content":"","id":"9jv60y"},{"content":"","id":"177ff4"}]}]}],"localeOptions":["en","es"],"pageWidth":400},"exporter":{"format":1,"allowLocales":true,"allowBlockStyles":true,"allowMergePages":true,"outputDirectory":"/Users/artemy/Documents/Projects/csapp/frontend/apps/admin/pages/Frontsite/sections/data","outputFilename":"features","isSchematicPreview":true},"filePath":"/Users/artemy/Desktop/prototext/templates/project-workflow.ptxt"}
+{
+  "editor": {
+    "content": [
+      {
+        "id": "draft",
+        "content": [
+          {
+            "id": "original-locale",
+            "content": [
+              {
+                "id": 1,
+                "content": "Project",
+                "style": 7
+              },
+              {
+                "id": 2,
+                "content": "Description",
+                "style": 6
+              },
+              {
+                "content": "...",
+                "id": "2lo2o4",
+                "style": 0
+              },
+              {
+                "content": "Goals",
+                "id": "1t8ot9",
+                "style": 6
+              },
+              {
+                "content": "...",
+                "id": "8p37mm"
+              }
+            ]
+          },
+          {
+            "id": "locale-1",
+            "content": [
+              {
+                "id": 1,
+                "content": "Bosquejo"
+              },
+              {
+                "id": 2,
+                "content": ""
+              },
+              {
+                "content": "",
+                "id": "vvoerh"
+              },
+              {
+                "content": "",
+                "id": "ji6uit"
+              },
+              {
+                "content": "",
+                "id": "3rwarh"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "z6909j",
+        "content": [
+          {
+            "id": "2x96yc",
+            "content": [
+              {
+                "content": "Workflow",
+                "id": "zwmh5c",
+                "style": 7
+              },
+              {
+                "content": "Uncompleted task.",
+                "id": "l1k65q",
+                "style": 4,
+                "link": {
+                  "ids": [
+                    "wygnoo",
+                    "jzh64g"
+                  ],
+                  "indices": [
+                    2,
+                    2
+                  ],
+                  "preview": [
+                    "Something #1",
+                    "Thing #2"
+                  ]
+                }
+              },
+              {
+                "content": "Completed task.",
+                "id": "zg0h4e",
+                "style": 3
+              },
+              {
+                "content": "Important remark or task.",
+                "id": "l5j32r",
+                "style": 1
+              },
+              {
+                "content": "Question.",
+                "id": "a7psjg",
+                "style": 2
+              },
+              {
+                "content": "An indefinite task or reflection.",
+                "id": "ruq7du"
+              },
+              {
+                "content": "Cancelled idea.",
+                "id": "qots1b",
+                "style": 5
+              }
+            ]
+          },
+          {
+            "id": "6xyuxj",
+            "content": [
+              {
+                "content": "",
+                "id": "hji7it"
+              },
+              {
+                "content": "",
+                "id": "x93ogk"
+              },
+              {
+                "content": "",
+                "id": "u2odqm"
+              },
+              {
+                "content": "",
+                "id": "fd9qwn"
+              },
+              {
+                "content": "",
+                "id": "7dqlnp"
+              },
+              {
+                "content": "",
+                "id": "9jv60y"
+              },
+              {
+                "content": "",
+                "id": "177ff4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en",
+      "es"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 1,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": true,
+    "outputDirectory": "",
+    "outputFilename": "",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

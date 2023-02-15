@@ -1,1 +1,232 @@
-{"editor":{"content":[{"id":"draft","content":[{"id":"original-locale","content":[{"id":1,"content":"...","style":7},{"content":"Пояснение","id":"ng4v18","style":5}]},{"id":"locale-1","content":[{"id":1,"content":"Bosquejo"},{"content":"","id":"jsw7aj"}]}]},{"id":"5oxo2b","content":[{"id":"0uiiaq","content":[{"content":"Принципы","id":"ecxdo7","style":7},{"content":"Пояснение","id":"rwh3cz","style":5}]},{"id":"pliti0","content":[{"content":"","id":"yzk3av"},{"content":"","id":"jcw5wt"}]}]},{"id":"3j6bra","content":[{"id":"3s9713","content":[{"content":"Фантазии","id":"t0k05s","style":7},{"content":"Пояснение","id":"d3bff0","style":5}]},{"id":"f26ff0","content":[{"content":"","id":"29nd0w"},{"content":"","id":"h7oooy"}]}]},{"id":"eswqn2","content":[{"id":"05lrw1","content":[{"content":"Цели","id":"bz0o1g","style":7},{"content":"Пояснение","id":"ng4v18","style":5}]},{"id":"l94i3r","content":[{"content":"","id":"r7xvk6"},{"content":"","id":"jsw7aj"}]}]},{"id":"k5ku8j","content":[{"id":"0jb15x","content":[{"content":"Отмены","id":"a5ltqn","style":7},{"content":"Пояснение","id":"ng4v18","style":5}]},{"id":"r44c18","content":[{"content":"","id":"velc05"},{"content":"","id":"jsw7aj"}]}]},{"id":"xm63ll","content":[{"id":"u2kelv","content":[{"content":"Достижения","id":"yj6ct7","style":7},{"content":"Пояснение","id":"ng4v18","style":5}]},{"id":"kiukxh","content":[{"content":"","id":"9xzpqw"},{"content":"","id":"jsw7aj"}]}]}],"localeOptions":["en","es"],"pageWidth":400},"exporter":{"format":1,"allowLocales":true,"allowBlockStyles":true,"allowMergePages":true,"outputDirectory":"/Users/artemy/Documents/Projects/csapp/frontend/apps/admin/pages/Frontsite/sections/data","outputFilename":"features","isSchematicPreview":true},"filePath":"/Users/artemy/Desktop/prototext/templates/life-roadmap.ptxt"}
+{
+  "editor": {
+    "content": [
+      {
+        "id": "5oxo2b",
+        "content": [
+          {
+            "id": "0uiiaq",
+            "content": [
+              {
+                "content": "My rules",
+                "id": "ecxdo7",
+                "style": 7
+              },
+              {
+                "content": "Reflect on the personal rules and values that guide your daily life and decision-making.",
+                "id": "rwh3cz",
+                "style": 5
+              }
+            ]
+          },
+          {
+            "id": "pliti0",
+            "content": [
+              {
+                "content": "",
+                "id": "yzk3av"
+              },
+              {
+                "content": "",
+                "id": "jcw5wt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3j6bra",
+        "content": [
+          {
+            "id": "3s9713",
+            "content": [
+              {
+                "content": "Fantasies",
+                "id": "t0k05s",
+                "style": 7
+              },
+              {
+                "content": "Imagine what goes beyond your rules and habits. Write down this ideas.",
+                "id": "d3bff0",
+                "style": 5
+              }
+            ]
+          },
+          {
+            "id": "f26ff0",
+            "content": [
+              {
+                "content": "",
+                "id": "29nd0w"
+              },
+              {
+                "content": "",
+                "id": "h7oooy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "eswqn2",
+        "content": [
+          {
+            "id": "05lrw1",
+            "content": [
+              {
+                "content": "Goals",
+                "id": "bz0o1g",
+                "style": 7
+              },
+              {
+                "content": "Think about your short- and long-term goals.",
+                "id": "ng4v18",
+                "style": 5
+              }
+            ]
+          },
+          {
+            "id": "l94i3r",
+            "content": [
+              {
+                "content": "",
+                "id": "r7xvk6"
+              },
+              {
+                "content": "",
+                "id": "jsw7aj"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "xm63ll",
+        "content": [
+          {
+            "id": "u2kelv",
+            "content": [
+              {
+                "content": "Progress",
+                "id": "yj6ct7",
+                "style": 7
+              },
+              {
+                "content": "Evaluate your progress in different areas of your life, such as personal growth, relationships, career, and health.",
+                "id": "ng4v18",
+                "style": 5
+              }
+            ]
+          },
+          {
+            "id": "kiukxh",
+            "content": [
+              {
+                "content": "",
+                "id": "9xzpqw"
+              },
+              {
+                "content": "",
+                "id": "jsw7aj"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "k5ku8j",
+        "content": [
+          {
+            "id": "0jb15x",
+            "content": [
+              {
+                "content": "Ignoring",
+                "id": "a5ltqn",
+                "style": 7
+              },
+              {
+                "content": "Write down the ideas you said no to and don't want to repeat them.",
+                "id": "ng4v18",
+                "style": 5
+              }
+            ]
+          },
+          {
+            "id": "r44c18",
+            "content": [
+              {
+                "content": "",
+                "id": "velc05"
+              },
+              {
+                "content": "",
+                "id": "jsw7aj"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "draft",
+        "content": [
+          {
+            "id": "original-locale",
+            "content": [
+              {
+                "id": 1,
+                "content": "Draft",
+                "style": 7
+              },
+              {
+                "content": "Write down any new raw ideas, plans, or projects that you want to start working on.",
+                "id": "ng4v18",
+                "style": 5
+              }
+            ]
+          },
+          {
+            "id": "locale-1",
+            "content": [
+              {
+                "id": 1,
+                "content": "Bosquejo"
+              },
+              {
+                "content": "",
+                "id": "jsw7aj"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en",
+      "es"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 3,
+    "allowLocales": false,
+    "allowBlockStyles": false,
+    "allowMergePages": true,
+    "outputDirectory": "",
+    "outputFilename": "",
+    "isSchematicPreview": false
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

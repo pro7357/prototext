@@ -17,7 +17,7 @@ export default props => {
 
 			<Features/>
 
-			{/* <UseCases/> */}
+			<UseCases/>
 
 			<Manifest/>
 

@@ -1,6 +1,5 @@
 
 const includeBaseConfig = require('./preact.config.base.js')
-const fsPromises = require('fs').promises
 
 const { npm_lifecycle_event } = process.env
 
@@ -14,8 +13,6 @@ export default {
 
 		config.output.filename = '[name].js'
 		config.output.publicPath = ''
-
-		// fsPromises.copyFile()
 
 	}
 }

@@ -218,26 +218,31 @@
     "localeOptions": [
       "en"
     ],
-    "pageWidth": 600
+    "pageWidth": 600,
+    "compactMenuMode": false
   },
   "exporter": {
     "format": 1,
     "allowLocales": true,
     "allowBlockStyles": true,
     "allowMergePages": true,
-    "outputDirectory": "/Users/artemy/Desktop/prototext",
-    "outputFilename": "xxx",
+    "outputDirectory": "",
+    "outputFilename": "",
     "isSchematicPreview": true
   },
   "presenter": {
     "sidebarMode": true,
-    "centerMode": true,
-    "fullWidthImgMode": true,
+    "allPagesMode": false,
     "tagFilterMode": false,
-    "monolithMode": true,
+    "exposeLinkedContent": false,
+    "locale": 0,
     "slideMode": false,
-    "locale": 0
+    "fitImgMode": true,
+    "fullWidthImgMode": true,
+    "contrastDarkMode": false,
+    "sharpImgMode": true,
+    "centerMode": true,
+    "monolithMode": true
   },
-  "filePath": "/Users/artemy/Desktop/prototext/notes/творческие-алгоритмы.ptxt",
   "encryption": null
 }

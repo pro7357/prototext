@@ -4,118 +4,154 @@ dotenv: ['.env']
 
 
 vars:
-  MAC_INTEL_BUILD_DIR: "./electron/releases/ProtoText-darwin-x64"
-  MAC_INTEL_BUILD_ZIP: "{{.MAC_INTEL_BUILD_DIR}}/ProtoText-MacOS-Intel.zip"
-  WIN_BUILD_DIR: "./electron/releases/ProtoText-win32-x64"
-  WIN_BUILD_ZIP: "{{.WIN_BUILD_DIR}}/ProtoText-Windows-x64.zip"
-  ALL_WEBSITE_FILES: "./website/dst/*"
+  RELEASES_DIR: "./electron/releases"
+  PUBLIC_RELEASES_DIR: "{{.RELEASES_DIR}}/public"
+  PUBLIC_WEBSITE_DIR: "./website/dst"
+  PUBLIC_APP_INFO_FILE: "./website/src/app-info.json"
 
 
 tasks:
 
   up:
+    desc: Start App in Development mode.
     cmds:
       - pm2 start 'npm start' --name 'prototext-frontend'
 
   down:
+    desc: Stop Development mode.
     cmds:
       - pm2 kill
 
 
   reset:
+    desc: Reset App in Development mode.
     cmds:
       - task down
       - task up
 
 
-  app:
+  electron:
+    desc: Start Electron in Development mode.
     cmds:
-      - npm run build:desktop
       - cd electron && npm start
 
 
-  bapp:
+  app:
+    desc: Build React App & start Electron in Development mode.
+    cmds:
+      - task: buildReact
+      - task: electron
+
+
+  buildReact:
+    desc: Build React App.
     cmds:
       - npm run build:desktop
-      - cd electron && npm run build
 
 
-  papp:
-    desc: Pack for MacOS
+  buildAppMacIntel:
+    desc: Build App for MacOS Intel.
     cmds:
       - rm -rf ./electron/releases/ProtoText-darwin-x64
-      - cd electron && npm run build
+      - cd electron && npm run build:macIntel
 
 
-  pwapp:
-    desc: Pack for Windows
+  buildAppWin64:
+    desc: Build App for Windows.
     cmds:
       - rm -rf ./electron/releases/ProtoText-win32-x64
       - cd electron && npm run build:win64
 
 
-  plapp:
-    desc: Pack for Linux
-    cmds:
-      - rm -rf ./electron/releases/ProtoText-linux-x64
-      - cd electron && npm run build:linux
-
-
-  sapp:
-    cmds:
-      - cd electron && npm start
-
-
-  logapp:
+  logApp:
+    desc: Display Development logs.
     cmds:
       - pm2 log prototext-frontend
 
 
-  rapp:
-    desc: Buld, Zip, Publish
+
+  # PRODUCTION RELEASES
+
+  release:
     cmds:
 
-      # Build React app & pack MacOS Intel App
-      # - task: bapp
+      # Increase App version (0=major or 1=minor or 2=patch)
+      - node ./scripts/updatePublicAppInfo.js {{.updLevel}}
 
-      # Pack Windows x64 App
-      # - task: pwapp
+      # Build React app
+      - task: buildReact
 
-      # Zip Mac Intel
-      # - ditto -c -k --sequesterRsrc --keepParent {{.MAC_INTEL_BUILD_DIR}} {{.MAC_INTEL_BUILD_ZIP}}
+      # Build MacOS Intel App
+      - task: buildAppMacIntel
 
-      # Zip Windows x64
-      # - ditto -c -k --sequesterRsrc --keepParent {{.WIN_BUILD_DIR}} {{.WIN_BUILD_ZIP}}
+      # Build Windows x64 App
+      - task: buildAppWin64
 
-      # Send all to the server via SSH
-      # - scp {{.MAC_INTEL_BUILD_ZIP}} $SSH_USER@$SSH_IP:~/$SSH_DIR/releases/
-      # - scp {{.WIN_BUILD_ZIP}} $SSH_USER@$SSH_IP:~/$SSH_DIR/releases/
+      # Clean public releases dir
+      - rm -rf {{.PUBLIC_RELEASES_DIR}}/*
+
+      # Zip all releases
+      - node ./scripts/compressAppReleases.js {{.RELEASES_DIR}} {{.PUBLIC_RELEASES_DIR}}
 
 
-  # Website
+  releaseMajor:
+    desc: Release a major build version.
+    cmds:
+      - task: release
+        vars: {updLevel: "0"}
 
-  upsite:
+
+  releaseMinor:
+    desc: Release a minor build version.
+    cmds:
+      - task: release
+        vars: {updLevel: "1"}
+
+
+  releasePatch:
+    desc: Release a patch build version.
+    cmds:
+      - task: release
+        vars: {updLevel: "2"}
+
+
+  publishApp:
+    desc: Send releases to the server via SSH & update the public app info.
+    cmds:
+      - scp -r {{.PUBLIC_RELEASES_DIR}}/* $SSH_USER@$SSH_IP:~/$SSH_DIR/releases
+      - scp -r {{.PUBLIC_APP_INFO_FILE}} $SSH_USER@$SSH_IP:~/$SSH_DIR/
+
+
+
+  # WEBSITE
+
+  upSite:
+    desc: Start Website Development.
     cmds:
       - pm2 start 'npm run website' --name 'prototext-website'
 
-  logsite:
+
+  logSite:
+    desc: Log Website Development.
     cmds:
       - pm2 log prototext-website
 
-  restartsite:
+
+  restartSite:
+    desc: Restart Website Development.
     cmds:
       - pm2 restart prototext-website
 
-  bsite:
+
+  buildSite:
+    desc: Build Website.
     cmds:
       - npm run build:website
 
-  psite:
-    desc: Publish website
+
+  publishSite:
+    desc: Publish Website.
     cmds:
 
-      # Build site
-      - task: bsite
-
-      # Send all to the server via SSH
-      - scp -r {{.ALL_WEBSITE_FILES}} $SSH_USER@$SSH_IP:~/$SSH_DIR/
+      # Send all website files in the "dst" folder to the server via SSH.
+      - scp -r {{.PUBLIC_WEBSITE_DIR}}/* $SSH_USER@$SSH_IP:~/$SSH_DIR/
