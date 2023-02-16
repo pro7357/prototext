@@ -62,13 +62,13 @@ module.exports = props => {
 	Menu.setApplicationMenu(menu)
 
 	if(app.isPackaged === false) {
-		// if(isMac) {
-		// 	newWindow.webContents.openDevTools()
-		// } else {
-		// 	devtools = new BrowserWindow()
-		// 	newWindow.webContents.setDevToolsWebContents(devtools.webContents)
-		// 	newWindow.webContents.openDevTools({ mode: 'detach' })
-		// }
+		if(isMac) {
+			// newWindow.webContents.openDevTools()
+		} else {
+			// devtools = new BrowserWindow()
+			// newWindow.webContents.setDevToolsWebContents(devtools.webContents)
+			// newWindow.webContents.openDevTools({ mode: 'detach' })
+		}
 	}
 
 	newWindow.webContents.on('did-finish-load', function() {

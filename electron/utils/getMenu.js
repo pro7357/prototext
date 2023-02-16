@@ -139,7 +139,7 @@ module.exports = ({ windows, app, getTargetWindow, isMac }) => [
 				: [{ role: 'delete' }, { type: 'separator' }, { role: 'selectAll' }]),
 			{ type: 'separator' },
 			{
-				label: 'Find & Filter content',
+				label: 'Search',
 				accelerator: isMac ? 'Cmd+F' : 'CTRL+F',
 				click: () => getTargetWindow().webContents.send('showEditorTopbar'),
 			},

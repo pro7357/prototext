@@ -12,6 +12,9 @@ import normalizeFilePath from 'globalUtils/normalizeFilePath'
 
 export default props => {
 
+	// Make the path to the file absolute and convert it to Unix format.
+	const src = normalizeFilePath(props.filePath, props.currentDoc, true)
+
 	const filePath = normalizeFilePath(props.filePath, props.currentDoc)
 
 	const isImage = fileTypes.isImage(filePath)
@@ -28,13 +31,13 @@ export default props => {
 
 			{isImage && (
 				<LinkedImage
-					src={filePath}
+					src={src}
 				/>
 			)}
 
 			{isVideo && (
 				<LinkedVideo
-					src={filePath}
+					src={src}
 				/>
 			)}
 

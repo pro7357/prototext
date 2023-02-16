@@ -59,8 +59,7 @@ export default props => {
 const useStyles = createUseStyles(theme => ({
 
 	root: {
-		'-webkit-app-region': 'drag',
-		cursor: 'grab',
+		...theme.draggableArea,
 		width: '100%',
 		height: '100vh',
 		padding: 32,

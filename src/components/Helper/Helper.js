@@ -2,6 +2,8 @@
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
+import os from 'globalUtils/os'
+
 import { switchLayout } from 'layoutActions'
 import { domain } from 'globalConstants'
 
@@ -34,6 +36,9 @@ export default props => {
 	const {
 		scrollbarsMode
 	} = props
+
+	const isMac = os.isMac()
+	let cmdKey = isMac ? 'CMD' : 'CTRL'
 
 	const classes = useStyles()
 
@@ -84,7 +89,7 @@ export default props => {
 					<Heading>Workspace<br/> options</Heading>
 					<EditorViewCompositions/>
 					<SHTs
-						content={viewOptions}
+						content={viewOptions(cmdKey)}
 					/>
 				</div>
 			</div>
@@ -137,7 +142,7 @@ export default props => {
 				</UIBlock>
 
 				<SHTs
-					content={textBlockFeatures}
+					content={textBlockFeatures(cmdKey)}
 				/>
 
 

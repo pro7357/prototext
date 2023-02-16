@@ -135,8 +135,6 @@ function mapStateToProps(state, props) {
 const useStyles = createUseStyles(theme => ({
 
 	root: {
-		// '-webkit-app-region': 'drag',
-		// cursor: isDesktopBuild ? 'grab' : 'default',
 		width: '100%',
 		display: 'flex',
 		flexDirection: 'row',

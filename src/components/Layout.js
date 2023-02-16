@@ -73,6 +73,8 @@ const useStyles = createUseStyles(theme => ({
 			fontFamily: theme.typography.fonts.primary,
 			backgroundColor: `${theme.background.default} !important`,
 			color: theme.text.default,
+			borderTop: theme.isFrameless ? 'none' : `1px solid ${theme.block.background}`,
+			textShadow: theme.isWindows ? '0px 0px 0px rgb(0,0,0)': 'none',
 		}
 
 	},

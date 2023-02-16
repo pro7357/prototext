@@ -1,7 +1,7 @@
 
 import Shortcut from '../components/Shortcut'
 
-export default [
+export default (cmdKey) => [
 	[
 		'[DRAG] the handle [⁝]',
 		null,
@@ -15,7 +15,7 @@ export default [
 	],
 
 	[
-		'[CMD+D]',
+		`[${cmdKey}+D]`,
 		null,
 		'To clone a block.',
 	],

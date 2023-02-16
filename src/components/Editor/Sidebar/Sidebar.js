@@ -98,8 +98,7 @@ export default props => {
 const useStyles = createUseStyles(theme => ({
 
 	root: {
-		'-webkit-app-region': 'drag',
-		cursor: isDesktopBuild ? 'grab' : 'default',
+		...theme.draggableArea,
 		width: 240,
 		position: 'relative',
 		boxShadow: `0 0 45px ${theme.shadow.default}`,

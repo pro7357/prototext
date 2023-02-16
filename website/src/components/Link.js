@@ -14,6 +14,7 @@ export default props => {
 		isInline,
 		isNotable,
 		isButton,
+		isDownloadable,
 		// isExternal,
 		className,
 	} = props
@@ -24,6 +25,7 @@ export default props => {
 		<a
 			href={url}
 			target={isInternal ? '_self' : '_blank'}
+			download={isDownloadable}
 			className={clsx(
 				classes.root,
 				isInline && classes.inline,

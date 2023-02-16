@@ -33,7 +33,6 @@ export default () => {
 
 	if(electronAPI) {
 
-
 		// Reset the app state to the original.
 		electronAPI.handle('reset', (e, data) => function(e, data) {
 			if (confirm('All unsaved data will be lost! Are you sure you want to start new notes from scratch?')) {

@@ -6,7 +6,7 @@ import { JssProvider } from 'react-jss'
 import ThemeProvider from './theme/ThemeProvider'
 
 import Layout from './components/Layout'
-import connectAppWithElectron from 'globalUtils/connectAppWithElectron'
+import connectAppToElectron from 'globalUtils/connectAppToElectron'
 import handleAppCrash from 'globalUtils/handleAppCrash'
 import { showEditor, togglePresenter } from 'layoutActions'
 import { toogleTopbar } from 'topbarActions'
@@ -22,7 +22,7 @@ export default () => {
 
 		// Connect to the Electron API, in particular to the events of the native menu.
 		if(isDesktopBuild) {
-			connectAppWithElectron()
+			connectAppToElectron()
 		}
 
 		// Register some general combinations of hot keys.

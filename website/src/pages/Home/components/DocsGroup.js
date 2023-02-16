@@ -74,6 +74,7 @@ export default props => {
 						<Link
 							url={fileSrc}
 							isNotable
+							isDownloadable
 						>
 							Download
 						</Link>

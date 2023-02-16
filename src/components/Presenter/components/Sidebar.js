@@ -125,23 +125,27 @@ export default props => {
 
 					<div className={classes.footer}>
 
-						<TextButton
-							isNotable
-							onClick={(e) => {
-								switchLayout(0)
-							}}
-						>
-							Back to Editor
-						</TextButton>
+						<div>
+								<TextButton
+								isNotable
+								onClick={(e) => {
+									switchLayout(0)
+								}}
+							>
+								Back to Editor
+							</TextButton>
+						</div>
 
-						<TextButton
-							isNotable
-							onClick={(e) => {
-								togglePresenterMode('sidebarMode')
-							}}
-						>
-							Hide
-						</TextButton>
+						<div>
+							<TextButton
+								isNotable
+								onClick={(e) => {
+									togglePresenterMode('sidebarMode')
+								}}
+							>
+								Hide
+							</TextButton>
+						</div>
 
 					</div>
 
@@ -159,7 +163,7 @@ const useStyles = createUseStyles(theme => ({
 
 	root: {
 		'-webkit-app-region': 'drag',
-		cursor: isDesktopBuild ? 'grab' : 'default',
+		cursor: theme.isFrameless ? 'grab' : 'default',
 		position: 'relative',
 		zIndex: 2,
 		backgroundColor: theme.background.default,

@@ -33,7 +33,8 @@ export default props => {
 	let keyCode = e.keyCode
 	let withAlt = e.altKey
 	let withShift = e.shiftKey
-	let withComand = e.metaKey
+	let withCtrl = e.ctrlKey
+	let withComand = e.metaKey || withCtrl
 	let spaceKey = e.code === 'Space'
 	let node = e.target
 	let caretPos = getCaret(node)

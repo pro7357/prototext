@@ -1,19 +1,19 @@
 
-export default [
+export default cmdKey => [
 	[
-		'[CMD+1]',
+		`[${cmdKey}+1]`,
 		'One Page view.',
 		'Initial workspace to edit content of a single page.'
 	],
 
 	[
-		'[CMD+2]',
+		`[${cmdKey}+2]`,
 		'Two Pages view.',
 		'Splitted workspace to compare and edit two pages at the same time, to move content blocks between pages. You can open two different pages or one page twice, but in a different scrolling position.'
 	],
 
 	[
-		'[CMD+3]',
+		`[${cmdKey}+3]`,
 		'Localization view.',
 		[
 			'Splitted workspace to translate pages into other languages.',
@@ -25,13 +25,13 @@ export default [
 	],
 
 	[
-		'[CMD+P]',
+		`[${cmdKey}+P]`,
 		'Presentation view.',
 		'A visual representation of the content of the current page, or all pages, or a selection of pages in two different design layouts: "flow" and "slides".'
 	],
 
 	[
-		'[CMD+F]',
+		`[${cmdKey}+F]`,
 		'Search panel',
 		'To filter blocks by text, content styling, tags, locally or globally for all pages, case-sensitive or not.'
 	],
