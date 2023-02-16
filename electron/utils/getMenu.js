@@ -45,16 +45,21 @@ module.exports = ({ windows, app, getTargetWindow, isMac }) => [
 					handleOpen(getTargetWindow(),app)
 				},
 			},
-			{
-				"label":"Open Recent",
-				"role":"recentdocuments",
-				"submenu":[
+			...(isMac
+				? [
 					{
-						"label":"Clear",
-						"role":"clearrecentdocuments"
+						"label":"Open Recent",
+						"role":"recentdocuments",
+						"submenu":[
+							{
+								"label":"Clear",
+								"role":"clearrecentdocuments"
+							}
+						]
 					}
-				]
-			},
+				  ]
+				: [/*TODO*/]
+			),
 			{
 				"label":"Import",
 				"submenu":[

@@ -43,7 +43,7 @@ export default connect(mapStateToProps)(props => {
 				title={
 					[
 						`What is the Zettelkasten?`,
-						`Hi! Call me to grow trees ;)`
+						`Hi! Call me to grow trees ☮︎`
 					][modalContentIndex]
 				}
 				isOpened={modalContentIndex !== false}
@@ -87,6 +87,9 @@ export default connect(mapStateToProps)(props => {
 							<img src='/assets/mission-1.jpg' />
 							<img src='/assets/artemy.jpg' />
 							<img src='/assets/mission-2.jpg'/>
+						</div>
+						<div>
+							Last fall, the local government tried to call me to kill people in a neighboring country. My answer is “No”. I respect other people's lives and want to contribute to global culture, progress, and the environment while I live. This project's mission is to promote rational thinking.
 						</div>
 						<i>letter2artemy@gmail.com</i>
 					</div>
@@ -148,7 +151,7 @@ const useStyles = createUseStyles(theme => ({
 			bottom: 1,
 			left: 0,
 			opacity: 0.5,
-			borderBottom: `1px solid ${theme.text.default}`,
+			borderBottom: `2px solid ${theme.text.default}`,
 		},
 		'&:hover': {
 			color: theme.textButton.notable.color,

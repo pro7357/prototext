@@ -3,8 +3,6 @@ const path = require('path')
 const webpack = require('webpack')
 const packageJson = require('../package.json')
 
-const { APP_VERSION } = process.env
-
 module.exports = (config, isBuild) => {
 
 	let rootDir = __dirname
@@ -19,6 +17,7 @@ module.exports = (config, isBuild) => {
 	config.plugins.push(
 		new webpack.DefinePlugin({
 			isBuild,
+			isDesktopBuild: JSON.stringify(null), // app build
 			APP_VERSION: JSON.stringify(packageJson.version)
 		})
 	)

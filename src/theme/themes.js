@@ -9,7 +9,7 @@ import blockBorderStyles from './blockBorderStyles'
 import draggableArea from './draggableArea'
 import palette from './palette'
 import typography from './typography'
-import os from 'globalUtils/os'
+import os from '../utils/os'
 
 
 export default themeIds.reduce((themes, themeId, themeIndex) => {
