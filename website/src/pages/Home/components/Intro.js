@@ -89,7 +89,7 @@ export default connect(mapStateToProps)(props => {
 							<img src='/assets/mission-2.jpg'/>
 						</div>
 						<div>
-							Last fall, the local government tried to call me to kill people in a neighboring country. My answer is “No”. I respect other people's lives and want to contribute to global culture, progress, and the environment while I live. This project's mission is to promote rational thinking.
+							Last fall, the local government tried to call me to kill people in a neighboring country. But my answer is “No”. I respect other people's lives and want to contribute to global culture, progress, and the environment while I live. This project's mission is to promote rational thinking.
 						</div>
 						<i>letter2artemy@gmail.com</i>
 					</div>
@@ -112,7 +112,7 @@ function mapStateToProps(state, props) {
 const useStyles = createUseStyles(theme => ({
 
 	root: {
-		paddingTop: 150,
+		paddingTop: 160,
 		paddingBottom: 8
 	},
 

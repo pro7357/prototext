@@ -40,6 +40,8 @@ export default props => {
 	const isMac = os.isMac()
 	let cmdKey = isMac ? 'CMD' : 'CTRL'
 
+	let investSectionPath = '/#invest-in-the-project'
+
 	const classes = useStyles()
 
 	return (
@@ -55,7 +57,7 @@ export default props => {
 					isNotable: true,
 					isExternal: true,
 					action: () => {
-						window.open(domain+'/#invest-in-the-project', '_blank')
+						window.open(domain+investSectionPath, '_blank')
 					}
 				},
 				{
@@ -66,6 +68,11 @@ export default props => {
 					}
 				}
 			]}
+			secondaryActionsForPrinting={(
+				<a href={domain+investSectionPath}>
+					Invest in the project <span className={classes.coin}>₿</span>
+				</a>
+			)}
 			scrollbarsMode={scrollbarsMode}
 			className={classes.root}
 			sectionsClassName={classes.sectionsClassName}

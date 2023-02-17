@@ -27,7 +27,7 @@ export default cmdKey => [
 	[
 		`[${cmdKey}+P]`,
 		'Presentation view.',
-		'A visual representation of the content of the current page, or all pages, or a selection of pages in two different design layouts: "flow" and "slides".'
+		'A visual representation of the content of the current page, or all pages, or a selection of pages in two different design layouts: "Flow" and "Slides". Use the arrow keys to switch the slides.'
 	],
 
 	[

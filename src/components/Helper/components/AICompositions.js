@@ -58,8 +58,10 @@ export default () => {
 				Use the internal links feature to give the AI more complex content and tasks.
 			</div>
 
-			<UIBlock className={clsx(classes.block, classes.taskBlock)}>
-				<div className={classes.taskBlockBg}/>
+			<UIBlock
+				className={clsx(classes.block, classes.taskBlock)}
+			>
+				<div className={clsx(classes.taskBlockBg, classes.largeTaskBlockBg)}/>
 				{/* Link to a page */}
 				Block – Internal link<br/>
 				To use all page content for the prompt.
@@ -113,7 +115,7 @@ const useStyles = createUseStyles(theme => ({
 
 	taskBlock: {
 		backgroundColor: theme.block.prompt.background,
-		margin: [4,0]
+		margin: [4,0],
 	},
 
 	taskBlockBg: {
@@ -126,6 +128,19 @@ const useStyles = createUseStyles(theme => ({
 		bottom: -20,
 		background: theme.shadow.rainbow,
 		boxShadow: `inset 0 0 10px 15px ${theme.background.default}, inset 0 0 3px 2px ${theme.background.default}`,
+		'@media print': {
+			boxShadow: 'none',
+			backgroundImage: 'url(./assets/ai-block-bg.jpg)',
+			backgroundRepeat: 'no-repeat',
+			backgroundPosition: 'center',
+			backgroundSize: '100% 100%',
+		}
+	},
+
+	largeTaskBlockBg: {
+		'@media print': {
+			backgroundSize: '100% 106%',
+		}
 	}
 
 

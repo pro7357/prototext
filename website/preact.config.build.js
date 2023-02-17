@@ -11,7 +11,7 @@ export default {
 
 		includeBaseConfig(config, isBuild)
 
-		config.output.filename = '[name].js'
+		config.output.filename = `[name].js?v=${(new Date()).getTime()}`
 		config.output.publicPath = ''
 
 	}

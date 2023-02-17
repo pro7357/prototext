@@ -11,6 +11,7 @@ export default props => {
 		title,
 		primaryAction,
 		secondaryActions,
+		secondaryActionsForPrinting,
 		scrollbarsMode,
 		className,
 		sectionsClassName
@@ -32,6 +33,7 @@ export default props => {
 					title={title}
 					primaryAction={primaryAction}
 					secondaryActions={secondaryActions}
+					secondaryActionsForPrinting={secondaryActionsForPrinting}
 				/>
 
 				<div

@@ -99,6 +99,11 @@ module.exports = ({ windows, app, getTargetWindow, isMac }) => [
 				accelerator: isMac ? 'Cmd+E' : 'CTRL+E',
 				click: () => getTargetWindow().webContents.send('showExporter'),
 			},
+			{
+				label: 'Repeat Exporting',
+				accelerator: isMac ? 'Cmd+Shift+E' : 'CTRL+Shift+E',
+				click: () => getTargetWindow().webContents.send('reExportData'),
+			},
 			{ type: 'separator' },
 			{
 				label: 'Reset',

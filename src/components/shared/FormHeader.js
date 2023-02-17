@@ -10,7 +10,8 @@ export default props => {
 	const {
 		title,
 		primaryAction,
-		secondaryActions
+		secondaryActions,
+		secondaryActionsForPrinting,
 	} = props
 
 	const classes = useStyles()
@@ -21,6 +22,12 @@ export default props => {
 			<div className={classes.title}>
 				{title}
 			</div>
+
+			{secondaryActionsForPrinting && (
+				<div className={classes.printingContent}>
+					{secondaryActionsForPrinting}
+				</div>
+			)}
 
 			<div className={classes.inlineBtns}>
 
@@ -75,8 +82,18 @@ const useStyles = createUseStyles(theme => ({
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'flex-start',
-		gap: 16
+		gap: 16,
+		'@media print': {
+			display: 'none'
+		}
 	},
 
+	printingContent: {
+		display: 'none',
+		'@media print': {
+			display: 'flex'
+		}
+	}
 
-}),{name: 'exporter-header'})
+
+}),{name: 'form-header'})

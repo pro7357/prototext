@@ -57,4 +57,4 @@ const useStyles = createUseStyles(theme => ({
 		cursor: 'pointer',
 	},
 
-}),{name: 'external-link'})
+}),{name: 'link'})

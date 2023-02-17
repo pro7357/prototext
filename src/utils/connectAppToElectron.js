@@ -16,6 +16,7 @@ import {
 
 import { toogleTopbar } from 'topbarActions'
 import { setExporterState } from 'exporterActions'
+import reExportData from 'exporterUtils/reExportData'
 import { setPresenterState } from 'presenterActions'
 import { toggleTheme } from 'theme/theme.actions'
 import { setFilePath, resetFilePath } from 'globalActions/filePath'
@@ -45,6 +46,12 @@ export default () => {
 		// Show the export window.
 		electronAPI.handle('showExporter', (e, data) => function(e, data) {
 			showExporter()
+		})
+
+
+		// Repeat the data exporting with previous settings.
+		electronAPI.handle('reExportData', (e, data) => function(e, data) {
+			reExportData()
 		})
 
 

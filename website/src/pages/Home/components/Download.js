@@ -75,9 +75,7 @@ export default connect(mapStateToProps)(props => {
 
 			<Button
 				className={classes.usageGuideBtn}
-				onClick={() => {
-					openModal(1)
-				}}
+				url='/assets/usage-guide.pdf'
 				isLarge
 			>
 				Usage Guide
