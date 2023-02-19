@@ -57,7 +57,7 @@ export default connect(mapStateToProps)(props => {
 				<Link isInternal isButton url='#app'><b>ProtoText.app</b></Link>
 				<Link isInternal isButton url='#features'>Features</Link>
 				<Link isInternal isButton url='#use-cases'>Use cases</Link>
-				<Link isInternal isButton url='#manifest'>Prices</Link>
+				<Link isInternal isButton url='#manifest'>Manifest</Link>
 				<Link isInternal isButton url='#shared-documents'>Shared docs</Link>
 				<Link isExternal isButton url='https://discord.com/channels/1075098555846504539'>Discord</Link>
 			</div>

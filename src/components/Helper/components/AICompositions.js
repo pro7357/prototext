@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import { createUseStyles } from 'react-jss'
 import UIBlock from 'sharedComponents/UIBlock'
 import TextButton from 'sharedComponents/TextButton'
+import Link from 'sharedComponents/Link'
 import Shortcut from './Shortcut'
 
 import BlockBorder from '../../Editor/Page/Block/BlockBorder'
@@ -66,6 +67,12 @@ export default () => {
 				Block – Internal link<br/>
 				To use all page content for the prompt.
 			</UIBlock>
+
+			<div>
+				<a target='_blank' href='https://youtu.be/Udo38jdK6u4'>
+					A tutorial video on YouTube
+				</a>
+			</div>
 
 		</div>
 	)

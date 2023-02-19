@@ -108,11 +108,24 @@ export default connect(mapStateToProps)(props => {
 							<h3>Dear user,</h3>
 
 							<ol>
-								<li><p>I'm an undefined developer without certifications from Apple or Microsoft. I offer you my open-source app to check and install. Your operating system may block it for security reasons, but rest assured that the app is safe. You have the option to scan it with an antivirus or build your own version from the source code.</p></li>
-								<li><p>The app is already multifunctional but still very young. This means that you may encounter some bugs, especially in Windows environment. Please send your bug reports to this <Link url='https://discord.com/channels/1075098555846504539/1075100646979686510' isNotable isInline>Discord channel</Link>.</p></li>
-								<li><p>ProtoText is connected to the official OpenAI API. This means that you will need an official <Link url='https://platform.openai.com/account/api-keys' isNotable isInline>API key</Link> for ChatGPT.</p></li>
-							</ol>
 
+								<li><p>
+									I'm an undefined developer without certifications from Apple or Microsoft. I offer you my open-source app to check and install. Your operating system may block it for security reasons, but rest assured that the app is safe. You have the option to scan it with an antivirus or build your own version from the source code.
+								</p></li>
+
+								<li><p>
+									The app is already multifunctional but still very young. This means that you may encounter some bugs, especially in Windows environment. Please send your bug reports to this <Link url='https://discord.com/channels/1075098555846504539/1075100646979686510' isNotable isInline>#bug-reports channel</Link>.
+								</p></li>
+
+								<li><p>
+									ProtoText is connected to the official OpenAI API. This means that you will need an official <Link url='https://platform.openai.com/account/api-keys' isNotable isInline>API key</Link> for ChatGPT.
+								</p></li>
+
+								<li><p>
+									Let me know if you are interested in the Apple Silicon or Linux versions of the app and can help me test it: <Link url='https://discord.com/channels/1075098555846504539/1075100729812996106' isNotable isInline>#suggestions channel</Link>.
+								</p></li>
+
+							</ol>
 
 						</div>
 
