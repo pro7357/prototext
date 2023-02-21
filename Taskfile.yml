@@ -153,3 +153,10 @@ tasks:
     desc: Publish Website. # Send all website files from "dst" dir to the server via SSH.
     cmds:
       - rsync -ru --size-only -P {{.PUBLIC_WEBSITE_DIR}}/* $SSH_USER@$SSH_IP:~/$SSH_DIR/
+
+
+  updateSite:
+    desc: Build Website & publish it.
+    cmds:
+      - task: buildSite
+      - task: publishSite

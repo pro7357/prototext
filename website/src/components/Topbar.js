@@ -59,7 +59,7 @@ export default connect(mapStateToProps)(props => {
 				<Link isInternal isButton url='#use-cases'>Use cases</Link>
 				<Link isInternal isButton url='#manifest'>Manifest</Link>
 				<Link isInternal isButton url='#shared-documents'>Shared docs</Link>
-				<Link isExternal isButton url='https://discord.com/channels/1075098555846504539'>Discord</Link>
+				<Link isExternal isButton url='https://discord.com/channels/1075098555846504539/1075098556752470128'>Discord</Link>
 			</div>
 
 			<div className={classes.rightSide}>

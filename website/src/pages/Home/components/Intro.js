@@ -139,7 +139,8 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	modalLink: {
-		display: 'inline',
+		// display: 'inline',
+		display: 'inline-block',
 		position: 'relative',
 		cursor: 'pointer',
 		'&:before': {
@@ -171,17 +172,25 @@ const useStyles = createUseStyles(theme => ({
 
 	twoCols: {
 		display: 'flex',
-		gap: 16
+		gap: 16,
+		flexWrap: 'wrap',
+		[theme.desktop]: {
+			flexWrap: 'nowrap',
+		}
 	},
 
 	firstCol: {
-		width: '60%'
+		[theme.desktop]: {
+			width: '60%',
+		}
 	},
 
 	secondCol: {
-		width: '40%',
 		'& img': {
 			width: '100%'
+		},
+		[theme.desktop]: {
+			width: '40%',
 		}
 	},
 

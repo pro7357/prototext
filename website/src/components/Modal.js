@@ -65,8 +65,11 @@ const useStyles = createUseStyles(theme => ({
 		height: '100%',
 		justifyContent: 'center',
 		alignItems: 'center',
-		padding: 60,
+		padding: 15,
 		backgroundColor: theme.background.lockScreen,
+		[theme.desktop]: {
+			padding: 60,
+		}
 	},
 
 	lockScreen: {
@@ -86,20 +89,35 @@ const useStyles = createUseStyles(theme => ({
 		position: 'relative',
 		zIndex: 1,
 		width: '100%',
-		padding: [24, 42, 48, 42],
+		padding: [12, 20, 30, 20],
 		flexDirection: 'column',
 		backgroundColor: theme.background.default,
 		borderRadius: theme.rounded,
 		textAlign: 'left',
 		overflowY: 'auto',
 		overflowX: 'hidden',
-		maxHeight: '100%'
+		maxHeight: '100%',
+		[theme.desktop]: {
+			padding: [24, 42, 48, 42],
+		}
 	},
 
 	topbar: {
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: 'space-between'
+		justifyContent: 'space-between',
+		position: 'relative',
+		'&>div': {
+			position: 'absolute',
+			top: 0,
+			right: 0,
+		},
+		[theme.desktop]: {
+			alignItems: 'center',
+			'&>div': {
+				position: 'relative'
+			}
+		}
 	},
 
 	title: {

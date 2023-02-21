@@ -20,8 +20,12 @@ export default connect(mapStateToProps)(props => {
 	} = props
 
 	useEffect(async () => {
+		const host = 'prototext.app'
+		if(location.protocol === 'http:' && location.host.indexOf(host) > -1) {
+			location.href = `https://${host}/`
+			return
+		}
 		let response = await requestActualAppInfo()
-		console.log('requestActualAppInfo response',response)
 		if(!response) {
 			alert('Unable to get the actual app version')
 			return
