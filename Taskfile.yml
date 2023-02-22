@@ -146,6 +146,7 @@ tasks:
   buildSite:
     desc: Build Website.
     cmds:
+      - rm -rf {{.PUBLIC_WEBSITE_DIR}}
       - npm run build:website
 
 

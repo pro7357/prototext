@@ -63,9 +63,14 @@ const useStyles = createUseStyles(theme => ({
 	static: {
 		cursor: 'default',
 		'-webkit-user-select': 'auto',
+		whiteSpace: 'initial',
+		borderRadius: theme.rounded,
 		'&:hover':{
 			backgroundColor: theme.tag.background,
 			color: 'inherit'
+		},
+		[theme.desktop]: {
+			borderRadius: theme.round,
 		}
 	}
 

@@ -40,7 +40,11 @@ export default props => {
 	return (
 		<Section className={classes.root} isCentred isVFlex id='invest-in-the-project'>
 
-			<Heading>Invest in the project</Heading>
+			<Heading className={classes.heading}>Invest in the project</Heading>
+
+			<div>
+				To achieve the next goals<br/>together.
+			</div>
 
 			<UIBlock
 				label={<b>{targetCoin.label}</b>}
@@ -65,7 +69,7 @@ export default props => {
 			</UIBlock>
 
 			<UIBlock
-				label={<b>The most relevant goals</b>}
+				label={<b>The next goals</b>}
 				className={classes.uiBlock}
 			>
 				<Tags>
@@ -130,12 +134,17 @@ const useStyles = createUseStyles(theme => ({
 		// alignItems: 'start'
 	},
 
+	heading: {
+		paddingBottom: 0,
+		marginBottom: -8
+	},
+
 	uiBlock: {
 		width: '100%'
 	},
 
 	firstBlock: {
-		marginTop:  -24,
+		marginTop:  32,
 	},
 
 	crypto: {

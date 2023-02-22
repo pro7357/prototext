@@ -49,7 +49,7 @@ export default connect(mapStateToProps)(props => {
 
 						<div>
 							Join this<br/>
-							<Link isInline isNotable url='https://discord.com/channels/1075098555846504539/1075450599144960081'>Discord channel</Link><br/>
+							<Link isInline isNotable url='https://discord.gg/HNuG622tZG'>Discord channel</Link><br/>
 							to collaborate on<br/>
 							templates.
 						</div>

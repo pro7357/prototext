@@ -36,6 +36,10 @@ export default i => ({
 			palette.blueGrey.df,
 			palette.indigoGrey.sp
 		][i],
+		semiMuted: [
+			palette.blueGrey.df,
+			palette.indigoGrey.mm
+		][i]
 	},
 
 

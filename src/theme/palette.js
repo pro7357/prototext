@@ -52,6 +52,7 @@ export default {
 		np: '#eeeef2',
 		tv: '#dedce4',
 		sp: '#b6b6c1',
+		mm: '#9f9faf',
 		bs: '#484859',
 		fw: '#4a4a5f',
 		qe: '#1c1c24',

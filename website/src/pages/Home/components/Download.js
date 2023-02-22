@@ -118,7 +118,7 @@ export default connect(mapStateToProps)(props => {
 								</p></li>
 
 								<li><p>
-									The app is already multifunctional but still very young. This means that you may encounter some bugs, especially in Windows environment. Please send your bug reports to this <Link url='https://discord.com/channels/1075098555846504539/1075100646979686510' isNotable isInline>#bug-reports channel</Link>.
+									The app is already multifunctional but still very young. This means that you may encounter some bugs, especially in Windows environment. Please send your bug reports to the <Link url='https://discord.gg/zze9qE5Cvq' isNotable isInline>#bug-reports channel</Link>.
 								</p></li>
 
 								<li><p>
@@ -126,7 +126,7 @@ export default connect(mapStateToProps)(props => {
 								</p></li>
 
 								<li><p>
-									Let me know if you are interested in the Apple Silicon or Linux versions of the app and can help me test it: <Link url='https://discord.com/channels/1075098555846504539/1075100729812996106' isNotable isInline>#suggestions channel</Link>.
+									Let me know if you are interested in the Apple Silicon or Linux versions of the app and can help me test it: <Link url='https://discord.gg/Ea3RhsMzAn' isNotable isInline>#suggestions channel</Link>.
 								</p></li>
 
 							</ol>

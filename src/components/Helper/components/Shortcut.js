@@ -21,7 +21,7 @@ export default props => {
 const useStyles = createUseStyles(theme => ({
 
 	root: {
-		color: theme.text.muted,
+		color: theme.text.semiMuted,
 		fontFamily: 'monospace',
 		fontSize: 14
 	},

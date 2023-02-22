@@ -18,7 +18,7 @@ import EditorViewCompositions from './components/EditorViewCompositions'
 import LinkedContentCompositions from './components/LinkedContentCompositions'
 import AICompositions from './components/AICompositions'
 
-// import mainMenuFile from './data/mainMenuFile'
+import mainMenuFile from './data/mainMenuFile'
 // import mainMenuView from './data/mainMenuView'
 import viewOptions from './data/viewOptions'
 import textBlockStyling from './data/textBlockStyling'
@@ -69,9 +69,14 @@ export default props => {
 				}
 			]}
 			secondaryActionsForPrinting={(
-				<a href={domain+investSectionPath}>
-					Invest in the project <span className={classes.coin}>₿</span>
-				</a>
+				<div className={classes.printLinks}>
+					<a href='https://discord.gg/SDuzTXWkSd' target='_blank'>
+						Support channel
+					</a>
+					<a href={domain+investSectionPath}>
+						Invest in the project <span className={classes.coin}>₿</span>
+					</a>
+				</div>
 			)}
 			scrollbarsMode={scrollbarsMode}
 			className={classes.root}
@@ -80,17 +85,6 @@ export default props => {
 			withWideColumnGap
 		>
 
-			{/* <div className={classes.column}>
-				<SHTs
-					title={<>File actions<br/>in the main menu</>}
-					content={mainMenuFile}
-				/>
-				<SHTs
-					title={<>View actions<br/>in the main menu</>}
-					content={mainMenuView}
-				/>
-			</div> */}
-
 			<div className={classes.column}>
 				<div className={classes.columnSection}>
 					<Heading>Workspace<br/> options</Heading>
@@ -98,11 +92,15 @@ export default props => {
 					<SHTs
 						content={viewOptions(cmdKey)}
 					/>
+					<Heading offsetTop>Working with one <span className={classes.emoji}>📖</span><br/>or several files <span className={classes.emoji}>📚</span></Heading>
+					<SHTs
+						content={mainMenuFile}
+					/>
 				</div>
 			</div>
 
 			<>
-				<Heading>Content block<br/>styling</Heading>
+				<Heading>Content block<br/>markup</Heading>
 				<div className={classes.textBlockSamples}>
 
 					<UIBlock isCompact>
@@ -237,6 +235,15 @@ const useStyles = createUseStyles(theme => ({
 		backgroundColor: 'gold',
 		color: 'black',
 		padding: [0,5]
+	},
+
+	printLinks: {
+		display: 'flex',
+		gap: 16
+	},
+
+	emoji: {
+		fontSize: 20
 	}
 
 }),{name: 'helper'})

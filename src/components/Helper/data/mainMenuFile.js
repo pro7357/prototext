@@ -2,33 +2,21 @@
 export default [
 
 	[
-		'[CMD+O]',
-		'Open',
-		'To open an existing prototext file.',
+		'[CMD+O], [CMD+S], [CMD+SHIFT+S], [CMD+E], [CMD+W]',
+		'Open, Save, Save As, Export, Close',
+		'The basic operation with a ProtoText document (*.ptxt).',
 	],
 
 	[
-		'[CMD+S]',
-		'Save ',
-		'To save editor state as a native prototext file with a ".ptxt" extention.',
+		'[CMD+N] + [CMD+O]',
+		'Open another document in a new window',
+		'Use the desktops in your operating system to arrange program windows. Try the fullscreen mode, it\'s comfortable.',
 	],
 
 	[
-		'[CMD+SHIFT+S]',
-		'Save As...',
-		'To save an opened prototext file with a different name.',
-	],
-
-	[
-		'[CMD+E]',
-		'Export',
-		'To export pages in one of the supported formats: JSON, JS, MD, TXT.',
-	],
-
-	[
-		// '[CMD+N]',
-		'Reset',
-		'To reset the editor to the blank state.',
+		'Menu > File > Import > Another PTXT file',
+		'Merge two documents into one',
+		'Example of use: Place your thoughts on the left side & the document with cognitive biases on the right side to analyze life situations, or ask ChatGPT for assistance 🌈.'
 	],
 
 ]
