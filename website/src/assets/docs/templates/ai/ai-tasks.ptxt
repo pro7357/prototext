@@ -9,7 +9,7 @@
             "content": [
               {
                 "id": "initial-block",
-                "content": "Prompts",
+                "content": "AI Tasks",
                 "style": 7
               },
               {
@@ -25,8 +25,20 @@
                 "id": "o65qgl"
               },
               {
-                "content": "Say this in other words",
-                "id": "5yom2f"
+                "content": "Reverse the meaning of this text",
+                "id": "1bkqxn"
+              },
+              {
+                "content": "List funny and brief variants for this text",
+                "id": "rghade"
+              },
+              {
+                "content": "Correct this text in a tolerant way",
+                "id": "yhx7gh"
+              },
+              {
+                "content": "List synonyms for",
+                "id": "ai5xqa"
               },
               {
                 "content": "Summarize the following text in one short sentence",
@@ -41,11 +53,7 @@
                 "id": "5ggbt3"
               },
               {
-                "content": "Recommend me ideas on this topic in one short sentence",
-                "id": "egjfft"
-              },
-              {
-                "content": "Translate this into English",
+                "content": "Translate this into simple English",
                 "id": "3nj9yo"
               },
               {
@@ -59,6 +67,14 @@
               {
                 "content": "Suggest alternative solutions for",
                 "id": "nzd4p7"
+              },
+              {
+                "content": "Rewrite this phrase beginning with a verb",
+                "id": "05k76i"
+              },
+              {
+                "content": "Swap the two parts of this sentence",
+                "id": "minvy4"
               }
             ]
           }

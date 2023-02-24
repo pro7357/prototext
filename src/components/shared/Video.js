@@ -10,9 +10,14 @@ export default props => {
 		isEmbedded,
 		isYouTube,
 		isFullHeigth,
+		withoutBg,
 		className,
 		extraProps = {},
 	} = props
+
+	let controls = typeof props.controls === 'undefined' ? true  : props.controls
+	let autoplay = typeof props.autoplay === 'undefined' ? false : props.autoplay
+	let loop = typeof props.loop === 'undefined' ? false : props.loop
 
 	const classes = useStyles()
 
@@ -62,16 +67,24 @@ export default props => {
 
 		return (
 			<video
+				ref={node => {
+					if(node) {
+						if(autoplay) {
+
+						}
+					}
+				}}
 				className={clsx(
 					classes.videoRoot,
 					isFullHeigth && classes.fullHeigth,
+					withoutBg && classes.transparentRoot,
 					className
 				)}
 				//poster={poster ? IMG_DIR+poster : null}
-				//width={width}
-				controls={true}
-				autoplay={false}
-				loop={false}
+				controls={controls}
+				autoPlay={autoplay}
+				muted={autoplay}
+				loop={loop}
 				{...extraProps}
 			>
 				<source src={src} type={`video/${codec}`} />
@@ -89,6 +102,10 @@ const useStyles = createUseStyles(theme => ({
 		height: 150,
 		backgroundColor: 'black',
 		outline: 'none'
+	},
+
+	transparentRoot: {
+		backgroundColor: 'transparent',
 	},
 
 	iframeRoot: {

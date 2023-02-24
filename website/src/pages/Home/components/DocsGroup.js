@@ -80,16 +80,6 @@ export default props => {
 						</Link>
 					)}
 
-					{/* {isDownloadable && (<div>
-						<Button
-							url={`${dir}/${fileName}.${isCompressed?`zip`:`ptxt`}`}
-							isNotable
-							isCompact
-						>
-							Download
-						</Button>
-					</div>)} */}
-
 				</div>,
 				<div
 					className={classes.screenshotWindow}

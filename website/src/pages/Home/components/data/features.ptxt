@@ -18,8 +18,8 @@
                 "style": 6
               },
               {
-                "content": "ProtoText provides a minimalistic interface to create, style and move blocks between pages by using intuitive keyboard shortcuts.",
-                "id": "gaelkf"
+                "content": "Blocks beat the usual way of writing of text in terms of speed and flexibility. Hit Enter to build blocks. Drag&Drop them between pages. Use one-char-markdown to markup the info.",
+                "id": "2202a9"
               }
             ]
           }
@@ -61,7 +61,7 @@
                 "style": 7
               },
               {
-                "content": "Ask for ChatGPT.\nApply tasks to your content.",
+                "content": "Interact with ChatGPT in a non-linear way.\nApply tasks to your content.",
                 "id": "gjtrb9",
                 "style": 6
               },
@@ -89,7 +89,7 @@
                 "style": 6
               },
               {
-                "content": "All pages of your content can be localized synchronously in a special app mode. You can see it in the screenshot below.",
+                "content": "All pages of your content can be localized synchronously in a special app mode. The markup is inherited from the source text.",
                 "id": "i4483c"
               }
             ]

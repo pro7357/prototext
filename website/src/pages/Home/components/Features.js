@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import Section from 'components/Section'
 import Heading from 'components/Heading'
 import Subheading from 'components/Subheading'
+import Video from 'app/components/shared/Video'
 
 import features  from './data/features'
 
@@ -26,6 +27,38 @@ export default connect(mapStateToProps)(props => {
 			<Heading className={classes.heading} isHuge isCold>Features</Heading>
 
 			<div className={classes.content}>
+
+				<div className={classes.feature}>
+
+					<Subheading>
+					The App Interface<br/>and your first impression.
+					</Subheading>
+
+					<div className={classes.subtitle}>
+						Yeah! It's primarily a minimal tool to focus on your own thoughts.<br/>Explore the hidden features on the following slides. Keep what you need and discard the rest!
+					</div>
+
+					<div className={classes.screenshotWindow}>
+
+						<img
+							src={`assets/screenshots/os_${theme}.jpg`}
+							className={classes.screenshotBackground}
+						/>
+
+						<div className={classes.blankDemoVideoWindow}>
+							<Video
+								className={classes.blankDemoVideo}
+								src={`assets/screenshots/blank-doc_${theme}.webm`}
+								withoutBg
+								controls={false}
+								autoplay={true}
+								loop={true}
+							/>
+						</div>
+
+					</div>
+
+				</div>
 
 				{features.map((feature, index) => {
 
@@ -91,7 +124,7 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	heading: {
-		paddingBottom: 0,
+		// paddingBottom: 0,
 		marginBottom: 18
 	},
 
@@ -125,7 +158,8 @@ const useStyles = createUseStyles(theme => ({
 	description: {
 		textAlign: 'left',
 		maxWidth: 700,
-		marginTop: 60
+		marginTop: 60,
+		wordBreak: 'break-word',
 	},
 
 	screenshotWindow: {
@@ -139,18 +173,33 @@ const useStyles = createUseStyles(theme => ({
 		borderRadius: theme.rounded * 2,
 		overflow: 'hidden',
 		display: 'block',
-		//maxHeight: 'calc(100vh - 100px)',
 	},
 
 	screenshot: {
-		borderRadius: theme.rounded * 2,
 		top: '6.5%',
 		left: '3%',
 		width: '94%',
 		display: 'block',
 		overflow: 'hidden',
 		position: 'absolute',
-		borderRadius: 8,
+		borderRadius: theme.rounded * 2,
+	},
+
+	blankDemoVideoWindow: {
+		top: '14.5%',
+		left: '15%',
+		width: '70%',
+		display: 'block',
+		overflow: 'hidden',
+		position: 'absolute',
+		borderRadius: theme.rounded * 2,
+		aspectRatio: 'auto 1920 / 1215',
+	},
+
+	blankDemoVideo: {
+		width: '100%',
+		height: '100%',
+		aspectRatio: 'auto 1920 / 1215',
 	}
 
 }),{name: 'features'})

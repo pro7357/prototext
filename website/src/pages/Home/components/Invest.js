@@ -60,10 +60,14 @@ export default props => {
 			>
 				<div className={classes.crypto}>
 					<img
-						className={classes.btcImg} width={200}
+						width={200}
 						src={`assets/${targetCoin.wallet}.png`}
 					/>
 					<Textarea value={targetCoin.wallet}/>
+					<img
+						width={200}
+						src={`assets/artemy-bw.jpg`}
+					/>
 				</div>
 
 			</UIBlock>

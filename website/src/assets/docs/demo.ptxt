@@ -966,7 +966,7 @@
                 }
               },
               {
-                "content": "Page: Page 1.",
+                "content": "Link to Page 1.",
                 "id": "9fnsuu",
                 "style": 8,
                 "link": {
@@ -996,7 +996,7 @@
                 }
               },
               {
-                "content": "Page: Page 1.\nBlock: Subheading 1.1",
+                "content": "Link to Block 1.1 on Page 1.",
                 "id": "v3ey9p",
                 "style": 8,
                 "link": {
@@ -1026,7 +1026,7 @@
                 }
               },
               {
-                "content": "Page: Page 2.\nBlock: Subheading 2.2",
+                "content": "Rewrite descriptions however you like.\nIt will not break the connection between\nthe blocks.",
                 "id": "tgbnd3",
                 "style": 8,
                 "link": {
