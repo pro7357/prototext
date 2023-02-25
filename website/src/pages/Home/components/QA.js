@@ -92,7 +92,7 @@ export default props => {
 									)
 								}
 
-								return <p className={classes.cardText}>{value}</p>
+								return <div className={classes.cardText}>{value}</div>
 
 							})}
 						</div>
@@ -132,12 +132,13 @@ const useStyles = createUseStyles(theme => ({
 		width: '100%',
 		display: 'flex',
 		flexDirection: 'column',
+		gap: 16
 	},
 
 	openedCard: {
 		padding: 30,
 		'& $cardHead': {
-			marginBottom: 16,
+			marginBottom: 8,
 		}
 	},
 

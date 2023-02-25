@@ -5,6 +5,7 @@ import clsx from 'clsx'
 
 import Section from 'components/Section'
 import Heading from 'components/Heading'
+import Link from 'components/Link'
 import Subheading from 'components/Subheading'
 import Video from 'app/components/shared/Video'
 
@@ -28,14 +29,14 @@ export default connect(mapStateToProps)(props => {
 
 			<div className={classes.content}>
 
-				<div className={classes.feature}>
+				<div id='features-slides-1' className={classes.feature}>
 
 					<Subheading>
 					The App Interface<br/>and your first impression.
 					</Subheading>
 
-					<div className={classes.subtitle}>
-						Yeah! It's primarily a minimal tool to focus on your own thoughts.<br/>Explore the hidden features on the following slides. Keep what you need and discard the rest!
+					<div className={clsx(classes.subtitle, classes.firstSubtitle)}>
+						Yeah! It's primarily a minimal tool to focus on your own thoughts. Discover the hidden app's features in the <Link isInline url='/assets/usage-guide.pdf'>usage guide</Link> and on the <Link isInternal isInline url='#features-slides-2'>following slides</Link>. Check out <Link isInternal isInline url='#use-cases'>real-world examples</Link> and benefits in the <Link isInternal isInline url='#questions-and-answers'>Q&A section</Link>. Keep what you need and discard the rest!
 					</div>
 
 					<div className={classes.screenshotWindow}>
@@ -68,8 +69,10 @@ export default connect(mapStateToProps)(props => {
 					let subtitle = splitText(feature[2])
 					let description = feature.slice(3)
 
+					let sectionIndex=`features-slides-${index+2}`
+
 					return (
-						<div className={classes.feature}>
+						<div id={sectionIndex} className={classes.feature}>
 
 							<Subheading>
 								{title}
@@ -153,6 +156,15 @@ const useStyles = createUseStyles(theme => ({
 		marginBottom: 30,
 		'&:first-child': {
 			marginBottom: 60
+		}
+	},
+
+	firstSubtitle: {
+		maxWidth: 870,
+		'& a': {
+			'&:before': {
+				bottom: 1
+			}
 		}
 	},
 

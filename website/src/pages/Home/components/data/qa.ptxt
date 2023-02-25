@@ -59,33 +59,40 @@
         ]
       },
       {
-        "id": "4djfwe",
+        "id": "sozj0c",
         "content": [
           {
-            "id": "jeovg7",
+            "id": "wwau9y",
             "content": [
               {
                 "style": 7,
-                "content": "Discord",
-                "id": "cmpl-6nFmShsP8dBBfh9b4dxrFe45QiryO"
+                "content": "Benefits for anyone",
+                "id": "cmpl-6mnp98h5w74n97nD6KS7A875BtCjV"
               },
               {
                 "style": 6,
-                "content": "What is “Discord” and why is it needed here?",
-                "id": "cmpl-6nFmShsP8dBBfh9b4dxrFe45QiryO"
+                "content": "🧠x2. How might ProtoText help me develop my intellectual abilities? The benefits for anyone.",
+                "id": "cmpl-6mnp98h5w74n97nD6KS7A875BtCjV"
               },
               {
-                "content": "Discord is a communication service that allows users to communicate in real-time.",
-                "id": "ttn9jh"
+                "content": "Hello again, it's me, Artemy, the app's developer and user 🧑‍💻.",
+                "id": "fgdsbw"
               },
               {
-                "content": "This is a useful thing to request help from the ProtoText developer, send him a bug report and suggest new ideas.",
-                "id": "cmpl-6mmka86YSaZAhc0zgW3gm53cCZRfM"
+                "id": "n3tcar",
+                "content": "I've a weak memory, and I can't solve complex problems in my head. But I love computers because they can be like a second brain. I record all my ideas, structure them, connect them, and use AI as an assistant."
               },
               {
-                "content": "discrord",
-                "id": "wa1ajv",
-                "style": 1
+                "content": "I have tested various mind mapping programs before, such as Trello, Coggle, and Diagrams.net. They all have a structured format, such as a tree-like, card-like, or schematic. A raw stream of thoughts, however, has no structure. Prototext offers the ability to work with a flat stack, which is the simplest representation of data. There is freedom in this.",
+                "id": "eromo5"
+              },
+              {
+                "content": "Why not use MS Word, you say? Yes, Word is suitable for organizing a lot of ideas. However, it lacks the flexibility and speed of ProtoText's content blocks.",
+                "id": "gsg817"
+              },
+              {
+                "content": "I have seen from my experience how ideas start to progress and their quality increases. This is important in our digital age. That is why I would like to recommend such a methodology and the app to you. 🙏",
+                "id": "cmpl-6mo1PchYb41k2S82x7oBAUJtSXZeR"
               }
             ]
           }
@@ -105,7 +112,7 @@
               {
                 "id": "05vze6",
                 "style": 6,
-                "content": "What are the benefits of ProtoText for writers & translators?"
+                "content": "Benefits for writers & translators."
               },
               {
                 "content": "How many kilometers of text do you select, copy and paste in a day? How much time do you spend on design of text instead of increasing its value? Do you have a lot of drafts? How do you feel when there are too many? Are you not overwhelmed by the multiple variations of the same texts? How do you compare and organize them? Where do you write multilingual texts? Are you experiencing any issues with synchronizing localized texts?",
@@ -181,7 +188,7 @@
                 "id": "cmpl-6moK9OMY59Mfq5k1QMEEmVcasc6Fa"
               },
               {
-                "content": "1. ProtoText is a handy app for composing, generating, managing multilingual content for your websites, web applications and other software products. Results can be exported instantly in following formats: JSON, JS, MD, TXT, keeping localizations and semantic formatting.",
+                "content": "1. ProtoText is a handy app for prototyping, composing, generating, managing multilingual content for your websites, web applications and other software products. Results can be exported in following formats: JSON, JS, MD, TXT, keeping localizations and semantic formatting. Try the shortcut Shift+Cmd+E for an instant re-export.",
                 "id": "y0y7jg"
               },
               {
@@ -226,28 +233,33 @@
         ]
       },
       {
-        "id": "sozj0c",
+        "id": "4djfwe",
         "content": [
           {
-            "id": "wwau9y",
+            "id": "jeovg7",
             "content": [
               {
                 "style": 7,
-                "content": "Benefits for anyone",
-                "id": "cmpl-6mnp98h5w74n97nD6KS7A875BtCjV"
+                "content": "Discord",
+                "id": "cmpl-6nFmShsP8dBBfh9b4dxrFe45QiryO"
               },
               {
                 "style": 6,
-                "content": "Benefits for anyone. How might this app help me develop\nmy intellectual abilities 🧠x2 ?",
-                "id": "cmpl-6mnp98h5w74n97nD6KS7A875BtCjV"
+                "content": "What is “Discord” and why is it needed here?",
+                "id": "cmpl-6nFmShsP8dBBfh9b4dxrFe45QiryO"
               },
               {
-                "content": "I've a weak memory, and I can't solve complex problems in my head. But I love computers because they can be like a second brain. I record all my ideas, structure them, connect them, and use AI as an assistant. This is why I developed the Prototext.",
-                "id": "cmpl-6mnw9GY3CmgvWHoxQe8d3aBUcJVoZ"
+                "content": "Discord is a communication service that allows users to communicate in real-time.",
+                "id": "ttn9jh"
               },
               {
-                "content": "I have seen from my experience how ideas start to progress and their quality increases. This is important in our digital age. That is why I would like to recommend such a methodology to you.",
-                "id": "cmpl-6mo1PchYb41k2S82x7oBAUJtSXZeR"
+                "content": "This is a useful thing to request help from the app's developer, send him a bug report or suggest new ideas.",
+                "id": "cmpl-6mmka86YSaZAhc0zgW3gm53cCZRfM"
+              },
+              {
+                "content": "discrord",
+                "id": "wa1ajv",
+                "style": 1
               }
             ]
           }
