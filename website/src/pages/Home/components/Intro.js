@@ -134,6 +134,7 @@ const useStyles = createUseStyles(theme => ({
 
 	appIconImg: {
 		width: 128,
+		height: 128,
 		borderRadius: 30,
 		overflow: 'hidden',
 	},

@@ -9,6 +9,7 @@ import Block from './Block/Block'
 import MidDropArea from '../MidDropArea'
 import GlvrdHint from './GlvrdHint'
 import PageFooter from './PageFooter'
+import createBlock from 'editorUtils/createBlock'
 
 import { localesDict } from 'globalUtils/allLocaleOptions'
 
@@ -109,7 +110,10 @@ export default connect(mapStateToProps)(props => {
 				{targetContentLength > 0 && targetContent.map((block, blockIndex)=> {
 
 					if(block === null || typeof block === 'undefined') {
-						return 'Incorrect value.'
+						block = createBlock(
+							'Oops... You have met with some kind of bug. Please describe how this block was created and send your bug report: https://discord.gg/zze9qE5Cvq',
+							{style: 1}
+						)
 					}
 
 					let blockLang = localesDict[localeOptions[0]]

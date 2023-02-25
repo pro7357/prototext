@@ -119,7 +119,8 @@ tasks:
     desc: Send releases to the server via SSH & update the public app info.
     cmds:
       - rsync -ru --size-only -P {{.PUBLIC_RELEASES_DIR}}/* $SSH_USER@$SSH_IP:~/$SSH_DIR/releases
-      - rsync -ru --size-only -P {{.PUBLIC_APP_INFO_FILE}} $SSH_USER@$SSH_IP:~/$SSH_DIR/
+      - rsync -P {{.PUBLIC_APP_INFO_FILE}} $SSH_USER@$SSH_IP:~/$SSH_DIR/
+      - task: updateSite
 
 
 

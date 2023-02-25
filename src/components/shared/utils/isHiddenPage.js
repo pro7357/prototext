@@ -18,6 +18,10 @@ export default props => {
 	for (const locale of page.content) {
 		for (const block of locale.content) {
 
+			if(!block) {
+				continue
+			}
+
 			if(isTagsMode && tags) {
 
 				// Filter pages by tags.
@@ -47,4 +51,5 @@ export default props => {
 	}
 
 	return true
+
 }

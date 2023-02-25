@@ -80,6 +80,9 @@ const useStyles = createUseStyles(theme => ({
 		alignItems: 'center',
 		flexDirection: 'column',
 		gap: 20,
+		zIndex: 1,
+		position: 'relative',
+		backgroundColor: theme.background.default,
 		[theme.desktop]: {
 			gap: 40,
 		}

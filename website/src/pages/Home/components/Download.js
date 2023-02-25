@@ -9,9 +9,6 @@ import Section from 'components/Section'
 import Button from 'app/components/shared/Button'
 import Link from 'components/Link'
 
-import requestActualAppInfo from 'utils/requestActualAppInfo'
-
-
 
 export default connect(mapStateToProps)(props => {
 
@@ -25,12 +22,6 @@ export default connect(mapStateToProps)(props => {
 			location.href = `https://${host}/`
 			return
 		}
-		let response = await requestActualAppInfo()
-		if(!response) {
-			alert('Unable to get the actual app version')
-			return
-		}
-		setVersions(response.versions)
 	}, [])
 
 	let isDark = theme === 0
@@ -38,10 +29,6 @@ export default connect(mapStateToProps)(props => {
 	const [modalContentIndex, setModalContentIndex] = useState(false)
 	const openModal = (index) => setModalContentIndex(index)
 	const closeModal = () => setModalContentIndex(false)
-
-	const [versions, setVersions] = useState()
-
-	let actualVersion = versions ? versions.actual : APP_VERSION
 
 
 	const classes = useStyles()
@@ -51,7 +38,7 @@ export default connect(mapStateToProps)(props => {
 
 			<Button
 				className={classes.buildBtn}
-				url={`/releases/ProtoText-MacOS-Intel-v${actualVersion}.zip`}
+				url={`/releases/ProtoText-MacOS-Intel-v${APP_VERSION}.zip`}
 				isNotable
 				isLarge
 			>
@@ -60,7 +47,7 @@ export default connect(mapStateToProps)(props => {
 
 			<Button
 				className={classes.buildBtn}
-				url={`/releases/ProtoText-Windows-v${actualVersion}.zip`}
+				url={`/releases/ProtoText-Windows-v${APP_VERSION}.zip`}
 				isNotable
 				isLarge
 			>

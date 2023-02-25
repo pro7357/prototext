@@ -10,6 +10,7 @@ export default [
 				  id: 'q6fuv1',
 				  style: 7
 				},
+				null,
 				{
 				  id: 'ksjh72',
 				  content: 'List solar system planets in short format'

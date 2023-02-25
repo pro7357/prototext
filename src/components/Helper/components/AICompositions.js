@@ -74,6 +74,13 @@ export default () => {
 				</a>
 			</div>
 
+			<div>
+				Limits:<br/>
+				1. Linked content depth: 1 level.<br/>
+				2. Max request length to ChatGPT is ~300 English words.<br/>
+				But you can continue the conversation in the context of the last answer.
+			</div>
+
 		</div>
 	)
 }

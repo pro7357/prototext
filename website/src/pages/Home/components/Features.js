@@ -49,6 +49,7 @@ export default connect(mapStateToProps)(props => {
 							<Video
 								className={classes.blankDemoVideo}
 								src={`assets/screenshots/blank-doc_${theme}.webm`}
+								poster={`assets/screenshots/start_${theme}.jpg`}
 								withoutBg
 								controls={false}
 								autoplay={true}

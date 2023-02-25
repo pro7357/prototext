@@ -7,6 +7,7 @@ export default props => {
 
 	const {
 		src,
+		poster,
 		isEmbedded,
 		isYouTube,
 		isFullHeigth,
@@ -80,7 +81,7 @@ export default props => {
 					withoutBg && classes.transparentRoot,
 					className
 				)}
-				//poster={poster ? IMG_DIR+poster : null}
+				poster={poster || null}
 				controls={controls}
 				autoPlay={autoplay}
 				muted={autoplay}
