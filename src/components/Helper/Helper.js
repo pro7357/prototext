@@ -100,7 +100,7 @@ export default props => {
 			</div>
 
 			<>
-				<Heading>Content block<br/>markup</Heading>
+				<Heading>Content card<br/>markup</Heading>
 				<div className={classes.textBlockSamples}>
 
 					<UIBlock isCompact>
@@ -136,14 +136,14 @@ export default props => {
 			</>
 
 			<>
-				<Heading>Content block<br/>features</Heading>
+				<Heading>Content card<br/>features</Heading>
 
 				<UIBlock isCompact className={classes.blockDemo}>
 					<OuterActions/>
 					<div className={classes.innerActionsBlockDemo}>
 						<TextButton isMuted isSmall>Actions</TextButton>
 					</div>
-					Any kind of blocks
+					Any kind of cards
 				</UIBlock>
 
 				<SHTs

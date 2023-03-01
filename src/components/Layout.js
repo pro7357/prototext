@@ -29,10 +29,10 @@ export default connect(mapStateToProps)(props => {
 
 	const Component = components[layout]
 
-	useStyles()
+	const classes = useStyles()
 
 	return (
-		<div>
+		<div className={classes.layout}>
 			<WindowControls/>
 			<Component scrollbarsMode={scrollbarsMode} />
 		</div>
@@ -78,6 +78,12 @@ const useStyles = createUseStyles(theme => ({
 		}
 
 	},
+
+	layout: {
+		position: 'relative',
+		backgroundColor: theme.background.default,
+		zIndex: 2
+	}
 
 }))
 

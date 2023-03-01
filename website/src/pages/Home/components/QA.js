@@ -17,7 +17,6 @@ export default props => {
 		publicData
 	} = props
 
-
 	const [opened, setOpened] = useState([])
 
 	const classes = useStyles()
@@ -160,7 +159,8 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	cardTitle: {
-		margin: 0
+		margin: 0,
+		...theme.desktopLineBreaks
 	},
 
 	cardText: {

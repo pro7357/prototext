@@ -32,11 +32,11 @@ export default connect(mapStateToProps)(props => {
 				<div id='features-slides-1' className={classes.feature}>
 
 					<Subheading>
-					The App Interface<br/>and your first impression.
+						The App Interface<br/>and your first impression.
 					</Subheading>
 
 					<div className={clsx(classes.subtitle, classes.firstSubtitle)}>
-						Yeah! It's primarily a minimal tool to focus on your own thoughts. Discover the hidden app's features in the <Link isInline url='/assets/usage-guide.pdf'>usage guide</Link> and on the <Link isInternal isInline url='#features-slides-2'>following slides</Link>. Check out <Link isInternal isInline url='#use-cases'>real-world examples</Link> and benefits in the <Link isInternal isInline url='#questions-and-answers'>Q&A section</Link>. Keep what you need and discard the rest!
+						Yeah! It's primarily a minimal tool to focus on your own thoughts. Discover the hidden app's features in the <Link isInline url='/assets/usage-guide.pdf'>usage guide</Link> and on the <Link isInternal isInline url='#features-slides-2'>following slides</Link>. Check out <Link isInternal isInline url='#use-cases'>real-world examples</Link> and benefits for you in the <Link isInternal isInline url='#questions-and-answers'>Q&A section</Link>. Keep what you need and discard the rest!
 					</div>
 
 					<div className={classes.screenshotWindow}>
@@ -50,7 +50,7 @@ export default connect(mapStateToProps)(props => {
 							<Video
 								className={classes.blankDemoVideo}
 								src={`assets/screenshots/blank-doc_${theme}.webm`}
-								poster={`assets/screenshots/start_${theme}.jpg`}
+								poster={`assets/screenshots/start-with-john_${theme}.jpg`}
 								withoutBg
 								controls={false}
 								autoplay={true}
@@ -128,8 +128,7 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	heading: {
-		// paddingBottom: 0,
-		marginBottom: 18
+		marginBottom: 18,
 	},
 
 	content: {
@@ -152,15 +151,16 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	subtitle: {
-		maxWidth: 550,
 		marginBottom: 30,
 		'&:first-child': {
 			marginBottom: 60
-		}
+		},
+		...theme.desktopLineBreaks
 	},
 
 	firstSubtitle: {
-		maxWidth: 870,
+		maxWidth: 920,
+		lineHeight: 1.45,
 		'& a': {
 			'&:before': {
 				bottom: 1
@@ -176,16 +176,22 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	screenshotWindow: {
-		borderRadius: theme.rounded * 2,
+		position: 'relative',
 		boxShadow: `0 40px 60px ${theme.ambient}`,
-		position: 'relative'
+		borderRadius: theme.rounded,
+		[theme.desktop]: {
+			borderRadius: theme.rounded * 2,
+		}
 	},
 
 	screenshotBackground: {
 		width: '100%',
-		borderRadius: theme.rounded * 2,
 		overflow: 'hidden',
 		display: 'block',
+		borderRadius: theme.rounded,
+		[theme.desktop]: {
+			borderRadius: theme.rounded * 2,
+		}
 	},
 
 	screenshot: {
@@ -195,7 +201,10 @@ const useStyles = createUseStyles(theme => ({
 		display: 'block',
 		overflow: 'hidden',
 		position: 'absolute',
-		borderRadius: theme.rounded * 2,
+		borderRadius: theme.rounded,
+		[theme.desktop]: {
+			borderRadius: theme.rounded * 2,
+		}
 	},
 
 	blankDemoVideoWindow: {
@@ -205,8 +214,11 @@ const useStyles = createUseStyles(theme => ({
 		display: 'block',
 		overflow: 'hidden',
 		position: 'absolute',
-		borderRadius: theme.rounded * 2,
 		aspectRatio: 'auto 1920 / 1215',
+		borderRadius: theme.rounded,
+		[theme.desktop]: {
+			borderRadius: theme.rounded * 2,
+		}
 	},
 
 	blankDemoVideo: {

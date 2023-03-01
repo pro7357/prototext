@@ -37,7 +37,10 @@ const useStyles = createUseStyles(theme => ({
 
 	root: {
 		display: 'block',
-		padding: [24,0,48,0]
+		padding: [12,0,20,0],
+		[theme.desktop]: {
+			padding: [24,0,48,0],
+		}
 	},
 
 	centred: {
@@ -73,4 +76,4 @@ const useStyles = createUseStyles(theme => ({
 	}
 
 
-}),{name: 'headline'})
+}),{name: 'heading'})

@@ -2,93 +2,6 @@
   "editor": {
     "content": [
       {
-        "id": "a5s2k8",
-        "content": [
-          {
-            "id": "m8j4ge",
-            "content": [
-              {
-                "content": "Features",
-                "id": "345kp1",
-                "style": 7
-              },
-              {
-                "content": "It's primarily a minimal tool to focus on your own thoughts.",
-                "id": "2zawt9"
-              },
-              {
-                "content": "Write down your raw thoughts as small content blocks to find a structure and set priorities.",
-                "id": "sm0dif"
-              },
-              {
-                "content": "Blocks beat the usual way of writing of text in terms of speed and flexibility. Hit Enter to build blocks. Drag&Drop them between pages. Use one-char-markdown to markup the info.",
-                "id": "17b6gi"
-              },
-              {
-                "content": "Connect blocks, pages, and documents into an information network. Filter content by text or tags.",
-                "id": "nqxnn7"
-              },
-              {
-                "content": "Interact with ChatGPT in a non-linear way.",
-                "id": "2ucfoo"
-              },
-              {
-                "content": "Apply tasks to your content.",
-                "id": "duv4fu"
-              },
-              {
-                "content": "Use the Internal Links feature to give AI large and complex tasks.",
-                "id": "igoyye"
-              },
-              {
-                "content": "Translate content into any languages without losing connection with the original text blocks.",
-                "id": "jyxt8y"
-              },
-              {
-                "content": "Export data keeping semantic formatting.",
-                "id": "se0jpu"
-              },
-              {
-                "content": "Create secret encrypted documents.",
-                "id": "f0n4c9"
-              },
-              {
-                "content": "How many kilometers of text do you select, copy and paste in a day? How much time do you spend on design of text instead of increasing its value? Do you have a lot of drafts? How do you feel when there are too many? Are you not overwhelmed by the multiple variations of the same texts? How do you compare and organize them? Where do you write multilingual texts? Are you experiencing any issues with synchronizing localized texts?",
-                "id": "tc9yf1"
-              },
-              {
-                "content": "1. The first heretical idea is to think in terms of small text blocks, not paragraphs. You drag a block, duplicate it, or delete it without selecting any text, thus saving time.",
-                "id": "ybue88"
-              },
-              {
-                "content": "2. The second heretical idea is to use invisible minimalistic Markdown-like syntax to markup the information. No other design tools. This will focus you on the quality & value of your text.",
-                "id": "7pdqph"
-              },
-              {
-                "content": "3. Write non-linearly as ideas come to you. Move the blocks with the best ideas from drafts to the final version pages. Connect complex scenarios using links. Create as many drafts as you want and filter everything using search and tags. ProtoText will help you conquer the information chaos.",
-                "id": "szx463"
-              },
-              {
-                "content": "4. Use the “Two pages” editor view to compare and manipulate different versions of text composition.",
-                "id": "6q1pf6"
-              },
-              {
-                "content": "5. Use the \"Localizations\" editor view to translate content into any language without losing connection to the original text blocks.",
-                "id": "wkfall"
-              },
-              {
-                "content": "6. Apply your favorite ChatGPT tasks to your text constantly, everywhere, non-linearly. Download the template with popular AI tasks from this site to increase your productivity.",
-                "id": "xy71hx"
-              },
-              {
-                "content": "The program's interface is extremely minimalistic. It's cleaner than MS Word, Google Docs, Pages, Notepad, etc.",
-                "id": "2gd86p"
-              }
-            ]
-          }
-        ]
-      },
-      {
         "id": "4beurh",
         "content": [
           {
@@ -98,21 +11,6 @@
                 "content": "AI Tasks",
                 "id": "0cs1e5",
                 "style": 7
-              },
-              {
-                "content": "Content: Features.",
-                "id": "yu8xt9",
-                "style": 8,
-                "link": {
-                  "ids": [
-                    "a5s2k8",
-                    "345kp1"
-                  ],
-                  "indices": [
-                    0,
-                    0
-                  ]
-                }
               },
               {
                 "content": "Turn features to benefits.",
@@ -130,9 +28,19 @@
                 }
               },
               {
-                "style": 9,
-                "content": "1. Write faster and more efficiently with small text blocks and minimalistic markdown-like syntax. \n2. Drag and drop blocks for easier manipulation of text. \n3. Connect complex scenarios and create multiple drafts to conquer the chaos of information. \n4. Easily compare and manipulate different versions of text composition. \n5. Translate content into any language without losing connection to the original text blocks. \n6. Apply AI tasks to your text to increase productivity. \n7. Enjoy a minimalistic interface cleaner than MS Word, Google Docs, Pages, and Notepad.",
-                "id": "cmpl-6nq2M8Dk1KoYWRdZvaV2HsJGLx9l3"
+                "content": "Content: App's Features.",
+                "id": "u5truc",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "5s19s9",
+                    "9pl8p3"
+                  ],
+                  "indices": [
+                    2,
+                    0
+                  ]
+                }
               }
             ]
           }
@@ -163,17 +71,32 @@
               },
               {
                 "content": "writers",
-                "id": "msyxi1"
+                "id": "msyxi1",
+                "style": 5
               },
               {
                 "content": "coders",
-                "id": "643qne",
-                "style": 5
+                "id": "643qne"
               },
               {
                 "content": "designers",
                 "id": "pwy8sc",
                 "style": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5s19s9",
+        "content": [
+          {
+            "id": "beh9ye",
+            "content": [
+              {
+                "content": "App's Features",
+                "id": "9pl8p3",
+                "style": 7
               }
             ]
           }
@@ -191,8 +114,8 @@
     "allowLocales": false,
     "allowBlockStyles": false,
     "allowMergePages": true,
-    "outputDirectory": "/Users/artemy/Documents/Projects/prototext/website/src/pages/Home/components/data",
-    "outputFilename": "qa",
+    "outputDirectory": "",
+    "outputFilename": "",
     "isSchematicPreview": false
   },
   "presenter": {

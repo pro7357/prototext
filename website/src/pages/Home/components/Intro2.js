@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import Section from 'components/Section'
 import Link from 'components/Link'
 import Modal from 'components/Modal'
-import DynamicHeading from 'components/DynamicHeading'
+import TextButton from 'app/components/shared/TextButton'
 import { useState } from 'preact/hooks'
 
 
@@ -32,24 +32,26 @@ export default connect(mapStateToProps)(props => {
 					src={`assets/logo${isDark?`-dark`:``}.png`}
 					className={classes.appIconImg}
 				/>
-				{/* <div className={classes.appName}>ProtoText</div> */}
+				<div className={classes.appName}>ProtoText</div>
 			</div>
 
 			<h1 className={classes.heading}>
-				<span>Try a new card-based method of working with text,</span>
-				<span>media files, and ChatGPT to unlock advanced possibilities</span>
-				<span>in content creation.</span>
+				<span>Try an innovative card-based way of working with text.</span>
+				<span>That is easier than creating cards in <div className={clsx(classes.modalLink, classes.silentLink)} onClick={()=>{openModal(1)}}>Trello</div> or use <div className={clsx(classes.modalLink, classes.silentLink)} onClick={()=>{openModal(2)}}>Markdown</div>.</span>
+				<span>The built-in AI will help you generate content.</span>
 			</h1>
 
 			<i className={classes.subHeading}>
-				This app is called “ProtoText”. It's a free, private, desktop app that is suitable for taking daily notes, brainstorming, composing multilingual text, creating flexible presentations, building knowledge networks. The app is designed to help you solve creative problems. The workflow is similar to creating cards in Trello and writing text in Markdown, but easier.<br/>
-				<span className={classes.modalLink} onClick={()=>{openModal(0)}}>Read the author's short story to learn more about the project.</span>
+				It's a free, private, desktop app that is suitable for taking daily notes, brainstorming, composing multilingual text, creating flexible presentations, building knowledge networks, and solving creative problems.<br/>
+				<span className={classes.modalLink} onClick={()=>{openModal(0)}}>Read the author's short story about the project.</span>
 			</i>
 
 			<Modal
 				title={
 					[
-						`Hi! My name is Artemy`
+						`Hi! My name is Artemy`,
+						`What is Trello?`,
+						`What is Markdown?`
 					][modalContentIndex]
 				}
 				isOpened={modalContentIndex !== false}
@@ -93,6 +95,38 @@ export default connect(mapStateToProps)(props => {
 						</div>
 
 					</div>
+				)}
+
+				{modalContentIndex === 1 && (
+					<div className={classes.twoCols}>
+
+						<div className={classes.firstCol}>
+							<p>
+								Trello is a digital tool that helps people organize tasks and projects in a visual way. It uses lists and cards to represent tasks and allows you to assign due dates, labels, and comments to each card. It's easy to use and great for organizing and managing tasks and projects.
+							</p>
+						</div>
+						<div className={classes.secondCol}>
+							<img src='/assets/trello.jpg' />
+						</div>
+
+					</div>
+
+				)}
+
+				{modalContentIndex === 2 && (
+					<div className={classes.twoCols}>
+
+						<div className={classes.firstCol}>
+							<p>
+								Markdown is a simple popular way of writing that allows you to add basic formatting to text. It uses special characters, like asterisks (*) or hash symbols (#), to indicate different types of formatting, such as bold or headings.
+							</p>
+						</div>
+						<div className={classes.secondCol}>
+							<img src='/assets/markdown.jpg' />
+						</div>
+
+					</div>
+
 				)}
 
 			</Modal>
@@ -155,26 +189,35 @@ const useStyles = createUseStyles(theme => ({
 		position: 'relative',
 		cursor: 'pointer',
 		color: theme.textButton.notable.color,
+		'&:before': {
+			content: '" "',
+			position: 'absolute',
+			zIndex: 0,
+			display: 'block',
+			width: '100%',
+			bottom: 2,
+			left: 0,
+		},
 		'&:hover': {
 			color: theme.textButton.notable.color,
 			'&:before': {
-				content: '" "',
-				position: 'absolute',
-				zIndex: 0,
-				display: 'block',
-				width: '100%',
-				bottom: 2,
-				left: 0,
 				borderBottom: `1px solid ${theme.textButton.notable.color}`,
 			},
 		}
 	},
 
-	largeModalLink: {
+	silentLink: {
+		color: theme.text.default,
 		'&:before': {
 			bottom: 4,
-			opacity: 1,
+			opacity: .2,
 			borderBottom: `2px solid ${theme.text.default}`,
+		},
+		'&:hover': {
+			'&:before': {
+				opacity: 1,
+				borderBottom: `2px solid ${theme.textButton.notable.color}`,
+			},
 		}
 	},
 

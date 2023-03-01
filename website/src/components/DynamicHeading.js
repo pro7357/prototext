@@ -1,47 +1,42 @@
 
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
+import { useState, useEffect } from 'preact/hooks'
 
 
+let t
 export default props => {
 
 	const {
-		children,
-		isCentred,
+		items,
 		className
 	} = props
+
+	const [itemIndex, setItemIndex] = useState(0)
+
+	t = setTimeout(() => {
+		setItemIndex((itemIndex + 1) % items.length)
+	}, 3000)
 
 	const classes = useStyles()
 
 	return (
-		<h2
+		<h1
 			className={clsx(
 				classes.root,
-				isCentred && classes.centred,
 				className
 			)}
 		>
-			{children}
-		</h2>
+			{items[itemIndex]}
+		</h1>
 	)
 }
 
 const useStyles = createUseStyles(theme => ({
 
 	root: {
-		...theme.desktopLineBreaks,
-		display: 'block',
-		margin: 0,
-		padding: 0,
-		fontSize: '1.4em',
-		[theme.desktop]: {
-			fontSize: '1.8em',
-		}
+
 	},
 
-	centred: {
-		textAlign: 'center'
-	}
 
-
-}),{name: 'subheading'})
+}),{name: 'dynamic-heading'})

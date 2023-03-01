@@ -14,7 +14,7 @@ export default () => {
 		<div className={classes.root}>
 
 			<div>
-				All these options become available after entering "@" inside the block. The type of link and the behavior of the interface depends on the content of the block.
+				All these options become available after entering "@" inside the card. The type of link and the behavior of the interface depends on the content of the card.
 			</div>
 
 			<UIBlock className={classes.block}>
@@ -25,7 +25,7 @@ export default () => {
 			</UIBlock>
 
 			<UIBlock className={classes.block}>
-				Internal link to another block or page
+				Internal link to another card or page
 				<div className={classes.controls}>
 					<TextButton isNotable>Follow internal link</TextButton>
 				</div>
@@ -66,7 +66,7 @@ export default () => {
 			<UIBlock className={classes.block}>
 				|
 				<div className={classes.controls}>
-					<TextButton isNotable>Link block</TextButton>
+					<TextButton isNotable>Link a card</TextButton>
 					<TextButton isNotable>Link files</TextButton>
 					<TextButton isNotable>Add assets</TextButton>
 				</div>

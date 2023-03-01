@@ -18,7 +18,7 @@ const media = breakpoint => `@media (min-width: ${breakpoint}px)`
 export default themeIds.reduce((themes, themeId, themeIndex) => {
 	return themes.concat({
 		...appBasic(themeIndex),
-		...basic(themeIndex),
+		...basic(themeIndex, media(breakpoints.desktop)),
 		appPalette,
 		palette,
 		typography,

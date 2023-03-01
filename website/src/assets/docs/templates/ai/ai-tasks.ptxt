@@ -75,6 +75,18 @@
               {
                 "content": "Swap the two parts of this sentence",
                 "id": "minvy4"
+              },
+              {
+                "content": "Reduce the number of pronouns `I` in this text without losing meaning",
+                "id": "lvj4zs"
+              },
+              {
+                "content": "Rewrite this text in the second person",
+                "id": "rmoye2"
+              },
+              {
+                "content": "Check this text for its meaning and the logic of the narrative. What can be improved? Write only the corrected version, nothing else.",
+                "id": "ihiv5s"
               }
             ]
           }

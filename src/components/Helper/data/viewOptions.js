@@ -9,7 +9,7 @@ export default cmdKey => [
 	[
 		`[${cmdKey}+2]`,
 		'Two Pages view',
-		'Splitted workspace to compare and edit two pages at the same time, to move content blocks between pages. You can open two different pages or one page twice, but in a different scrolling position.'
+		'Splitted workspace to compare and edit two pages at the same time, to move content cards between pages. You can open two different pages or one page twice, but in a different scrolling position.'
 	],
 
 	[
@@ -17,7 +17,7 @@ export default cmdKey => [
 		'Localization view',
 		[
 			'Splitted workspace to translate pages into other languages.',
-			'Localized content blocks are inextricably linked to the original blocks: LEFT <- RIGHT.',
+			'Localized content cards are inextricably linked to the original cards: LEFT <- RIGHT.',
 			'The right sidebar here performs the editing of locales & navigation between them.',
 			'Click on the button in the right sidebar at the bottom to add, delete, rearrange languages.',
 			'Note: The number of locales is always the same for all pages!'
@@ -33,7 +33,7 @@ export default cmdKey => [
 	[
 		`[${cmdKey}+F]`,
 		'Search panel',
-		'To filter blocks by text, content styling, tags, locally or globally for all pages, case-sensitive or not.'
+		'To filter cards by text, content styling, tags, locally or globally for all pages, case-sensitive or not.'
 	],
 
 	[

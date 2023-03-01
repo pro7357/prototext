@@ -1,0 +1,246 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "Benefints of Regular Exercise",
+                "style": 7
+              },
+              {
+                "content": "Improved physical health and fitness.",
+                "id": "mvl2fp"
+              },
+              {
+                "content": "Reduced risk of chronic diseases, such as heart disease and diabetes.",
+                "id": "f356mg"
+              },
+              {
+                "content": "Enhanced mental well-being and reduced risk of depression and anxiety.",
+                "id": "tuxlm4"
+              },
+              {
+                "content": "Increased energy and stamina.",
+                "id": "9n7ezl"
+              },
+              {
+                "content": "Link to Healthy Eating Habits.",
+                "id": "e6gotv",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "iljspw",
+                    "7upphk"
+                  ],
+                  "indices": [
+                    10,
+                    0
+                  ]
+                }
+              },
+              {
+                "content": "exercise",
+                "id": "h938qe",
+                "style": 8
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mfupm5",
+        "content": [
+          {
+            "id": "9wkyv4",
+            "content": [
+              {
+                "content": "Benefits of Journaling",
+                "id": "atmfct"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "a831cl",
+        "content": [
+          {
+            "id": "ugxm96",
+            "content": [
+              {
+                "content": "Time Management",
+                "id": "nmo58q"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dssbq2",
+        "content": [
+          {
+            "id": "zksxh9",
+            "content": [
+              {
+                "content": "Public Speaking Skills",
+                "id": "zjwqbp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1liq3u",
+        "content": [
+          {
+            "id": "7zcwxw",
+            "content": [
+              {
+                "content": "Principles of Leadership",
+                "id": "3ree14"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "8jpbzs",
+        "content": [
+          {
+            "id": "lt1igp",
+            "content": [
+              {
+                "content": "Building Resilience",
+                "id": "qe4l7f"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dkpxon",
+        "content": [
+          {
+            "id": "rqxqyd",
+            "content": [
+              {
+                "content": "Successful Goal Setting",
+                "id": "idhck5"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3ebfaj",
+        "content": [
+          {
+            "id": "pa4fc0",
+            "content": [
+              {
+                "content": "Mindful Communication",
+                "id": "6tix8y"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lh83pn",
+        "content": [
+          {
+            "id": "0g7zit",
+            "content": [
+              {
+                "content": "Effective Collaboration",
+                "id": "cr8vi2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pw9251",
+        "content": [
+          {
+            "id": "ccdqre",
+            "content": [
+              {
+                "content": "Growth Mindset",
+                "id": "3ibvub"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iljspw",
+        "content": [
+          {
+            "id": "a0lhzi",
+            "content": [
+              {
+                "content": "Healthy Eating Habits",
+                "id": "7upphk",
+                "style": 7
+              },
+              {
+                "content": "Eating a balanced diet with plenty of fruits, vegetables, whole grains, and lean proteins.",
+                "id": "zb9n7x"
+              },
+              {
+                "content": "Limiting processed foods, sugar, and unhealthy fats.",
+                "id": "kve053"
+              },
+              {
+                "content": "Staying hydrated by drinking plenty of water and limiting sugary drinks.",
+                "id": "4lhue2"
+              },
+              {
+                "content": "Practicing mindful eating and avoiding distractions while eating.",
+                "id": "yd32j8"
+              },
+              {
+                "content": "health, food",
+                "id": "il03vl",
+                "style": 8
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 0,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": true,
+    "outputDirectory": "~/Desktop/prototext/output",
+    "outputFilename": "test",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

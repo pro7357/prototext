@@ -26,33 +26,6 @@
                 "content": "Draft",
                 "id": "sziuym",
                 "style": 7
-              },
-              {
-                "style": 6,
-                "content": "Benefits for people who need to write high-quality text without special skills.",
-                "id": "cmpl-6mujNgyoHwh61BHa5yd2RWBTiEGyS"
-              },
-              {
-                "content": "Welcome aboard the AI-powered jet aircraft. Today is the day we can press the button “Write me a text on topic X like a professional copywriter” to get a decent result.",
-                "id": "cmpl-6mumAN0wF4FnNHCgEVcngf8vkjRgw"
-              },
-              {
-                "content": "Просто напишите в одном из блоков ваше задание, активируйте режим \"ИИ\" и выберите жертву.",
-                "id": "u0yq4o"
-              },
-              {
-                "style": 9,
-                "content": "Just write your task in one of the blocks, activate the AI mode, and choose a victim.",
-                "id": "cmpl-6muu5fCrzSlCxR6C1HM13HovX65YC"
-              },
-              {
-                "content": "For coders, for the new app version",
-                "id": "qa4ze7",
-                "style": 6
-              },
-              {
-                "content": "Используйте шорткат SHIFT+CMD+E для быстрого повторного экспорта данных. Это мелочь, но я её использую очень часто.",
-                "id": "78scgn"
               }
             ]
           }
@@ -79,16 +52,24 @@
                 "id": "fgdsbw"
               },
               {
-                "id": "n3tcar",
-                "content": "I've a weak memory, and I can't solve complex problems in my head. But I love computers because they can be like a second brain. I record all my ideas, structure them, connect them, and use AI as an assistant."
+                "content": "I've already written about it, but maybe you haven't seen my story.",
+                "id": "0zc2ep"
               },
               {
-                "content": "I have tested various mind mapping programs before, such as Trello, Coggle, and Diagrams.net. They all have a structured format, such as a tree-like, card-like, or schematic. A raw stream of thoughts, however, has no structure. Prototext offers the ability to work with a flat stack, which is the simplest representation of data. There is freedom in this.",
+                "id": "n3tcar",
+                "content": "As a person who does not possess exceptional mental computational abilities or a super memory, I still want to solve complex creative tasks. Here, the computer helps me as a second brain. I record all my ideas, structure them, connect them, and use AI as an assistant."
+              },
+              {
+                "content": "I have tested various mind mapping programs before, such as Trello, Coggle, and Diagrams.net. They all have a structured or nested format. Thinking about structure means to strain your brain. A raw stream of thoughts, however, has no structure. Prototext offers the ability to work with a flat stack, which is the simplest representation of data. There is freedom in this.",
                 "id": "eromo5"
               },
               {
-                "content": "Why not use MS Word, you say? Yes, Word is suitable for organizing a lot of ideas. However, it lacks the flexibility and speed of ProtoText's content blocks.",
+                "content": "Why not use MS Word, you say? Yes, Word is suitable for organizing a lot of ideas. However, it lacks the flexibility and speed of ProtoText's content cards.",
                 "id": "gsg817"
+              },
+              {
+                "content": "The built-in ChatGPT and set of frequently used commands help me quickly find new ideas, improve my English, and generate any text content. Try to download my templates with AI Tasks and feel the comfort of ProtoText.",
+                "id": "035o9a"
               },
               {
                 "content": "I have seen from my experience how ideas start to progress and their quality increases. This is important in our digital age. That is why I would like to recommend such a methodology and the app to you. 🙏",
@@ -131,7 +112,7 @@
                 "id": "cmpl-6msaWcv8F7yVncCRQNzK7zEP8Ygr9"
               },
               {
-                "content": "1. The first heretical idea is to think in terms of small text blocks, not paragraphs. You drag a block, duplicate it, or delete it without selecting any text, thus saving time.",
+                "content": "1. The first heretical idea is to think in terms of small cards (or text blocks), not paragraphs. You drag a card, duplicate it, or delete it without selecting any text, thus saving time.",
                 "id": "cmpl-6msV28Oz1lQyPXwSSlxdFQX4FlyNd"
               },
               {
@@ -139,7 +120,7 @@
                 "id": "cmpl-6msV28Oz1lQyPXwSSlxdFQX4FlyNd"
               },
               {
-                "content": "3. Write non-linearly as ideas come to you. Move the blocks with the best ideas from drafts to the final version pages. Connect complex scenarios using links. Create as many drafts as you want and filter everything using search and tags. ProtoText will help you conquer the information chaos.",
+                "content": "3. Write non-linearly as ideas come to you. Move the cards with the best ideas from drafts to the final version pages. Connect complex scenarios using links. Create as many drafts as you want and filter everything using search and tags. ProtoText will help you conquer the information chaos.",
                 "id": "cmpl-6mtWWuhZF5kMQg40RnZjNWpatKNWI"
               },
               {
@@ -147,7 +128,7 @@
                 "id": "rn6wyq"
               },
               {
-                "content": "5. Use the \"Localizations\" editor view to translate content into any language without losing connection to the original text blocks.",
+                "content": "5. Use the \"Localizations\" editor view to translate content into any language without losing connection to the original text parts.",
                 "id": "cmpl-6mvweRPSHhyq8l9pV0fb9HEm061Mp"
               },
               {
@@ -181,7 +162,7 @@
               {
                 "id": "ghaqe5",
                 "style": 6,
-                "content": "Benefits for coders & engineers."
+                "content": "Benefits for coders & other IT specialists."
               },
               {
                 "content": "Hi colleagues!",
@@ -192,7 +173,7 @@
                 "id": "y0y7jg"
               },
               {
-                "content": "2. Create private offline ToDo lists & Workflow docs. I know there are 100,000 alternatives. Try one more. Benefits: minimalism, flat data structure. It is not Trello cards, but atomic text blocks which you can drag and drop as in Kanban, and style like Markdown, but simplified and cleaner.",
+                "content": "2. Create private offline ToDo lists & Workflow docs. I know there are 100,000 alternatives. Try one more. Benefits: minimalism, flat data structure. It is not Trello cards, but atomic content cards which you can drag and drop as in Kanban, and style like Markdown, but simplified and cleaner.",
                 "id": "s78oz3"
               },
               {
@@ -227,6 +208,66 @@
               {
                 "content": "I'm happy that you are all here in this world ☀️. You may be familiar with the Zettelkasten method or something similar. You have the power and wisdom to understand the advantages of the app and get benefit from it without hints.",
                 "id": "cmpl-6mnEOe4dq08VFmnJmU4tFbLArevsK"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "qvgkyx",
+        "content": [
+          {
+            "id": "dqwgys",
+            "content": [
+              {
+                "content": "Alternatives",
+                "id": "mui253",
+                "style": 7
+              },
+              {
+                "content": "Notion, Evernote, Trello, Obsidian, Logseq, Google Docs...\nWhy do I need another app when I already have a million?",
+                "id": "0m3yor",
+                "style": 6
+              },
+              {
+                "content": "Comparing ProtoText, Notion, and so on is like comparing a bicycle  🚲 to spaceships 🚀🚀🚀.",
+                "id": "s5f37s"
+              },
+              {
+                "content": "The choice is in your hands 🙌",
+                "id": "blrs50"
+              },
+              {
+                "content": "ProtoText is an extremely minimalist tool to immediately start taking action.",
+                "id": "jrnfm3"
+              },
+              {
+                "content": "1. You will love it first and foremost as a tool for short brainstorming sessions to unload a raw stream of thoughts and prioritize your ideas. Try writing text as small cards. This is a unique feature and you may end up liking it.",
+                "id": "cmpl-6p3kUAJykmeMN4bl3uSWlzJmTrmYr"
+              },
+              {
+                "content": "2. The built-in ChatGPT will perfectly complement this process. You can apply a lot of small your favorite AI tasks to the same small parts of your texts. When the AI began generating too many ideas, the app will be useful to filter, prioritize, and store them.",
+                "id": "77jrkw"
+              },
+              {
+                "content": "3. ProtoText can help you compose multilingual product presentations. What free programs do you know of that have the same level of flexibility on this issue?",
+                "id": "cmpl-6p3li2XSu0WTgBSSCBj30eLB7Nmbt"
+              },
+              {
+                "content": "4. ProtoText can help you organize your digital portfolio. You were able to assemble all of your various works into one network.",
+                "id": "cmpl-6p3nXxviLbbI5NfkLpr2dSgzdc8KS"
+              },
+              {
+                "content": "5. Prototext is not about design, fonts, colors, and other embellishments of content. It is primarily about meaningful markup of information. It is like Markdown, but a little simpler and cleaner.",
+                "id": "w6owba"
+              },
+              {
+                "content": "6. Prototext is not a cloud service. It is probably important for someone.",
+                "id": "xv9f7w"
+              },
+              {
+                "content": "7. If you still want to store your data in a cloud, then you will find in Protext a reliable encryption tool for your information",
+                "id": "pb3awn"
               }
             ]
           }

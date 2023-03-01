@@ -67,7 +67,7 @@ export default connect(mapStateToProps)(props => {
 					autoFocus={true}
 					value={searchText}
 					onInput={setSearchText}
-					placeholder='Enter any text or a block styling symbol'
+					placeholder='Enter any text or a card styling symbol'
 				/>
 			)}
 

@@ -1,0 +1,126 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "sijqlq",
+        "content": [
+          {
+            "id": "jtdhl5",
+            "content": [
+              {
+                "content": "Benefits of Meditation",
+                "id": "c5ofj8",
+                "style": 7
+              },
+              {
+                "content": "Reduced stress and anxiety.",
+                "id": "pvb3y6"
+              },
+              {
+                "content": "Increased focus and concentration.",
+                "id": "t9e8ha"
+              },
+              {
+                "content": "Improved mood and emotional well-being.",
+                "id": "ocy4lu"
+              },
+              {
+                "content": "Enhanced self-awareness and mindfulness.",
+                "id": "uzk4jq"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "he2mya",
+        "content": [
+          {
+            "id": "5ise6r",
+            "content": [
+              {
+                "content": "Types of Meditation",
+                "id": "0m6xtp",
+                "style": 7
+              },
+              {
+                "content": "Mindfulness meditation.",
+                "id": "crvi05"
+              },
+              {
+                "content": "Transcendental meditation.",
+                "id": "ls0vd6"
+              },
+              {
+                "content": "Loving-kindness meditation.",
+                "id": "rjtrxe"
+              },
+              {
+                "content": "Body scan meditation.",
+                "id": "kj7wdt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "weywm0",
+        "content": [
+          {
+            "id": "kznkof",
+            "content": [
+              {
+                "content": "Getting Started",
+                "id": "4x4w97",
+                "style": 7
+              },
+              {
+                "content": "Choose a quiet and comfortable place to meditate.",
+                "id": "asjmrm"
+              },
+              {
+                "content": "Decide on the type of meditation that resonates with you.",
+                "id": "8kbocj"
+              },
+              {
+                "content": "Start with short sessions, gradually increasing the duration over time.",
+                "id": "c2catr"
+              },
+              {
+                "content": "Use guided meditations or apps to help you get started.",
+                "id": "7oq326"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 0,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": true,
+    "outputDirectory": "~/Desktop/prototext/output",
+    "outputFilename": "test",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

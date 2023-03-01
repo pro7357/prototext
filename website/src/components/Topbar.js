@@ -55,7 +55,7 @@ export default connect(mapStateToProps)(props => {
 
 			<div className={classes.leftSide}>
 				<Link isInternal isButton url='#app'>
-					<b>ProtoText.app</b>
+					<b>ProtoText</b>
 					<span> v{APP_VERSION}</span>
 				</Link>
 				<Link isInternal isButton url='#features'>Features</Link>

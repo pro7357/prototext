@@ -28,12 +28,12 @@ export default () => {
 				<div className={classes.btns}>
 					<TextButton isNotable isSmall>AI</TextButton>
 				</div>
-				Block – Content
+				Card – Content
 			</UIBlock>
 
 			<UIBlock className={clsx(classes.block, classes.taskBlock)}>
 				<div className={classes.taskBlockBg}/>
-				Block – Task
+				Card – Task
 			</UIBlock>
 
 			<UIBlock className={classes.block}>
@@ -46,7 +46,7 @@ export default () => {
 			</UIBlock>
 
 			<div>
-				Please note that Content and Task can be the same block.
+				Please note that Content and Task can be the same card.
 			</div>
 
 			<div className={classes.subHeading}>
@@ -64,8 +64,8 @@ export default () => {
 			>
 				<div className={clsx(classes.taskBlockBg, classes.largeTaskBlockBg)}/>
 				{/* Link to a page */}
-				Block – Internal link<br/>
-				To use all page content for the prompt.
+				Card – With a linked page<br/>
+				to use all content of this page as a prompt.
 			</UIBlock>
 
 			<div>

@@ -37,7 +37,7 @@ export default props => {
 					onClick={activateLinkMode}
 					isNotable
 				>
-					Link block
+					Link a card
 				</TextButton>
 
 				<TextButton

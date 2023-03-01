@@ -1,0 +1,242 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "content": "Table of Contents",
+                "id": "xdg9gl",
+                "style": 7
+              },
+              {
+                "content": "Introduction.",
+                "id": "a1h3su",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "duethm",
+                    "xl0ak3"
+                  ],
+                  "indices": [
+                    1,
+                    0
+                  ]
+                }
+              },
+              {
+                "content": "Background.",
+                "id": "1nad90",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "8o3q8p",
+                    "98ta8x"
+                  ],
+                  "indices": [
+                    2,
+                    0
+                  ]
+                }
+              },
+              {
+                "content": "Main content.",
+                "id": "oqt194",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "cbuhxk",
+                    "3zmsh4"
+                  ],
+                  "indices": [
+                    3,
+                    0
+                  ]
+                }
+              },
+              {
+                "content": "Conclusion.",
+                "id": "d4q3i0",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "4gsfdr",
+                    "mpiabp"
+                  ],
+                  "indices": [
+                    4,
+                    0
+                  ]
+                }
+              },
+              {
+                "content": "References.",
+                "id": "hxx2jl",
+                "style": 8,
+                "link": {
+                  "ids": [
+                    "ecg6ms",
+                    "055v1e"
+                  ],
+                  "indices": [
+                    5,
+                    0
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "duethm",
+        "content": [
+          {
+            "id": "ue2exe",
+            "content": [
+              {
+                "content": "Introduction",
+                "id": "xl0ak3",
+                "style": 7
+              },
+              {
+                "id": "bb1mbi",
+                "content": "This section can introduce the author and provide some context about the topic they will be discussing in the book."
+              },
+              {
+                "content": "Hook: The introduction should start with a hook that grabs the reader's attention and encourages them to keep reading. This can be a provocative statement, an interesting fact, or a personal story that relates to the topic.",
+                "id": "ptfurr"
+              },
+              {
+                "content": "Background information: The introduction should provide some background information about the topic, including its history, significance, and relevance to modern science.",
+                "id": "up8rv3"
+              },
+              {
+                "content": "Objectives: The introduction should clearly state the objectives or goals of the book, outlining what the reader can expect to learn from reading it.",
+                "id": "2a0hb2"
+              },
+              {
+                "content": "Scope: The introduction should also define the scope of the book, including the specific areas or topics that will be covered and any limitations or restrictions on the scope of the discussion.",
+                "id": "wk8oak"
+              },
+              {
+                "content": "Structure: The introduction may outline the structure of the book, including how it is organized, what topics are covered in each chapter, and how the chapters relate to each other.",
+                "id": "uwkxvz"
+              },
+              {
+                "content": "Summary: Finally, the introduction may conclude with a summary of what the reader can expect from the book, highlighting its key features and benefits, and encouraging them to read on.",
+                "id": "r84316"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "8o3q8p",
+        "content": [
+          {
+            "id": "4ewx9r",
+            "content": [
+              {
+                "id": "98ta8x",
+                "style": 7,
+                "content": "Background"
+              },
+              {
+                "id": "1f8l26",
+                "content": "This section can provide relevant background information about the scientific field the book is about, including its history, major concepts, and theories."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cbuhxk",
+        "content": [
+          {
+            "id": "a8e0gr",
+            "content": [
+              {
+                "content": "Main content",
+                "id": "3zmsh4",
+                "style": 7
+              },
+              {
+                "id": "dy23cx",
+                "content": "This section will form the bulk of the book and will delve into the main topic or topics that the author wants to discuss. The content can be broken up into chapters, each exploring a different aspect of the topic, and can include examples, case studies, and anecdotes."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4gsfdr",
+        "content": [
+          {
+            "id": "7qr83x",
+            "content": [
+              {
+                "content": "Conclusion",
+                "id": "mpiabp",
+                "style": 7
+              },
+              {
+                "id": "9e4jbf",
+                "content": "This section can summarize the main points covered in the book and offer some concluding thoughts or insights. The author may also use this section to suggest future directions for research or to make recommendations for action."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ecg6ms",
+        "content": [
+          {
+            "id": "9jrfb3",
+            "content": [
+              {
+                "content": "References",
+                "id": "055v1e",
+                "style": 7
+              },
+              {
+                "content": "This section can provide a list of sources cited in the book, as well as additional resources for readers who want to learn more about the topic.",
+                "id": "mvlaf3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 0,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": true,
+    "outputDirectory": "~/Desktop/prototext/output",
+    "outputFilename": "test",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

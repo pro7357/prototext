@@ -8,17 +8,17 @@
             "id": "qx47jc",
             "content": [
               {
-                "content": "Blocks",
+                "content": "Cards",
                 "id": "l57zzv",
                 "style": 7
               },
               {
-                "content": "Write down your raw thoughts as small content blocks to find a structure and set priorities.",
+                "content": "Write your text as small cards to flex your content control.\nOne-key shortcuts will help you markup data & attach any resources as quickly as possible.",
                 "id": "grflt4",
                 "style": 6
               },
               {
-                "content": "Blocks beat the usual way of writing of text in terms of speed and flexibility. Hit Enter to build blocks. Drag&Drop them between pages. Use one-char-markdown to markup the info.",
+                "content": "Cards beat the usual way of writing of text in flexibility. You can drag & drop a card between pages, duplicate it, or delete it without selecting any text, thus saving a lot of time.",
                 "id": "2202a9"
               }
             ]
@@ -37,12 +37,12 @@
                 "style": 7
               },
               {
-                "content": "Connect blocks, pages, and documents into an information network. Filter content by text or tags.",
+                "content": "From Chaos to Order.\nConnect your cards, pages, and docs into a network\nto organize knowledge & gain fresh insights.",
                 "id": "4jfobs",
                 "style": 6
               },
               {
-                "content": "The magic of Zettelkasten starts after you enter \"@\"\nin an empty block.",
+                "content": "Combining individual ideas can lead you to new associations and boost your creative thinking. Just type '@' in an empty card to start your first knowledge network.",
                 "id": "ybll2w"
               }
             ]
@@ -61,7 +61,7 @@
                 "style": 7
               },
               {
-                "content": "Interact with ChatGPT in a non-linear way.\nApply tasks to your content.",
+                "content": "Let AI make You Stronger.\nInteract with built-in ChatGPT. Combine and apply\nyour favorite tasks to your content.",
                 "id": "gjtrb9",
                 "style": 6
               },
@@ -84,7 +84,7 @@
                 "id": "v30yw4"
               },
               {
-                "content": "Translate content into any languages without losing connection with the original text blocks.",
+                "content": "Translate content into any languages\nwithout losing connection with the original text.",
                 "id": "5hagwm",
                 "style": 6
               },
@@ -108,13 +108,13 @@
                 "style": 7
               },
               {
-                "content": "Present content blocks as full-screen slides and switch them using the arrow keys.",
-                "id": "0wba5e",
+                "content": "Wanna make a big impression with your content for someone?\nOK, just activate the full-screen Presentation mode.",
+                "id": "yrmufz",
                 "style": 6
               },
               {
-                "content": "Use the \"Internal Links\" and \"Tags\" features to create multiple presentations for different purposes and viewers.",
-                "id": "xff2i8"
+                "content": "Filter and localize content to create more precisely focused presentations for different clients. Navigate between slides using the arrow keys.",
+                "id": "7vj4my"
               }
             ]
           }
@@ -156,17 +156,75 @@
                 "style": 7
               },
               {
-                "content": "Create secret encrypted documents.",
+                "content": "Protect your data\nwith strong encryption.",
                 "id": "vw653o",
                 "style": 6
               },
               {
-                "content": "But remember that if you forget the secret phrase, there is no way to recover the data. ⚠️",
+                "content": "The app offers a way to encrypt information without the possibility of recovering passwords. This is a deliberate security measure.",
                 "id": "uk0rr1"
               },
               {
                 "content": "If you are a serious programmer or an ethical hacker, please try to hack the demo file \"https://prototext.app/assets/docs/encrypted-demo.ptxt\" and explain how this is possible. I promise the first person to send $💯 in BTC.",
                 "id": "n690r8"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "0eqc4z",
+        "content": [
+          {
+            "id": "e6rjaa",
+            "content": [
+              {
+                "content": "Draft",
+                "id": "yl6x3t",
+                "style": 7
+              },
+              {
+                "content": "Think Small, Create Big.\nWrite down your thoughts as small cards.\nUse one-key shortcuts to prioritize your ideas quickly.",
+                "id": "grflt4",
+                "style": 6
+              },
+              {
+                "content": "ProtoText offers a unique card-based approach to content creation that allows users to connect ideas and create a knowledge network easily. It's designed to be easy to use, and with the addition of ChatGPT, it can help users generate new ideas and insights quickly. Additionally, ProtoText is free and cloud-less.",
+                "id": "3a9tww"
+              },
+              {
+                "content": "Easy drag & drop text editor",
+                "id": "uypvtn",
+                "style": 3
+              },
+              {
+                "content": "Make your rich text writing really flexible using an easy сard-based text editor with built-in ChatGPT assistance.",
+                "id": "g6qjdx"
+              },
+              {
+                "content": "Simplify Your Content Creation with ProtoText",
+                "id": "vbqulo"
+              },
+              {
+                "content": "Brainstorming & Card-Based Text writing tool",
+                "id": "0o522y",
+                "style": -1
+              },
+              {
+                "content": "The All-in-One Tool for Streamlining Your Creative Workflow",
+                "id": "mzosdk"
+              },
+              {
+                "content": "Take Control of Your Ideas and Boost Your Productivity with ProtoText",
+                "id": "xst20f"
+              },
+              {
+                "content": "Get More Done in Less Time with the Innovative Rich Text Workflow",
+                "id": "bk952m"
+              },
+              {
+                "content": "Write down your raw thoughts as small content blocks to find a structure and set priorities.",
+                "id": "grflt4"
               }
             ]
           }

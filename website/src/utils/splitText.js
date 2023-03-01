@@ -15,9 +15,9 @@ export default text => {
 			}
 
 			return (
-				<div>
+				<span>
 					{p}
-				</div>
+				</span>
 				)
 		})}
 	</>)

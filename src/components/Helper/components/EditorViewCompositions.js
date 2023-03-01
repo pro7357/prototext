@@ -14,7 +14,7 @@ export default () => {
 				<div className={classes.page}>
 					Page
 					<small>
-						Consists of paragraphs<br/>called "content blocks"
+						Consists of<br/>"content cards"
 					</small>
 				</div>
 			</div>
