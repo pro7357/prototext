@@ -128,7 +128,7 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	heading: {
-		marginBottom: 18,
+		paddingBottom: 42,
 	},
 
 	content: {

@@ -4,10 +4,13 @@ import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
 import Section from 'components/Section'
+import Heading from 'components/Heading'
 import Link from 'components/Link'
 import Modal from 'components/Modal'
 import TextButton from 'app/components/shared/TextButton'
+import OverviewVideo from './OverviewVideo'
 import { useState } from 'preact/hooks'
+import DynamicHeading from 'components/DynamicHeading'
 
 
 export default connect(mapStateToProps)(props => {
@@ -25,24 +28,22 @@ export default connect(mapStateToProps)(props => {
 	const classes = useStyles()
 
 	return (
-		<Section className={classes.root} isCentred id='app'>
+		<Section className={classes.root} isCentred isVFlex id='app'>
 
-			<div className={classes.appIcon}>
-				<img
-					src={`assets/logo${isDark?`-dark`:``}.png`}
-					className={classes.appIconImg}
-				/>
-				<div className={classes.appName}>ProtoText</div>
+			<Heading isHuge isCold className={classes.primaryHeading}>
+				Solving<br/>creative problems
+			</Heading>
+
+			<div className={classes.secondaryHeading}>
+				Using AI & “Cards”
 			</div>
 
-			<h1 className={classes.heading}>
-				<span>Try an innovative card-based way of working with text.</span>
-				<span>That is easier than creating cards in <div className={clsx(classes.modalLink, classes.silentLink)} onClick={()=>{openModal(1)}}>Trello</div> or use <div className={clsx(classes.modalLink, classes.silentLink)} onClick={()=>{openModal(2)}}>Markdown</div>.</span>
-				<span>The built-in AI will help you generate content.</span>
-			</h1>
+			<div className={classes.overview}>
+				<OverviewVideo/>
+			</div>
 
 			<i className={classes.subHeading}>
-				It's a free, private, desktop app that is suitable for taking daily notes, brainstorming, composing multilingual text, creating flexible presentations, building knowledge networks, and solving creative problems.<br/>
+				It's a free, introvert-friendly, desktop app that is suitable for taking daily notes, brainstorming, research, composing multilingual text, creating flexible presentations, building knowledge networks, and managing your projects content.<br/>
 				<span className={classes.modalLink} onClick={()=>{openModal(0)}}>Read the author's short story about the project.</span>
 			</i>
 
@@ -51,7 +52,8 @@ export default connect(mapStateToProps)(props => {
 					[
 						`Hi! My name is Artemy`,
 						`What is Trello?`,
-						`What is Markdown?`
+						`What is Markdown?`,
+						`Overview video`
 					][modalContentIndex]
 				}
 				isOpened={modalContentIndex !== false}
@@ -129,6 +131,19 @@ export default connect(mapStateToProps)(props => {
 
 				)}
 
+				{modalContentIndex === 3 && (
+					<div className={classes.twoCols}>
+						<div className={classes.firstCol}>
+							<p>
+								Is innovative the way or not? Why use this app when there are millions of other options? Can ProtoText help make life easier? Whether it's worth a try is up to you. I'm just a dev, but it seems to have solved many of the issues I've seen. Try it out and let me know what you think ✍️
+							</p>
+						</div>
+						<div className={classes.secondCol}>
+							<iframe width="560" height="280" src="https://www.youtube.com/embed/aUczdQSx6po" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+					</div>
+				)}
+
 			</Modal>
 
 		</Section>
@@ -147,17 +162,32 @@ const useStyles = createUseStyles(theme => ({
 
 	root: {
 		paddingTop: 160,
-		paddingBottom: 12
+		paddingBottom: 12,
 	},
 
-	heading: {
-		margin: [32, 0, 24, 0],
-		fontSize: 34,
+	caption: {
+		// margin: [32, 0, 24, 0],
+		// fontSize: 34,
 		...theme.desktopLineBreaks
+	},
+
+	primaryHeading: {
+		margin: 0,
+		padding: 0,
+		...theme.desktopLineBreaks
+	},
+
+	secondaryHeading: {
+		fontSize: 38,
+		fontWeight: 'bold',
 	},
 
 	subHeading: {
 		lineHeight: 1.55,
+	},
+
+	overview: {
+		margin: [40,0]
 	},
 
 	nowrap: {
@@ -210,7 +240,7 @@ const useStyles = createUseStyles(theme => ({
 		color: theme.text.default,
 		'&:before': {
 			bottom: 4,
-			opacity: .2,
+			opacity: .25,
 			borderBottom: `2px solid ${theme.text.default}`,
 		},
 		'&:hover': {
@@ -241,6 +271,9 @@ const useStyles = createUseStyles(theme => ({
 		'& img': {
 			width: '100%'
 		},
+		'& iframe': {
+			width: '100%'
+		},
 		[theme.desktop]: {
 			width: '40%',
 		}
@@ -265,6 +298,12 @@ const useStyles = createUseStyles(theme => ({
 			display: 'block',
 			width: 'calc(100% / 3 - 10px)'
 		},
+	},
+
+	youtube: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
 	}
 
 }),{name: 'intro'})

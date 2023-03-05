@@ -13,13 +13,13 @@
                 "style": 7
               },
               {
-                "content": "Write your text as small cards to flex your content control.\nOne-key shortcuts will help you markup data & attach any resources as quickly as possible.",
-                "id": "grflt4",
+                "content": "Write your text as small cards. Forget the paragraph concept.\nUsing Card-based approach, One-Key Markup, and Split-Screen View\nwill give you great flexible control over your content.",
+                "id": "2dva5l",
                 "style": 6
               },
               {
-                "content": "Cards beat the usual way of writing of text in flexibility. You can drag & drop a card between pages, duplicate it, or delete it without selecting any text, thus saving a lot of time.",
-                "id": "2202a9"
+                "content": "Cards offer more flexibility than traditional text writing because you can easily drag and drop them\nbetween pages, duplicate or delete them without the need to select text, saving a lot of time.\nUsing one-key shortcuts can help you quickly markup data and attach files. 📎",
+                "id": "bcampw"
               }
             ]
           }
@@ -37,13 +37,13 @@
                 "style": 7
               },
               {
-                "content": "From Chaos to Order.\nConnect your cards, pages, and docs into a network\nto organize knowledge & gain fresh insights.",
-                "id": "4jfobs",
+                "content": "Connect your cards, pages, and docs into a network\nto organize knowledge and gain fresh insights.",
+                "id": "ll0b9q",
                 "style": 6
               },
               {
-                "content": "Combining individual ideas can lead you to new associations and boost your creative thinking. Just type '@' in an empty card to start your first knowledge network.",
-                "id": "ybll2w"
+                "content": "Combining individual ideas can lead you to new associations\nand boost your creative thinking. Just type '@' in an empty card\nto start your first knowledge network.",
+                "id": "yp7k3d"
               }
             ]
           }
@@ -61,12 +61,12 @@
                 "style": 7
               },
               {
-                "content": "Let AI make You Stronger.\nInteract with built-in ChatGPT. Combine and apply\nyour favorite tasks to your content.",
+                "content": "Interact with built-in ChatGPT to generate content from scratch.\nCombine and apply your favorite tasks to your content\nto receive more advanced responses from the AI.",
                 "id": "gjtrb9",
                 "style": 6
               },
               {
-                "content": "Use the Internal Links feature to give AI large and complex tasks 👍\n(A tutorial video on YouTube)[https://youtu.be/Udo38jdK6u4]",
+                "content": "Three ways to interact with ChatGPT inside the ProtoText:\n(A tutorial video on YouTube – 3:40 min)[https://youtu.be/Udo38jdK6u4]",
                 "id": "nr619p"
               }
             ]
@@ -81,7 +81,8 @@
             "content": [
               {
                 "content": "Translation",
-                "id": "v30yw4"
+                "id": "v30yw4",
+                "style": 7
               },
               {
                 "content": "Translate content into any languages\nwithout losing connection with the original text.",
@@ -89,7 +90,7 @@
                 "style": 6
               },
               {
-                "content": "All pages of your content can be localized synchronously in a special app mode. The markup is inherited from the source text.",
+                "content": "All pages of your content can be localized synchronously in a special app mode.\nThe markup is inherited from the source text.",
                 "id": "i4483c"
               }
             ]
@@ -113,7 +114,7 @@
                 "style": 6
               },
               {
-                "content": "Filter and localize content to create more precisely focused presentations for different clients. Navigate between slides using the arrow keys.",
+                "content": "Filter and localize content to create more precisely focused presentations for different clients.\nNavigate between slides as usual – using the arrow keys.",
                 "id": "7vj4my"
               }
             ]
@@ -137,7 +138,7 @@
                 "style": 6
               },
               {
-                "content": "The \"Proto\" prefix in the app name means the beginning stage of content production. The text you are reading here was exported from a ProtoText document.",
+                "content": "The \"Proto\" prefix in the app name means the beginning stage of content production.\nThe text you are reading here was exported from a ProtoText document.",
                 "id": "px3qh9"
               }
             ]
@@ -161,11 +162,11 @@
                 "style": 6
               },
               {
-                "content": "The app offers a way to encrypt information without the possibility of recovering passwords. This is a deliberate security measure.",
+                "content": "The app offers a way to encrypt information without the possibility\nof recovering passwords. This is a deliberate security measure.",
                 "id": "uk0rr1"
               },
               {
-                "content": "If you are a serious programmer or an ethical hacker, please try to hack the demo file \"https://prototext.app/assets/docs/encrypted-demo.ptxt\" and explain how this is possible. I promise the first person to send $💯 in BTC.",
+                "content": "If you are a serious programmer or an ethical hacker, please try to hack the demo file \"https://prototext.app/ assets / docs / encrypted-demo.ptxt\" and explain how this is possible. I promise the first person to send $💯 in BTC.",
                 "id": "n690r8"
               }
             ]
@@ -182,6 +183,10 @@
                 "content": "Draft",
                 "id": "yl6x3t",
                 "style": 7
+              },
+              {
+                "content": "(Overview video on YouTube – 3:44 min)[https://youtu.be/aUczdQSx6po]",
+                "id": "bmuol5"
               },
               {
                 "content": "Think Small, Create Big.\nWrite down your thoughts as small cards.\nUse one-key shortcuts to prioritize your ideas quickly.",
@@ -234,7 +239,7 @@
     "localeOptions": [
       "en"
     ],
-    "pageWidth": 600,
+    "pageWidth": false,
     "compactMenuMode": false
   },
   "exporter": {

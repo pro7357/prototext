@@ -18,7 +18,7 @@ import { showSettings } from 'layoutActions'
 
 // This mode means imitation of a request with delay and
 // imitation of an answer – "./src/utils/ai/openai/demo/chatGPTResponse.js"
-const chatGPTImitationMode = isDesktopBuild ? false : true
+const chatGPTImitationMode = isDesktopBuild ? false : !true
 
 // Determine the request method - stream or full answer with delay.
 const stream = true

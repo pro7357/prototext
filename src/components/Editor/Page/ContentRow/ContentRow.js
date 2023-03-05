@@ -20,17 +20,21 @@ export default props => {
 		blockIndex,
 		localeIndex,
 		isAlone,
+		isTargetPage,
 		twoColsMode,
 		singlePageMode,
 		pageWidth,
 		side,
+		isSelected,
 		children
 	} = props
 
 	const {
 		dndMode,
+		selMode,
 		linkMode,
 		aiPromptMode,
+		selRange,
 		currentDoc,
 	} = sharedEditorProps
 
@@ -38,9 +42,9 @@ export default props => {
 
 	let promptable = aiPromptMode
 
-	let draggable = !isAlone && !linkMode && !promptable
-	let droppable = isTextBlockDndMode && !promptable
-	let deletable = !isAlone && !linkMode && !promptable
+	let draggable = (!isAlone && !linkMode && !promptable) || isSelected
+	let droppable = isTextBlockDndMode && !promptable && !isSelected
+	let deletable = !isAlone && !linkMode && !promptable && !selMode
 
 	let isHighlighted = block.isHighlighted
 
@@ -59,6 +63,7 @@ export default props => {
 				linkMode && classes.linkable,
 				promptable && classes.promptable,
 				isHighlighted && classes.highlighted,
+				isSelected && classes.selected,
 				block.style === 6 && classes.withTopMargin
 			)}
 			onMouseUp={e=>{
@@ -66,6 +71,18 @@ export default props => {
 				handleDrag({
 					e,
 					moment: 'unhold',
+				})
+			}}
+			onDoubleClick={e=>{
+				if(isAlone && !linkMode && !aiPromptMode) return
+				handleClick({
+					e,
+					pageIndex,
+					localeIndex,
+					blockIndex,
+					isTargetPage,
+					selRange,
+					dblMode: true
 				})
 			}}
 			onClick={e=>{
@@ -76,12 +93,15 @@ export default props => {
 					pageIndex,
 					localeIndex,
 					blockIndex,
+					isTargetPage,
 					pageWidth,
 					isAlone,
 					singlePageMode,
 					twoColsMode,
 					linkMode,
 					aiPromptMode,
+					selRange,
+					isTextBlockDndMode,
 					currentDoc
 				})
 			}}
@@ -91,6 +111,8 @@ export default props => {
 				handleDrag({
 					e,
 					moment: 'start',
+					selMode,
+					selRange,
 					srcPageIndex: pageIndex,
 					srcLocaleIndex: localeIndex,
 					srcBlockIndex: blockIndex,
@@ -101,6 +123,8 @@ export default props => {
 			onDragEnd={e=>{
 				handleDrag({
 					e,
+					selMode,
+					selRange,
 					moment: 'end',
 					twoColsMode
 				})
@@ -114,6 +138,8 @@ export default props => {
 			onDrop={e => {
 				handleDrop({
 					e,
+					selMode,
+					selRange,
 					block,
 					moment: 'drop',
 					pageIndex,
@@ -128,7 +154,7 @@ export default props => {
 
 			<div className={classes.bg} />
 
-			<OuterActions className={classes.outerActions}/>
+			{!selMode && <OuterActions className={classes.outerActions}/>}
 
 			<InnerActions
 				className={classes.innerActions}
@@ -219,6 +245,13 @@ const useStyles = createUseStyles(theme => ({
 	highlighted: {
 		borderRadius: theme.rounded,
 		boxShadow: `0px 0 8px 4px ${theme.block.link.focused.shadow}`,
+	},
+
+	selected: {
+		'& [data-role="block-root"]': {
+			backgroundColor: theme.selection.background,
+			color: theme.selection.color,
+		}
 	},
 
 	draggable: {

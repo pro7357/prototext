@@ -10,6 +10,8 @@ const handlersIds = [
 	'switchPageView',
 	'switchSideFocus',
 	'addPage',
+	'resetPage',
+	'clonePage',
 	'deletePageOrLocale',
 	'clearLocale',
 	'switchEditorMode',
@@ -23,6 +25,7 @@ const handlersIds = [
 	'rearrangeLocales',
 	'rearrangeTextBlocks',
 	'switchBlockHighlight',
+	'selectBlocks'
 ]
 
 const handlers = handlersIds.reduce((handlers, id) => {
@@ -57,7 +60,7 @@ const initialState = {
 	targetLocaleIndex: 0,
 	targetBlockIndex:0,
 
-	leftSideFocus: isDesktopBuild ? 0 : 1,
+	leftSideFocus: isDesktopBuild ? 0 : 0,
 
 	// RightSide –
 	// is the second page index in the 'Two Pages' mode
@@ -93,6 +96,9 @@ const initialState = {
 
 	// Drag and Drop mode for pages, localizations, text blocks.
 	dndMode: false,
+
+	// Selection range.
+	selRange: null,
 
 	// The mode of creating links between blocks.
 	linkMode: false,

@@ -49,7 +49,7 @@ const useStyles = createUseStyles(theme => ({
 
 	huge: {
 		textTransform: 'uppercase',
-		letterSpacing: '0.1em',
+		letterSpacing: '0.06em',
 		fontSize: '2.5em',
 		[theme.desktop]: {
 			fontSize: '3.3em',

@@ -1,11 +1,11 @@
 {
   "private": true,
   "name": "prototext",
-  "version": "1.7.13",
+  "version": "1.7.14",
   "description": "Since 22 October 2022",
   "scripts": {
-    "start": "preact watch -c ./preact.config.dev.js -p 3333 --template src/index.html",
-    "build:desktop": "preact build -c ./preact.config.desktop.js --no-sw --no-esm --no-prerender --dest electron/build/ --template src/index.html",
+    "start": "preact watch -c ./preact.config.dev.js -p 3333 --template ./src/index.html",
+    "build:desktop": "preact build -c ./preact.config.desktop.js --no-sw --no-esm --no-prerender --dest electron/build/ --template ./src/index.html",
     "website": "preact watch --src ./website/src -c ./website/preact.config.dev.js -p 3335 --template ./website/src/index.html",
     "build:website": "preact build --src ./website/src -c ./website/preact.config.build.js --no-sw --no-esm --no-prerender --dest ./website/dst/ --template ./website/src/index.html"
   },

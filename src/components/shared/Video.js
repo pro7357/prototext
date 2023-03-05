@@ -64,7 +64,7 @@ export default props => {
 
 	} else {
 
-		let codec = 'webm'
+		let codec = src.indexOf('.webm') > -1 ? 'webm' : 'mp4'
 
 		return (
 			<video

@@ -9,6 +9,12 @@ export default (cmdKey) => [
 	],
 
 	[
+		'[CLICK] on [⁝]',
+		null,
+		<>To start the card selection mode. Use <Shortcut isInline>[SHIFT+CLICK]</Shortcut> to quickly select a range of cards, Drag & Drop cards anywhere, <Shortcut isInline>[CMD+C]</Shortcut> to copy content, <Shortcut isInline>[ESC]</Shortcut> to reset selection.</>,
+	],
+
+	[
 		'[CLICK] on [×]',
 		null,
 		'To remove a card. If the card contains an asset, the app will ask you about deleting the linked file.',
@@ -35,7 +41,7 @@ export default (cmdKey) => [
 	[
 		'[BACKSPACE]',
 		null,
-		'To remove or merge cards.',
+		'To remove or merge cards. To delete multiple cards at once, use the key in card selection mode.',
 	],
 
 	<>The behavior of the <Shortcut isInline>[ENTER]</Shortcut> and <Shortcut isInline>[BACKSPACE]</Shortcut>keys depends on the content of the card and the cursor position. Just experiment to understand the principles.</>,
@@ -57,7 +63,7 @@ export default (cmdKey) => [
 	[
 		'[ESC]',
 		null,
-		'To switch the app to the normal state. To cancel the card dragging, link creation, and task selection for AI.',
+		'To switch the app to the normal state. To cancel the card selection, dragging, link creation, and AI mode.',
 	],
 
 ]

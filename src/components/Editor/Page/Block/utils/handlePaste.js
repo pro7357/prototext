@@ -1,8 +1,12 @@
 
-import { addBlock } from 'editorActions'
+import { addBlock, updBlock } from 'editorActions'
 import createBlock from 'editorUtils/createBlock'
 import { getStyleKeys } from 'sharedUtils/blockStyling'
 const styleKeys = getStyleKeys(true)
+import { setCaret } from './handleKeyDown'
+
+// The "typewriter" animation mode for screencasing purposes.
+const typewriterMode = !isDesktopBuild && !true
 
 
 export default props => {
@@ -12,7 +16,26 @@ export default props => {
 	e.preventDefault()
 
 	let value = e.target.innerText
+	let node = e.target
 	let clipboardData = e.clipboardData.getData('Text') || ''
+
+	if(typewriterMode) {
+		node.setAttribute('contenteditable', 'false')
+		typewriter(
+			clipboardData,
+			node,
+			() => {
+				updBlock(
+					{
+						...block,
+						content: clipboardData,
+					},
+				)
+			}
+		)
+		return
+	}
+
 
 	clipboardData = clipboardData.replaceAll(/\t/gi,'').trim()
 
@@ -75,4 +98,21 @@ export default props => {
 	// Insert the text without design.Update the target block.
 	document.execCommand('insertText', false, clipboardData)
 
+}
+
+
+function typewriter(value, node, callback) {
+	if(value.length) {
+
+		node.innerHTML = node.innerHTML + value[0]
+
+		setTimeout(() => {
+			typewriter(value.slice(1), node, callback)
+		}, 50)
+
+	} else {
+		node.setAttribute('contenteditable', 'true')
+		setCaret(node, 'end')
+		callback()
+	}
 }

@@ -49,6 +49,22 @@ export default props => {
 			title='App features & Shortcuts'
 			secondaryActions={[
 				{
+					label: 'Feedback ✍️',
+					isExternal: true,
+					isNotable: true,
+					action: () => {
+						window.open('https://forms.gle/ztiNzcoRbeGbDVKj8','_blank')
+					}
+				},
+				{
+					label: 'Discord',
+					isExternal: true,
+					isNotable: true,
+					action: () => {
+						window.open('https://discord.gg/SDuzTXWkSd','_blank')
+					}
+				},
+				{
 					label: (
 						<div>
 							Invest in the project <span className={classes.coin}>₿</span>
@@ -71,7 +87,10 @@ export default props => {
 			secondaryActionsForPrinting={(
 				<div className={classes.printLinks}>
 					<a href='https://discord.gg/SDuzTXWkSd' target='_blank'>
-						Support channel
+						Feedback Form
+					</a>
+					<a href='https://discord.gg/SDuzTXWkSd' target='_blank'>
+						Discord
 					</a>
 					<a href={domain+investSectionPath}>
 						Invest in the project <span className={classes.coin}>₿</span>

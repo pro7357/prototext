@@ -1,5 +1,8 @@
 
-import { switchSideFocus, deletePageOrLocale } from 'editorActions'
+import {
+	switchSideFocus,
+	deletePageOrLocale,
+} from 'editorActions'
 
 import getClickPosition from 'globalUtils/getClickPosition'
 

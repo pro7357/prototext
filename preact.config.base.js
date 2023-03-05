@@ -2,6 +2,7 @@
 require('dotenv').config()
 const path = require('path')
 const webpack = require('webpack')
+const packageJson = require('./package.json')
 
 module.exports = (config, isDesktopBuild) => {
 
@@ -31,6 +32,7 @@ module.exports = (config, isDesktopBuild) => {
 	config.plugins.push(
 		new webpack.DefinePlugin({
 			isDesktopBuild,
+			APP_VERSION: JSON.stringify(packageJson.version)
 		})
 	)
 

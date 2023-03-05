@@ -8,6 +8,8 @@ export default props => {
 
 	const {
 		e,
+		selMode,
+		selRange,
 		block,
 		moment,
 		pageIndex,
@@ -85,11 +87,21 @@ export default props => {
 		let dstPageIndex = pageIndex
 		let dstBlockIndex = blockIndex + 1
 
+		// Ignore unsafe ranges.
+		if(selRange) {
+			if(
+				srcPageIndex === dstPageIndex &&
+				(dstBlockIndex >= selRange[0] && blockIndex <= selRange.slice(-1)[0])
+			) {
+				return
+			}
+		}
+
 		rearrangeTextBlocks(
 			srcPageIndex,
 			srcBlockIndex,
 			dstPageIndex,
-			dstBlockIndex
+			dstBlockIndex,
 		)
 
 	}

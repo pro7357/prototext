@@ -4,6 +4,7 @@ import { createUseStyles } from 'react-jss'
 import Topbar from './Topbar'
 import Section from './Section'
 import Footer from './Footer'
+import Feedback from './Feedback'
 
 export default props => {
 
@@ -13,7 +14,8 @@ export default props => {
 		<div className={classes.root}>
 			<Topbar/>
 			{props.children}
-				<Footer/>
+			<Footer/>
+			<Feedback/>
 		</div>
 	)
 

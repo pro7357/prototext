@@ -9,6 +9,7 @@ export default props => {
 
 	const {
 		items,
+		timeout = 3000,
 		className
 	} = props
 
@@ -16,20 +17,12 @@ export default props => {
 
 	t = setTimeout(() => {
 		setItemIndex((itemIndex + 1) % items.length)
-	}, 3000)
+	}, timeout)
 
 	const classes = useStyles()
 
-	return (
-		<h1
-			className={clsx(
-				classes.root,
-				className
-			)}
-		>
-			{items[itemIndex]}
-		</h1>
-	)
+	return items[itemIndex]
+
 }
 
 const useStyles = createUseStyles(theme => ({

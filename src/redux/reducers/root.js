@@ -11,6 +11,7 @@ import scrollbarsMode from './scrollbarsMode'
 import spellcheck from './spellcheck'
 import fbbMode from './fbbMode'
 import history from './history'
+import updates from './updates'
 import filePath from './filePath'
 import topbar from '../../components/Editor/Topbar/topbar.reducer'
 import encryption from './encryption'
@@ -45,7 +46,10 @@ export default combineReducers({
 	// Absolute address of the working .ptxt document
 	filePath,
 
-	// Document encryption settings
+	// Document encryption settings.
 	encryption,
+
+	// App Updates info.
+	updates,
 
 })

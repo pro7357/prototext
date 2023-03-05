@@ -30,7 +30,8 @@ export default props => {
 
 	const {
 		localeOptions,
-		aiPromptMode: promptable
+		aiPromptMode: promptable,
+		selMode,
 	} = sharedEditorProps
 
 	let isLoading = localizedBlock && typeof localizedBlock.isLoading !== 'undefined'
@@ -38,9 +39,13 @@ export default props => {
 		: block.isLoading
 
 	let showLoadingSpinner = isLoading && !isAiResponse(block.style)
-	let showTranslate = !isLoading && twoColsMode && localizedBlock && !promptable
-	let showAi = !isLoading && !showTranslate && !promptable
-	let showGlvrd = !isLoading && singlePageMode && localeOptions[0] === 'ru' && !promptable
+	let showTranslate = !isLoading && twoColsMode && localizedBlock && !promptable && !selMode
+	let showAi = !isLoading && !showTranslate && !promptable && !selMode
+
+	let showGlvrd = !isLoading &&
+		singlePageMode &&
+		localeOptions[0] === 'ru' &&
+		!promptable && !selMode
 
 	const classes = useStyles()
 

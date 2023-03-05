@@ -1,17 +1,26 @@
 
+import getUID from './getUID'
+
 export default async props => {
 
-	if(!isBuild) {
+	if(!isDesktopBuild) {
 		// Demo data for the development mode.
 		return {
 			"versions": {
-				"actual": "1.7.0",
+				"actual": "1.7.14",
 				"archived": []
 			}
 		}
 	}
 
-	let url = `https://prototext.app/app-info.json`
+	let refId = localStorage.getItem('instanceId')
+
+	if(!refId) {
+		refId = getUID()
+		localStorage.setItem('instanceId',refId)
+	}
+
+	let url = `https://prototext.app/app-info.json?refVersion=${APP_VERSION}&refId=${refId}`
 
 	let options = {
 		method: 'get'

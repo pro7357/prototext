@@ -4,7 +4,13 @@ import clsx from 'clsx'
 
 import TextButton from 'sharedComponents/TextButton'
 import Input from 'sharedComponents/Input'
-import { deletePageOrLocale, clearLocale, setPageWidth } from 'editorActions'
+import {
+	resetPage,
+	clonePage,
+	deletePageOrLocale,
+	clearLocale,
+	setPageWidth
+} from 'editorActions'
 import { excludePage } from 'exporterActions'
 
 
@@ -23,20 +29,53 @@ export default props => {
 	const classes = useStyles()
 
 	return (
-		<div className={clsx(classes.root, alonePageMode && classes.alonePageFooter)}>
+		<div className={clsx(classes.root)}>
 
-			{!alonePageMode && (
-				<TextButton
-					className={classes.deleteButton}
-					isDangerous
-					onClick={()=>{
-						deletePageOrLocale(pageIndex)
-						excludePage(pageIndex)
-					}}
-				>
-					Delete page
-				</TextButton>
-			)}
+			<div className={classes.pageActions}>
+
+				<div className={classes.pageActionsLabel}>
+					Page actions
+				</div>
+
+				<div className={classes.pageActionsButtons}>
+					<div>
+						<TextButton
+							className={classes.deleteButton}
+							onClick={()=>{
+								clonePage(pageIndex)
+							}}
+						>
+							Duplicate
+						</TextButton>
+					</div>
+
+					{!alonePageMode && (
+						<div>
+							<TextButton
+								className={classes.deleteButton}
+								onClick={()=>{
+									deletePageOrLocale(pageIndex)
+									excludePage(pageIndex)
+								}}
+							>
+								Delete
+							</TextButton>
+						</div>
+					)}
+
+					<div>
+						<TextButton
+							className={classes.deleteButton}
+							onClick={()=>{
+								resetPage(pageIndex)
+							}}
+						>
+							Reset
+						</TextButton>
+					</div>
+
+				</div>
+			</div>
 
 			{singlePageMode && (
 				<div className={classes.pageWidthUI}>
@@ -94,16 +133,42 @@ const useStyles = createUseStyles(theme => ({
 		justifyContent: 'space-between'
 	},
 
-	alonePageFooter: {
-		justifyContent: 'flex-end'
-	},
-
 	deleteButton: {
 		// minWidth: '33%',
 	},
 
 	rigthDeleteButton: {
 		textAlign: 'right',
+	},
+
+
+	pageActions: {
+		overflow: 'hidden',
+		position: 'relative',
+		'&:hover':{
+			overflow: 'initial',
+			'& $pageActionsButtons': {
+				opacity: 1
+			}
+		}
+	},
+
+	pageActionsLabel: {
+		color: theme.text.muted,
+		opacity: 0.6,
+		fontSize: 17
+	},
+
+	pageActionsButtons: {
+		width: '100%',
+		padding: [28, 0, 10, 0],
+		display: 'flex',
+		flexDirection: 'column',
+		gap: 5,
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		opacity: 0,
 	},
 
 	pageWidthUI: {

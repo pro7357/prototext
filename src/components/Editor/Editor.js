@@ -2,7 +2,7 @@
 import { connect } from 'react-redux'
 import { createUseStyles } from 'react-jss'
 import { store } from 'store'
-import { useState } from 'preact/hooks'
+import { useState, useEffect } from 'preact/hooks'
 import parseFilePath from 'globalUtils/parseFilePath'
 
 import Topbar from './Topbar/Topbar'
@@ -10,6 +10,8 @@ import Page from './Page/Page'
 import LeftSidebar from './Sidebar/LeftSidebar'
 import RightSidebar from './Sidebar/RightSidebar'
 import ContentShadow from './ContentShadow'
+
+import handleKeyDownInsideEsitor from './utils/handleKeyDownInsideEsitor'
 
 
 
@@ -22,6 +24,7 @@ export default connect(mapStateToProps)(props => {
 		pageView,
 		leftSideFocus,
 		rightSideFocus,
+		targetPageIndex,
 		topbarMode,
 		searchText,
 		searchMatchCase,
@@ -29,6 +32,7 @@ export default connect(mapStateToProps)(props => {
 		searchTags,
 		globalSearch,
 		spellcheck,
+		selRange,
 	} = props
 
 	const singlePageMode = pageView === 0
@@ -57,6 +61,12 @@ export default connect(mapStateToProps)(props => {
 
 	sharedEditorProps.currentDoc = filePath && parseFilePath(filePath)
 
+	useEffect(() => {
+
+		document.body.addEventListener('keydown', handleKeyDownInsideEsitor)
+
+	},[])
+
 	const classes = useStyles()
 
 	return (
@@ -81,6 +91,7 @@ export default connect(mapStateToProps)(props => {
 							sharedEditorProps={sharedEditorProps}
 							page={content[leftSideFocus]}
 							pageIndex={leftSideFocus}
+							isTargetPage={true}
 							targetLocaleIndex={rightSideFocus}
 							twoColsMode={localizationMode}
 							alonePageMode={alonePageMode}
@@ -92,6 +103,7 @@ export default connect(mapStateToProps)(props => {
 							sharedEditorProps={sharedEditorProps}
 							page={content[leftSideFocus].content[0]}
 							pageIndex={leftSideFocus}
+							isTargetPage={targetPageIndex === leftSideFocus}
 							targetLocaleIndex={0}
 							singlePageMode={singlePageMode}
 							alonePageMode={alonePageMode}
@@ -108,6 +120,7 @@ export default connect(mapStateToProps)(props => {
 								: content[rightSideFocus].content[0]
 							}
 							pageIndex={rightSideFocus}
+							isTargetPage={targetPageIndex === rightSideFocus}
 							targetLocaleIndex={0}
 							alonePageMode={alonePageMode}
 							side='right'
@@ -139,6 +152,7 @@ function mapStateToProps(state, props) {
 		pageView: state.editor.pageView,
 		leftSideFocus: state.editor.leftSideFocus,
 		rightSideFocus: state.editor.rightSideFocus,
+		targetPageIndex: state.editor.targetPageIndex,
 		localeOptions: state.editor.localeOptions,
 		localeConfigMode: state.editor.localeConfigMode,
 		filePath: state.filePath,
@@ -146,6 +160,8 @@ function mapStateToProps(state, props) {
 		aiPromptMode: state.editor.aiPromptMode,
 		fbbMode: state.fbbMode,
 		dndMode: state.editor.dndMode,
+		selMode: Boolean(state.editor.selRange),
+		selRange: state.editor.selRange,
 		topbarMode: state.topbar.isActive,
 		searchText: state.topbar.searchText,
 		searchMatchCase: state.topbar.searchMatchCase,

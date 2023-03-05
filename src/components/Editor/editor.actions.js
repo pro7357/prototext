@@ -63,6 +63,15 @@ export const addPage = (side) => {
 }
 
 
+export const clonePage = (targetPageIndex) => {
+	store.dispatch({
+		allowUndo: true,
+		type: 'clonePage',
+		targetPageIndex
+	})
+}
+
+
 export const deletePageOrLocale = (targetPageIndex, targetLocaleIndex) => {
 	store.dispatch({
 		allowUndo: true,
@@ -241,5 +250,30 @@ export const switchBlockHighlight = (
 		targetLocaleIndex,
 		targetBlockIndex,
 		side
+	})
+}
+
+
+export const selectBlocks = (range) => {
+	store.dispatch({
+		type: 'selectBlocks',
+		range
+	})
+}
+
+
+export const resetBlockSelection = () => {
+	store.dispatch({
+		type: 'selectBlocks',
+		range: null
+	})
+}
+
+
+
+export const resetPage = targetPageIndex => {
+	store.dispatch({
+		type: 'resetPage',
+		targetPageIndex
 	})
 }

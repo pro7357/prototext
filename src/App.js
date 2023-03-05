@@ -7,13 +7,15 @@ import ThemeProvider from './theme/ThemeProvider'
 
 import Layout from './components/Layout'
 import connectAppToElectron from 'globalUtils/connectAppToElectron'
+import checkForUpdates from 'globalUtils/checkForUpdates'
 import handleAppCrash from 'globalUtils/handleAppCrash'
 import { showEditor, togglePresenter } from 'layoutActions'
 import { toogleTopbar } from 'topbarActions'
 import {
 	deactivateAiPromptMode,
 	deactivateDndMode,
-	deactivateLinkMode
+	deactivateLinkMode,
+	resetBlockSelection
  } from 'editorActions'
 
 export default () => {
@@ -23,6 +25,7 @@ export default () => {
 		// Connect to the Electron API, in particular to the events of the native menu.
 		if(isDesktopBuild) {
 			connectAppToElectron()
+			checkForUpdates()
 		}
 
 		// Register some general combinations of hot keys.
@@ -38,6 +41,7 @@ export default () => {
 				deactivateAiPromptMode()
 				deactivateDndMode()
 				deactivateLinkMode()
+				resetBlockSelection()
 			}
 
 		})

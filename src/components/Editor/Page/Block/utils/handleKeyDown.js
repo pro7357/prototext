@@ -43,8 +43,6 @@ export default props => {
 	let isBackspace = key === 'Backspace'
 	let isEmptyValue = !value || !value.trim().length
 
-	// console.log('e',e)
-
 	if(keyCode === 68 && withComand) {
 
 		// CMD + D Duplicate the block.
@@ -191,7 +189,7 @@ export default props => {
 }
 
 
-const setCaret = (node, position) => {
+export const setCaret = (node, position) => {
 
 	setTimeout(() => {
 
@@ -224,7 +222,7 @@ const setCaret = (node, position) => {
 }
 
 
-const shiftFocus = (node, targetLocaleIndex, vShift, callback) => {
+export const shiftFocus = (node, targetLocaleIndex, vShift, callback) => {
 
 	if(!node) {
 		return
@@ -257,7 +255,7 @@ const shiftFocus = (node, targetLocaleIndex, vShift, callback) => {
 }
 
 
-function getCaret(el) {
+export function getCaret(el) {
 
 	let caretPos = 0
 	const sel = window.getSelection()
@@ -275,7 +273,7 @@ function getCaret(el) {
 }
 
 
-function getEndPos(node) {
+export function getEndPos(node) {
 
 	let children = node.childNodes
 	let size = 0

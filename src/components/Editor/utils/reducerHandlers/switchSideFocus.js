@@ -7,10 +7,11 @@ export default (initialState, state, action) => {
 	let tbi = state.targetBlockIndex
 	let lsf = state.leftSideFocus
 	let rsf = state.rightSideFocus
+	let selMode = state.selRange
 
 	return {
 		...state,
-		targetPageIndex: lMode || linkMode ? tpi : action.focus,
+		targetPageIndex: lMode || linkMode || selMode ? tpi : action.focus,
 		targetBlockIndex: linkMode ? tbi : 0,
 		leftSideFocus: action.side === 'left' ? action.focus : lsf,
 		rightSideFocus: lMode && action.side === 'left'

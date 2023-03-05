@@ -7,6 +7,7 @@ import { toogleTopbar } from 'topbarActions'
 import { showExporter, showHelper, showProtector, togglePresenter } from 'layoutActions'
 import { toggleTheme } from 'theme/theme.actions'
 import { themeIds } from 'theme/themes'
+import os from 'globalUtils/os'
 
 import TextButton from 'sharedComponents/TextButton'
 import MutedTextLine from 'sharedComponents/MutedTextLine'
@@ -34,6 +35,7 @@ export default connect(mapStateToProps)(props => {
 		targetPageIndex,
 		history,
 		encryption,
+		updates,
 
 	} = props
 
@@ -112,6 +114,34 @@ export default connect(mapStateToProps)(props => {
 
 				</>)}
 
+				{updates && (
+					<TextButton
+						isActive
+						onClick={() => {
+
+							let platform = os.isMac()
+								? 'MacOS-Intel'
+								: os.isWindows()
+									? 'Windows'
+									: null
+
+							let url = `https://prototext.app${platform?`/releases/ProtoText-${platform}-v${updates.releaseVersion}.zip`:``}?ref=updBtn`
+
+							window.open(url, '_blank')
+
+						}}
+						label={
+							updates.releaseNotes && (<>
+								<b>Release notes:</b>
+								<div>{updates.releaseNotes}</div>
+							</>
+							)
+						}
+					>
+						There are updates!
+					</TextButton>
+				)}
+
 				<TextButton
 					onClick={() => {
 						showHelper()
@@ -138,5 +168,6 @@ function mapStateToProps(state, props) {
 		themeIndex: state.theme,
 		pageViews: state.editor.pageViews,
 		encryption: state.encryption,
+		updates: state.updates
 	}
 }

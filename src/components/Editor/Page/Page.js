@@ -31,6 +31,7 @@ export default connect(mapStateToProps)(props => {
 		sharedEditorProps,
 		page,
 		pageIndex,
+		isTargetPage,
 		targetLocaleIndex,
 		singlePageMode,
 		alonePageMode,
@@ -44,6 +45,8 @@ export default connect(mapStateToProps)(props => {
 		topbarMode,
 		scrollbarsMode,
 		search,
+		selMode,
+		selRange,
 	} = sharedEditorProps
 
 
@@ -128,6 +131,10 @@ export default connect(mapStateToProps)(props => {
 
 					let isAlone = targetContentLength === 1
 
+					let isSelected = selMode &&
+						isTargetPage &&
+						selRange.includes(blockIndex)
+
 					if(isContentRowHidden({search,block,localizedBlock})) {
 						return null
 					}
@@ -136,12 +143,14 @@ export default connect(mapStateToProps)(props => {
 
 						<ContentRow
 							sharedEditorProps={sharedEditorProps}
+							isSelected={isSelected}
 							twoColsMode={twoColsMode}
 							block={block}
 							localizedBlock={localizedBlock}
 							pageIndex={pageIndex}
 							blockIndex={blockIndex}
 							localeIndex={targetLocaleIndex}
+							isTargetPage={isTargetPage}
 							pageWidth={pageWidth}
 							isAlone={isAlone}
 							singlePageMode={singlePageMode}
@@ -150,6 +159,7 @@ export default connect(mapStateToProps)(props => {
 
 							<Block
 								sharedEditorProps={sharedEditorProps}
+								isSelected={isSelected}
 								block={block}
 								twoColsMode={twoColsMode}
 								pageIndex={pageIndex}
@@ -165,6 +175,7 @@ export default connect(mapStateToProps)(props => {
 							{(twoColsMode && isLocalesExists) && (
 								<Block
 									sharedEditorProps={sharedEditorProps}
+									isSelected={isSelected}
 									block={localizedBlock}
 									originalLocaleBlock={block}
 									twoColsMode={twoColsMode}

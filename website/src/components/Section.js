@@ -68,7 +68,8 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	vFlex: {
-		flexDirection: 'column'
+		flexDirection: 'column',
+		alignItems: 'stretch',
 	}
 
 }),{name: 'section'})

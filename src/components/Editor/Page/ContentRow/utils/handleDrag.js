@@ -2,11 +2,12 @@
 import {
 	activateTextBlockDndMode,
 	deactivateDndMode,
+	resetBlockSelection,
 	switchUserFocus
 } from 'editorActions'
 import getClickPosition from 'globalUtils/getClickPosition'
 
-const isDndIconPos = x => x < 8
+export const isDndIconPos = x => x < 8
 let tempDiv
 
 /*
@@ -17,6 +18,8 @@ export default props => {
 	const {
 		e,
 		moment,
+		selMode,
+		selRange,
 		srcPageIndex,
 		srcLocaleIndex,
 		srcBlockIndex,
@@ -34,20 +37,6 @@ export default props => {
 
 	const {x,y} = getClickPosition(e)
 
-	// The user hold the left mouse key. The event before "Drag Start"
-	if(moment === 'hold') {
-
-		// Is it a click in the "⠇" dnd button area?
-
-		let activateDnd = isDndIconPos(x)
-
-		if(activateDnd) {
-			activateTextBlockDndMode()
-		}
-
-		return
-
-	}
 
 	// The user unhold the left mouse key. Deactivate the D&D mode.
 	if(moment === 'unhold') {
@@ -56,37 +45,51 @@ export default props => {
 	}
 
 
-	// Start moving the selected Content Row.
+	// Start moving the selected Content Row or Rows.
 	if(moment === 'start') {
 
-		if(!isContentRow || !isDndIconPos(x)) {
+		if(!isContentRow || ( !isDndIconPos(x) && !selMode )) {
 			e.preventDefault()
 			e.stopPropagation()
 			return
 		}
 
-		window.targetDndEl = node
-
-		let nodeBB = node.getBoundingClientRect()
-		let nodeWidth = nodeBB && nodeBB.width
-
-		if(twoColsMode && nodeWidth) {
-			nodeWidth /= 2
-		}
-
-
-		// Create a custom clone of dragged Content Row.
-		let fakeGhost = node.cloneNode(true)
-		fakeGhost.style.width = ((nodeWidth || pageWidth) * (twoColsMode?2:1))+'px'
-		tempDiv.appendChild(fakeGhost)
-		e.dataTransfer.setDragImage(fakeGhost,x,y)
-
-		// Hide the original Content Row.
-		node.style.opacity = 0
-
-		// Pass data and switch the focus in Redux Store.
+		// Pass data.
 		e.dataTransfer.setData('text/plain', srcPageIndex+'-'+srcBlockIndex)
-		switchUserFocus(srcPageIndex, srcLocaleIndex, srcBlockIndex)
+
+		if(selMode) {
+
+			let fakeGhost = document.createElement('div')
+			let len = selRange.length
+			fakeGhost.innerText = `${len} card${len>1?`s`:``}`
+			tempDiv.appendChild(fakeGhost)
+			e.dataTransfer.setDragImage(fakeGhost,10,25)
+
+		} else {
+
+			window.targetDndEl = node
+
+			let nodeBB = node.getBoundingClientRect()
+			let nodeWidth = nodeBB && nodeBB.width
+
+			if(twoColsMode && nodeWidth) {
+				nodeWidth /= 2
+			}
+
+
+			// Create a custom clone of dragged Content Row.
+			let fakeGhost = node.cloneNode(true)
+			fakeGhost.style.width = ((nodeWidth || pageWidth) * (twoColsMode?2:1))+'px'
+			tempDiv.appendChild(fakeGhost)
+			e.dataTransfer.setDragImage(fakeGhost,x,y)
+
+			// Hide the original Content Row.
+			node.style.opacity = 0
+
+			// Switch the focus in Redux Store.
+			switchUserFocus(srcPageIndex, srcLocaleIndex, srcBlockIndex)
+
+		}
 
 		return
 
@@ -99,6 +102,7 @@ export default props => {
 		// Reset the transparency of the original Content Row.
 		node.style.opacity = 1
 		deactivateDndMode()
+		resetBlockSelection()
 
 		tempDiv.innerHTML = ''
 

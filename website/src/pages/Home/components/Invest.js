@@ -40,11 +40,18 @@ export default props => {
 	return (
 		<Section className={classes.root} isCentred isVFlex id='invest-in-the-project'>
 
-			<Heading className={classes.heading}>Invest in the project</Heading>
+			<Heading className={classes.heading}>
+				<span>
+				At your wish. You can invest in the project to achieve
+				</span>
+				<span>
+				the next goals together and faster.
+				</span>
+			</Heading>
 
-			<div>
-				To achieve the next goals<br/>together.
-			</div>
+			{/* <div>
+				To achieve the next goals<br/>together & faster.
+			</div> */}
 
 			<UIBlock
 				label={<b>{targetCoin.label}</b>}
@@ -140,7 +147,8 @@ const useStyles = createUseStyles(theme => ({
 
 	heading: {
 		paddingBottom: 0,
-		marginBottom: -8
+		// marginBottom: -8,
+		...theme.desktopLineBreaks
 	},
 
 	uiBlock: {

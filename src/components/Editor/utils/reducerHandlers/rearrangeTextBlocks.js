@@ -6,6 +6,24 @@ export default (initialState, state, action) => {
 
 	let content = state.content
 
+	let selRange = state.selRange
+	let selMode = Boolean(selRange)
+	let selection
+
+	if(selMode) {
+
+		let tpi = state.targetPageIndex
+		let tli = state.targetLocaleIndex
+		let srcPageBlocks = state.content[tpi].content[tli].content
+
+		selection = selRange.reduce((done, selectedBlockIndex) => {
+			return done.concat(
+				srcPageBlocks[selectedBlockIndex]
+			)
+		},[])
+
+	}
+
 	return {
 		...state,
 		timestamp: getTimestamp(),
@@ -23,9 +41,13 @@ export default (initialState, state, action) => {
 						...locale,
 						content: locale.content.reduce((blocks, block, i)=>{
 
-							// Exclude text block (source)
+							// Exclude text block[s] (source)
 							if(pageIndex === action.srcPageIndex) {
-								if(i === action.srcBlockIndex) {
+								if(
+									selMode
+										? selRange.includes(i)
+										: i === action.srcBlockIndex
+								) {
 									return blocks
 								}
 							}
@@ -38,7 +60,7 @@ export default (initialState, state, action) => {
 								if(i === action.dstBlockIndex) {
 									// Before
 									return blocks.concat(
-										srcBlock,
+										selMode ? selection : srcBlock,
 										block
 									)
 								} else if(
@@ -48,7 +70,7 @@ export default (initialState, state, action) => {
 									// After
 									return blocks.concat(
 										block,
-										srcBlock
+										selMode ? selection : srcBlock
 									)
 								}
 							}

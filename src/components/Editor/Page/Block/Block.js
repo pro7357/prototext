@@ -36,6 +36,7 @@ export default props => {
 	const {
 		localeOptions,
 		dndMode,
+		selMode,
 		fbbMode,
 		linkMode,
 		aiPromptMode,
@@ -82,7 +83,7 @@ export default props => {
 				className={clsx(
 					classes.editableRoot
 				)}
-				contentEditable={!dndMode && !linkMode && !aiPromptMode}
+				contentEditable={!dndMode && !linkMode && !aiPromptMode && !selMode}
 				spellcheck={spellcheck}
 				ref={(node)=> {
 					if(node) {
