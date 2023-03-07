@@ -16,6 +16,7 @@ _*
 *.zip
 electron/releases
 website/dst
+website/src/assets/videos
 size-plugin.json
 package-lock.json
 .env

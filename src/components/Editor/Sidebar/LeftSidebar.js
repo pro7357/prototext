@@ -125,7 +125,9 @@ export default connect(mapStateToProps)(props => {
 									? 'Windows'
 									: null
 
-							let url = `https://prototext.app${platform?`/releases/ProtoText-${platform}-v${updates.releaseVersion}.zip`:``}?ref=updBtn`
+							let refId = localStorage.getItem('instanceId')
+
+							let url = `https://prototext.app${platform?`/releases/ProtoText-${platform}-v${updates.releaseVersion}.zip`:``}?ref=updBtn&refVersion=${APP_VERSION}&refId=${refId}`
 
 							window.open(url, '_blank')
 

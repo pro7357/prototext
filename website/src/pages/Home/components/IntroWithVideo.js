@@ -64,13 +64,10 @@ export default connect(mapStateToProps)(props => {
 					<div className={classes.twoCols}>
 
 						<div className={classes.firstCol}>
-							<p>
-								The app, which began as an experiment in working with text, has now become something I use every day and I love the freedom it brings to my mind.
-							</p>
 
-							{/* <p>
-								It all became possible after the idea: What if we replaced the "text paragraphs" with "cards", like in Trello, and added Markdown for quick card styling.
-							</p> */}
+							<p>
+								The app, which began as an experiment in working with text and media files, has now become something I use every day and I love the freedom it brings to my mind.
+							</p>
 
 							<p>
 								As a person who does not possess exceptional mental computational abilities or a super memory, I still want to solve complex creative tasks. Here, the computer helps me as the Second Brain. I record all my ideas, structure them, connect them, and use AI as an assistant inside the ProtoText.

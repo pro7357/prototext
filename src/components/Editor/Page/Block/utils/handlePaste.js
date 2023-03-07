@@ -6,7 +6,7 @@ const styleKeys = getStyleKeys(true)
 import { setCaret } from './handleKeyDown'
 
 // The "typewriter" animation mode for screencasing purposes.
-const typewriterMode = !isDesktopBuild && !true
+const typewriterMode = !true
 
 
 export default props => {
