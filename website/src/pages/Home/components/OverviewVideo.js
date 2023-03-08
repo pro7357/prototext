@@ -145,7 +145,7 @@ const useStyles = createUseStyles(theme => ({
 		'&::-webkit-media-controls-panel': {
 			backgroundImage: 'linear-gradient(0deg, rgba(0,89,255,1) 0%, rgba(0,89,255,1) 80%, rgba(0,0,0,0) 81%, rgba(0,0,0,0) 100%) !important',
 			boxShadow: 'none !important',
-		 }
+		}
 	},
 
 }),{name: 'overview-video'})

@@ -1,7 +1,8 @@
 
 import {
 	isImage,
-	isVideo
+	isVideo,
+	isAudio,
 } from 'globalUtils/fileTypes'
 
 export const isTextBlock = style => !style || style < 8 || style === 9
@@ -35,6 +36,8 @@ export const isImageFileLink = (isFileLink, link) =>  isFileLink && isImage(link
 
 export const isVideoFileLink = (isFileLink, link) => isFileLink && isVideo(link.filePath)
 
+export const isAudioFileLink = (isFileLink, link) => isFileLink && isAudio(link.filePath)
+
 export const isTags = (content, isLink, isInternalLink, isWebLink, isFileLink) => content &&
 		isLink &&
 		!isInternalLink &&
@@ -55,6 +58,7 @@ export const recognizeAll = (style, link, content) => {
 	const _isFileLink = isFileLink(link)
 	const _isAssetLink = isAssetLink(_isFileLink, link)
 	const _isImage  = isImageFileLink(_isFileLink, link)
+	const _isAudioFile = isAudioFileLink(_isFileLink, link)
 	const _isVideoFile = isVideoFileLink(_isFileLink, link)
 	const _isYouTubeVideo = isYouTubeVideo(_isWebLink, content)
 	const _isTags = isTags(
@@ -72,6 +76,7 @@ export const recognizeAll = (style, link, content) => {
 		isFileLink: _isFileLink,
 		isAssetLink: _isAssetLink,
 		isImage: _isImage,
+		isAudioFile: _isAudioFile,
 		isVideoFile: _isVideoFile,
 		isYouTubeVideo: _isYouTubeVideo,
 		isTags: _isTags,

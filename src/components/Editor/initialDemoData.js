@@ -10,6 +10,14 @@ export default [
 				  id: 'q6fuv1',
 				  style: 7
 				},
+				{
+					content: 'MP3 file',
+					id: 've3Ds',
+					style: 8,
+					link: {
+					  filePath: 'https://download.samplelib.com/mp3/sample-3s.mp3'
+					}
+				},
 				null,
 				{
 				  id: 'ksjh72',

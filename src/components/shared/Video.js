@@ -68,6 +68,7 @@ export default props => {
 
 		return (
 			<video
+				key={src}
 				ref={node => {
 					if(node) {
 						if(autoplay) {

@@ -132,12 +132,18 @@ export default connect(mapStateToProps)(props => {
 							window.open(url, '_blank')
 
 						}}
-						label={
-							updates.releaseNotes && (<>
-								<b>Release notes:</b>
-								<div>{updates.releaseNotes}</div>
+						hint={
+							<>
+								Release notes is available in our
+								<div>
+									<a
+										target='_blank'
+										href='https://discord.gg/Xwg8e6T3zA'
+									>
+										Discord
+									</a>
+								</div>
 							</>
-							)
 						}
 					>
 						There are updates!

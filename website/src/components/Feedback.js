@@ -27,7 +27,8 @@ export default props => {
 					setIsOpened(!isOpened)
 				}}
 			>
-				{isOpened ? `Hide` : `Your thoughts, please ✍️`}
+				{/* {isOpened ? `Hide` : `Your thoughts, please ✍️`} */}
+				{isOpened ? `Hide` : `Leave a comment ✍️`}
 			</TextButton>
 
 			{isOpened && (

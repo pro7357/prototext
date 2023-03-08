@@ -4,6 +4,7 @@ import clsx from 'clsx'
 
 import TextButton from 'sharedComponents/TextButton'
 import LinkedImage from './LinkedImage'
+import LinkedAudio from './LinkedAudio'
 import LinkedVideo from './LinkedVideo'
 import revealFileInFinder from './utils/revealFileInFinder'
 import * as fileTypes from 'globalUtils/fileTypes'
@@ -19,6 +20,7 @@ export default props => {
 
 	const isImage = fileTypes.isImage(filePath)
 	const isVideo = fileTypes.isVideo(filePath)
+	const isAudio = fileTypes.isAudio(filePath)
 	const isOther = !isImage && !isVideo
 
 	const classes = useStyles()
@@ -31,6 +33,12 @@ export default props => {
 
 			{isImage && (
 				<LinkedImage
+					src={src}
+				/>
+			)}
+
+			{isAudio && (
+				<LinkedAudio
 					src={src}
 				/>
 			)}

@@ -26,7 +26,8 @@ const useStyles = createUseStyles(theme => ({
 
 	footer: {
 		paddingTop: 0,
-		paddingBottom: 140
+		paddingBottom: 140,
+		alignItems: 'center',
 	},
 
 	qt: {

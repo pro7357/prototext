@@ -202,6 +202,9 @@ export default async props => {
 					aiResponseBlockNode.innerText = result.text
 					finalStreamResultText = result.text
 					finalStreamResultId = result.id
+					if(finalStreamResultText[0]==='"') {
+						finalStreamResultText
+					}
 				} else {
 					alert('Unable to get a response block node')
 				}
@@ -210,6 +213,16 @@ export default async props => {
 
 			return
 
+		}
+
+		if(stream && streamIsDone) {
+			finalStreamResultText = finalStreamResultText.trim()
+			if(finalStreamResultText[0] === '"') {
+				finalStreamResultText = finalStreamResultText.slice(1)
+			}
+			if(finalStreamResultText.slice(-1) === '"') {
+				finalStreamResultText = finalStreamResultText.slice(0,-1)
+			}
 		}
 
 		updBlock(

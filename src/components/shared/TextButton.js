@@ -16,6 +16,7 @@ export default props => {
 		isSemiDangerous,
 		isComplexNotable,
 		children,
+		hint,
 		className,
 		extraProps = {},
 	} = props
@@ -36,7 +37,10 @@ export default props => {
 				isComplexNotable && classes.isComplexNotable,
 				className
 			)}
-			onClick={e => {
+			{...extraProps}
+		>
+			<div
+				onClick={e => {
 
 				if(!onClick) return false
 
@@ -47,10 +51,17 @@ export default props => {
 					return
 				}
 				onClick(e)
-			}}
-			{...extraProps}
-		>
-			{children}
+				}}
+			>
+				{children}
+			</div>
+
+			{hint && (
+				<div className={classes.hint}>
+					{hint}
+				</div>
+			)}
+
 		</div>
 	)
 
@@ -66,8 +77,12 @@ const useStyles = createUseStyles(theme => ({
 		whiteSpace: 'nowrap',
 		position: 'relative',
 		display: 'table',
+		position: 'relative',
 		'&:hover': {
 			color: theme.textButton.notable.color,
+			'& $hint': {
+				display: 'block',
+			},
 			'&:before': {
 				content: '" "',
 				position: 'absolute',
@@ -79,6 +94,31 @@ const useStyles = createUseStyles(theme => ({
 				borderBottom: `1px solid ${theme.textButton.notable.color}`,
 			},
 		}
+	},
+
+	hint: {
+		display: 'none',
+		position: 'absolute',
+		bottom: 'calc(100% + 4px)',
+		left: 0,
+		fontSize: 14,
+		width: 150,
+		padding: 5,
+		background: theme.background.top,
+		wordWrap: 'break-word',
+		whiteSpace: 'break-spaces',
+		borderRadius: 4,
+		color: theme.text.default,
+		'&:before': {
+			content: '" "',
+			position: 'absolute',
+			zIndex: 0,
+			display: 'block',
+			width: '100%',
+			bottom: -6,
+			left: 0,
+			height: 6
+		},
 	},
 
 	isSmall: {

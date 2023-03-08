@@ -57,7 +57,7 @@ export default props => {
 	}
 
 
-	if(withShift || selRange || activateDnd) {
+	if(selRange || activateDnd) {
 
 		if((selRange && !isTargetPage) || isTextBlockDndMode) {
 			return
