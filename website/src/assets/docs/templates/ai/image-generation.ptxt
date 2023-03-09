@@ -1,0 +1,384 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "s6xam6",
+        "content": [
+          {
+            "id": "ukgn1s",
+            "content": [
+              {
+                "content": "Image Generation",
+                "id": "21rb93",
+                "style": 7
+              },
+              {
+                "content": "A page for your notes.",
+                "id": "zkwcta",
+                "style": 5
+              },
+              {
+                "content": "",
+                "id": "xnjtka"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "925oqb",
+        "content": [
+          {
+            "id": "eor9o5",
+            "content": [
+              {
+                "content": "ChatGPT Help",
+                "id": "d4gwfi",
+                "style": 7
+              },
+              {
+                "content": "List synonyms for",
+                "id": "grrfm0"
+              },
+              {
+                "content": "Say it in other words",
+                "id": "k2xnnb"
+              },
+              {
+                "content": "List variants of this text",
+                "id": "tvmpx2"
+              },
+              {
+                "content": "Generate keywords for this topic, separated by commas",
+                "id": "5v9upf"
+              },
+              {
+                "content": "Translate this into standard English",
+                "id": "72dot0"
+              },
+              {
+                "content": "Correct this into standard English",
+                "id": "04sms6"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "9bx9g5",
+        "content": [
+          {
+            "id": "vomlhr",
+            "content": [
+              {
+                "content": "Keywords",
+                "id": "bv33bq",
+                "style": 7
+              },
+              {
+                "id": "byxat6",
+                "content": "8k,"
+              },
+              {
+                "content": "trending on artstation,",
+                "id": "sni3vg"
+              },
+              {
+                "content": "trending on behance,",
+                "id": "4zusnx"
+              },
+              {
+                "content": "cyberpunk,",
+                "id": "o3ac2q"
+              },
+              {
+                "id": "5ww8fd",
+                "content": "with a cyberpunk city background,"
+              },
+              {
+                "id": "fljaqh",
+                "content": "futuristic lighting,"
+              },
+              {
+                "id": "nvj66g",
+                "content": "cinematic lighting,"
+              },
+              {
+                "id": "vv8uon",
+                "content": "cozy lighting,"
+              },
+              {
+                "id": "duh2l6",
+                "content": "cinematic poster,"
+              },
+              {
+                "id": "rs9wvo",
+                "content": "vintage,"
+              },
+              {
+                "content": "glowing,",
+                "id": "vwuqew"
+              },
+              {
+                "content": "detailed,",
+                "id": "j9u98c"
+              },
+              {
+                "content": "cartoon style,",
+                "id": "yixb0a"
+              },
+              {
+                "content": "darkness,",
+                "id": "k4g4fs"
+              },
+              {
+                "id": "jcgydl",
+                "content": "grotesque,"
+              },
+              {
+                "content": "painted by art by tsuyoshi nagano,",
+                "id": "if2vlh"
+              },
+              {
+                "id": "ozpa60",
+                "content": "greg rutkowski,"
+              },
+              {
+                "id": "dh1ef7",
+                "content": "artgerm,"
+              },
+              {
+                "id": "l2xd77",
+                "content": "alphonse mucha,"
+              },
+              {
+                "id": "n6vani",
+                "content": "spike painting,"
+              },
+              {
+                "content": "golden light,",
+                "id": "xf0oay"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "n7ftgp",
+        "content": [
+          {
+            "id": "mzm2zu",
+            "content": [
+              {
+                "content": "Stable Diffusion",
+                "id": "8ie2ob",
+                "style": 7
+              },
+              {
+                "content": "https://replicate.com/stability-ai/stable-diffusion",
+                "id": "v6ww3k",
+                "style": 8
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "td7crl",
+        "content": [
+          {
+            "id": "n1ktcz",
+            "content": [
+              {
+                "content": "Dreamlike",
+                "id": "1a7fdx",
+                "style": 7
+              },
+              {
+                "content": "https://dreamlike.art/",
+                "id": "79s5au",
+                "style": 8
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "j8l1kt",
+        "content": [
+          {
+            "id": "6vt01w",
+            "content": [
+              {
+                "content": "Lexica",
+                "id": "zi4uvp",
+                "style": 7
+              },
+              {
+                "content": "https://lexica.art/",
+                "id": "fa0ej6",
+                "style": 8
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zujr8w",
+        "content": [
+          {
+            "id": "046u4g",
+            "content": [
+              {
+                "content": "DALL·E",
+                "id": "n2tszx",
+                "style": 7
+              },
+              {
+                "id": "08d53q",
+                "style": 8,
+                "content": "https://openai.com/product/dall-e-2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sz8huo",
+        "content": [
+          {
+            "id": "rox0s4",
+            "content": [
+              {
+                "content": "Midjourney",
+                "id": "ux57ja",
+                "style": 7
+              },
+              {
+                "content": "https://www.midjourney.com",
+                "id": "mudpdt",
+                "style": 8
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "The best results",
+                "style": 7
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ciaxtq",
+        "content": [
+          {
+            "id": "0wu707",
+            "content": [
+              {
+                "content": "Uncategorized",
+                "id": "530noz",
+                "style": 7
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bvefkq",
+        "content": [
+          {
+            "id": "kmfcld",
+            "content": [
+              {
+                "content": "Failed",
+                "id": "arm0vc",
+                "style": 7
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hfb6ug",
+        "content": [
+          {
+            "id": "vb3j85",
+            "content": [
+              {
+                "content": "Tutorial",
+                "id": "7059c2",
+                "style": 7
+              },
+              {
+                "id": "2hxs1e",
+                "style": 6,
+                "content": "How can keywords be quickly combined into a high-quality prompt for image generation?"
+              },
+              {
+                "content": "1. Go to the Keywords page.",
+                "id": "rmpqs9"
+              },
+              {
+                "content": "2. Click on the handle of a card with desired keyword to activate the card selection mode.",
+                "id": "2x3w3s"
+              },
+              {
+                "content": "3. Click on other keywords that you want to use.",
+                "id": "xeuu4y"
+              },
+              {
+                "content": "4. Press CMD+C or CTRL+C to copy your keywords into the clipboard.",
+                "id": "g3lfaf"
+              },
+              {
+                "content": "5. Press CMD+V or CTRL+V to paste it in an empty card.",
+                "id": "7bks4o"
+              },
+              {
+                "content": "6. Use Backspace key to merge the new cards into one \"prompt\".",
+                "id": "lrc9aq"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 500,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 0,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": true,
+    "outputDirectory": "~/Desktop/prototext/output",
+    "outputFilename": "test",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

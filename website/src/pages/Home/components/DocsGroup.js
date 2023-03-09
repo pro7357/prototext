@@ -16,7 +16,8 @@ export default props => {
 		data,
 		isNarrow,
 		isDownloadable,
-		renderExtraItem
+		renderExtraItem,
+		className
 	} = props
 
 	const classes = useStyles()
@@ -120,11 +121,7 @@ export default props => {
 	return (
 		<Section className={classes.root} isCentred isWide isVFlex>
 
-			{/* <Subheading>
-				{title}
-			</Subheading> */}
-
-			<div className={classes.examples}>
+			<div className={clsx(classes.examples, className)}>
 				{examples}
 			</div>
 

@@ -4,10 +4,13 @@ import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
 import Section from 'components/Section'
+import Heading from 'components/Heading'
 import Link from 'components/Link'
 import Modal from 'components/Modal'
 import TextButton from 'app/components/shared/TextButton'
+import OverviewVideo from './OverviewVideo'
 import { useState } from 'preact/hooks'
+import DynamicHeading from 'components/DynamicHeading'
 
 
 export default connect(mapStateToProps)(props => {
@@ -25,26 +28,22 @@ export default connect(mapStateToProps)(props => {
 	const classes = useStyles()
 
 	return (
-		<Section className={classes.root} isCentred id='app'>
+		<Section className={classes.root} isCentred isVFlex id='app'>
 
-			<div className={classes.appIcon}>
-				<img
-					src={`assets/logo${isDark?`-dark`:``}.png`}
-					className={classes.appIconImg}
-				/>
-				<div className={classes.appName}>ProtoText</div>
+			<Heading isHuge isCold className={classes.primaryHeading}>
+				Solving<br/>creative problems
+			</Heading>
+
+			<div className={classes.secondaryHeading}>
+				Using AI & “Cards”
 			</div>
 
-			<h1 className={classes.heading}>
-				<span>Try an <div className={clsx(classes.modalLink, classes.silentLink)} onClick={()=>{openModal(3)}}>innovative</div> way of working with text.</span>
-				<span>That's as flexible and easy as cards in <div className={clsx(classes.modalLink, classes.silentLink)} onClick={()=>{openModal(1)}}>Trello</div> or  <div className={clsx(classes.modalLink, classes.silentLink)} onClick={()=>{openModal(2)}}>Markdown</div>.</span>
-				<span>The built-in AI will help you generate content.</span>
-			</h1>
-
-
+			<div className={classes.overview}>
+				<OverviewVideo/>
+			</div>
 
 			<i className={classes.subHeading}>
-				It's a free, private, desktop app that is suitable for taking daily notes, brainstorming, composing multilingual text, creating flexible presentations, building knowledge networks, and solving other creative problems using text.<br/>
+				It's a free, introvert-friendly, desktop app that is suitable for taking daily notes, brainstorming, research, composing multilingual text, creating flexible presentations, building knowledge networks, and managing your projects content.<br/>
 				<span className={classes.modalLink} onClick={()=>{openModal(0)}}>Read the author's short story about the project.</span>
 			</i>
 
@@ -65,13 +64,10 @@ export default connect(mapStateToProps)(props => {
 					<div className={classes.twoCols}>
 
 						<div className={classes.firstCol}>
-							<p>
-								The app, which began as an experiment in working with text, has now become something I use every day and I love the freedom it brings to my mind.
-							</p>
 
-							{/* <p>
-								It all became possible after the idea: What if we replaced the "text paragraphs" with "cards", like in Trello, and added Markdown for quick card styling.
-							</p> */}
+							<p>
+								The app, which began as an experiment in working with text and media files, has now become something I use every day and I love the freedom it brings to my mind.
+							</p>
 
 							<p>
 								As a person who does not possess exceptional mental computational abilities or a super memory, I still want to solve complex creative tasks. Here, the computer helps me as the Second Brain. I record all my ideas, structure them, connect them, and use AI as an assistant inside the ProtoText.
@@ -100,51 +96,6 @@ export default connect(mapStateToProps)(props => {
 					</div>
 				)}
 
-				{modalContentIndex === 1 && (
-					<div className={classes.twoCols}>
-
-						<div className={classes.firstCol}>
-							<p>
-								Trello is a digital tool that helps people organize tasks and projects in a visual way. It uses lists and cards to represent tasks and allows you to assign due dates, labels, and comments to each card. It's easy to use and great for organizing and managing tasks and projects.
-							</p>
-						</div>
-						<div className={classes.secondCol}>
-							<img src='/assets/trello.jpg' />
-						</div>
-
-					</div>
-
-				)}
-
-				{modalContentIndex === 2 && (
-					<div className={classes.twoCols}>
-
-						<div className={classes.firstCol}>
-							<p>
-								Markdown is a simple popular way of writing that allows you to add basic formatting to text. It uses special characters, like asterisks (*) or hash symbols (#), to indicate different types of formatting, such as bold or headings.
-							</p>
-						</div>
-						<div className={classes.secondCol}>
-							<img src='/assets/markdown.jpg' />
-						</div>
-
-					</div>
-
-				)}
-
-				{modalContentIndex === 3 && (
-					<div className={classes.twoCols}>
-						<div className={classes.firstCol}>
-							<p>
-								Is innovative the way or not? Why use this app when there are millions of other options? Can ProtoText help make life easier? Whether it's worth a try is up to you. I'm just a dev, but it seems to have solved many of the issues I've seen. Try it out and let me know what you think ✍️
-							</p>
-						</div>
-						<div className={classes.secondCol}>
-							<iframe width="560" height="280" src="https://www.youtube.com/embed/aUczdQSx6po" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-						</div>
-					</div>
-				)}
-
 			</Modal>
 
 		</Section>
@@ -163,17 +114,32 @@ const useStyles = createUseStyles(theme => ({
 
 	root: {
 		paddingTop: 160,
-		paddingBottom: 12
+		paddingBottom: 12,
 	},
 
-	heading: {
-		margin: [32, 0, 24, 0],
-		fontSize: 34,
+	caption: {
+		// margin: [32, 0, 24, 0],
+		// fontSize: 34,
 		...theme.desktopLineBreaks
+	},
+
+	primaryHeading: {
+		margin: 0,
+		padding: 0,
+		...theme.desktopLineBreaks
+	},
+
+	secondaryHeading: {
+		fontSize: 38,
+		fontWeight: 'bold',
 	},
 
 	subHeading: {
 		lineHeight: 1.55,
+	},
+
+	overview: {
+		margin: [40,0]
 	},
 
 	nowrap: {

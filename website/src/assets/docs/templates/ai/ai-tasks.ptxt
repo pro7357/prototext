@@ -17,6 +17,10 @@
                 "id": "voy33c"
               },
               {
+                "content": "Summarize this for a second-grade student",
+                "id": "5qrb6q"
+              },
+              {
                 "content": "Continue",
                 "id": "zwpole"
               },
@@ -85,8 +89,20 @@
                 "id": "rmoye2"
               },
               {
-                "content": "Check this text for its meaning and the logic of the narrative. What can be improved? Write only the corrected version, nothing else.",
+                "content": "Check this text for its meaning and the logic of the narrative. What can be improved? Write only the corrected version, nothing else",
                 "id": "ihiv5s"
+              },
+              {
+                "content": "Connect these sentences logically",
+                "id": "sftvb6"
+              },
+              {
+                "content": "Write a sentence that connects these two thoughts",
+                "id": "2dpgb4"
+              },
+              {
+                "content": "Offer a better solution for",
+                "id": "b1b9pd"
               }
             ]
           }

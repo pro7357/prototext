@@ -59,7 +59,7 @@ export default connect(mapStateToProps)(props => {
 					<span> v{APP_VERSION}</span>
 				</Link>
 				<Link isInternal isButton url='#features'>Features</Link>
-				<Link isInternal isButton url='#use-cases'>Use cases</Link>
+				<Link isInternal isButton url='#use-cases'>Use cases<sup className={classes.upd}>✦</sup></Link>
 				<Link isInternal isButton url='#manifest'>Manifest</Link>
 				<Link isInternal isButton url='#shared-documents'>Shared docs</Link>
 				<Link isExternal isButton url='https://discord.gg/3WWfQYUs48'>Discord</Link>
@@ -127,6 +127,12 @@ const useStyles = createUseStyles(theme => ({
 	compact: {
 		padding: [8,24]
 	},
+
+	upd: {
+		color: theme.textButton.active.color,
+		fontSize: 12,
+		marginRight: -4
+	}
 
 
 }),{name: 'header'})

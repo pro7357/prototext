@@ -1,5 +1,5 @@
 
-import Intro from './components/IntroWithVideo'
+import Intro from './components/Intro'
 import Download from './components/Download'
 import Features from './components/Features'
 import UseCases from './components/UseCases'

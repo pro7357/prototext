@@ -24,7 +24,6 @@ export default connect(mapStateToProps)(props => {
 		pageView,
 		leftSideFocus,
 		rightSideFocus,
-		targetPageIndex,
 		topbarMode,
 		searchText,
 		searchMatchCase,
@@ -42,6 +41,7 @@ export default connect(mapStateToProps)(props => {
 	const state = store.getState()
 	let content = state.editor.content
 	const alonePageMode = content.length === 1
+	const targetPageIndex = state.editor.targetPageIndex
 
 	let sharedEditorProps = props
 
@@ -62,9 +62,7 @@ export default connect(mapStateToProps)(props => {
 	sharedEditorProps.currentDoc = filePath && parseFilePath(filePath)
 
 	useEffect(() => {
-
 		document.body.addEventListener('keydown', handleKeyDownInsideEsitor)
-
 	},[])
 
 	const classes = useStyles()
@@ -152,7 +150,6 @@ function mapStateToProps(state, props) {
 		pageView: state.editor.pageView,
 		leftSideFocus: state.editor.leftSideFocus,
 		rightSideFocus: state.editor.rightSideFocus,
-		targetPageIndex: state.editor.targetPageIndex,
 		localeOptions: state.editor.localeOptions,
 		localeConfigMode: state.editor.localeConfigMode,
 		filePath: state.filePath,

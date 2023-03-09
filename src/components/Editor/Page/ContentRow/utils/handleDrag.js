@@ -104,7 +104,9 @@ export default props => {
 		deactivateDndMode()
 		resetBlockSelection()
 
-		tempDiv.innerHTML = ''
+		if(tempDiv) {
+			tempDiv.innerHTML = ''
+		}
 
 	}
 

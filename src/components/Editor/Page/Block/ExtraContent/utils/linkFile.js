@@ -36,9 +36,9 @@ export default async props => {
 			{
 				...block,
 				style: 8,
-				content: parseFilePath(filePaths[0]).base,
+				content: assetMode ? filePaths[0][1] : filePaths[0],
 				link: {
-					filePath: filePaths[0]
+					filePath: assetMode ? filePaths[0][0] : filePaths[0]
 				}
 			},
 			true,
@@ -54,11 +54,11 @@ export default async props => {
 			filePaths.reduce((blocks, filePath, index) => {
 				return blocks.concat(
 					createBlock(
-						parseFilePath(filePath).base,
+						assetMode ? filePath[1] : filePath,
 						{
 							style: 8,
 							link: {
-								filePath: filePath
+								filePath: assetMode ? filePath[0] : filePath
 							}
 						}
 					)

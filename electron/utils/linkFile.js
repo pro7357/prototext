@@ -40,7 +40,9 @@ module.exports = async (targetWindow, assetMode) => {
 
 				await copyFile(filePath, assetFilePath)
 
-				relativeFilePaths.push(assetRelativeFilePath)
+				relativeFilePaths.push(
+					[assetRelativeFilePath, path.parse(filePath).name]
+				)
 
 			}
 
