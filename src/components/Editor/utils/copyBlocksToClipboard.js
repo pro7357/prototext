@@ -15,7 +15,7 @@ export default props => {
 	let data = blocks.reduce((done, block, index) => {
 
 		return done += block && block.content
-			? (index?'\n':'') + `${block.style?styleKeys[block.style]:``}${block.content}`
+			? (index?'\n':'') + `${block.style?styleKeys[block.style]||``:``}${block.content}`
 			: ``
 
 	},'')

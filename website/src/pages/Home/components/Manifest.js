@@ -22,7 +22,7 @@ export default props => {
 			v: 'Private'
 		},
 		{
-			v: 'Offline'
+			v: 'Offline-first'
 		},
 		{
 			v: 'No ads'
@@ -31,7 +31,7 @@ export default props => {
 			v: 'No registration'
 		},
 		{
-			v: 'Open source'
+			v: 'Open-source'
 		},
 	]
 

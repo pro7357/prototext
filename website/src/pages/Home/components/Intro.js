@@ -43,7 +43,7 @@ export default connect(mapStateToProps)(props => {
 			</div>
 
 			<i className={classes.subHeading}>
-				It's a free, introvert-friendly, desktop app that is suitable for taking daily notes, brainstorming, research, composing multilingual text, creating flexible presentations, building knowledge networks, and managing your projects content.<br/>
+				It's a free, introvert-friendly, desktop app that is suitable for brainstorming with AI assistance, taking notes, composing multilingual text, creating flexible presentations, building knowledge networks, and managing your project's content.<br/>
 				<span className={classes.modalLink} onClick={()=>{openModal(0)}}>Read the author's short story about the project.</span>
 			</i>
 
@@ -113,13 +113,14 @@ function mapStateToProps(state, props) {
 const useStyles = createUseStyles(theme => ({
 
 	root: {
-		paddingTop: 160,
+		paddingTop: 120,
 		paddingBottom: 12,
+		[theme.desktop]: {
+			paddingTop: 160,
+		}
 	},
 
 	caption: {
-		// margin: [32, 0, 24, 0],
-		// fontSize: 34,
 		...theme.desktopLineBreaks
 	},
 
@@ -136,6 +137,7 @@ const useStyles = createUseStyles(theme => ({
 
 	subHeading: {
 		lineHeight: 1.55,
+		fontSize: 19,
 	},
 
 	overview: {

@@ -6758,6 +6758,161 @@
             ]
           }
         ]
+      },
+      {
+        "id": "hp4mue",
+        "content": [
+          {
+            "id": "gw7asj",
+            "content": [
+              {
+                "content": "ChatGPT Help",
+                "id": "xsrmeh",
+                "style": 7
+              },
+              {
+                "content": "Apply these tasks to your content:",
+                "id": "erzc18",
+                "style": 5
+              },
+              {
+                "content": "What are the main contradictions in my problem and how can they be resolved",
+                "id": "500xyl"
+              },
+              {
+                "content": "What known principles of invention can be applied to solve my problem",
+                "id": "w1nxqj"
+              },
+              {
+                "content": "What resources can be used to improve the current solution to the problem",
+                "id": "w7r99h"
+              },
+              {
+                "content": "What possible solutions to the problem can be considered using the `Ideal Final Result` technique",
+                "id": "gklbre"
+              },
+              {
+                "content": "What are the strengths and weaknesses of the current solution to the problem",
+                "id": "hq5z8c"
+              },
+              {
+                "content": "What existing systems can be used to solve the problem or how can an existing system be modified to improve its functionality",
+                "id": "84kc36"
+              }
+            ]
+          },
+          {
+            "id": "8r7lp0",
+            "content": [
+              {
+                "content": "",
+                "id": "mn44iq"
+              },
+              {
+                "content": "",
+                "id": "eb8k4r"
+              },
+              {
+                "content": "",
+                "id": "kqxfg6"
+              },
+              {
+                "content": "",
+                "id": "ss46pd"
+              },
+              {
+                "content": "",
+                "id": "z1zsyk"
+              },
+              {
+                "content": "",
+                "id": "3q319l"
+              },
+              {
+                "content": "",
+                "id": "q9b3au"
+              },
+              {
+                "content": "",
+                "id": "k47unc"
+              }
+            ]
+          },
+          {
+            "id": "qvlvix",
+            "content": [
+              {
+                "content": "",
+                "id": "3cwp01"
+              },
+              {
+                "content": "",
+                "id": "oer6u7"
+              },
+              {
+                "content": "",
+                "id": "0hatja"
+              },
+              {
+                "content": "",
+                "id": "xitz1y"
+              },
+              {
+                "content": "",
+                "id": "fptk7o"
+              },
+              {
+                "content": "",
+                "id": "h0tgvu"
+              },
+              {
+                "content": "",
+                "id": "9gmc65"
+              },
+              {
+                "content": "",
+                "id": "90xrci"
+              }
+            ]
+          },
+          {
+            "id": "lqfor7",
+            "content": [
+              {
+                "content": "",
+                "id": "shij5g"
+              },
+              {
+                "content": "",
+                "id": "ahz6qx"
+              },
+              {
+                "content": "",
+                "id": "t67zvq"
+              },
+              {
+                "content": "",
+                "id": "fc6wib"
+              },
+              {
+                "content": "",
+                "id": "4d6meu"
+              },
+              {
+                "content": "",
+                "id": "cmdbd7"
+              },
+              {
+                "content": "",
+                "id": "7skbsb"
+              },
+              {
+                "content": "",
+                "id": "e9wg56"
+              }
+            ]
+          }
+        ]
       }
     ],
     "localeOptions": [
@@ -6770,7 +6925,7 @@
     "compactMenuMode": true
   },
   "exporter": {
-    "format": 1,
+    "format": 2,
     "allowLocales": true,
     "allowBlockStyles": true,
     "allowMergePages": true,

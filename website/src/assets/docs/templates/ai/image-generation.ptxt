@@ -59,6 +59,14 @@
               {
                 "content": "Correct this into standard English",
                 "id": "04sms6"
+              },
+              {
+                "content": "List unique keywords from this text",
+                "id": "vfomzc"
+              },
+              {
+                "content": "List unique keywords from this text, split all by new line symbol",
+                "id": "vfomzc"
               }
             ]
           }
@@ -315,14 +323,29 @@
             "id": "vb3j85",
             "content": [
               {
-                "content": "Tutorial",
+                "content": "Tutorials",
                 "id": "7059c2",
                 "style": 7
+              },
+              {
+                "content": "How to organize prompts and generated images, filter unique keywords?",
+                "id": "h0wvrn",
+                "style": 6
+              },
+              {
+                "content": "https://youtu.be/0du2fzi6tVI",
+                "id": "cb1ntn",
+                "style": 8
               },
               {
                 "id": "2hxs1e",
                 "style": 6,
                 "content": "How can keywords be quickly combined into a high-quality prompt for image generation?"
+              },
+              {
+                "content": "https://youtu.be/OybgBw3SDzY",
+                "id": "9pxx8l",
+                "style": 8
               },
               {
                 "content": "1. Go to the Keywords page.",

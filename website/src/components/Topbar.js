@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { toggleTheme } from 'theme/theme.actions'
 import TextButton from 'app/components/shared/TextButton'
 import Link from './Link'
-import { useEffect, useRef } from 'preact/hooks'
+import { useEffect, useState, useRef } from 'preact/hooks'
 
 let scrolled
 
@@ -45,7 +45,11 @@ export default connect(mapStateToProps)(props => {
 	const classes = useStyles()
 
 	return (
-		<div className={classes.root} id='topbar'
+		<div
+			className={clsx(
+				classes.root,
+			)}
+			id='topbar'
 			ref={node => {
 				if(node && !topbarNode.current) {
 					topbarNode.current = node
@@ -53,24 +57,41 @@ export default connect(mapStateToProps)(props => {
 			}}
 		>
 
-			<div className={classes.leftSide}>
-				<Link isInternal isButton url='#app'>
-					<b>ProtoText</b>
-					<span> v{APP_VERSION}</span>
-				</Link>
-				<Link isInternal isButton url='#features'>Features</Link>
-				<Link isInternal isButton url='#use-cases'>Use cases<sup className={classes.upd}>✦</sup></Link>
-				<Link isInternal isButton url='#manifest'>Manifest</Link>
-				<Link isInternal isButton url='#shared-documents'>Shared docs</Link>
-				<Link isExternal isButton url='https://discord.gg/3WWfQYUs48'>Discord</Link>
-				<Link isInternal isButton url='#questions-and-answers'>Q&A</Link>
-			</div>
+			<Link isInternal isButton url='#app'>
+				<b>ProtoText</b>
+				<span> v{APP_VERSION}</span>
+			</Link>
 
-			<div className={classes.rightSide}>
-				<TextButton onClick={toggleTheme}>
-					{theme?'Dark':'Light'} theme
-				</TextButton>
-			</div>
+			<Link className={classes.desktop} isInternal isButton url='#features'>
+				Features
+			</Link>
+
+			<Link className={classes.desktop} isInternal isButton url='#use-cases'>
+				Use cases<sup className={classes.upd}>✦</sup>
+			</Link>
+
+			<Link className={classes.desktop} isInternal isButton url='#manifest'>
+				Manifest
+			</Link>
+
+			<Link className={classes.desktop} isInternal isButton url='#shared-documents'>
+				Shared docs
+			</Link>
+
+			<Link className={classes.desktop} isInternal isButton url='#questions-and-answers'>
+				Q&A
+			</Link>
+			<Link className={classes.desktop} isExternal isButton url='https://www.youtube.com/@svgsprite4942'>
+				Tutorials on YouTube<sup className={classes.upd}>✦</sup>
+			</Link>
+
+			<Link isExternal isButton url='https://discord.gg/3WWfQYUs48'>
+				Community<sup className={classes.upd}>✦</sup>
+			</Link>
+
+			<TextButton className={clsx(classes.desktop, classes.rightSide)} onClick={toggleTheme}>
+				{theme?'Dark':'Light'} theme
+			</TextButton>
 
 		</div>
 	)
@@ -89,8 +110,8 @@ const useStyles = createUseStyles(theme => ({
 		width: '100%',
 		padding: [24,24],
 		display: 'flex',
+		gap: 16,
 		flexWrap: 'wrap',
-		gap: 8,
 		alignItems: 'center',
 		justifyContent: 'space-between',
 		backgroundColor: theme.background.default,
@@ -104,24 +125,16 @@ const useStyles = createUseStyles(theme => ({
 		transition: `padding 500ms ease`
 	},
 
-	leftSide: {
+	desktop: {
 		display: 'none',
 		[theme.desktop]: {
-			display: 'flex',
-			gap: 16,
-			alignItems: 'center',
-			flexWrap: 'wrap',
+			display: 'block',
 		}
 	},
 
 	rightSide: {
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-		width: '100%',
-		[theme.desktop]: {
-			width: 'auto'
-		}
+		flexGrow: 1,
+		textAlign: 'right'
 	},
 
 	compact: {
@@ -129,9 +142,13 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	upd: {
+		display: 'none',
 		color: theme.textButton.active.color,
 		fontSize: 12,
-		marginRight: -4
+		marginRight: -4,
+		[theme.desktop]: {
+			display: 'inline-block',
+		}
 	}
 
 
