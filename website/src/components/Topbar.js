@@ -81,15 +81,21 @@ export default connect(mapStateToProps)(props => {
 			<Link className={classes.desktop} isInternal isButton url='#questions-and-answers'>
 				Q&A
 			</Link>
+
 			<Link className={classes.desktop} isExternal isButton url='https://www.youtube.com/@svgsprite4942'>
-				Tutorials on YouTube<sup className={classes.upd}>✦</sup>
+				Tutorials
 			</Link>
 
 			<Link isExternal isButton url='https://discord.gg/3WWfQYUs48'>
 				Community<sup className={classes.upd}>✦</sup>
 			</Link>
 
-			<TextButton className={clsx(classes.desktop, classes.rightSide)} onClick={toggleTheme}>
+			<div className={clsx(classes.fill, classes.desktop)}/>
+
+			<TextButton
+				className={clsx(classes.desktop, classes.rightSide)}
+				onClick={toggleTheme}
+			>
 				{theme?'Dark':'Light'} theme
 			</TextButton>
 
@@ -132,8 +138,11 @@ const useStyles = createUseStyles(theme => ({
 		}
 	},
 
-	rightSide: {
+	fill: {
 		flexGrow: 1,
+	},
+
+	rightSide: {
 		textAlign: 'right'
 	},
 

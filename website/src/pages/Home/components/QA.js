@@ -83,7 +83,7 @@ export default props => {
 											{value.split(' ').map((imgId, imgIndex) => {
 												return (
 													<ImagePreview
-														src={`assets/screenshots/qa/${imgId}.jpg`}
+														src={`assets/screenshots/qa/${imgId}`}
 													/>
 												)
 											})}

@@ -49,7 +49,7 @@ export default props => {
 			title='App features & Shortcuts'
 			secondaryActions={[
 				{
-					label: 'Feedback ✍️',
+					label: 'Write a review',
 					isExternal: true,
 					isNotable: true,
 					action: () => {
@@ -57,7 +57,7 @@ export default props => {
 					}
 				},
 				{
-					label: 'Discord',
+					label: 'Join the community',
 					isExternal: true,
 					isNotable: true,
 					action: () => {
@@ -67,7 +67,7 @@ export default props => {
 				{
 					label: (
 						<div>
-							Invest in the project <span className={classes.coin}>₿</span>
+							Donate <span className={classes.coin}>₿</span>
 						</div>
 					),
 					isNotable: true,

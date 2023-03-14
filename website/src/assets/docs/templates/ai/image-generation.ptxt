@@ -84,6 +84,11 @@
                 "style": 7
               },
               {
+                "content": "https://rentry.org/toptokens#top-1000-most-used-tokens-in-prompts",
+                "id": "wc0sw0",
+                "style": 8
+              },
+              {
                 "id": "byxat6",
                 "content": "8k,"
               },
@@ -172,6 +177,55 @@
         ]
       },
       {
+        "id": "yx2bcp",
+        "content": [
+          {
+            "id": "wmn126",
+            "content": [
+              {
+                "content": "Negative Prompts",
+                "id": "dfqhvg",
+                "style": 7
+              },
+              {
+                "content": "https://rentry.org/toptokens#top-1000-most-used-tokens-in-negative-prompts",
+                "id": "mmc347",
+                "style": 8
+              },
+              {
+                "content": "out of frame, duplicate, watermark, signature, text, ugly, morbid, mutated, deformed, blurry, bad anatomy, bad proportions, cloned face, disfigured, fused fingers, fused limbs, too many fingers, long neck",
+                "id": "gegxzq"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2xjedt",
+        "content": [
+          {
+            "id": "cz5fqp",
+            "content": [
+              {
+                "content": "Image 2 Depthmap",
+                "id": "r85xy8",
+                "style": 7
+              },
+              {
+                "content": "https://replicate.com/cjwbw/midas",
+                "id": "avvzfz",
+                "style": 8
+              },
+              {
+                "content": "https://replicate.com/cjwbw/zoedepth",
+                "id": "1xdj8e",
+                "style": 8
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "n7ftgp",
         "content": [
           {
@@ -185,6 +239,16 @@
               {
                 "content": "https://replicate.com/stability-ai/stable-diffusion",
                 "id": "v6ww3k",
+                "style": 8
+              },
+              {
+                "content": "https://huggingface.co/spaces/stabilityai/stable-diffusion",
+                "id": "u8lemh",
+                "style": 8
+              },
+              {
+                "content": "https://github.com/nolanaatama/sd-1click-colab",
+                "id": "bywena",
                 "style": 8
               }
             ]
@@ -205,6 +269,11 @@
               {
                 "content": "https://dreamlike.art/",
                 "id": "79s5au",
+                "style": 8
+              },
+              {
+                "content": "https://huggingface.co/dreamlike-art/dreamlike-diffusion-1.0",
+                "id": "rt1vw1",
                 "style": 8
               }
             ]
@@ -281,6 +350,11 @@
                 "id": "initial-block",
                 "content": "The best results",
                 "style": 7
+              },
+              {
+                "content": "Collect here your most successful image generation.",
+                "id": "872vjq",
+                "style": 5
               }
             ]
           }
@@ -296,21 +370,11 @@
                 "content": "Uncategorized",
                 "id": "530noz",
                 "style": 7
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "bvefkq",
-        "content": [
-          {
-            "id": "kmfcld",
-            "content": [
+              },
               {
-                "content": "Failed",
-                "id": "arm0vc",
-                "style": 7
+                "content": "A place for generated images that still need to be categorized.",
+                "id": "d0gu9d",
+                "style": 5
               }
             ]
           }
@@ -346,30 +410,6 @@
                 "content": "https://youtu.be/OybgBw3SDzY",
                 "id": "9pxx8l",
                 "style": 8
-              },
-              {
-                "content": "1. Go to the Keywords page.",
-                "id": "rmpqs9"
-              },
-              {
-                "content": "2. Click on the handle of a card with desired keyword to activate the card selection mode.",
-                "id": "2x3w3s"
-              },
-              {
-                "content": "3. Click on other keywords that you want to use.",
-                "id": "xeuu4y"
-              },
-              {
-                "content": "4. Press CMD+C or CTRL+C to copy your keywords into the clipboard.",
-                "id": "g3lfaf"
-              },
-              {
-                "content": "5. Press CMD+V or CTRL+V to paste it in an empty card.",
-                "id": "7bks4o"
-              },
-              {
-                "content": "6. Use Backspace key to merge the new cards into one \"prompt\".",
-                "id": "lrc9aq"
               }
             ]
           }

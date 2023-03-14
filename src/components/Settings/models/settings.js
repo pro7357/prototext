@@ -33,12 +33,12 @@ export default {
 			type: 'input',
 			dataType: 'number',
 			label: 'ChatGPT Max Tokens',
-			defValue: 30,
-			max: 2048,
+			defValue: 1024,
+			max: 4096,
 			min: 1,
 			step: 1,
 			keepInLS: true,
-			hint: 'The maximum number of tokens to generate in the completion (1-2048). A helpful rule of thumb is that one token generally corresponds to ~4 characters of text for common English text. This translates to roughly ¾ of a word (so 100 tokens ~= 75 words).'
+			hint: 'The maximum number of tokens to generate in the completion (1-4096). A helpful rule of thumb is that one token generally corresponds to ~4 characters of text for common English text. This translates to roughly ¾ of a word (so 100 tokens ~= 75 words).'
 		},
 
 	},

@@ -15,8 +15,9 @@ export default async props => {
 	} = props
 
 	const btnNode = e.target
-	const originalBlockNode = btnNode.parentNode.parentNode.children[0]
-	const localizedBlockNode = btnNode.parentNode.parentNode.children[1]
+	console.log('btnNode',btnNode)
+	const originalBlockNode = btnNode.parentNode.parentNode.parentNode.children[0].children[1]
+	const localizedBlockNode = btnNode.parentNode.parentNode.parentNode.children[1].children[1]
 
 	if(!originalBlockNode || !localizedBlockNode) {
 		return
