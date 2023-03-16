@@ -4,7 +4,13 @@ import { connect } from 'react-redux'
 import { undo } from 'store'
 import { switchPageView, switchEditorMode } from 'editorActions'
 import { toogleTopbar } from 'topbarActions'
-import { showExporter, showHelper, showProtector, togglePresenter } from 'layoutActions'
+import {
+	showExporter,
+	showHelper,
+	showProtector,
+	togglePresenter,
+	showSettings
+} from 'layoutActions'
 import { toggleTheme } from 'theme/theme.actions'
 import { themeIds } from 'theme/themes'
 import os from 'globalUtils/os'
@@ -110,6 +116,14 @@ export default connect(mapStateToProps)(props => {
 						}}
 					>
 						Presentation
+					</TextButton>
+
+					<TextButton
+						onClick={() => {
+							showSettings()
+						}}
+					>
+						Settings
 					</TextButton>
 
 				</>)}

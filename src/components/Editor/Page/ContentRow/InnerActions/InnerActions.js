@@ -2,12 +2,13 @@
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
-import { isAiResponse } from 'sharedUtils/blockTypes'
+import { isAiResponse, isLink } from 'sharedUtils/blockTypes'
 import Spinner from 'sharedComponents/Spinner'
 import ActionButton from './ActionButton'
 import translate from './utils/translate'
 import glvrdTextAnalysys from './utils/glvrdTextAnalysys'
 import askAi from './utils/askAi'
+import textToSpeech from './utils/textToSpeech'
 
 import {
 	switchUserFocus
@@ -32,6 +33,8 @@ export default props => {
 		localeOptions,
 		aiPromptMode: promptable,
 		selMode,
+		isOpenAIEnabled,
+		isElevenlabsEnabled,
 	} = sharedEditorProps
 
 	let isLoading = localizedBlock && typeof localizedBlock.isLoading !== 'undefined'
@@ -40,7 +43,9 @@ export default props => {
 
 	let showLoadingSpinner = isLoading && !isAiResponse(block.style)
 	let showTranslate = !isLoading && twoColsMode && localizedBlock && !promptable && !selMode
-	let showAi = !isLoading && !showTranslate && !promptable && !selMode
+	let showAi = isOpenAIEnabled === 'yes' && !isLoading && !showTranslate && !promptable && !selMode
+
+	let showElevenlabs = isElevenlabsEnabled === 'yes' && !isLink(block.style)
 
 	let showGlvrd = !isLoading &&
 		singlePageMode &&
@@ -67,10 +72,6 @@ export default props => {
 			{showTranslate && (
 				<ActionButton
 					label='Translate'
-					isLoading={localizedBlock.isLoading}
-					pageIndex={pageIndex}
-					localeIndex={localeIndex}
-					blockIndex={blockIndex}
 					action={e => {
 						translate({
 							e,
@@ -88,10 +89,6 @@ export default props => {
 			{showGlvrd && (
 				<ActionButton
 					label='Glvrd'
-					sharedEditorProps={sharedEditorProps}
-					pageIndex={pageIndex}
-					block={block}
-					blockIndex={blockIndex}
 					action={e => {
 						glvrdTextAnalysys({
 							pageIndex,
@@ -103,18 +100,26 @@ export default props => {
 				/>
 			)}
 
+			{showElevenlabs && (
+				<ActionButton
+					label='Speech'
+					action={() => {
+						textToSpeech({
+							pageIndex,
+							blockIndex
+						})
+					}}
+				/>
+			)}
+
 			{showAi && (
 				<ActionButton
 					label='AI'
-					sharedEditorProps={sharedEditorProps}
-					pageIndex={pageIndex}
-					block={block}
-					blockIndex={blockIndex}
 					action={askAi}
 				/>
 			)}
 
-			</div>
+		</div>
 	)
 }
 

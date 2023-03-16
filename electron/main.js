@@ -19,6 +19,7 @@ const chooseExportDir = require('./utils/chooseExportDir')
 const handlePtxtFileOpenByClick = require('./utils/handlePtxtFileOpenByClick')
 const handleTranslate = require('./utils/handleTranslate')
 const linkFile = require('./utils/linkFile')
+const saveGeneratedAsset = require('./utils/saveGeneratedAsset')
 const deleteFile = require('./utils/deleteFile')
 const { getHash32 } = require('./utils/crpyto')
 const encryptFileContent = require('./utils/encryptFileContent')
@@ -162,6 +163,11 @@ app.whenReady().then( async () => {
 
 	ipcMain.handle('linkFile', async (event, assetMode) => {
 		return await linkFile(getTargetWindow(), assetMode)
+	})
+
+
+	ipcMain.handle('saveGeneratedAsset', async (event, payload) => {
+		return await saveGeneratedAsset(getTargetWindow(), payload)
 	})
 
 

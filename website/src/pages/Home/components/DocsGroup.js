@@ -7,6 +7,8 @@ import Subheading from 'components/Subheading'
 import Button from 'app/components/shared/Button'
 import Link from 'components/Link'
 
+import splitText from 'utils/splitText'
+
 
 export default props => {
 
@@ -100,7 +102,7 @@ export default props => {
 
 			example.push(
 				<div className={classes.description}>
-					{item.v}
+					{splitText(item.v)}
 				</div>
 			)
 
@@ -152,7 +154,6 @@ const useStyles = createUseStyles(theme => ({
 		display: 'flex',
 		width: '100%',
 		flexDirection: 'column',
-		gap: 20,
 		marginBottom: 16,
 		[theme.desktop]: {
 			width: 'calc((100% / 2) - 48px / 2)',
@@ -172,6 +173,7 @@ const useStyles = createUseStyles(theme => ({
 		justifyContent: 'space-between',
 		flexWrap: 'wrap',
 		gap: 16,
+		marginBottom: 20,
 		'& h2': {
 			fontSize: 28,
 			textAlign: 'left'
@@ -181,7 +183,7 @@ const useStyles = createUseStyles(theme => ({
 	screenshotWindow: {
 		borderRadius: theme.rounded * 2,
 		boxShadow: `0 10px 30px ${theme.shadow.default}`,
-		marginBottom: 8,
+		marginBottom: 20,
 		cursor: 'pointer',
 		position: 'relative',
 		'&>div': {
@@ -209,12 +211,13 @@ const useStyles = createUseStyles(theme => ({
 		maxWidth: '100%',
 		borderRadius: theme.rounded * 2,
 		overflow: 'hidden',
-		display: 'block'
+		display: 'block',
 	},
 
 	description: {
 		fontSize: 15,
-		textAlign: 'left'
+		textAlign: 'left',
+		marginTop: 8
 	}
 
 }),{name: 'docs-group'})

@@ -21,7 +21,11 @@ const update = async () => {
 	let newVersion = currentVersion.split('.').reduce((result, num, index) => {
 		num = Number(num)
 		return result.concat(
-			index === updLevel ? num + 1 : num
+			index === updLevel
+				? num + 1
+				: index > updLevel
+					? 0
+					: num
 		)
 	}, []).join('.')
 

@@ -167,6 +167,8 @@ function mapStateToProps(state, props) {
 		globalSearch: state.topbar.searchInAllPages,
 		history: state.history,
 		spellcheck: state.spellcheck,
+		isOpenAIEnabled: state.settings.isOpenAIEnabled,
+		isElevenlabsEnabled: state.settings.isElevenlabsEnabled,
 	}
 }
 

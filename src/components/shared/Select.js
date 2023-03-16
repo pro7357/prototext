@@ -1,4 +1,5 @@
 
+import { useEffect, useState } from 'preact/hooks'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
@@ -8,7 +9,7 @@ export default props => {
 	const {
 		id,
 		value,
-		options,
+		getOptions,
 		optionValueHandler,
 		optionLabelHandler,
 		onChange,
@@ -19,6 +20,24 @@ export default props => {
 		isDisabled,
 		insideUIBlock,
 	} = props
+
+	const [options, setOptions] = useState(null)
+
+	useEffect(() => {
+
+		async function fetchData() {
+			if (getOptions) {
+			  const actualOptions = await getOptions()
+			  setOptions(actualOptions)
+			} else {
+			  setOptions(props.options)
+			}
+		 }
+
+		fetchData()
+
+	},[props.options, getOptions])
+
 
 
 	const classes = useStyles()
@@ -46,11 +65,16 @@ export default props => {
 				className
 			)}
 		>
-			{options.map((option, optionIndex)=>{
-				let value = optionValueHandler(option, optionIndex)
+			{options && options.map((option, optionIndex)=>{
+				let value = optionValueHandler
+					? optionValueHandler(option, optionIndex)
+					: option.value
 				return (
 					<option disabled={value===''} value={value}>
-						{optionLabelHandler(option, optionIndex)}
+						{optionLabelHandler
+							? optionLabelHandler(option, optionIndex)
+							: option.label
+						}
 					</option>
 				)
 			})}

@@ -8,13 +8,15 @@ import UIBlockLabel from './UIBlockLabel'
 import UIBlockHint from './UIBlockHint'
 import Input from './Input'
 import Switch from './Switch'
+import Select from './Select'
 import normalizeFiledValue from './utils/normalizeFiledValue'
 import clsx from 'clsx'
 
 
 const fieldComponentsByType = {
 	input: Input,
-	switch: Switch
+	switch: Switch,
+	select: Select
 }
 
 export default props => {
