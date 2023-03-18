@@ -21,9 +21,11 @@ npm install && cd electron npm install
 
 
 #### Check the availability of the necessary dev tools on your computer
+- [Hoomebrew](https://brew.sh/)
 - [Go lang to use Taskfile](https://go.dev/doc/install)
-- [Taskfile](https://taskfile.dev/)
 - [NodeJS](https://nodejs.org/en/download/releases/)
+- npm install -g @go-task/cli
+- npm install pm2 -g
 
 
 #### Start development on localhost:3333
