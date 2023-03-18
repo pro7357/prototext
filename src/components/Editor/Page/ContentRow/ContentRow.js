@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import handleDrag from './utils/handleDrag'
 import handleDrop from './utils/handleDrop'
 import handleClick from './utils/handleClick'
+import getClickPosition from 'globalUtils/getClickPosition'
 
 import InnerActions from './InnerActions/InnerActions'
 import OuterActions from './OuterActions'
@@ -48,6 +49,8 @@ export default props => {
 
 	let isHighlighted = block.isHighlighted
 
+	let lastMouseDownPos
+
 	const classes = useStyles()
 
 	return (
@@ -73,6 +76,9 @@ export default props => {
 					moment: 'unhold',
 				})
 			}}
+			onMouseDown={e => {
+				lastMouseDownPos = getClickPosition(e)
+			}}
 			onDoubleClick={e=>{
 				if(isAlone && !linkMode && !aiPromptMode) return
 				handleClick({
@@ -89,6 +95,7 @@ export default props => {
 				if(isAlone && !linkMode && !aiPromptMode) return
 				handleClick({
 					e,
+					lastMouseDownPos,
 					block,
 					pageIndex,
 					localeIndex,
@@ -145,7 +152,8 @@ export default props => {
 					pageIndex,
 					localeIndex,
 					blockIndex,
-					twoColsMode
+					twoColsMode,
+					currentDoc
 				})
 			}}
 		>

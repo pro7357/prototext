@@ -194,20 +194,17 @@ module.exports = ({ windows, app, getTargetWindow, isMac }) => [
 			},
 			{type: 'separator'},
 			{
-				type: 'radio',
 				label: 'One Page view',
 				accelerator: isMac ? 'Cmd+1' : 'CTRL+1',
 				checked: true,
 				click: () => getTargetWindow().webContents.send('switchPageView',0),
 			},
 			{
-				type: 'radio',
 				label: 'Two Pages view',
 				accelerator: isMac ? 'Cmd+2' : 'CTRL+2',
 				click: () => getTargetWindow().webContents.send('switchPageView',1),
 			},
 			{
-				type: 'radio',
 				label: 'Localization view',
 				accelerator: isMac ? 'Cmd+3' : 'CTRL+3',
 				click: () => getTargetWindow().webContents.send('switchPageView',2),

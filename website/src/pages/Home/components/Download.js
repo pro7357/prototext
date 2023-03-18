@@ -42,7 +42,7 @@ export default connect(mapStateToProps)(props => {
 				isNotable
 				isLarge
 			>
-				Download for Mac Intel
+				Download for Mac
 			</Button>
 
 			<Button
@@ -113,7 +113,7 @@ export default connect(mapStateToProps)(props => {
 								</p></li>
 
 								<li><p>
-									Let me know if you are interested in the Apple Silicon or Linux versions of the app and can help me test it: <Link url='https://discord.gg/Ea3RhsMzAn' isNotable isInline>#suggestions channel</Link>.
+									Let me know if you are interested in the Linux versions of the app and can help me test it: <Link url='https://discord.gg/Ea3RhsMzAn' isNotable isInline>#suggestions channel</Link>.
 								</p></li>
 
 							</ol>

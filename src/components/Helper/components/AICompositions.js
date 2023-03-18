@@ -17,11 +17,21 @@ export default () => {
 		<div className={classes.root}>
 
 			<div>
-				Currently, ProtoText supports integration with ChatGPT by using the official OpenAI API and integration with Microsoft Translator.
+				Currently, ProtoText supports integration with ChatGPT by OpenAI, Microsoft Translator and Speech Synthesis by ElevenLabs.
 			</div>
 
 			<div>
-				Use the "AI" button to target ChatGPT to your desired content and task:
+				Go to the Main menu {`>`} Settings to activate these cool features.
+			</div>
+
+			<div className={classes.subHeading}>
+				<b>
+					Text Generation
+				</b>
+			</div>
+
+			<div>
+				Use the "AI" button to target built-in ChatGPT to your desired content and task:
 			</div>
 
 			<UIBlock className={classes.block}>
@@ -37,35 +47,15 @@ export default () => {
 			</UIBlock>
 
 			<UIBlock className={classes.block}>
-				<div className={classes.btns}>
-					<TextButton isNotable isSmall>Translate</TextButton>
-				</div>
 				<BlockBorder style={9}/>
 				AI's response<br/>
 				is here…
 			</UIBlock>
 
-			<div>
-				Please note that Content and Task can be the same card.
-			</div>
-
-			<div className={classes.subHeading}>
-				<b>
-					And finally the most interesting feature
-				</b>
-			</div>
-
-			<div>
-				Use the internal links feature to give the AI more complex content and tasks.
-			</div>
-
 			<UIBlock
-				className={clsx(classes.block, classes.taskBlock)}
+				className={clsx(classes.block)}
 			>
-				<div className={clsx(classes.taskBlockBg, classes.largeTaskBlockBg)}/>
-				{/* Link to a page */}
-				Card – With a linked page<br/>
-				to use all content of this page as a prompt.
+				Use "Internal links" feature to give the AI an entire content page as a single prompt.
 			</UIBlock>
 
 			<div>
@@ -74,12 +64,29 @@ export default () => {
 				</a>
 			</div>
 
-			<div>
+			{/* <div>
 				Limits:<br/>
 				1. Linked content depth: 1 level.<br/>
 				2. Max request length to ChatGPT is ~300 English words.<br/>
-				But you can continue the conversation in the context of the last answer.
+				But you can continue the conversation in the context of the last message.
+			</div> */}
+
+			<div className={classes.subHeading}>
+				<b>
+					Speech Synthesis
+				</b>
 			</div>
+
+			<div>
+				Just one click to generate a high-quality voiceover and save the result as an attached MP3 asset.
+			</div>
+
+			<UIBlock className={classes.block}>
+				<div className={classes.btns}>
+					<TextButton isNotable isSmall>Speech</TextButton>
+				</div>
+				Text to Speech
+			</UIBlock>
 
 		</div>
 	)

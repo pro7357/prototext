@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
+import { bugReportsUrl } from 'globalConstants'
 import isContentRowHidden from 'sharedUtils/isContentRowHidden'
 import ContentRow from './ContentRow/ContentRow'
 import Block from './Block/Block'
@@ -114,7 +115,7 @@ export default connect(mapStateToProps)(props => {
 
 					if(block === null || typeof block === 'undefined') {
 						block = createBlock(
-							'Oops... You have met with some kind of bug. Please describe how this block was created and send your bug report: https://discord.gg/zze9qE5Cvq',
+							`Oops... You have met with some kind of bug. Please describe how this block was created and send your bug report: ${bugReportsUrl}`,
 							{style: 1}
 						)
 					}

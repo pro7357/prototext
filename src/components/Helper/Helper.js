@@ -87,13 +87,7 @@ export default props => {
 			secondaryActionsForPrinting={(
 				<div className={classes.printLinks}>
 					<a href='https://discord.gg/SDuzTXWkSd' target='_blank'>
-						Feedback Form
-					</a>
-					<a href='https://discord.gg/SDuzTXWkSd' target='_blank'>
-						Discord
-					</a>
-					<a href={domain+investSectionPath}>
-						Invest in the project <span className={classes.coin}>₿</span>
+						Join the community
 					</a>
 				</div>
 			)}

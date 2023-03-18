@@ -1,5 +1,6 @@
 
 import { rearrangeTextBlocks } from 'editorActions'
+import linkFile from '../../Block/ExtraContent/utils/linkFile'
 
 /*
 	The difference between DRAG & DROP functions for text blocks, localizations, and menu elements is minimal.This is a task for refactoring.
@@ -16,6 +17,7 @@ export default props => {
 		localeIndex,
 		blockIndex,
 		twoColsMode,
+		currentDoc
 	} = props
 
 
@@ -25,6 +27,14 @@ export default props => {
 	let node = e.target
 	let role = node && node.dataset && node.dataset.role
 	let depth = node && node.dataset && parseInt(node.dataset.depth)
+
+	const dndNode = window.targetDndEl
+	const dndNodeRole = dndNode && dndNode.dataset.role
+	const isDndNodeImage = dndNodeRole === 'image'
+
+	if(!dndNode || isDndNodeImage) {
+		return
+	}
 
 	if(role !== 'content-row') {
 		if(depth) {
@@ -65,14 +75,46 @@ export default props => {
 
 		contentRowNode.style.backgroundColor = ''
 
-		let srcData = e.dataTransfer.getData('text').split('-').map(item => Number(item))
+		if(mdaNode && mdaNode.style) {
+			mdaNode.style.opacity = 0
+		}
+
+		let srcData = e.dataTransfer.getData('text/plain').split('-').map(item => Number(item))
+
+		let srcUriData = e.dataTransfer.getData('text/uri-list')
+		let srcFilePaths = e.dataTransfer.files
+
+		if(srcFilePaths) {
+			if(srcFilePaths.length) {
+				// Convert to an iterable array.
+				let _srcFilePaths = []
+				for (let i = 0; i < srcFilePaths.length; i++) {
+					_srcFilePaths.push(srcFilePaths[i].path)
+				}
+				srcFilePaths = _srcFilePaths
+			} else {
+				srcFilePaths = null
+			}
+		}
+
+		if(srcUriData || srcFilePaths) {
+			linkFile({
+				block,
+				targetPageIndex: pageIndex,
+				targetLocaleIndex: 0, // localeIndex
+				targetBlockIndex: blockIndex + 1,
+				currentDoc,
+				assetMode: true,
+				srcFilePaths,
+				srcFileUrls: srcUriData ? [srcUriData] : null,
+			})
+			return
+		}
+
 
 		let srcPageIndex = srcData[0]
 		let srcBlockIndex = srcData[1]
 
-		if(mdaNode && mdaNode.style) {
-			mdaNode.style.opacity = 0
-		}
 
 		if(pageIndex === srcPageIndex && srcBlockIndex === blockIndex + 1) {
 			return

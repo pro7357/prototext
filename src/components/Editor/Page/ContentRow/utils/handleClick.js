@@ -20,6 +20,7 @@ export default props => {
 
 	const {
 		e,
+		lastMouseDownPos,
 		dblMode,
 		block,
 		pageIndex,
@@ -33,7 +34,6 @@ export default props => {
 		currentDoc
 	} = props
 
-
 	let node = e.target
 	let value = node.innerText
 	let withAlt = e.altKey
@@ -45,14 +45,17 @@ export default props => {
 	let activateDeletion
 	let activateDnd
 
+
 	if(isContentRow && !linkMode && !aiPromptMode) {
 
 		nodeBB = node.getBoundingClientRect()
 		contentRowWidth = nodeBB && nodeBB.width
 
-		activateDeletion = x >= contentRowWidth - 1 && x < contentRowWidth + 25
+		activateDeletion = x >= contentRowWidth - 1
+			&& x < contentRowWidth + 25
+			&& lastMouseDownPos.x > contentRowWidth
 
-		activateDnd = isDndIconPos(x)
+		activateDnd = isDndIconPos(x) && lastMouseDownPos.x < 0
 
 	}
 

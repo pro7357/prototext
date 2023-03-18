@@ -2,58 +2,101 @@
 const { dialog } = require('electron')
 const createDir = require('./createDir')
 const copyFile = require('./copyFile')
+const downloadFile = require('./downloadFile')
 const path = require('path')
+const parseUrl = require('url').parse
 const { getUUID } = require('./crpyto')
 
 
-module.exports = async (targetWindow, assetMode) => {
+module.exports = async (targetWindow, props) => {
 
-	let result = await dialog.showOpenDialog(targetWindow, {
-		properties: ['openFile','multiSelections'],
-	})
+	const {
 
-	if(
-		result &&
-		result.canceled === false &&
-		result.filePaths && result.filePaths.length > 0
-	) {
+		// Save linked files as attached assets (the clones with unique IDs).
+		assetMode,
 
-		if(assetMode) {
+		// Files that was added using Drag&Drop method from OS or a web UI.
+		srcFilePaths,
+		srcFileUrls
 
-			const currentDocFilePath = targetWindow.filePath
+	} = props
 
-			if(!currentDocFilePath) {
-				return null
+	let items = srcFilePaths || srcFileUrls
+
+	// Open the Dialog window to select files in OS.
+	if(!items) {
+		let selection = await dialog.showOpenDialog(targetWindow, {
+			properties: ['openFile','multiSelections'],
+		})
+		if(selection.canceled || !selection.filePaths || !selection.filePaths.length) {
+			return null
+		}
+		items = selection.filePaths
+	}
+
+	if(!items) {
+		return null
+	}
+
+	if(assetMode) {
+
+		const currentDocFilePath = (props.currentDoc && props.currentDoc.fullPath) ||
+			(targetWindow && targetWindow.filePath)
+
+		if(!currentDocFilePath) {
+			return null
+		}
+
+		const assetsDir = `${path.dirname(currentDocFilePath)}/assets`
+
+		await createDir(assetsDir)
+
+		let relativeFilePaths = []
+
+		for (const item of items) {
+
+			const parsedItem = srcFileUrls
+				? parseUrl(item)
+				: path.parse(item)
+
+			const displayAssetName = srcFileUrls
+				? path.parse(parsedItem.pathname).name
+				: parsedItem.name
+
+			const assetExt = srcFileUrls ? path.extname(parsedItem.pathname) : parsedItem.ext
+			const assetFileName = `${getUUID()}${assetExt}`
+			const assetFilePath = `${assetsDir}/${assetFileName}`
+			const assetRelativeFilePath = `./assets/${assetFileName}`
+
+			let isOk = true
+
+			try {
+				if(srcFileUrls) {
+					await downloadFile(parsedItem, assetFilePath)
+				} else {
+					await copyFile(item, assetFilePath)
+				}
+			} catch (error) {
+				console.log(error)
+				isOk = false
 			}
 
-			const assetsDir = `${path.dirname(currentDocFilePath)}/assets`
-
-			await createDir(assetsDir)
-
-			let relativeFilePaths = []
-
-			for (const filePath of result.filePaths) {
-
-				const assetFileName = `${getUUID()}${path.extname(filePath)}`
-				const assetFilePath = `${assetsDir}/${assetFileName}`
-				const assetRelativeFilePath = `./assets/${assetFileName}`
-
-				await copyFile(filePath, assetFilePath)
-
+			if(isOk) {
 				relativeFilePaths.push(
-					[assetRelativeFilePath, path.parse(filePath).name]
+					[assetRelativeFilePath, displayAssetName]
 				)
-
 			}
-
-			return relativeFilePaths
 
 		}
 
-		return result.filePaths
+		return relativeFilePaths.length
+			? relativeFilePaths
+			: null
 
 	}
 
-	return null
+	return items && items.length
+		? items
+		: null
 
 }

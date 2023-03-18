@@ -1,7 +1,7 @@
 
 // require('dotenv').config()
 
-const { app, BrowserWindow, Notification, dialog, ipcMain } = require('electron')
+const { app, BrowserWindow, Notification, dialog, ipcMain, clipboard } = require('electron')
 const path = require('path')
 const os = require('os')
 const isMac = process.platform === 'darwin'
@@ -82,8 +82,10 @@ app.whenReady().then( async () => {
 
 
 	ipcMain.handle('thereAreUnsavedChanges', async (event, props) => {
-		// getTargetWindow().thereAreUnsavedChanges = true
-		getTargetWindow().setDocumentEdited(true)
+		let targetWindow = getTargetWindow()
+		if(targetWindow) {
+			targetWindow.setDocumentEdited(true)
+		}
 	})
 
 
@@ -161,8 +163,16 @@ app.whenReady().then( async () => {
 	})
 
 
-	ipcMain.handle('linkFile', async (event, assetMode) => {
-		return await linkFile(getTargetWindow(), assetMode)
+	ipcMain.handle('linkFile', async (event, payload) => {
+		return await linkFile(getTargetWindow(), payload)
+	})
+
+
+	ipcMain.handle('dragImageStart', async (event, imageUrl) => {
+		event.sender.startDrag({
+			file: imageUrl,
+			icon: imageUrl,
+		 })
 	})
 
 

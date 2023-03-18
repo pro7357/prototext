@@ -1,5 +1,6 @@
 
 import { createUseStyles } from 'react-jss'
+import requestElectronApi from 'globalUtils/requestElectronApi'
 import clsx from 'clsx'
 
 
@@ -18,6 +19,12 @@ export default props => {
 			style={{
 				backgroundImage: `url('${src}')`
 			}}
+			draggable
+			data-role='image'
+			onDragStart={ e => {
+				e.preventDefault()
+				requestElectronApi('dragImageStart',src)
+			}}
 		/>
 	)
 
@@ -34,7 +41,13 @@ const useStyles = createUseStyles(theme => ({
 		backgroundSize: 'contain',
 		backgroundRepeat: 'no-repeat',
 		backgroundPosition: 'center',
-		// backgroundSize: 'cover',
+		position: 'relative',
+		overflow: 'hidden',
+		textAlign: 'center',
+		'& img': {
+			height: '100%',
+			maxWidth: '100%',
+		}
 	},
 
 }),{name: 'linked-image'})

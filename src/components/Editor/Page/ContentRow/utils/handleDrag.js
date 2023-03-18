@@ -34,6 +34,11 @@ export default props => {
 	const node = e.target
 	let role = node && node.dataset && node.dataset.role
 	const isContentRow = role === 'content-row'
+	const isImage = role === 'image'
+
+	if(isImage) {
+		return
+	}
 
 	const {x,y} = getClickPosition(e)
 

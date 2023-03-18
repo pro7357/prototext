@@ -10,4 +10,7 @@ module.exports = async (src, dst) => {
 				dst
 			)
 		})
+		.catch(error => {
+			throw new Error('Unable to copy the file:', src)
+		})
 }
