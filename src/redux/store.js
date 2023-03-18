@@ -1,6 +1,6 @@
 
 import { createStore, applyMiddleware } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
+import { composeWithDevTools } from '@redux-devtools/extension'
 import requestElectronApi from 'globalUtils/requestElectronApi'
 import deepClone from '../utils/deepClone'
 import rootReducer from './reducers/root'
