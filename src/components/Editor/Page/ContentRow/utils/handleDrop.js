@@ -28,13 +28,9 @@ export default props => {
 	let role = node && node.dataset && node.dataset.role
 	let depth = node && node.dataset && parseInt(node.dataset.depth)
 
-	const dndNode = window.targetDndEl
-	const dndNodeRole = dndNode && dndNode.dataset.role
-	const isDndNodeImage = dndNodeRole === 'image'
-
-	if(!dndNode || isDndNodeImage) {
-		return
-	}
+	// const dndNode = window.targetDndEl
+	// const dndNodeRole = dndNode && dndNode.dataset.role
+	// const isDndNodeImage = dndNodeRole === 'image'
 
 	if(role !== 'content-row') {
 		if(depth) {

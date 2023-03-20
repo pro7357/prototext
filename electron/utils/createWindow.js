@@ -1,4 +1,5 @@
 
+const log = require('electron-log')
 const { BrowserWindow, Menu, shell, dialog, webFrame } = require('electron')
 const path = require('path')
 const isMac = process.platform === 'darwin'
@@ -70,6 +71,17 @@ module.exports = props => {
 			// newWindow.webContents.openDevTools({ mode: 'detach' })
 		}
 	}
+
+
+	newWindow.webContents.on('crashed', function(e) {
+   	log.info('Crashed', e)
+   })
+
+
+	newWindow.webContents.on('render-process-gone', function(e, details) {
+		log.info('Render process gone', details)
+	})
+
 
 	newWindow.webContents.on('did-finish-load', function() {
 

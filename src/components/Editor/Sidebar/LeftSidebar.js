@@ -160,7 +160,7 @@ export default connect(mapStateToProps)(props => {
 							</>
 						}
 					>
-						There are updates!
+						Updates
 					</TextButton>
 				)}
 

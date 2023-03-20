@@ -1,4 +1,5 @@
 
+const log = require('electron-log')
 const { dialog } = require('electron')
 const createDir = require('./createDir')
 const copyFile = require('./copyFile')
@@ -21,7 +22,10 @@ module.exports = async (targetWindow, props) => {
 
 	} = props
 
-	let items = srcFilePaths || srcFileUrls
+	log.info('linkFile srcFilePaths',srcFilePaths)
+	log.info('linkFile srcFileUrls',srcFileUrls)
+
+	let items = srcFileUrls || srcFilePaths
 
 	// Open the Dialog window to select files in OS.
 	if(!items) {
@@ -47,7 +51,9 @@ module.exports = async (targetWindow, props) => {
 			return null
 		}
 
-		const assetsDir = `${path.dirname(currentDocFilePath)}/assets`
+		const assetsDir = path.resolve(path.dirname(currentDocFilePath), 'assets')
+
+		log.info('assetsDir',assetsDir)
 
 		await createDir(assetsDir)
 
@@ -65,8 +71,10 @@ module.exports = async (targetWindow, props) => {
 
 			const assetExt = srcFileUrls ? path.extname(parsedItem.pathname) : parsedItem.ext
 			const assetFileName = `${getUUID()}${assetExt}`
-			const assetFilePath = `${assetsDir}/${assetFileName}`
+			const assetFilePath = path.resolve(assetsDir,assetFileName)
 			const assetRelativeFilePath = `./assets/${assetFileName}`
+
+			log.info('assetFilePath',assetFilePath)
 
 			let isOk = true
 
@@ -77,11 +85,12 @@ module.exports = async (targetWindow, props) => {
 					await copyFile(item, assetFilePath)
 				}
 			} catch (error) {
-				console.log(error)
+				log.info('assetFilePath',error && error.message)
 				isOk = false
 			}
 
 			if(isOk) {
+				log.info('linkFile ok', assetRelativeFilePath, displayAssetName)
 				relativeFilePaths.push(
 					[assetRelativeFilePath, displayAssetName]
 				)

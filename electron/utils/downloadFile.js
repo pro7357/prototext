@@ -1,4 +1,5 @@
 
+const log = require('electron-log')
 const http = require('http')
 const https = require('https')
 const fs = require('fs')
@@ -27,11 +28,15 @@ module.exports = async (url, dest) => {
 
 		let normalizedUrl = `${protocol}//${hostname}${pathname}`
 
+		log.info('downloadFile normalizedUrl', normalizedUrl)
+
 		const file = fs.createWriteStream(dest, { flags: 'wx' })
 
 		const request = (isHttps ? https : http).get(normalizedUrl, (response) => {
+			log.info(response.statusMessage)
 			if (response.statusCode === 200) {
 				response.pipe(file)
+				log.info('downloadFile ok')
 			} else {
 				file.close()
 				fs.unlink(dest, () => {}) // Delete temp file
@@ -40,6 +45,7 @@ module.exports = async (url, dest) => {
 		})
 
 		request.on('error', (err) => {
+			log.info('request error',err.message)
 			file.close()
 			fs.unlink(dest, () => {}) // Delete temp file
 			reject(err.message)
@@ -50,6 +56,8 @@ module.exports = async (url, dest) => {
 		})
 
 		file.on('error', (err) => {
+
+			log.info('file error',err.message)
 
 			file.close()
 

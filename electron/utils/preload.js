@@ -1,4 +1,6 @@
 
+const log = require('electron-log')
+
 const {
 	contextBridge,
 	ipcRenderer,
@@ -19,4 +21,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
 
 window.addEventListener('DOMContentLoaded', () => {
 	webFrame.setVisualZoomLevelLimits(1, 10)
+})
+
+window.addEventListener('error', e => {
+	log.info(e && e.message)
 })

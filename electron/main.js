@@ -1,6 +1,11 @@
 
 // require('dotenv').config()
 
+const log = require('electron-log')
+log.initialize({ preload: true })
+log.info('\nNew session')
+log.errorHandler.startCatching()
+
 const { app, BrowserWindow, Notification, dialog, ipcMain, clipboard } = require('electron')
 const path = require('path')
 const os = require('os')
@@ -70,7 +75,7 @@ app.setAboutPanelOptions({
 
 
 
-app.whenReady().then( async () => {
+app.whenReady().then(() => {
 
 	targetWindow = createWindow({windows, app})
 
@@ -171,7 +176,7 @@ app.whenReady().then( async () => {
 	ipcMain.handle('dragImageStart', async (event, imageUrl) => {
 		event.sender.startDrag({
 			file: imageUrl,
-			icon: imageUrl,
+			icon: path.resolve(__dirname,'./build/assets/image-dnd-icon.png'),
 		 })
 	})
 
@@ -224,7 +229,10 @@ app.whenReady().then( async () => {
 	})
 
 
+}).catch(e => {
+	log.info('App error', e && e.message)
 })
+
 
 app.on('window-all-closed', function () {
 	app.quit()

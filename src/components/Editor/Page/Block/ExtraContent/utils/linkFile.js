@@ -28,6 +28,26 @@ export default async props => {
 		return
 	}
 
+
+	// Create preloading blocks for files that should be uploaded using URLs.
+	if(srcFileUrls) {
+		addBlock(
+			srcFileUrls.reduce((blocks, filePath, index) => {
+				return blocks.concat(
+					createBlock(
+						'Uploading...',
+						{
+							style: 5,
+						}
+					)
+				)
+			},[]),
+			targetBlockIndex,
+			false
+		)
+	}
+
+
 	// Option #1 – to open a dialog window to choose files.
 	// Option #2 - to save files that was added using Drag&Drop method.
 	let filePaths = await requestElectronApi(
@@ -49,7 +69,7 @@ export default async props => {
 
 	if(filePaths.length === 1 && !dndFileMode) {
 
-		// update the current block.
+		// Update the current block.
 		updBlock(
 			{
 				...block,
@@ -67,28 +87,52 @@ export default async props => {
 
 	} else {
 
-		// Create a series of blocks based on selected files.
-		addBlock(
-			filePaths.reduce((blocks, filePath, index) => {
-				return blocks.concat(
-					createBlock(
-						assetMode ? filePath[1] : filePath,
-						{
-							style: 8,
-							link: {
-								filePath: assetMode ? filePath[0] : filePath
-							}
+		if(srcFileUrls) {
+
+			// Update the group of files uploaded using URLs.
+			filePaths.forEach((filePath, i) => {
+				updBlock(
+					{
+						...block,
+						style: 8,
+						content: filePath[1],
+						link: {
+							filePath: filePath[0]
 						}
-					)
+					},
+					true,
+					targetPageIndex,
+					targetLocaleIndex,
+					targetBlockIndex + i
 				)
-			},[]),
-			dndFileMode
-				? targetBlockIndex // insert file blocks below the target D&D position
-				: undefined, // use position of the target block from the state
-			dndFileMode
-				? false // not replace the target block
-				: true // replace the target block
-		)
+			})
+
+		} else {
+
+			// Create a new group of blocks based on selected files.
+			addBlock(
+				filePaths.reduce((blocks, filePath, index) => {
+					return blocks.concat(
+						createBlock(
+							assetMode ? filePath[1] : filePath,
+							{
+								style: 8,
+								link: {
+									filePath: assetMode ? filePath[0] : filePath
+								}
+							}
+						)
+					)
+				},[]),
+				dndFileMode
+					? targetBlockIndex // insert file blocks below the target D&D position
+					: undefined, // use position of the target block from the state
+				dndFileMode
+					? false // not replace the target block
+					: true // replace the target block
+			)
+
+		}
 
 	}
 

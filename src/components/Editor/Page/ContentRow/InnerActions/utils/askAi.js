@@ -166,8 +166,27 @@ export default async props => {
 	)
 
 
-	const onError = () => {
-		deleteBlock(aiResponseBlockIndex)
+	const onError = (message) => {
+
+		console.error('The request to ChatGPT is failed.',message)
+
+		// let _page = store.getState().editor.content[initialPageIndex]
+		// if(!_page) return
+		// let _block = _page.content[localeIndex].content[aiResponseBlockIndex]
+		// if(!_block || _block.id !== aiResponseBlock.id) return
+
+		// updBlock(
+		// 	{
+		// 		...aiResponseBlock,
+		// 		isLoading: undefined,
+		// 		content: 'The request failed. Try again.',
+		// 	},
+		// 	true, // with refresh
+		// 	initialPageIndex,
+		// 	localeIndex,
+		// 	aiResponseBlockIndex
+		// )
+
 	}
 
 
@@ -272,8 +291,7 @@ export default async props => {
 			}
 		})
 	} catch (error) {
-		alert(error.message)
-		onError()
+		onError(error.message)
 	}
 
 	if(chatGPTImitationMode || !stream) {
