@@ -46,7 +46,7 @@ export default {
 			type: 'input',
 			dataType: 'number',
 			label: 'ChatGPT Max Tokens',
-			defValue: 4096,
+			defValue: 1024,
 			max: 4096,
 			min: 1,
 			step: 1,

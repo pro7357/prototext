@@ -69,6 +69,8 @@ module.exports = async (targetWindow, props) => {
 				? path.parse(parsedItem.pathname).name
 				: parsedItem.name
 
+			let isFileUrlProtocol = srcFileUrls && parsedItem.protocol === 'file:'
+
 			const assetExt = srcFileUrls ? path.extname(parsedItem.pathname) : parsedItem.ext
 			const assetFileName = `${getUUID()}${assetExt}`
 			const assetFilePath = path.resolve(assetsDir,assetFileName)
@@ -79,10 +81,13 @@ module.exports = async (targetWindow, props) => {
 			let isOk = true
 
 			try {
-				if(srcFileUrls) {
+				if(srcFileUrls && !isFileUrlProtocol) {
 					await downloadFile(parsedItem, assetFilePath)
 				} else {
-					await copyFile(item, assetFilePath)
+					await copyFile(
+						isFileUrlProtocol ? item.slice(7) : item,
+						assetFilePath
+					)
 				}
 			} catch (error) {
 				log.info('assetFilePath',error && error.message)
