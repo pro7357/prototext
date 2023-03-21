@@ -48,8 +48,8 @@ const askChatGPT = async (props) => {
 						progressEvent.currentTarget.response,
 						true
 					)
-					if(resultPart === true) {
-						onDone()
+					if(resultPart.isDone) {
+						onDone(resultPart)
 					} else {
 						onProgress(
 							resultPart
@@ -97,21 +97,22 @@ const askChatGPT = async (props) => {
 
 const extractTextFromChank = (data, stream) => {
 
-	// console.log('data',data)
-
 	const lines = data
+		.toString()
 		.split('\n')
 		.filter((line) => line.trim() !== '')
 
 	let text = ''
 	let id
+	let isDone
 
 	for (const line of lines) {
 
 		let message = line.replace(/^data: /, '')
 
 		if (message === '[DONE]') {
-			return true
+			isDone = true
+			break
 		}
 
 		try {
@@ -128,7 +129,8 @@ const extractTextFromChank = (data, stream) => {
 
 	return {
 		id,
-		text: text.trim()
+		text: text.trim(),
+		isDone
 	}
 
 }

@@ -286,8 +286,9 @@ export default async props => {
 			onProgress: (result) => {
 				updateResponseBlock(result, false)
 			},
-			onDone: () => {
-				updateResponseBlock(false, true)
+			onDone: (result) => {
+				updateResponseBlock(result, false) // Add the last stream message.
+				updateResponseBlock(false, true) // Save result in the redux state.
 			}
 		})
 	} catch (error) {

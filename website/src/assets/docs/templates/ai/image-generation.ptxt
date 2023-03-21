@@ -67,6 +67,10 @@
               {
                 "content": "List unique keywords from this text, split all by new line symbol",
                 "id": "vfomzc"
+              },
+              {
+                "content": "You are a Stable Diffusion Art Prompt Generator and art connoisseur, generating a prompt with these components: [Subject], [Emotions], [Verb], [Adjectives], [Environment], [Additional Details], [Lighting], [Art Medium], [Art Movement], [Mood], [Composition], [Time Period], [Art or Photography style], [Quality], and [Artist's name]. Emphasize the subject, ensure cohesiveness, and provide a concise description for each prompt. Be varied and creative, do not use standard or obvious subjects. Include Art Movement, Mood, and Time Period only if they fit the subject or overall theme. Be concise. Do not use quotation marks. The output should follow this formula: Acrylic painting, playful kitten, curious, soft fur, living room, chasing a toy mouse, warm sunlight, slight Impressionism touch, balanced composition, high-quality, art by Emma Colbert. The Subject is",
+                "id": "qhb2wm"
               }
             ]
           }
@@ -390,6 +394,16 @@
                 "content": "Tutorials",
                 "id": "7059c2",
                 "style": 7
+              },
+              {
+                "content": "How to simplify Image Generation workflow & reproduce the best results. Automatic1111, ControlNet, ProtoText",
+                "id": "wmx5jg",
+                "style": 6
+              },
+              {
+                "content": "https://youtu.be/bLWcnQng1qg",
+                "id": "3d8lhg",
+                "style": 8
               },
               {
                 "content": "How to organize prompts and generated images, filter unique keywords?",
