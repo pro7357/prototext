@@ -71,6 +71,8 @@ module.exports = async (targetWindow, props) => {
 
 			let isFileUrlProtocol = srcFileUrls && parsedItem.protocol === 'file:'
 
+			log.info('isFileUrlProtocol',isFileUrlProtocol)
+
 			const assetExt = srcFileUrls ? path.extname(parsedItem.pathname) : parsedItem.ext
 			const assetFileName = `${getUUID()}${assetExt}`
 			const assetFilePath = path.resolve(assetsDir,assetFileName)

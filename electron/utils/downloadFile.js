@@ -20,13 +20,13 @@ module.exports = async (url, dest) => {
 
 		const {
 			protocol,
-			hostname,
+			host,
 			pathname
 		} = url
 
 		const isHttps = protocol === 'https:'
 
-		let normalizedUrl = `${protocol}//${hostname}${pathname}`
+		let normalizedUrl = `${protocol}//${host}${pathname}`
 
 		log.info('downloadFile normalizedUrl', normalizedUrl)
 
