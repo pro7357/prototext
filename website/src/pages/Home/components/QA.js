@@ -193,4 +193,4 @@ const useStyles = createUseStyles(theme => ({
 	}
 
 
-}),{name: 'q-and-a'})
+}),{name: 'qa'})
