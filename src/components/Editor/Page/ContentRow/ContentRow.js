@@ -40,12 +40,16 @@ export default props => {
 	} = sharedEditorProps
 
 	let isTextBlockDndMode = dndMode === 'block'
+	let isPageDndMode = dndMode === 'page'
+	let isLocaleDndMode = dndMode === 'locale'
 
 	let promptable = aiPromptMode
 
 	let draggable = (!isAlone && !linkMode && !promptable) || isSelected
 	let droppable = isTextBlockDndMode && !promptable && !isSelected
 	let deletable = !isAlone && !linkMode && !promptable && !selMode
+
+	let ignoreDnd = isPageDndMode || isLocaleDndMode
 
 	let isHighlighted = block.isHighlighted
 
@@ -137,12 +141,15 @@ export default props => {
 				})
 			}}
 			onDragOver={e => {
+				if(ignoreDnd) return
 				handleDrop({e,moment: 'over', twoColsMode})
 			}}
 			onDragLeave={e => {
+				if(ignoreDnd) return
 				handleDrop({e,moment: 'leave', twoColsMode})
 			}}
 			onDrop={e => {
+				if(ignoreDnd) return
 				handleDrop({
 					e,
 					selMode,

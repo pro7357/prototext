@@ -10,6 +10,7 @@ export default props => {
 		onClick,
 		onInput,
 		isActive,
+		isNotable,
 		isDisabled,
 		children,
 		isSmall,
@@ -37,7 +38,12 @@ export default props => {
 			}}
 		>
 			{label && (
-				<div className={classes.label}>
+				<div
+					className={clsx(
+						classes.label,
+						isNotable && classes.isNotable,
+					)}
+				>
 					{label}
 				</div>
 			)}
@@ -93,6 +99,10 @@ const useStyles = createUseStyles(theme => ({
 
 	isActive: {
 		backgroundColor: theme.switch.active.background,
+	},
+
+	isNotable: {
+		color: theme.textButton.notable.color,
 	},
 
 	isDisabled: {

@@ -2,7 +2,7 @@
 import { connect } from 'react-redux'
 import { createUseStyles } from 'react-jss'
 
-import { switchLayout } from 'layoutActions'
+import { showEditor } from 'layoutActions'
 import Form from 'sharedComponents/Form'
 
 import Encryption from './components/Encryption'
@@ -29,7 +29,7 @@ export default connect(mapStateToProps)(props => {
 				label: 'Close',
 				isSemiDangerous: true,
 				action: () => {
-					switchLayout(0)
+					showEditor()
 				}
 			}]}
 			scrollbarsMode={scrollbarsMode}

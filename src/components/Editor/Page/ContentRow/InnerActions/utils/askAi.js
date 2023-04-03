@@ -3,6 +3,7 @@ import { store } from 'store'
 import { askChatGPT } from 'globalUtils/ai/openai/chatGPT'
 import createBlock from 'editorUtils/createBlock'
 import getLinkedContent from './getLinkedContent'
+import { error } from 'globalUtils/notify'
 
 
 import {
@@ -36,8 +37,9 @@ export default async props => {
 	const appSettings = state.settings
 
 	const openAIApiKey = appSettings.openAIApiKey
+	const chatGPTModelId = appSettings.chatGPTModelId
+	const chatGPTLimitTokens = appSettings.chatGPTLimitTokens
 	const chatGPTTemperature = appSettings.chatGPTTemperature
-	const chatGPTMaxTokens = appSettings.chatGPTMaxTokens
 
 	if(typeof taskBlockIndex === 'undefined') {
 		/*
@@ -166,9 +168,12 @@ export default async props => {
 	)
 
 
-	const onError = (message) => {
+	const onError = (details) => {
 
-		console.error('The request to ChatGPT is failed.',message)
+		error(
+			'The request to ChatGPT is failed.',
+			details
+		)
 
 		// let _page = store.getState().editor.content[initialPageIndex]
 		// if(!_page) return
@@ -280,14 +285,20 @@ export default async props => {
 			prompt: finalPrompt,
 			conversationId: initialBlock,
 			apiKey: openAIApiKey,
+			modelId: chatGPTModelId,
 			temperature: chatGPTTemperature,
-			maxTokens: chatGPTMaxTokens,
+			limitTokens: chatGPTLimitTokens,
 			stream,
 			onProgress: (result) => {
-				updateResponseBlock(result, false)
+				if(result) {
+					updateResponseBlock(result, false)
+				}
 			},
 			onDone: (result) => {
-				updateResponseBlock(result, false) // Add the last stream message.
+				if(result) {
+					// Add the last stream message.
+					updateResponseBlock(result, false)
+				}
 				updateResponseBlock(false, true) // Save result in the redux state.
 			}
 		})

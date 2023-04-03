@@ -3,6 +3,7 @@ import { combineReducers } from 'redux'
 
 import theme from 'theme/theme.reducer'
 import layout from '../../components/layout.reducer'
+import welcomeSettings from '../../components/Welcome/welcome.reducer'
 import editor from '../../components/Editor/editor.reducer'
 import presenter from '../../components/Presenter/presenter.reducer'
 import exporter from '../../components/Exporter/exporter.reducer'
@@ -38,6 +39,7 @@ export default combineReducers({
 	exporter,
 
 	// App settings that usually should be kept in the browser memory.
+	welcomeSettings,
 	settings,
 
 	// The number of available steps for the "undo" function.

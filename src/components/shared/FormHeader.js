@@ -38,6 +38,7 @@ export default props => {
 							isDangerous={secondaryAction.isDangerous}
 							isSemiDangerous={secondaryAction.isSemiDangerous}
 							isNotable={secondaryAction.isNotable}
+							isDisabled={secondaryAction.isDisabled}
 						>
 							{secondaryAction.label}
 						</TextButton>
@@ -46,7 +47,11 @@ export default props => {
 				))}
 
 				{primaryAction && (
-					<Button onClick={primaryAction.action}>
+					<Button
+						onClick={primaryAction.action}
+						isNotable={primaryAction.isNotable}
+						isDisabled={primaryAction.isDisabled}
+					>
 						{primaryAction.label}
 					</Button>
 				)}

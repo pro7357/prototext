@@ -21,7 +21,7 @@ export default e => {
 	let isBackspace = key === 'Backspace'
 
 	const state = store.getState()
-	const isEditor = state.layout === 0
+	const isEditor = state.layout === 1
 	const selRange = state.editor.selRange
 	const editor = state.editor
 

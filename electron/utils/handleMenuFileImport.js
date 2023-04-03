@@ -25,7 +25,7 @@ module.exports = (targetWindow, app, extension) => {
 			if(filePath) {
 
 				if(isPtxt) {
-					openPtxtFile(targetWindow, filePath, true)
+					openPtxtFile({targetWindow, filePath, importMode: true})
 					app.addRecentDocument(filePath)
 				} else {
 					// nothing yet

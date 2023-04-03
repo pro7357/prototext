@@ -14,7 +14,7 @@ module.exports = (targetWindow, app) => {
 		if(result.canceled === false && result.filePaths && result.filePaths.length > 0) {
 			let filePath = result.filePaths[0]
 			if(filePath) {
-				openPtxtFile(targetWindow, filePath)
+				openPtxtFile({targetWindow, filePath})
 				app.addRecentDocument(filePath)
 			}
 		}

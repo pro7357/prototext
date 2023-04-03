@@ -18,15 +18,15 @@ export default props => {
 		<div className={clsx(classes.root, classes.complexLabel, className)}>
 			<div>{children}</div>
 			{secondaryActions && (
-				<div>
+				<div className={classes.secondaryActions}>
 					{secondaryActions.map((item, index) => {
 						return (
 							<TextButton
 								onClick={item.action}
 								isNotable
 							>
-							{item.label}
-						</TextButton>
+								{item.label}
+							</TextButton>
 						)
 					})}
 				</div>
@@ -51,6 +51,11 @@ const useStyles = createUseStyles(theme => ({
 		justifyContent: 'space-between',
 		width: '100%'
 	},
+
+	secondaryActions: {
+		display: 'flex',
+		gap: 12
+	}
 
 
 }),{name: 'ui-block-label'})

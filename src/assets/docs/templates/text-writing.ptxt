@@ -1,0 +1,182 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "ChatGPT Help",
+                "style": 7
+              },
+              {
+                "content": "Recommend me ideas on this topic",
+                "id": "egjfft"
+              },
+              {
+                "content": "Recommend me ideas on this topic in one short sentence",
+                "id": "5ggbt3"
+              },
+              {
+                "content": "Explain this",
+                "id": "voy33c"
+              },
+              {
+                "content": "Continue",
+                "id": "zwpole"
+              },
+              {
+                "content": "Summarize this",
+                "id": "5qrb6q"
+              },
+              {
+                "content": "Summarize this for a second-grade student",
+                "id": "5qrb6q"
+              },
+              {
+                "content": "Summarize the following text in one short sentence",
+                "id": "0nwlha"
+              },
+              {
+                "content": "Rephrase this",
+                "id": "o65qgl"
+              },
+              {
+                "content": "Reverse the meaning of this text",
+                "id": "1bkqxn"
+              },
+              {
+                "content": "List funny and brief variants for this text",
+                "id": "rghade"
+              },
+              {
+                "content": "Correct this text in a tolerant way",
+                "id": "yhx7gh"
+              },
+              {
+                "content": "List synonyms for",
+                "id": "ai5xqa"
+              },
+              {
+                "content": "Translate this into simple English",
+                "id": "3nj9yo"
+              },
+              {
+                "content": "Correct this to standard English",
+                "id": "0byrct"
+              },
+              {
+                "content": "Find semantic repetitions here",
+                "id": "gqbehh"
+              },
+              {
+                "content": "Rewrite this phrase beginning with a verb",
+                "id": "05k76i"
+              },
+              {
+                "content": "Swap the two parts of this sentence",
+                "id": "minvy4"
+              },
+              {
+                "content": "Reduce the number of pronouns `I` in this text without losing meaning",
+                "id": "lvj4zs"
+              },
+              {
+                "content": "Rewrite this text in the second person",
+                "id": "rmoye2"
+              },
+              {
+                "content": "Check this text for its meaning and the logic of the narrative. What can be improved? Write only the corrected version, nothing else",
+                "id": "ihiv5s"
+              },
+              {
+                "content": "Connect these sentences logically",
+                "id": "sftvb6"
+              },
+              {
+                "content": "Write a sentence that connects these two thoughts",
+                "id": "2dpgb4"
+              },
+              {
+                "content": "Suggest alternative solutions for",
+                "id": "nzd4p7"
+              },
+              {
+                "content": "Offer a better solution for",
+                "id": "b1b9pd"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gw1q1p",
+        "content": [
+          {
+            "id": "at696w",
+            "content": [
+              {
+                "content": "My Content",
+                "id": "44y03i",
+                "style": 7
+              },
+              {
+                "content": "",
+                "id": "2e62yt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3xr5xu",
+        "content": [
+          {
+            "id": "rl6rla",
+            "content": [
+              {
+                "content": "Draft",
+                "id": "n6wwfy",
+                "style": 7
+              },
+              {
+                "content": "",
+                "id": "h01s0s"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 3,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": false,
+    "outputDirectory": "",
+    "outputFilename": "",
+    "isSchematicPreview": false
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}

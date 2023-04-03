@@ -15,16 +15,10 @@ import { store } from 'store'
 const message = (isEncrypted) =>
 `Oh, an unexpected software error has occurred.
 
-What's it?
-Probable causes:
-1. Bug in the App.
-2. The data is corrupted.
-3. Incompatibility of the data format.
-
 The app will now try to soft reset${isEncrypted?`.`:` and back up your notes to the following directory:
 "~/Desktop/prototext/backups/"`}
 
-Please report this bug to the developer letter2artemy@gmail.com with the details of the error:
+Please report this bug to the developer https://discord.gg/zze9qE5Cvq with the details of the error:
 
 `
 

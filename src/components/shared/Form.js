@@ -14,7 +14,8 @@ export default props => {
 		secondaryActionsForPrinting,
 		scrollbarsMode,
 		className,
-		sectionsClassName
+		sectionsClassName,
+		sectionsClassNames
 	} = props
 
 	const classes = useStyles()
@@ -44,7 +45,12 @@ export default props => {
 				>
 					{bodySections && Array.isArray(bodySections) ? bodySections.map((section,sectionIndex) => {
 						return(
-							<div className={classes.bodySection}>
+							<div
+								className={clsx(
+									classes.bodySection,
+									sectionsClassNames && sectionsClassNames[sectionIndex]
+								)}
+							>
 								{section}
 							</div>
 						)

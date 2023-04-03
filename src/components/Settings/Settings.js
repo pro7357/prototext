@@ -2,11 +2,11 @@
 import { connect } from 'react-redux'
 import { createUseStyles } from 'react-jss'
 
-import { switchLayout } from 'layoutActions'
+import { showEditor } from 'layoutActions'
 import SmartForm from 'sharedComponents/SmartForm'
 
 import models from './models/settings'
-import { setSettingsProperty } from './settings.actions'
+import setSettingsProperty from './settings.actions'
 
 
 export default connect(mapStateToProps)(props => {
@@ -26,7 +26,7 @@ export default connect(mapStateToProps)(props => {
 					label: 'Close',
 					isSemiDangerous: true,
 					action: () => {
-						switchLayout(0)
+						showEditor()
 					}
 				}
 			]}

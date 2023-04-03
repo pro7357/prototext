@@ -2,7 +2,12 @@
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
-import { isAiResponse, isLink } from 'sharedUtils/blockTypes'
+import {
+	isTextBlock,
+	isInternalLink,
+	isAiResponse,
+	isLink
+} from 'sharedUtils/blockTypes'
 import Spinner from 'sharedComponents/Spinner'
 import ActionButton from './ActionButton'
 import translate from './utils/translate'
@@ -23,7 +28,7 @@ export default props => {
 		pageIndex,
 		blockIndex,
 		localeIndex,
-		block,
+		block = {},
 		localizedBlock,
 		twoColsMode,
 		singlePageMode,
@@ -37,20 +42,33 @@ export default props => {
 		isElevenlabsEnabled,
 	} = sharedEditorProps
 
+	const {
+		link,
+		style
+	} = block
+
 	let isLoading = localizedBlock && typeof localizedBlock.isLoading !== 'undefined'
 		? localizedBlock.isLoading
 		: block.isLoading
 
-	let showLoadingSpinner = isLoading && !isAiResponse(block.style)
+	let showLoadingSpinner = isLoading && !isAiResponse(style)
 	let showTranslate = !isLoading && twoColsMode && localizedBlock && !promptable && !selMode
-	let showAi = isOpenAIEnabled === 'yes' && !isLoading && !showTranslate && !promptable && !selMode
+	let showAi = isOpenAIEnabled === 'yes' &&
+		!isLoading &&
+		!showTranslate &&
+		!promptable &&
+		!selMode &&
+		(isTextBlock(style) || isInternalLink(link))
 
-	let showElevenlabs = isElevenlabsEnabled === 'yes' && !isLink(block.style)
+	let showElevenlabs = isElevenlabsEnabled === 'yes' && !isLink(style)
 
-	let showGlvrd = !isLoading &&
-		singlePageMode &&
-		localeOptions[0] === 'ru' &&
-		!promptable && !selMode
+	// An unused feature for now.
+	// let showGlvrd = !isLoading &&
+	// 	singlePageMode &&
+	// 	localeOptions[0] === 'ru' &&
+	// 	!promptable && !selMode
+
+	let showGlvrd = false
 
 	const classes = useStyles()
 

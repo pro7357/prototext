@@ -10,8 +10,10 @@ import Helper from './Helper/Helper'
 import Protector from './Protector/Protector'
 import Presenter from './Presenter/Presenter'
 import Settings from './Settings/Settings'
+import Welcome from './Welcome/Welcome'
 
 const components = [
+	Welcome,
 	Editor,
 	Exporter,
 	Helper,

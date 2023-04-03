@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { useEffect } from 'preact/hooks'
 
 import { toggleAllPagesSelection } from 'exporterActions'
-import { switchLayout } from 'layoutActions'
+import { showEditor } from 'layoutActions'
 import Form from 'sharedComponents/Form'
 import PageSelector from './components/PageSelector'
 import FormatSwitch from './components/FormatSwitch'
@@ -56,7 +56,7 @@ export default connect(mapStateToProps)(props => {
 					label: 'Back to Editor',
 					isSemiDangerous: true,
 					action: () => {
-						switchLayout(0)
+						showEditor()
 					}
 				}
 			]}

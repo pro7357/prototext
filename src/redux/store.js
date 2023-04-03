@@ -2,7 +2,8 @@
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from '@redux-devtools/extension'
 import requestElectronApi from 'globalUtils/requestElectronApi'
-import deepClone from '../utils/deepClone'
+import deepClone from 'globalUtils/deepClone'
+import prepareStateToSave from 'globalUtils/prepareStateToSave'
 import rootReducer from './reducers/root'
 import { setHistorySteps } from './actions/hystory'
 import { setEditorState } from 'editorActions'
@@ -12,6 +13,7 @@ let store
 let history = []
 let historyLen = 100
 let thereAreUnsavedChanges = false
+let lastSavingTime = (new Date()).getTime()
 
 
 export const undo = () => {
@@ -24,6 +26,8 @@ export const undo = () => {
 const stateMiddleware = store => next => action => {
 
 	const actionType = action.type
+
+	let state = store.getState()
 
 	let isReset = actionType === 'resetEditorState'
 	let isSoftReset = actionType === 'softResetEditorState'
@@ -46,13 +50,17 @@ const stateMiddleware = store => next => action => {
 
 	if(action.allowUndo || isSoftReset) {
 
-		let state = deepClone(store.getState())
+		let stateClone = deepClone(state)
 
-		delete state.editor.pageView
+		delete stateClone.editor.pageView
 
 		if(isSoftReset) {
 
-			localStorage.setItem('contentBeforeSoftReset',JSON.stringify(state.editor.content))
+			localStorage.setItem(
+				'contentBeforeSoftReset',
+				JSON.stringify(stateClone.editor.content)
+			)
+
 			location.reload()
 
 		} else {
@@ -62,7 +70,7 @@ const stateMiddleware = store => next => action => {
 				history = history.slice(1)
 			}
 
-			history = history.concat(state)
+			history = history.concat(stateClone)
 
 			store.dispatch({
 				type: 'setHistorySteps',
@@ -73,17 +81,41 @@ const stateMiddleware = store => next => action => {
 
 	}
 
+
 	let result = next(action)
 
-	if(action.lsKey) {
-		localStorage.setItem(
-			action.lsKey,
-			JSON.stringify(action.payload)
-		)
+
+	// Save the doc automatically.
+
+	const autoSaveMode = state.settings.autoSaveMode
+	const filePath = state.filePath
+
+	if(autoSaveMode && filePath) {
+		setTimeout(() => {
+			requestElectronApi(
+				'completeSaving',
+				{
+					state: prepareStateToSave(),
+					filePath,
+					silentMode: true
+				}
+			)
+		}, 0)
 	}
 
-	// localStorage.setItem('state', JSON.stringify(store.getState()))
+	if(action.lsKey) {
+		if(action.payload === undefined || action.payload === null) {
+			localStorage.removeItem(action.lsKey)
+		} else {
+			localStorage.setItem(
+				action.lsKey,
+				JSON.stringify(action.payload)
+			)
+		}
+	}
+
 	return result
+
 }
 
 

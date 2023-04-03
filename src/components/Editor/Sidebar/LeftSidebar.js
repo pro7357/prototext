@@ -1,5 +1,6 @@
 
 import { connect } from 'react-redux'
+import requestElectronApi from 'globalUtils/requestElectronApi'
 
 import { undo } from 'store'
 import { switchPageView, switchEditorMode } from 'editorActions'
@@ -13,7 +14,6 @@ import {
 } from 'layoutActions'
 import { toggleTheme } from 'theme/theme.actions'
 import { themeIds } from 'theme/themes'
-import os from 'globalUtils/os'
 
 import TextButton from 'sharedComponents/TextButton'
 import MutedTextLine from 'sharedComponents/MutedTextLine'
@@ -41,7 +41,7 @@ export default connect(mapStateToProps)(props => {
 		targetPageIndex,
 		history,
 		encryption,
-		updates,
+		autoSaveMode,
 
 	} = props
 
@@ -128,40 +128,21 @@ export default connect(mapStateToProps)(props => {
 
 				</>)}
 
-				{updates && (
-					<TextButton
-						isActive
-						onClick={() => {
-
-							let platform = os.isMac()
-								? 'MacOS-Intel'
-								: os.isWindows()
-									? 'Windows'
-									: null
-
-							let refId = localStorage.getItem('instanceId')
-
-							let url = `https://prototext.app${platform?`/releases/ProtoText-${platform}-v${updates.releaseVersion}.zip`:``}?ref=updBtn&refVersion=${APP_VERSION}&refId=${refId}`
-
-							window.open(url, '_blank')
-
-						}}
-						hint={
-							<>
-								Release notes is available in our
-								<div>
-									<a
-										target='_blank'
-										href='https://discord.gg/Xwg8e6T3zA'
-									>
-										Discord
-									</a>
-								</div>
-							</>
-						}
-					>
-						Updates
-					</TextButton>
+				{(autoSaveMode && !currentDoc) && (
+					<div>
+						<TextButton
+							isActive
+							onClick={() => {
+								requestElectronApi('hitMenuItem','save')
+							}}
+						>
+							<b>Save this document once</b>
+						</TextButton>
+						<MutedTextLine>
+							So future changes will be
+							saved automatically.
+						</MutedTextLine>
+					</div>
 				)}
 
 				<TextButton
@@ -190,6 +171,6 @@ function mapStateToProps(state, props) {
 		themeIndex: state.theme,
 		pageViews: state.editor.pageViews,
 		encryption: state.encryption,
-		updates: state.updates
+		autoSaveMode: state.settings.autoSaveMode
 	}
 }

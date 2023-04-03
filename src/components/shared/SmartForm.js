@@ -109,13 +109,6 @@ export default props => {
 												newValue
 											)
 
-											if(keepInLS && newValue) {
-												localStorage.setItem(
-													fieldId,
-													JSON.stringify(newValue)
-												)
-											}
-
 										}}
 									/>
 

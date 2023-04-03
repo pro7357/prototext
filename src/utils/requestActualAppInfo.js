@@ -7,8 +7,7 @@ export default async props => {
 		// Demo data for the development mode.
 		return {
 			"versions": {
-				"actual": "1.7.14",
-				"archived": []
+				"actual": "1.8.3",
 			}
 		}
 	}

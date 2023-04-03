@@ -29,6 +29,7 @@ export default props => {
 				isDangerous && classes.dangerous,
 				isLarge && classes.large,
 				isCompact && classes.compact,
+				isDisabled && classes.disabled,
 				className
 			)}
 			onClick={e => {
@@ -113,6 +114,11 @@ const useStyles = createUseStyles(theme => ({
 	compact: {
 		display: 'inline-block',
 		width: 'auto'
+	},
+
+	disabled: {
+		backgroundColor: [theme.button.background, '!important'],
+		cursor: 'not-allowed',
 	}
 
 }),{name: 'btn'})

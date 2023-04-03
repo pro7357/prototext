@@ -58,7 +58,7 @@ module.exports = ({ windows, app, getTargetWindow, isMac }) => [
 						]
 					}
 				  ]
-				: [/*TODO*/]
+				: []
 			),
 			{
 				"label":"Import",
@@ -75,6 +75,7 @@ module.exports = ({ windows, app, getTargetWindow, isMac }) => [
 				type: 'separator',
 			},
 			{
+				id: 'save',
 				label: 'Save',
 				accelerator: isMac ? 'Cmd+S' : 'CTRL+S',
 				click: () => {
@@ -86,6 +87,17 @@ module.exports = ({ windows, app, getTargetWindow, isMac }) => [
 				accelerator: isMac ? 'Shift+Cmd+S' : 'Shift+CTRL+S',
 				click: () => {
 					handleMenuFileSave(true, getTargetWindow())
+				},
+			},
+			{
+				id: 'auto-save',
+				label: 'Auto-Save',
+				type: 'checkbox',
+				checked: app.autoSaveMode || false,
+				click: (el) => {
+					let newVal = el.checked
+					app.autoSaveMode = newVal
+					getTargetWindow().webContents.send('toggleAutoSaveMode', newVal)
 				},
 			},
 			{ type: 'separator' },
@@ -115,16 +127,11 @@ module.exports = ({ windows, app, getTargetWindow, isMac }) => [
 			},
 			{ type: 'separator' },
 			{ role: 'close' },
-			...(!isMac
-				? [
-					{ type: 'separator' },
-					{
-						label: 'Settings',
-						click: () => getTargetWindow().webContents.send('showSettings'),
-					},
-				]
-				: []
-			)
+			{ type: 'separator' },
+			{
+				label: 'Settings',
+				click: () => getTargetWindow().webContents.send('showSettings'),
+			},
 		],
 	},
 	{

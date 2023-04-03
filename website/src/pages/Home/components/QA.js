@@ -91,7 +91,7 @@ export default props => {
 									)
 								}
 
-								return <div className={classes.cardText}>{value}</div>
+								return <div className={classes.cardText}>{splitText(value)}</div>
 
 							})}
 						</div>

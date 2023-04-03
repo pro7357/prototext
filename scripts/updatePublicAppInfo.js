@@ -78,7 +78,7 @@ const update = async () => {
 
 	// Add the new version and keep the previous in the archived.
 	info.versions.actual = newVersion
-	info.versions.archived = (info.versions.archived || []).concat(currentVersion)
+	// info.versions.archived = (info.versions.archived || []).concat(currentVersion)
 
 	await saveFiles(
 		[{

@@ -1,9 +1,17 @@
 
 import Link from 'sharedComponents/Link'
 import { listVoices } from 'globalUtils/ai/elevenlabs/elevenlabs'
+import { models as chatGPTModels } from 'globalUtils/ai/openai/chatGPT'
 
 export default {
 	byId: {
+
+		autoSaveMode: {
+			type: 'switch',
+			dataType: 'boolean',
+			keepInLS: true,
+			defValue: false,
+		},
 
 		isOpenAIEnabled: {
 			type: 'select',
@@ -30,28 +38,46 @@ export default {
 			)
 		},
 
+		chatGPTModelId: {
+			label: 'Model',
+			keepInLS: true,
+			type: 'select',
+			dataType: 'text',
+			defValue: chatGPTModels.allIds[0],
+			getOptions: async () => {
+				return chatGPTModels.allIds.map(modelId => {
+					const model = chatGPTModels.byId[modelId]
+					return {
+						label: model.title,
+						value: modelId
+					}
+				})
+			},
+			hint: 'Note that GPT-4 is only accessible to those who have been granted access.'
+		},
+
+		chatGPTLimitTokens: {
+			type: 'input',
+			dataType: 'number',
+			label: 'Limit Tokens',
+			defValue: 0,
+			max: 32768,
+			min: 0,
+			step: 1,
+			keepInLS: true,
+			hint: 'Enter a number if you want to limit the length of requests to ChatGPT. Or enter 0 to use the maximum available capabilities of the model.'
+		},
+
 		chatGPTTemperature: {
 			type: 'input',
 			dataType: 'number',
-			label: 'ChatGPT Temperature',
+			label: 'Temperature',
 			defValue: 0.6,
 			max: 1,
 			min: 0,
 			step: 0.1,
 			keepInLS: true,
-			hint: 'Higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.'
-		},
-
-		chatGPTMaxTokens: {
-			type: 'input',
-			dataType: 'number',
-			label: 'ChatGPT Max Tokens',
-			defValue: 1024,
-			max: 4096,
-			min: 1,
-			step: 1,
-			keepInLS: true,
-			hint: 'The maximum number of tokens to generate in the completion (1-4096). A helpful rule of thumb is that one token generally corresponds to ~4 characters of text for common English text. This translates to roughly ¾ of a word (so 100 tokens ~= 75 words).'
+			hint: 'Try 0.9 for creative applications, 0 for ones with a well-defined answer.'
 		},
 
 		isElevenlabsEnabled: {
@@ -123,10 +149,12 @@ export default {
 
 	},
 	allIds: [
+		'autoSaveMode',
 		'isOpenAIEnabled',
 		'openAIApiKey',
+		'chatGPTModelId',
+		'chatGPTLimitTokens',
 		'chatGPTTemperature',
-		'chatGPTMaxTokens',
 		'isElevenlabsEnabled',
 		'elevenlabsApiKey',
 		'elevenlabsVoiceId',
@@ -139,8 +167,9 @@ export default {
 			content: [
 				'isOpenAIEnabled',
 				'openAIApiKey',
+				'chatGPTModelId',
+				'chatGPTLimitTokens',
 				'chatGPTTemperature',
-				'chatGPTMaxTokens',
 			]
 		},
 		{

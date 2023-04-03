@@ -1,7 +1,6 @@
 
 import { store } from 'store'
 
-
 export const switchLayout = (payload) => {
 	store.dispatch({
 		type: 'switchLayout',
@@ -9,28 +8,30 @@ export const switchLayout = (payload) => {
 	})
 }
 
-export const showExporter = (payload) => {
-	switchLayout(1)
-}
-
-export const showEditor = (payload) => {
+export const showWelcome = () => {
 	switchLayout(0)
 }
 
-export const showHelper = (payload) => {
+export const showEditor = () => {
+	switchLayout(1)
+}
+
+export const showExporter = () => {
 	switchLayout(2)
 }
 
-export const showProtector = (payload) => {
+export const showHelper = () => {
 	switchLayout(3)
 }
 
-export const showSettings = (payload) => {
-	switchLayout(5)
+export const showProtector = () => {
+	switchLayout(4)
 }
 
 export const togglePresenter = () => {
-	store.dispatch({
-		type: 'togglePresenter'
-	})
+	switchLayout(5)
+}
+
+export const showSettings = () => {
+	switchLayout(6)
 }

@@ -6,21 +6,28 @@ log.initialize({ preload: true })
 log.info('\nNew session')
 log.errorHandler.startCatching()
 
-const { app, BrowserWindow, Notification, dialog, ipcMain, clipboard } = require('electron')
+const {
+	app,
+	BrowserWindow,
+	Menu,
+	Notification,
+	dialog,
+	ipcMain
+} = require('electron')
+
 const path = require('path')
 const os = require('os')
 const isMac = process.platform === 'darwin'
 
 const packageJson = require('./package.json')
 
-const {
-	defOutputDirectory
-} = require('./constants/index')
-
+const { defOutputDirectory } = require('./constants/index')
 const createWindow = require('./utils/createWindow')
+const openPtxtFiles = require('./utils/openPtxtFiles')
 const saveStateAsPtxtFile = require('./utils/saveStateAsPtxtFile')
 const saveFiles = require('./utils/saveFiles')
 const chooseExportDir = require('./utils/chooseExportDir')
+const handleMenuFileOpen = require('./utils/handleMenuFileOpen')
 const handlePtxtFileOpenByClick = require('./utils/handlePtxtFileOpenByClick')
 const handleTranslate = require('./utils/handleTranslate')
 const linkFile = require('./utils/linkFile')
@@ -30,6 +37,7 @@ const { getHash32 } = require('./utils/crpyto')
 const encryptFileContent = require('./utils/encryptFileContent')
 const unlockFile = require('./utils/unlockFile')
 const revealFileInFinder = require('./utils/revealFileInFinder')
+const calculateGPTTokens = require('./utils/calculateGPTTokens')
 
 
 let windows = new Set()
@@ -79,11 +87,31 @@ app.whenReady().then(() => {
 
 	targetWindow = createWindow({windows, app})
 
-	// app.on('activate', () => {
-	// 	if (BrowserWindow.getAllWindows().length === 0) {
-	// 		targetWindow = createWindow({windows, app})
-	// 	}
-	// })
+
+	ipcMain.handle('hitMenuItem', async (event, id) => {
+		const menuItem = Menu.getApplicationMenu().getMenuItemById(id)
+		if(menuItem) {
+			menuItem.click()
+		} else {
+			log.info('No menu item with ID:', id)
+		}
+	})
+
+
+	ipcMain.handle('openDocs', async (event, payload) => {
+		if(!payload) {
+			// Open a document in the usual way.
+			handleMenuFileOpen(getTargetWindow(), app)
+		} else {
+			// Open one or several documents or templates from the welcome app screen.
+			openPtxtFiles({
+				app,
+				windows,
+				targetWindow: getTargetWindow(),
+				payload
+			})
+		}
+	})
 
 
 	ipcMain.handle('thereAreUnsavedChanges', async (event, props) => {
@@ -96,7 +124,12 @@ app.whenReady().then(() => {
 
 	ipcMain.handle('completeSaving', async (event, props) => {
 
-		const filePath = props.filePath
+		const {
+			silentMode,
+			filePath,
+			lastSaving
+		} = props
+
 		let currentState = props.state
 		let fileEncryption = currentState.encryption
 
@@ -111,10 +144,14 @@ app.whenReady().then(() => {
 
 		if(isOk) {
 
-			new Notification({
-				title:'Saved ✅',
-				body: filePath
-			}).show()
+			if(silentMode) {
+				log.info('Saved', filePath)
+			} else {
+				new Notification({
+					title:'Saved ✅',
+					body: filePath
+				}).show()
+			}
 
 			app.addRecentDocument(filePath)
 
@@ -125,6 +162,10 @@ app.whenReady().then(() => {
 				'Error. Unable to save file :(',
 				'Some error has happened. Try the "Menu > Export".'
 			)
+		}
+
+		if(lastSaving) {
+			getTargetWindow().close()
 		}
 
 	})
@@ -216,6 +257,11 @@ app.whenReady().then(() => {
 	})
 
 
+	ipcMain.handle('switchFullscreen', async (event, value) => {
+		getTargetWindow().setFullScreen(value)
+	})
+
+
 	ipcMain.handle('toggleWindowButtons', async (event, value) => {
 		if(isMac) {
 			let targetWindow = getTargetWindow()
@@ -226,6 +272,33 @@ app.whenReady().then(() => {
 
 	ipcMain.handle('translate', async (event, props) => {
 		return await handleTranslate(props, getTargetWindow())
+	})
+
+	ipcMain.handle('calculateGPTTokens', async (event, text) => {
+		return calculateGPTTokens(text)
+	})
+
+
+	ipcMain.handle('showNotification', async (event, props) => {
+
+		const {
+			type,
+			primaryMessage,
+			secondaryMessage
+		} = props
+
+		if(type === 'error') {
+			dialog.showErrorBox(
+				primaryMessage,
+				secondaryMessage
+			)
+		} else {
+			new Notification({
+				title: primaryMessage,
+				body: secondaryMessage
+			}).show()
+		}
+
 	})
 
 

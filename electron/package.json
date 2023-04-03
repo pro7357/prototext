@@ -24,6 +24,7 @@
   "dependencies": {
     "bing-translate-api": "^2.8.0",
     "crypto": "^1.0.1",
-    "electron-log": "^5.0.0-beta.19"
+    "electron-log": "^5.0.0-beta.19",
+    "gpt-3-encoder": "^1.1.4"
   }
 }

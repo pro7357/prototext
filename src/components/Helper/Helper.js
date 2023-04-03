@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import os from 'globalUtils/os'
 
-import { switchLayout } from 'layoutActions'
+import { showEditor } from 'layoutActions'
 import { domain } from 'globalConstants'
 
 import Form from 'sharedComponents/Form'
@@ -80,7 +80,7 @@ export default props => {
 					label: 'Close [ESC]',
 					isSemiDangerous: true,
 					action: () => {
-						switchLayout(0)
+						showEditor()
 					}
 				}
 			]}

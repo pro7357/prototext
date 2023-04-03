@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import Switch from 'sharedComponents/Switch'
 import UIBlock from 'sharedComponents/UIBlock'
 import TextButton from 'sharedComponents/TextButton'
-import { switchLayout } from 'layoutActions'
+import { showEditor } from 'layoutActions'
 import { togglePresenterMode } from 'presenterActions'
 import presentationModels from '../models/presentation'
 import Select from 'sharedComponents/Select'
@@ -129,7 +129,7 @@ export default props => {
 								<TextButton
 								isNotable
 								onClick={(e) => {
-									switchLayout(0)
+									showEditor()
 								}}
 							>
 								Back to Editor

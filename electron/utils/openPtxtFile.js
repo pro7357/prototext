@@ -2,20 +2,32 @@
 const { dialog } = require('electron')
 const readFile = require('./readFile')
 const path = require('path')
+const log = require('electron-log')
 
 
-module.exports = async (targetWindow, filePath, importMode) => {
+module.exports = async props => {
+
+	const {
+		targetWindow,
+		filePath,
+		importMode,
+		doNotKeepFilePath
+	} = props
 
 	let data
 
 	try {
 
+		log.info('Read file', filePath)
+
 		data = await readFile(filePath)
 		data = JSON.parse(data)
-		data.filePath = filePath
+		if(!doNotKeepFilePath) {
+			data.filePath = filePath
+		}
 
 	} catch (error) {
-		console.log(error, filePath)
+		log.info('Read file error', error.message)
 	}
 
 	if(!data) {
@@ -26,7 +38,7 @@ module.exports = async (targetWindow, filePath, importMode) => {
 		return
 	}
 
-	if(!importMode) {
+	if(!importMode && !doNotKeepFilePath) {
 		// Keep the current path to the file,
 		// not the one that is written inside (the previous one).
 		targetWindow.filePath = filePath

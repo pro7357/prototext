@@ -1,10 +1,10 @@
 
-import { store } from 'store'
+import models from './models/settings'
+import actionFactory from 'globalActions/utils/actionFactory'
 
-export const setSettingsProperty = (propId, payload) => {
-	store.dispatch({
-		type: 'setSettingsProperty',
-		propId,
-		payload
-	})
-}
+export default (propId, payload) => actionFactory(
+	propId,
+	payload,
+	'Settings',
+	models
+)

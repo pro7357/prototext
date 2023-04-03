@@ -1,11 +1,16 @@
 
 import {
+	showWelcome,
+	showEditor,
 	showExporter,
 	showHelper,
 	showProtector,
 	togglePresenter,
 	showSettings,
 } from 'layoutActions'
+
+import { addRecentDoc, setRecentDocs } from 'welcomeActions'
+import setSettingsProperty from 'settingsActions'
 
 import {
 	resetEditorState,
@@ -25,6 +30,7 @@ import { resetHistory } from 'globalActions/hystory'
 import { toggleSpellchecker } from 'globalActions/spellcheck'
 import { setEcryption, disableEncryption } from 'globalActions/encryption'
 import deepClone from 'globalUtils/deepClone'
+import prepareStateToSave from 'globalUtils/prepareStateToSave'
 import { store } from 'store'
 
 
@@ -40,6 +46,12 @@ export default () => {
 				resetEditorState()
 				resetHistory()
 			}
+		})
+
+
+		// Show the welcome window.
+		electronAPI.handle('showWelcome', (e, data) => function(e, data) {
+			showWelcome()
 		})
 
 
@@ -94,6 +106,11 @@ export default () => {
 				disableEncryption()
 			}
 
+
+			if(!data.encryption || !data.encryption.unlockMode) {
+				showEditor()
+			}
+
 			if(data.editor) {
 				setEditorState(data.editor, true)
 				resetHistory()
@@ -109,6 +126,7 @@ export default () => {
 
 			if(data.filePath) {
 				setFilePath(data.filePath)
+				addRecentDoc(data.filePath)
 			}
 
 		})
@@ -142,31 +160,36 @@ export default () => {
 		})
 
 
-		electronAPI.handle('save', (e, data) => function(e, filePath) {
+		electronAPI.handle('save', (e, data) => function(e, payload) {
 
-			let currentState = deepClone(store.getState())
+			const {
+				filePath,
+				lastSaving
+			} = payload
 
-			let reducedState = {
-				editor: {
-					content: currentState.editor.content,
-					localeOptions: currentState.editor.localeOptions,
-					pageWidth: currentState.editor.pageWidth,
-					compactMenuMode: currentState.editor.compactMenuMode
-				},
-				exporter: currentState.exporter,
-				presenter: currentState.presenter,
-				encryption: currentState.encryption,
-			}
-
-			delete reducedState.exporter.selectedPages
-			delete reducedState.exporter.pageSelectionToggler
+			const reducedState = prepareStateToSave()
 
 			// Send a response with the current edited store state to the Electron main process to complete the save.
 
 			setFilePath(filePath)
 
-			electronAPI.send('completeSaving', {state: reducedState, filePath})
+			electronAPI.send(
+				'completeSaving',
+				{
+					state: reducedState,
+					lastSaving,
+					filePath
+				}
+			)
 
+			addRecentDoc(filePath)
+
+		})
+
+
+		// Toggle the auto-save documents mode.
+		electronAPI.handle('toggleAutoSaveMode', (e, data) => function(e, value) {
+			setSettingsProperty('autoSaveMode', value)
 		})
 
 

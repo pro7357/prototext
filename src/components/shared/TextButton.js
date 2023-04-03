@@ -8,6 +8,7 @@ export default props => {
 	const {
 		id = null,
 		onClick,
+		isDisabled,
 		isSmall,
 		isMuted,
 		isActive,
@@ -35,6 +36,7 @@ export default props => {
 				isNotable && classes.isNotable,
 				(isDangerous || isSemiDangerous) && classes.isDangerous,
 				isComplexNotable && classes.isComplexNotable,
+				isDisabled && classes.isDisabled,
 				className
 			)}
 			{...extraProps}
@@ -42,15 +44,17 @@ export default props => {
 			<div
 				onClick={e => {
 
-				if(!onClick) return false
+					if(!onClick || isDisabled) return false
 
-				if(isDangerous) {
-					if (window.confirm('Do you really want to do it?')) {
-						onClick(e)
+					if(isDangerous) {
+						if (window.confirm('Do you really want to do it?')) {
+							onClick(e)
+						}
+						return
 					}
-					return
-				}
-				onClick(e)
+
+					onClick(e)
+
 				}}
 			>
 				{children}
@@ -146,5 +150,10 @@ const useStyles = createUseStyles(theme => ({
 	isDangerous: {
 		color: theme.textButton.dangerous.color,
 	},
+
+	isDisabled: {
+		cursor: 'not-allowed',
+		color: [theme.text.default, '!important'],
+	}
 
 }),{name: 'txt-btn'})

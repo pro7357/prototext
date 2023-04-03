@@ -14,7 +14,9 @@ module.exports = props => {
 
 	const {
 		app,
-		windows
+		windows,
+		fullscreenMode,
+		onReady,
 	} = props
 
 	let newWindow
@@ -48,6 +50,12 @@ module.exports = props => {
 			preload: path.join(__dirname, 'preload.js'),
 		},
 	})
+
+	if(!isMac && fullscreenMode) {
+		// TODO:
+		//newWindow.setDesktopIndex(desktopIndex)
+		//newWindow.moveTop()
+	}
 
 	newWindow.loadFile('build/index.html')
 
@@ -91,6 +99,10 @@ module.exports = props => {
 			app.filePath = null
 		}
 
+		if(typeof onReady === 'function') {
+			onReady(newWindow)
+		}
+
 		if(isMac) {
 			newWindow.setWindowButtonVisibility(false)
 		}
@@ -132,17 +144,38 @@ module.exports = props => {
 
 	newWindow.on('close', function(e) {
 
+		log.info('Before Close')
+
 		if(newWindow.isDocumentEdited()) {
 
-			const choice = dialog.showMessageBoxSync(this, {
-				type: 'question',
-				buttons: ['Yes', 'No'],
-				title: 'Confirm',
-				message: 'Are you sure you want to quit? If you have unsaved data then it will be lost.'
-			})
+			log.info('isDocumentEdited', true)
+			log.info('autoSaveMode', app.autoSaveMode)
 
-			if(choice === 1) {
+			if(newWindow.filePath && app.autoSaveMode) {
+
+				log.info('Last saving')
 				e.preventDefault()
+
+				targetWindow.webContents.send(
+					'save',
+					{
+						filePath: newWindow.filePath,
+						lastSaving: true,
+					}
+				)
+
+			} else {
+
+				const choice = dialog.showMessageBoxSync(this, {
+					type: 'question',
+					buttons: ['Yes', 'No'],
+					title: 'Confirm',
+					message: 'Are you sure you want to quit? If you have unsaved data then it will be lost.'
+				})
+
+				if(choice === 1) {
+					e.preventDefault()
+				}
 			}
 
 		}

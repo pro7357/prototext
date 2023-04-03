@@ -1,0 +1,48 @@
+{
+  "editor": {
+    "content": [
+      {
+        "id": "initial-page",
+        "content": [
+          {
+            "id": "initial-locale",
+            "content": [
+              {
+                "id": "initial-block",
+                "content": "The Topic",
+                "style": 7
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "localeOptions": [
+      "en"
+    ],
+    "pageWidth": 400,
+    "compactMenuMode": false
+  },
+  "exporter": {
+    "format": 1,
+    "allowLocales": true,
+    "allowBlockStyles": true,
+    "allowMergePages": true,
+    "outputDirectory": "/Users/artemy/Documents/Test/my-project/src",
+    "outputFilename": "data",
+    "isSchematicPreview": true
+  },
+  "presenter": {
+    "sidebarMode": true,
+    "allPagesMode": false,
+    "tagFilterMode": false,
+    "exposeLinkedContent": false,
+    "locale": 0,
+    "slideMode": true,
+    "fitImgMode": true,
+    "fullWidthImgMode": false,
+    "contrastDarkMode": false,
+    "sharpImgMode": true
+  },
+  "encryption": null
+}
