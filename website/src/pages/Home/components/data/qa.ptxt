@@ -32,54 +32,6 @@
         ]
       },
       {
-        "id": "sozj0c",
-        "content": [
-          {
-            "id": "wwau9y",
-            "content": [
-              {
-                "style": 7,
-                "content": "Benefits for anyone",
-                "id": "cmpl-6mnp98h5w74n97nD6KS7A875BtCjV"
-              },
-              {
-                "style": 6,
-                "content": "🧠x2. How might ProtoText help me develop my intellectual abilities? The benefits for anyone.",
-                "id": "cmpl-6mnp98h5w74n97nD6KS7A875BtCjV"
-              },
-              {
-                "content": "Hello again, it's me, Artemy, the app's developer and user 🧑‍💻.",
-                "id": "fgdsbw"
-              },
-              {
-                "content": "I've already written about it, but maybe you haven't seen my story.",
-                "id": "0zc2ep"
-              },
-              {
-                "id": "n3tcar",
-                "content": "As a person who does not possess exceptional mental computational abilities or a super memory, I still want to solve complex creative tasks. Here, the computer helps me as a second brain. I record all my ideas, structure them, connect them, and use AI as an assistant."
-              },
-              {
-                "content": "I have tested various mind mapping programs before, such as Trello, Coggle, and Diagrams.net. They all have a structured or nested format. Thinking about structure means to strain your brain. A raw stream of thoughts, however, has no structure. Prototext offers the ability to work with a flat stack, which is the simplest representation of data. There is freedom in this.",
-                "id": "eromo5"
-              },
-              {
-                "content": "Why not use MS Word, you say? Yes, Word is suitable for organizing a lot of ideas. However, it lacks the flexibility and speed of ProtoText's content cards.",
-                "id": "gsg817"
-              },
-              {
-                "content": "The built-in ChatGPT and set of frequently used commands help me quickly find new ideas, improve my English, and generate any text content. Try to download my templates with AI Tasks and feel the comfort of ProtoText.",
-                "id": "035o9a"
-              },
-              {
-                "content": "I have seen from my experience how ideas start to progress and their quality increases. This is important in our digital age. That is why I would like to recommend such a methodology and the app to you. 🙏",
-                "id": "cmpl-6mo1PchYb41k2S82x7oBAUJtSXZeR"
-              }
-            ]
-          }
-        ]
-      },
-      {
         "id": "x6pf6b",
         "content": [
           {
@@ -258,6 +210,54 @@
         ]
       },
       {
+        "id": "sozj0c",
+        "content": [
+          {
+            "id": "wwau9y",
+            "content": [
+              {
+                "style": 7,
+                "content": "Benefits for anyone",
+                "id": "cmpl-6mnp98h5w74n97nD6KS7A875BtCjV"
+              },
+              {
+                "style": 6,
+                "content": "Benefits for anyone. How to 🧠x2?",
+                "id": "cmpl-6mnp98h5w74n97nD6KS7A875BtCjV"
+              },
+              {
+                "content": "Hello again, it's me, Artemy, the app's developer and user 🧑‍💻.",
+                "id": "fgdsbw"
+              },
+              {
+                "content": "I've already written about it, but maybe you haven't seen my story.",
+                "id": "0zc2ep"
+              },
+              {
+                "id": "n3tcar",
+                "content": "As a person who does not possess exceptional mental computational abilities or a super memory, I still want to solve complex creative tasks. Here, the computer helps me as a second brain. I record all my ideas, structure them, connect them, and use AI as an assistant."
+              },
+              {
+                "content": "I have tested various mind mapping programs before, such as Trello, Coggle, and Diagrams.net. They all have a structured or nested format. Thinking about structure means to strain your brain. A raw stream of thoughts, however, has no structure. Prototext offers the ability to work with a flat stack, which is the simplest representation of data. There is freedom in this.",
+                "id": "eromo5"
+              },
+              {
+                "content": "Why not use MS Word, you say? Yes, Word is suitable for organizing a lot of ideas. However, it lacks the flexibility and speed of ProtoText's content cards.",
+                "id": "gsg817"
+              },
+              {
+                "content": "The built-in ChatGPT and set of frequently used commands help me quickly find new ideas, improve my English, and generate any text content. Try to download my templates with AI Tasks and feel the comfort of ProtoText.",
+                "id": "035o9a"
+              },
+              {
+                "content": "I have seen from my experience how ideas start to progress and their quality increases. This is important in our digital age. That is why I would like to recommend such a methodology and the app to you. 🙏",
+                "id": "cmpl-6mo1PchYb41k2S82x7oBAUJtSXZeR"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "qvgkyx",
         "content": [
           {
@@ -367,11 +367,15 @@
                 "style": 6
               },
               {
-                "content": "Trees are life. My friends and I have been growing trees for the past few years, and I wish you to follow the same path.",
+                "content": "Trees are life. My friends and I have been growing trees and cleaning up the environment by removing plastic garbage for the past few years.",
                 "id": "lvkdi2"
               },
               {
-                "content": "trees-5.jpg trees-3.jpg trees-1.jpg trees-4.jpg",
+                "content": "(Join our cozy eco-friendly community on Discord)[https://discord.gg/Ar925vxYdh]",
+                "id": "usw2ui"
+              },
+              {
+                "content": "trees-5.jpg trees-3.jpg trees-1.jpg trees-4.jpg eco-1.jpg eco-2.jpg eco-3.jpg donations.jpg",
                 "id": "5hevqi",
                 "style": 1
               }

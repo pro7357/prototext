@@ -93,88 +93,120 @@
                 "style": 8
               },
               {
-                "id": "byxat6",
-                "content": "8k,"
+                "content": "foggy background",
+                "id": "svhjh0"
               },
               {
-                "content": "trending on artstation,",
+                "id": "0byczx",
+                "content": "epic realistic"
+              },
+              {
+                "id": "f13myi",
+                "content": "rutkowski"
+              },
+              {
+                "id": "oidp8h",
+                "content": "hdr"
+              },
+              {
+                "id": "x9560z",
+                "content": "intricate details"
+              },
+              {
+                "id": "t29wr0",
+                "content": "hyperdetailed"
+              },
+              {
+                "id": "j86v39",
+                "content": "cinematic"
+              },
+              {
+                "id": "u0e4h8",
+                "content": "rim light"
+              },
+              {
+                "id": "br8b8f",
+                "content": "muted colors"
+              },
+              {
+                "id": "byxat6",
+                "content": "8k"
+              },
+              {
+                "content": "trending on artstation",
                 "id": "sni3vg"
               },
               {
-                "content": "trending on behance,",
+                "content": "trending on behance",
                 "id": "4zusnx"
               },
               {
-                "content": "cyberpunk,",
+                "content": "cyberpunk",
                 "id": "o3ac2q"
               },
               {
                 "id": "5ww8fd",
-                "content": "with a cyberpunk city background,"
+                "content": "with a cyberpunk city background"
               },
               {
                 "id": "fljaqh",
-                "content": "futuristic lighting,"
-              },
-              {
-                "id": "nvj66g",
-                "content": "cinematic lighting,"
+                "content": "futuristic lighting"
               },
               {
                 "id": "vv8uon",
-                "content": "cozy lighting,"
+                "content": "cozy lighting"
               },
               {
                 "id": "duh2l6",
-                "content": "cinematic poster,"
+                "content": "cinematic poster"
               },
               {
                 "id": "rs9wvo",
-                "content": "vintage,"
+                "content": "vintage"
               },
               {
-                "content": "glowing,",
+                "content": "glowing",
                 "id": "vwuqew"
               },
               {
-                "content": "detailed,",
+                "content": "detailed",
                 "id": "j9u98c"
               },
               {
-                "content": "cartoon style,",
+                "content": "cartoon style",
                 "id": "yixb0a"
               },
               {
-                "content": "darkness,",
+                "content": "darkness",
                 "id": "k4g4fs"
               },
               {
                 "id": "jcgydl",
-                "content": "grotesque,"
+                "content": "grotesque"
               },
               {
-                "content": "painted by art by tsuyoshi nagano,",
+                "content": "painted by art by tsuyoshi nagano",
                 "id": "if2vlh"
               },
               {
-                "id": "ozpa60",
-                "content": "greg rutkowski,"
-              },
-              {
                 "id": "dh1ef7",
-                "content": "artgerm,"
+                "content": "artgerm"
               },
               {
                 "id": "l2xd77",
-                "content": "alphonse mucha,"
+                "content": "alphonse mucha"
               },
               {
                 "id": "n6vani",
-                "content": "spike painting,"
+                "content": "spike painting"
               },
               {
-                "content": "golden light,",
+                "content": "golden light",
                 "id": "xf0oay"
+              },
+              {
+                "content": "bw",
+                "id": "rcp3gk"
               }
             ]
           }
@@ -205,31 +237,6 @@
         ]
       },
       {
-        "id": "2xjedt",
-        "content": [
-          {
-            "id": "cz5fqp",
-            "content": [
-              {
-                "content": "Image 2 Depthmap",
-                "id": "r85xy8",
-                "style": 7
-              },
-              {
-                "content": "https://replicate.com/cjwbw/midas",
-                "id": "avvzfz",
-                "style": 8
-              },
-              {
-                "content": "https://replicate.com/cjwbw/zoedepth",
-                "id": "1xdj8e",
-                "style": 8
-              }
-            ]
-          }
-        ]
-      },
-      {
         "id": "n7ftgp",
         "content": [
           {
@@ -239,6 +246,16 @@
                 "content": "Stable Diffusion",
                 "id": "8ie2ob",
                 "style": 7
+              },
+              {
+                "content": "https://www.sdcompendium.com/doku.php",
+                "id": "3kbz2d",
+                "style": 8
+              },
+              {
+                "content": "https://www.reddit.com/r/StableDiffusion/",
+                "id": "lknlrh",
+                "style": 8
               },
               {
                 "content": "https://replicate.com/stability-ai/stable-diffusion",

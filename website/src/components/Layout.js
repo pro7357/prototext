@@ -15,7 +15,7 @@ export default props => {
 			<Topbar/>
 			{props.children}
 			<Footer/>
-			<Feedback/>
+			{/* <Feedback/> */}
 		</div>
 	)
 

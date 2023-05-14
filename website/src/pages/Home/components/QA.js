@@ -28,7 +28,10 @@ export default props => {
 
 			<div className={classes.cards}>
 				{questions.map((question, questionIndex) => {
-					let isOpened = opened.includes(questionIndex)
+
+					let isOpened = opened.includes(questionIndex) ||
+						questionIndex === questions.length - 1
+
 					return (
 						<div
 							className={clsx(

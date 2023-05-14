@@ -54,4 +54,4 @@ task
 
 ## License
 
-CC BY-NC
+See LICENSE file for details.

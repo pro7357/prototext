@@ -67,7 +67,7 @@ export default connect(mapStateToProps)(props => {
 			</Link>
 
 			<Link className={classes.desktop} isInternal isButton url='#use-cases'>
-				Use cases<sup className={classes.upd}>✦</sup>
+				Use cases
 			</Link>
 
 			<Link className={classes.desktop} isInternal isButton url='#manifest'>
