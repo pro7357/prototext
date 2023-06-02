@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "prototext",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "description": "Since 22 October 2022",
   "scripts": {
     "start": "preact watch -c ./preact.config.dev.js -p 3333 --template ./src/index.html",
