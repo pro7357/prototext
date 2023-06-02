@@ -7,6 +7,7 @@ import UIBlockSection from './UIBlockSection'
 import UIBlockLabel from './UIBlockLabel'
 import UIBlockHint from './UIBlockHint'
 import Input from './Input'
+import Textarea from './Textarea'
 import Switch from './Switch'
 import Select from './Select'
 import normalizeFiledValue from './utils/normalizeFiledValue'
@@ -15,6 +16,7 @@ import clsx from 'clsx'
 
 const fieldComponentsByType = {
 	input: Input,
+	textarea: Textarea,
 	switch: Switch,
 	select: Select
 }
@@ -67,6 +69,7 @@ export default props => {
 								return 'Undefinded field type: '+type
 							}
 
+
 							const FieldComponent = fieldComponentsByType[type]
 
 							if(!FieldComponent) {
@@ -77,10 +80,20 @@ export default props => {
 								label,
 								hint,
 								defValue,
-								keepInLS
+								keepInLS,
+								displayCondition
 							} = field
 
 							let value = state[fieldId]
+
+							if(displayCondition) {
+								if(
+									!displayCondition.fieldValues.includes(
+										state[displayCondition.fieldId])
+									) {
+										return null
+								}
+							}
 
 							if(typeof value === 'undefined') {
 								value = defValue

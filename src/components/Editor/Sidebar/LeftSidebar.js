@@ -2,12 +2,10 @@
 import { connect } from 'react-redux'
 import requestElectronApi from 'globalUtils/requestElectronApi'
 
-import { undo } from 'store'
-import { switchPageView, switchEditorMode } from 'editorActions'
+import { switchPageView } from 'editorActions'
 import { toogleTopbar } from 'topbarActions'
 import {
 	showExporter,
-	showHelper,
 	showProtector,
 	togglePresenter,
 	showSettings
@@ -39,7 +37,6 @@ export default connect(mapStateToProps)(props => {
 
 		sharedEditorProps,
 		targetPageIndex,
-		history,
 		encryption,
 		autoSaveMode,
 
@@ -56,17 +53,6 @@ export default connect(mapStateToProps)(props => {
 			targetPageIndex={targetPageIndex}
 			side='left'
 			footerContent={<>
-
-				{history > 0 && (
-					<TextButton
-						isNotable
-						onClick={() => {
-							undo()
-						}}
-					>
-						Undo
-					</TextButton>
-				)}
 
 				{!isDesktopBuild && (<>
 
@@ -144,14 +130,6 @@ export default connect(mapStateToProps)(props => {
 						</MutedTextLine>
 					</div>
 				)}
-
-				<TextButton
-					onClick={() => {
-						showHelper()
-					}}
-				>
-					Help
-				</TextButton>
 
 				{currentDoc && (
 					<MutedTextLine>

@@ -17,9 +17,15 @@ let lastSavingTime = (new Date()).getTime()
 
 
 export const undo = () => {
+
+	if(!history.length) {
+		return
+	}
+
 	let stateFormHistory = history.pop()
 	setEditorState(stateFormHistory.editor, true)
 	setHistorySteps(history.length)
+
 }
 
 

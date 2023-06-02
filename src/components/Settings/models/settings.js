@@ -65,7 +65,7 @@ export default {
 			min: 0,
 			step: 1,
 			keepInLS: true,
-			hint: 'Enter a number if you want to limit the length of requests to ChatGPT. Or enter 0 to use the maximum available capabilities of the model.'
+			hint: 'Enter a number if you want to limit the length of requests to ChatGPT. Or keep "0" to use the maximum capabilities of the model.'
 		},
 
 		chatGPTTemperature: {
@@ -77,7 +77,7 @@ export default {
 			min: 0,
 			step: 0.1,
 			keepInLS: true,
-			hint: 'Try 0.9 for creative applications, 0 for ones with a well-defined answer.'
+			hint: 'Try "0.9" for creative applications, "0" for ones with a well-defined answer.'
 		},
 
 		isElevenlabsEnabled: {
@@ -147,6 +147,31 @@ export default {
 			hint: 'Adjust this parameter if you notice background artifacts in generated speech.'
 		},
 
+		localizationEngine: {
+			type: 'select',
+			dataType: 'text',
+			label: 'Engine',
+			keepInLS: true,
+			defValue: 'mst',
+			options: [
+				{label: 'Microsoft Translator', value: 'mst'},
+				{label: 'ChatGPT', value: 'cgpt'},
+			]
+		},
+
+		localizationExtraContext: {
+			type: 'textarea',
+			dataType: 'text',
+			displayCondition: {
+				fieldId: 'localizationEngine',
+				fieldValues: ['cgpt']
+			},
+			label: 'Extra Context',
+			keepInLS: true,
+			defValue: '',
+			hint: 'Expand the standard translation prompt with any relevant contextual information. For example, "The topic is politics in the 21st century. You are a satirical writer, use British sarcasm."',
+		}
+
 	},
 	allIds: [
 		'autoSaveMode',
@@ -159,7 +184,9 @@ export default {
 		'elevenlabsApiKey',
 		'elevenlabsVoiceId',
 		'elevenlabsVoiceStability',
-		'elevenlabsVoiceSimilarityBoost'
+		'elevenlabsVoiceSimilarityBoost',
+		'localizationEngine',
+		'localizationExtraContext',
 	],
 	byGroups: [
 		{
@@ -180,6 +207,13 @@ export default {
 				'elevenlabsVoiceId',
 				'elevenlabsVoiceStability',
 				'elevenlabsVoiceSimilarityBoost'
+			]
+		},
+		{
+			label: 'Content Localization',
+			content: [
+				'localizationEngine',
+				'localizationExtraContext'
 			]
 		},
 		// {

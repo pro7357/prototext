@@ -137,8 +137,12 @@ module.exports = ({ windows, app, getTargetWindow, isMac }) => [
 	{
 		label: 'Edit',
 		submenu: [
-			{ role: 'undo' },
-			{ role: 'redo' },
+			{
+				label: 'Undo a document change',
+				click: () => getTargetWindow().webContents.send('docUndo'),
+			},
+			{ role: 'undo', label: 'Undo (inside card)'},
+			{ role: 'redo' , label: 'Redo (inside card)' },
 			{ type: 'separator' },
 			{ role: 'cut' },
 			{ role: 'copy' },
@@ -239,7 +243,7 @@ module.exports = ({ windows, app, getTargetWindow, isMac }) => [
 				type: 'separator',
 			},
 			{
-				label: 'Help and Shortcuts map',
+				label: 'Usage Guide. App features and Shortcuts 🤓📚',
 				accelerator: isMac ? 'Cmd+H' : 'CTRL+H',
 				click: () => getTargetWindow().webContents.send('showHelper'),
 			},

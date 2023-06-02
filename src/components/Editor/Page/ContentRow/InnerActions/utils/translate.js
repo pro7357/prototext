@@ -1,5 +1,9 @@
 
+import { store } from 'store'
 import requestElectronApi from 'globalUtils/requestElectronApi'
+import { askChatGPT } from 'globalUtils/ai/openai/chatGPT'
+import { localesDict } from 'globalUtils/allLocaleOptions'
+import { showSettings } from 'layoutActions'
 import { updBlock } from 'editorActions'
 
 export default async props => {
@@ -13,6 +17,23 @@ export default async props => {
 		localeIndex,
 		blockIndex
 	} = props
+
+	const state = store.getState()
+	const appSettings = state.settings
+
+	const isCGPTEngine = appSettings.localizationEngine == 'cgpt'
+	const openAIApiKey = appSettings.openAIApiKey
+	let promptInjection = appSettings.localizationExtraContext
+
+	if(isCGPTEngine) {
+		if(!openAIApiKey) {
+			alert(
+				'OpenAI API key not configured. The app will now open the settings window.'
+			)
+			showSettings()
+			return
+		}
+	}
 
 	const btnNode = e.target
 	const originalBlockNode = btnNode.parentNode.parentNode.parentNode.children[0].children[1]
@@ -47,7 +68,7 @@ export default async props => {
 			localeIndex,
 			blockIndex
 		)
-		alert('Translation service is not available.')
+		// alert('Translation service is not available.')
 	}
 
 	let originalText = originalBlockNode.innerText
@@ -57,18 +78,56 @@ export default async props => {
 		return
 	}
 
-	let translation = await requestElectronApi('translate', {
-		text: originalText,
-		srcLang,
-		dstLang
-	})
+	let translation
 
-	if(translation) {
-		delete localizedBlock.isLoading
+	if(isCGPTEngine) {
+
+		// OpenAI ChatGPT
+
+		let prompt = `Translate this into`
+
+		if(promptInjection) {
+			prompt = promptInjection + ` ` + prompt
+		} else {
+			prompt += ` standard`
+		}
+
+		prompt += ` ` + localesDict[dstLang].name
+
+		prompt += `: ` + originalText
+
+		translation = await askChatGPT({
+			prompt,
+			apiKey: openAIApiKey,
+			modelId: appSettings.chatGPTModelId,
+			temperature: appSettings.chatGPTTemperature,
+			limitTokens: appSettings.chatGPTLimitTokens,
+		})
+
+	} else {
+
+		// Microsoft Traslator
+
+		translation = await requestElectronApi('translate', {
+			text: originalText,
+			srcLang,
+			dstLang
+		})
+
+	}
+
+	let newLocalizedContent = translation &&
+		(isCGPTEngine
+			? translation.text
+			: translation
+		)
+
+	if(newLocalizedContent) {
 		updBlock(
 			{
 				...localizedBlock,
-				content: translation
+				isLoading: undefined,
+				content: newLocalizedContent
 			},
 			true, // with refresh
 			pageIndex,

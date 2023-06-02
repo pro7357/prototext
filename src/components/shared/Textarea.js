@@ -11,6 +11,7 @@ export default props => {
 		onChange,
 		handleRef,
 		isTransparent,
+		insideUIBlock,
 		className,
 		value,
 		placeholder,
@@ -25,6 +26,7 @@ export default props => {
 			className={clsx(
 				classes.root,
 				isTransparent && classes.transparent,
+				insideUIBlock && classes.insideUIBlock,
 				className
 			)}
 			spellcheck={false}
@@ -60,6 +62,10 @@ const useStyles = createUseStyles(theme => ({
 	transparent: {
 		backgroundColor: 'transparent',
 		padding: 0
+	},
+
+	insideUIBlock: {
+		backgroundColor: theme.input.insideUIBlock.background,
 	}
 
 }),{name: 'textarea'})

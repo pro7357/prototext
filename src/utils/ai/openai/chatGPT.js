@@ -77,6 +77,7 @@ const askChatGPT = async (props) => {
 	try {
 
 		let completion
+		const isChatFormat = modelId !== defModelId
 
 		if (imitationMode) {
 			await sleep(2000)
@@ -85,7 +86,6 @@ const askChatGPT = async (props) => {
 
 			const model = models.byId[modelId]
 			const modelMaxTokes = model.maxTokens
-			const isChatFormat = modelId !== defModelId
 
 			let allowedTokenNumber = limitTokens || modelMaxTokes
 
@@ -152,7 +152,9 @@ const askChatGPT = async (props) => {
 		if(imitationMode || !stream) {
 			result = {
 				id: completion.data.id,
-				text: (completion.data.choices[0].text || '').trim()
+				text: isChatFormat
+					? (completion.data.choices[0].message.content || '').trim()
+					: (completion.data.choices[0].text || '').trim()
 			}
 		}
 

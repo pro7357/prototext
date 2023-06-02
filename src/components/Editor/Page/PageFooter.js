@@ -31,13 +31,13 @@ export default props => {
 	return (
 		<div className={clsx(classes.root)}>
 
-			<div className={classes.pageActions}>
+			<div className={classes.actions}>
 
-				<div className={classes.pageActionsLabel}>
+				<div className={classes.actionsLabel}>
 					Page actions
 				</div>
 
-				<div className={classes.pageActionsButtons}>
+				<div className={classes.actionsButtons}>
 					<div>
 						<TextButton
 							className={classes.deleteButton}
@@ -104,15 +104,38 @@ export default props => {
 			)}
 
 			{(twoColsMode && isLocalesExists) && (
-				<TextButton
-					className={clsx(classes.deleteButton,classes.rigthDeleteButton)}
-					isDangerous
-					onClick={()=>{
-						clearLocale(pageIndex)
-					}}
-				>
-					Clear localization
-				</TextButton>
+				<div className={classes.actions}>
+
+					<div className={classes.actionsLabel}>
+						Localization actions
+					</div>
+
+					<div className={clsx(classes.actionsButtons, classes.localizationActions)}>
+
+						{/* <div>
+							<TextButton
+								className={clsx(classes.deleteButton)}
+								onClick={()=>{
+									//translateFullPage(pageIndex)
+								}}
+							>
+								Translate all
+							</TextButton>
+						</div> */}
+
+						<div>
+							<TextButton
+								className={clsx(classes.deleteButton)}
+								onClick={()=>{
+									clearLocale(pageIndex)
+								}}
+							>
+								Clear
+							</TextButton>
+						</div>
+
+					</div>
+				</div>
 			)}
 
 			</div>
@@ -142,24 +165,24 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 
-	pageActions: {
+	actions: {
 		overflow: 'hidden',
 		position: 'relative',
 		'&:hover':{
 			overflow: 'initial',
-			'& $pageActionsButtons': {
+			'& $actionsButtons': {
 				opacity: 1
 			}
 		}
 	},
 
-	pageActionsLabel: {
+	actionsLabel: {
 		color: theme.text.muted,
 		opacity: 0.6,
 		fontSize: 17
 	},
 
-	pageActionsButtons: {
+	actionsButtons: {
 		width: '100%',
 		padding: [28, 0, 10, 0],
 		display: 'flex',
@@ -169,6 +192,10 @@ const useStyles = createUseStyles(theme => ({
 		top: 0,
 		left: 0,
 		opacity: 0,
+	},
+
+	localizationActions: {
+		alignItems: 'flex-end',
 	},
 
 	pageWidthUI: {

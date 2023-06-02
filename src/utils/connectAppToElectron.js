@@ -31,7 +31,7 @@ import { toggleSpellchecker } from 'globalActions/spellcheck'
 import { setEcryption, disableEncryption } from 'globalActions/encryption'
 import deepClone from 'globalUtils/deepClone'
 import prepareStateToSave from 'globalUtils/prepareStateToSave'
-import { store } from 'store'
+import { store, undo } from 'store'
 
 
 export default () => {
@@ -227,6 +227,12 @@ export default () => {
 		electronAPI.handle('togglePresenter', (e, data) => function(e, data) {
 			togglePresenter()
 		})
+
+		// Undo a major document change.
+		electronAPI.handle('docUndo', (e, data) => function(e, data) {
+			undo()
+		})
+
 
 	} else {
 		console.error('Unable to get access to the Electron API')
