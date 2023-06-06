@@ -48,14 +48,16 @@ export default props => {
 
 	if(isContentRow && !linkMode && !aiPromptMode) {
 
+		let lx = lastMouseDownPos && lastMouseDownPos.x
+
 		nodeBB = node.getBoundingClientRect()
 		contentRowWidth = nodeBB && nodeBB.width
 
 		activateDeletion = x >= contentRowWidth - 1
 			&& x < contentRowWidth + 25
-			&& lastMouseDownPos.x > contentRowWidth
+			&& lx > contentRowWidth
 
-		activateDnd = isDndIconPos(x) && lastMouseDownPos.x < 0
+		activateDnd = isDndIconPos(x) && lx < 0
 
 	}
 

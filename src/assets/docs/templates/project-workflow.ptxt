@@ -2,58 +2,186 @@
   "editor": {
     "content": [
       {
-        "id": "jiavxo",
+        "id": "jsgk9e",
         "content": [
           {
-            "id": "s1rt4m",
+            "id": "83b9lp",
             "content": [
               {
-                "content": "Project",
-                "id": "q9ja6j",
+                "content": "💰 Project",
+                "id": "6qy40n",
                 "style": 7
               },
               {
-                "content": "Description",
-                "id": "hfp633",
+                "content": "Try to answer the popular Y-Combinator interview questions about your project in detail, use the built-in AI for hints ↓",
+                "id": "2zhpol",
+                "style": 5
+              },
+              {
+                "content": "What is it and what problem does it solve?",
+                "id": "u574iq",
                 "style": 6
               },
               {
-                "content": "...",
-                "id": "14jps8"
+                "content": "",
+                "id": "jcnko6"
               },
               {
-                "content": "Goals",
-                "id": "ipayq2",
+                "content": "Who is your target market and how big is the opportunity?",
+                "id": "sa2qnn",
                 "style": 6
               },
               {
-                "content": "...",
-                "id": "itx6xw"
+                "content": "",
+                "id": "ox6cgj"
+              },
+              {
+                "content": "What is your business model and how will you make money?",
+                "id": "uu0okq",
+                "style": 6
+              },
+              {
+                "content": "",
+                "id": "73zcby"
+              },
+              {
+                "content": "Who is on your team and what are their relevant experiences?",
+                "id": "q8h438",
+                "style": 6
+              },
+              {
+                "content": "",
+                "id": "hqdqbg"
+              },
+              {
+                "content": "How are you different from your competitors and why will you succeed?",
+                "id": "hqjcwp",
+                "style": 6
+              },
+              {
+                "content": "",
+                "id": "kk3eiz"
+              },
+              {
+                "content": "What is your go-to-market strategy and how will you acquire customers?",
+                "id": "36p6pt",
+                "style": 6
+              },
+              {
+                "content": "",
+                "id": "ypu9eq"
+              },
+              {
+                "content": "What is your current traction and what are your plans for growth?",
+                "id": "8cs1w2",
+                "style": 6
+              },
+              {
+                "content": "",
+                "id": "0n725v"
+              },
+              {
+                "content": "What are your biggest risks and how will you mitigate them?",
+                "id": "dkbntj",
+                "style": 6
+              },
+              {
+                "content": "",
+                "id": "coqle7"
+              },
+              {
+                "content": "How much funding are you seeking and how will you use the funds?",
+                "id": "w2l4fx",
+                "style": 6
+              },
+              {
+                "content": "",
+                "id": "6zgj1l"
               }
             ]
           },
           {
-            "id": "op5r9h",
+            "id": "0bzeqq",
             "content": [
               {
-                "content": "",
-                "id": "e4sb8w"
+                "content": "Copy: Untitled",
+                "id": "qqiqvf"
               },
               {
                 "content": "",
-                "id": "xrij6f"
+                "id": "pcniw2"
               },
               {
                 "content": "",
-                "id": "zl45ox"
+                "id": "5rsz9i"
               },
               {
                 "content": "",
-                "id": "69tcub"
+                "id": "jlf5up"
               },
               {
                 "content": "",
-                "id": "cafdsv"
+                "id": "l3jttc"
+              },
+              {
+                "content": "",
+                "id": "m8tfc4"
+              },
+              {
+                "content": "",
+                "id": "7mqjh6"
+              },
+              {
+                "content": "",
+                "id": "kzeuze"
+              },
+              {
+                "content": "",
+                "id": "v3afhu"
+              },
+              {
+                "content": "",
+                "id": "bm5r6n"
+              },
+              {
+                "content": "",
+                "id": "ggubgg"
+              },
+              {
+                "content": "",
+                "id": "2j08jo"
+              },
+              {
+                "content": "",
+                "id": "hl4cx0"
+              },
+              {
+                "content": "",
+                "id": "mf0e3x"
+              },
+              {
+                "content": "",
+                "id": "fn8p47"
+              },
+              {
+                "content": "",
+                "id": "aj5tfv"
+              },
+              {
+                "content": "",
+                "id": "yog5i7"
+              },
+              {
+                "content": "",
+                "id": "4bb9n2"
+              },
+              {
+                "content": "",
+                "id": "8g7lja"
+              },
+              {
+                "content": "",
+                "id": "7uob4v"
               }
             ]
           }
@@ -66,13 +194,18 @@
             "id": "2x96yc",
             "content": [
               {
-                "content": "Draft",
+                "content": "🤩 Unsorted ideas",
                 "id": "zwmh5c",
                 "style": 7
               },
               {
-                "content": "Raw stream of thoughts...",
-                "id": "sw93tj"
+                "content": "A place for any ideas which may eventually become working tasks, questions or should be discarded.",
+                "id": "vq7n3e",
+                "style": 5
+              },
+              {
+                "content": "",
+                "id": "ptqpon"
               }
             ]
           },
@@ -85,7 +218,52 @@
               },
               {
                 "content": "",
-                "id": "prizwh"
+                "id": "zh5w3k"
+              },
+              {
+                "content": "",
+                "id": "cnc8ae"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5affqf",
+        "content": [
+          {
+            "id": "9n83wg",
+            "content": [
+              {
+                "content": "😎 Tasks",
+                "id": "49fpat",
+                "style": 7
+              },
+              {
+                "content": "Use the special symbols [!] [-] [+] [?] [/] [*] at the beginning of cards to mark tasks at your discretion.",
+                "id": "pihtvj",
+                "style": 5
+              },
+              {
+                "content": "",
+                "id": "18jx6d"
+              }
+            ]
+          },
+          {
+            "id": "sgh95a",
+            "content": [
+              {
+                "content": "",
+                "id": "phee5s"
+              },
+              {
+                "content": "",
+                "id": "4a6vsl"
+              },
+              {
+                "content": "",
+                "id": "y1g5cw"
               }
             ]
           }
@@ -98,23 +276,13 @@
             "id": "f51d6j",
             "content": [
               {
-                "content": "Bugs",
+                "content": "😵‍💫 Issues",
                 "id": "9114m5",
                 "style": 7
               },
               {
-                "content": "Important task",
-                "id": "8eheh7",
-                "style": 1
-              },
-              {
-                "content": "Less important task",
-                "id": "8eheh7",
-                "style": 2
-              },
-              {
-                "content": "Common task",
-                "id": "8eheh7"
+                "content": "",
+                "id": "6zp20t"
               }
             ]
           },
@@ -127,79 +295,7 @@
               },
               {
                 "content": "",
-                "id": "kr5wbn"
-              },
-              {
-                "content": "",
-                "id": "kr5wbn"
-              },
-              {
-                "content": "",
-                "id": "kr5wbn"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "0pbyn2",
-        "content": [
-          {
-            "id": "dt96es",
-            "content": [
-              {
-                "content": "Enhancements",
-                "id": "3szsk5",
-                "style": 7
-              },
-              {
-                "content": "",
-                "id": "385mtu"
-              }
-            ]
-          },
-          {
-            "id": "2z07mg",
-            "content": [
-              {
-                "content": "",
-                "id": "gwrbjj"
-              },
-              {
-                "content": "",
-                "id": "7gojo8"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "log9jb",
-        "content": [
-          {
-            "id": "an6cpp",
-            "content": [
-              {
-                "content": "Questions",
-                "id": "o7cr67",
-                "style": 7
-              },
-              {
-                "content": "",
-                "id": "bp4izo"
-              }
-            ]
-          },
-          {
-            "id": "wnhoy2",
-            "content": [
-              {
-                "content": "",
-                "id": "dzqh5e"
-              },
-              {
-                "content": "",
-                "id": "16dpnz"
+                "id": "ve47sb"
               }
             ]
           }
@@ -212,7 +308,7 @@
             "id": "0jsnbs",
             "content": [
               {
-                "content": "Help wanted",
+                "content": "🔎 Help wanted",
                 "id": "1bohxr",
                 "style": 7
               },
@@ -244,7 +340,7 @@
             "id": "88voja",
             "content": [
               {
-                "content": "Cancelled",
+                "content": "⛔️ Discarded",
                 "id": "hqwgem",
                 "style": 7
               },
@@ -276,7 +372,7 @@
             "id": "r1infi",
             "content": [
               {
-                "content": "Completed",
+                "content": "✅ Completed",
                 "id": "1to4m8",
                 "style": 7
               },

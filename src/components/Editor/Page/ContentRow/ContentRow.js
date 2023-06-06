@@ -87,6 +87,7 @@ export default props => {
 				if(isAlone && !linkMode && !aiPromptMode) return
 				handleClick({
 					e,
+					lastMouseDownPos,
 					pageIndex,
 					localeIndex,
 					blockIndex,
