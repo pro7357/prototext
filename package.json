@@ -10,7 +10,8 @@
     "build:website": "preact build --src ./website/src -c ./website/preact.config.build.js --no-sw --no-esm --no-prerender --dest ./website/dst/ --template ./website/src/index.html"
   },
   "engines": {
-    "node": "12.2.0"
+    "node": "16.13.0",
+	 "npm": "8.1.0"
   },
   "dependencies": {
     "@redux-devtools/extension": "^3.2.5",

@@ -4,6 +4,6 @@ export default [
 	'Brainstorm',
 	'Life-Roadmap',
 	'Project-Workflow',
-	'Text Writing',
+	'Text-Writing',
 	'Image-Generation',
 ]
