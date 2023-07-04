@@ -2,40 +2,50 @@
 export default async props => {
 
 	let {
-		apiEndpoint,
 		url,
-		method,
+		method = 'get',
 		body = null,
+		headers = {},
 		isFormData
 	} = props
 
 	let response
 	let options = {}
-	let headers = {}
 
-	if(!url) {
-		url = `/api/${apiEndpoint}`
-	}
+	method = method.toLowerCase()
 
 	if(method !== 'get') {
-		options.body = isFormData ? body : JSON.stringify(body)
+
+		options.body = isFormData || typeof body === 'string'
+			? body
+			: JSON.stringify(body)
+
 		options.method = method
+
 	}
 
 	if (body) {
-		headers = {
-			'Accept': 'application/json',
-		}
-		if(!isFormData){
+		if(!isFormData && !headers['Content-Type']) {
 			headers['Content-Type'] = 'application/json'
+		}
+		if(!headers['Accept']) {
+			headers['Accept'] = 'application/json'
 		}
 	}
 
 	options.headers = headers
 
 	try {
+
 		response = await fetch(url, options)
-		response = await response.json()
+
+		let contentType = response.headers.get('Content-Type')
+
+		response = contentType === 'application/json'
+			? await response.json()
+			: await response.arrayBuffer()
+
+
 	} catch (err) {
 		console.log(err.message)
 	}

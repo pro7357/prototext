@@ -1,5 +1,6 @@
 
 const log = require('electron-log')
+const { isWindows, isMac } = require('./os')
 
 const {
 	contextBridge,
@@ -15,8 +16,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
 		channel,
 		callable(event, data)
 	),
-	isMac: process.platform === 'darwin',
-	isWindows: process.platform === 'win32'
+	isMac,
+	isWindows
 })
 
 window.addEventListener('DOMContentLoaded', () => {

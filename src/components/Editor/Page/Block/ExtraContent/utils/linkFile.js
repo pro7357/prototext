@@ -16,7 +16,8 @@ export default async props => {
 		currentDoc,
 		assetMode,
 		srcFilePaths,
-		srcFileUrls
+		srcFileUrls,
+		srcFiles
 	} = props
 
 	const dndFileMode = srcFilePaths || srcFileUrls
@@ -42,6 +43,7 @@ export default async props => {
 					)
 				)
 			},[]),
+			targetPageIndex,
 			targetBlockIndex,
 			false
 		)
@@ -56,14 +58,12 @@ export default async props => {
 			assetMode,
 			currentDoc,
 			srcFilePaths, // files from OS
-			srcFileUrls // files from a web UI
+			srcFileUrls,  // files from a web UI
+			srcFiles,     // files created from scratch
 		}
 	)
 
 	if(!filePaths) {
-		alert(
-			`Oops... Something is wrong with the files. Please describe the issue: ${bugReportsUrl}`
-		)
 		return
 	}
 
@@ -124,6 +124,7 @@ export default async props => {
 						)
 					)
 				},[]),
+				targetPageIndex,
 				dndFileMode
 					? targetBlockIndex // insert file blocks below the target D&D position
 					: undefined, // use position of the target block from the state

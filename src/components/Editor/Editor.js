@@ -88,11 +88,13 @@ export default connect(mapStateToProps)(props => {
 						<Page
 							sharedEditorProps={sharedEditorProps}
 							page={content[leftSideFocus]}
+							pageId={content[leftSideFocus].id}
 							pageIndex={leftSideFocus}
 							isTargetPage={true}
 							targetLocaleIndex={rightSideFocus}
 							twoColsMode={localizationMode}
 							alonePageMode={alonePageMode}
+							side='localization'
 						/>
 					)}
 
@@ -100,6 +102,7 @@ export default connect(mapStateToProps)(props => {
 						<Page
 							sharedEditorProps={sharedEditorProps}
 							page={content[leftSideFocus].content[0]}
+							pageId={content[leftSideFocus].id}
 							pageIndex={leftSideFocus}
 							isTargetPage={targetPageIndex === leftSideFocus}
 							targetLocaleIndex={0}
@@ -116,6 +119,9 @@ export default connect(mapStateToProps)(props => {
 							page={localizationMode
 								? content[leftSideFocus].content[rightSideFocus]
 								: content[rightSideFocus].content[0]
+							}
+							pageId={content[
+								localizationMode ? leftSideFocus : rightSideFocus].id
 							}
 							pageIndex={rightSideFocus}
 							isTargetPage={targetPageIndex === rightSideFocus}
@@ -155,6 +161,7 @@ function mapStateToProps(state, props) {
 		filePath: state.filePath,
 		linkMode: state.editor.linkMode,
 		aiPromptMode: state.editor.aiPromptMode,
+		lastActionIndex: state.editor.lastActionIndex,
 		fbbMode: state.fbbMode,
 		dndMode: state.editor.dndMode,
 		selMode: Boolean(state.editor.selRange),
@@ -167,8 +174,7 @@ function mapStateToProps(state, props) {
 		globalSearch: state.topbar.searchInAllPages,
 		history: state.history,
 		spellcheck: state.spellcheck,
-		isOpenAIEnabled: state.settings.isOpenAIEnabled,
-		isElevenlabsEnabled: state.settings.isElevenlabsEnabled,
+		appSettings: state.settings,
 	}
 }
 

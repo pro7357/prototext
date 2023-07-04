@@ -93,7 +93,7 @@ const useStyles = createUseStyles(theme => ({
 	input: {
 		'-webkit-app-region': 'no-drag',
 		width: '100%',
-		padding: [8,14],
+		padding: [8,12],
 		color: 'inherit',
 		font: 'inherit',
 		textAlign: 'left',

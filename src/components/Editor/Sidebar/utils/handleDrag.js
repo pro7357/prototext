@@ -23,25 +23,14 @@ export default props => {
 	const node = e.target
 	const {x,y} = getClickPosition(e)
 
-	if(moment === 'hold') {
+
+	if(moment === 'start') {
 
 		if(isLocalizationView) {
 			activateLocaleDndMode()
 		} else {
 			activatePageDndMode()
 		}
-
-		return
-
-	}
-
-	if(moment === 'unhold') {
-		deactivateDndMode()
-		return
-	}
-
-
-	if(moment === 'start') {
 
 		window.targetDndEl = node
 

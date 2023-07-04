@@ -105,6 +105,7 @@ export default props => {
 							content: secondValue
 						}
 					],
+					targetPageIndex,
 					targetBlockIndex,
 					true // replaceTargetBlock
 				)

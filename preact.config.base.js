@@ -20,6 +20,7 @@ module.exports = (config, isDesktopBuild) => {
 
 	config.resolve.alias.welcomeActions   = path.join(rootDir,'./src/components/Welcome/welcome.actions.js')
 	config.resolve.alias.settingsActions  = path.join(rootDir,'./src/components/Settings/settings.actions.js')
+	config.resolve.alias.settingsModels   = path.join(rootDir,'./src/components/Settings/models')
 
 	config.resolve.alias.editorUtils      = path.join(rootDir,'./src/components/Editor/utils/')
 	config.resolve.alias.editorActions    = path.join(rootDir,'./src/components/Editor/editor.actions.js')

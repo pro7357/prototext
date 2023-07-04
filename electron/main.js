@@ -12,12 +12,13 @@ const {
 	Menu,
 	Notification,
 	dialog,
-	ipcMain
+	ipcMain,
+	systemPreferences,
 } = require('electron')
 
 const path = require('path')
 const os = require('os')
-const isMac = process.platform === 'darwin'
+const { isMac } = require('./utils/os')
 
 const packageJson = require('./package.json')
 
@@ -86,7 +87,6 @@ app.setAboutPanelOptions({
 app.whenReady().then(() => {
 
 	targetWindow = createWindow({windows, app})
-
 
 	ipcMain.handle('hitMenuItem', async (event, id) => {
 		const menuItem = Menu.getApplicationMenu().getMenuItemById(id)
@@ -274,8 +274,14 @@ app.whenReady().then(() => {
 		return await handleTranslate(props, getTargetWindow())
 	})
 
+
 	ipcMain.handle('calculateGPTTokens', async (event, text) => {
 		return calculateGPTTokens(text)
+	})
+
+
+	ipcMain.handle('askForMicAccess', async (event) => {
+		return await systemPreferences.askForMediaAccess('microphone')
 	})
 
 

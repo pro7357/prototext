@@ -8,7 +8,6 @@ import {
 } from 'editorActions'
 import getClickPosition from 'globalUtils/getClickPosition'
 import connectBlocks from './connectBlocks'
-import askAi from '../InnerActions/utils/askAi'
 import { isFileLink, isAssetLink } from 'sharedUtils/blockTypes'
 import requestElectronApi from 'globalUtils/requestElectronApi'
 import normalizeFilePath from 'globalUtils/normalizeFilePath'
@@ -29,10 +28,14 @@ export default props => {
 		isTargetPage,
 		linkMode,
 		aiPromptMode,
+		lastActionIndex,
 		selRange,
 		isTextBlockDndMode,
-		currentDoc
+		currentDoc,
+		appSettings,
+		sharedEditorProps,
 	} = props
+
 
 	let node = e.target
 	let value = node.innerText
@@ -137,10 +140,25 @@ export default props => {
 	if(aiPromptMode) {
 		e.preventDefault()
 		e.stopPropagation()
-		askAi({
-			taskPageIndex: pageIndex,
-			taskBlockIndex: blockIndex,
-		})
+		try {
+
+			let engine = appSettings.cardActions[lastActionIndex].engine
+
+			let completeAIPrompt = require(
+				`../InnerActions/utils/handlersByEngine/${engine}`
+			).default
+
+			completeAIPrompt({
+				sharedEditorProps,
+				isDuoPromptMode: true,
+				isSecondDuoPromptingStage: true,
+				block
+			})
+
+		} catch (error) {
+			console.log('An undefined action handler', error.message)
+		}
+
 		return
 	}
 

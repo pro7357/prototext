@@ -146,12 +146,15 @@ export const switchUserFocus = (targetPageIndex, targetLocaleIndex, targetBlockI
 }
 
 
-export const addBlock = (payload, position, replaceTargetBlock) => {
+export const addBlock = (
+	payload, targetPageIndex, targetBlockIndex, replaceTargetBlock
+) => {
 	store.dispatch({
 		allowUndo: true,
 		type: 'addBlock',
 		payload,
-		position,
+		targetPageIndex,
+		targetBlockIndex,
 		replaceTargetBlock
 	})
 }
@@ -270,10 +273,20 @@ export const resetBlockSelection = () => {
 }
 
 
-
 export const resetPage = targetPageIndex => {
 	store.dispatch({
 		type: 'resetPage',
 		targetPageIndex
+	})
+}
+
+
+export const setLastActionIndex = (lastActionIndex, targetPageIndex, targetLocaleIndex, targetBlockIndex) => {
+	store.dispatch({
+		type: 'setLastActionIndex',
+		lastActionIndex,
+		targetPageIndex,
+		targetLocaleIndex,
+		targetBlockIndex
 	})
 }

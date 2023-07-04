@@ -2,6 +2,26 @@
   "editor": {
     "content": [
       {
+        "id": "gw1q1p",
+        "content": [
+          {
+            "id": "at696w",
+            "content": [
+              {
+                "content": "My Text Content",
+                "id": "44y03i",
+                "style": 7
+              },
+              {
+                "content": "Activate Split View mode [CMD+2]. Open this page on the left and a list of CahtGPT instructions on the right. Apply the instructions to your content using the \"AI\" button within the cards.",
+                "id": "2e62yt",
+                "style": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "initial-page",
         "content": [
           {
@@ -111,44 +131,61 @@
               {
                 "content": "Offer a better solution for",
                 "id": "b1b9pd"
+              },
+              {
+                "content": "Think through this step by step",
+                "id": "j3s38i"
+              },
+              {
+                "content": "Let's think about this logically",
+                "id": "7ecdl2"
+              },
+              {
+                "content": "Explain your reasoning",
+                "id": "1y98bz"
+              },
+              {
+                "content": "Provide details to support your answer",
+                "id": "rr7awe"
+              },
+              {
+                "content": "Compare and contrast your answer with alternatives",
+                "id": "ewmiec"
               }
             ]
           }
         ]
       },
       {
-        "id": "gw1q1p",
+        "id": "7i6tv0",
         "content": [
           {
-            "id": "at696w",
+            "id": "0spqre",
             "content": [
               {
-                "content": "My Content",
-                "id": "44y03i",
+                "content": "Open LLMs",
+                "id": "5s0420",
                 "style": 7
               },
               {
-                "content": "",
-                "id": "2e62yt"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "3xr5xu",
-        "content": [
-          {
-            "id": "rl6rla",
-            "content": [
-              {
-                "content": "Draft",
-                "id": "n6wwfy",
-                "style": 7
+                "content": "https://www.reddit.com/r/LocalLLaMA/wiki/models/#wiki_models",
+                "id": "xlivcu",
+                "style": 8
               },
               {
-                "content": "",
-                "id": "h01s0s"
+                "content": "https://github.com/eugeneyan/open-llms",
+                "id": "nb879e",
+                "style": 8
+              },
+              {
+                "content": "https://chat.lmsys.org/",
+                "id": "b66r54",
+                "style": 8
+              },
+              {
+                "content": "https://replicate.com/collections/language-models",
+                "id": "cx9stm",
+                "style": 8
               }
             ]
           }

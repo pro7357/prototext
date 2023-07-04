@@ -7,6 +7,8 @@ const downloadFile = require('./downloadFile')
 const path = require('path')
 const parseUrl = require('url').parse
 const { getUUID } = require('./crpyto')
+const saveFiles = require('./saveFiles')
+
 
 
 module.exports = async (targetWindow, props) => {
@@ -18,14 +20,17 @@ module.exports = async (targetWindow, props) => {
 
 		// Files that was added using Drag&Drop method from OS or a web UI.
 		srcFilePaths,
-		srcFileUrls
+		srcFileUrls,
+
+		// Files that was created from scratch in the app UI. For example, audio records.
+		srcFiles,
 
 	} = props
 
 	log.info('linkFile srcFilePaths',srcFilePaths)
 	log.info('linkFile srcFileUrls',srcFileUrls)
 
-	let items = srcFileUrls || srcFilePaths
+	let items = srcFileUrls || srcFilePaths || srcFiles
 
 	// Open the Dialog window to select files in OS.
 	if(!items) {
@@ -61,30 +66,50 @@ module.exports = async (targetWindow, props) => {
 
 		for (const item of items) {
 
-			const parsedItem = srcFileUrls
-				? parseUrl(item)
-				: path.parse(item)
+			const normalizedItem = srcFiles
+				? item
+				: srcFileUrls
+					? parseUrl(item)
+					: path.parse(item)
 
-			const displayAssetName = srcFileUrls
-				? path.parse(parsedItem.pathname).name
-				: parsedItem.name
+			const displayAssetName = srcFileUrls && !srcFiles
+				? path.parse(normalizedItem.pathname).name
+				: normalizedItem.name
 
-			let isFileUrlProtocol = srcFileUrls && parsedItem.protocol === 'file:'
+			let isFileUrlProtocol = srcFileUrls && normalizedItem.protocol === 'file:'
 
 			log.info('isFileUrlProtocol',isFileUrlProtocol)
 
-			const assetExt = srcFileUrls ? path.extname(parsedItem.pathname) : parsedItem.ext
-			const assetFileName = `${getUUID()}${assetExt}`
-			const assetFilePath = path.resolve(assetsDir,assetFileName)
-			const assetRelativeFilePath = `./assets/${assetFileName}`
+			const convertTo = normalizedItem.convertTo
+
+			let assetExt = srcFileUrls && !srcFiles
+				? path.extname(normalizedItem.pathname)
+				: convertTo || normalizedItem.ext
+
+			if(assetExt && assetExt[0] === '.') {
+				assetExt = assetExt.slice(1)
+			}
+
+			const assetFileName = getUUID()
+			const assetFileBase = `${assetFileName}.${assetExt}`
+			const assetFilePath = path.resolve(assetsDir,assetFileBase)
+			const assetRelativeFilePath = `./assets/${assetFileBase}`
 
 			log.info('assetFilePath',assetFilePath)
 
 			let isOk = true
 
 			try {
-				if(srcFileUrls && !isFileUrlProtocol) {
-					await downloadFile(parsedItem, assetFilePath)
+				if(srcFiles) {
+					await saveFiles(
+						[{
+							...normalizedItem,
+							name: assetFileName,
+						}],
+						assetsDir
+					)
+				} else if(srcFileUrls && !isFileUrlProtocol) {
+					await downloadFile(normalizedItem, assetFilePath)
 				} else {
 					await copyFile(
 						isFileUrlProtocol ? item.slice(7) : item,

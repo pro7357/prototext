@@ -25,7 +25,7 @@ export default props => {
 
 		// Slides switching with the help of arrows keys.
 
-		e.preventDefault()
+		if(e.preventDefault) e.preventDefault()
 
 		let direction = arrowDown || arrowRight ? 1 : -1
 		let newTargetSlideIndex = slideIndex + direction

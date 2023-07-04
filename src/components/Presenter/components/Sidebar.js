@@ -2,15 +2,8 @@
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
-import Switch from 'sharedComponents/Switch'
-import UIBlock from 'sharedComponents/UIBlock'
-import TextButton from 'sharedComponents/TextButton'
-import { showEditor } from 'layoutActions'
-import { togglePresenterMode } from 'presenterActions'
-import presentationModels from '../models/presentation'
-import Select from 'sharedComponents/Select'
+import PrimaryControls from './PrimaryControls'
 
-// const presentationModes = require('../models/presentation').modes()
 
 export default props => {
 
@@ -37,117 +30,13 @@ export default props => {
 				scrollbarsMode && classes.withVisibleScrollbars
 			)}>
 
-				{!isActive && (
-					<div
-						className={classes.sidebarToggler}
-						onClick={() => togglePresenterMode('sidebarMode')}
-					>☰</div>
-				)}
-
 				{isActive && <>
 
-					{presentationModels.byGroups.map(group => {
-						return (
-							<div className={classes.group}>
-								<div className={classes.groupLabel}>{group.label}</div>
-								<div className={classes.groupContent}>
-									{group.content.map(id => {
-
-										const field = presentationModels.byId[id]
-
-										const {
-											label,
-											getValue,
-											getOptions,
-											optionValueHandler,
-											optionLabelHandler,
-											isTransparent,
-											onChange,
-											defValue,
-											displayCondition,
-											type
-										} = field
-
-										// Hide or show the field in case of dependence.
-										if(displayCondition) {
-
-											const targetValue = presenterProps[
-												displayCondition.id
-											]
-
-											if(typeof targetValue !== 'undefined') {
-												if(targetValue !== displayCondition.value) {
-													return null
-												}
-											}
-										}
-
-										return (
-											<UIBlock
-												isSuperCompact
-											>
-
-												{type === 'switch' && (
-													<Switch
-														label={label}
-														onClick={() => togglePresenterMode(id)}
-														isActive={presenterProps[id]}
-														isSmall
-													/>
-												)}
-
-												{type === 'select' && (
-													<Select
-														value={getValue(
-															presenterProps,
-															editorProps
-														)}
-														options={getOptions(
-															presenterProps,
-															editorProps
-														)}
-														optionValueHandler={optionValueHandler}
-														optionLabelHandler={optionLabelHandler}
-														isTransparent={isTransparent}
-														onChange={onChange}
-													/>
-												)}
-
-											</UIBlock>
-										)
-
-									})}
-								</div>
-							</div>
-						)
-					})}
-
-
-					<div className={classes.footer}>
-
-						<div>
-								<TextButton
-								isNotable
-								onClick={(e) => {
-									showEditor()
-								}}
-							>
-								Back to Editor
-							</TextButton>
-						</div>
-
-						<div>
-							<TextButton
-								isNotable
-								onClick={(e) => {
-									togglePresenterMode('sidebarMode')
-								}}
-							>
-								Hide
-							</TextButton>
-						</div>
-
-					</div>
+					<PrimaryControls
+						scrollbarsMode={scrollbarsMode}
+						presenterProps={presenterProps}
+						editorProps={editorProps}
+					/>
 
 				</>}
 
@@ -194,52 +83,5 @@ const useStyles = createUseStyles(theme => ({
 	withVisibleScrollbars: {
 		...theme.scrollbar
 	},
-
-	group: {
-		display: 'flex',
-		gap: 10,
-		flexDirection: 'column',
-		justifyContent: 'flex-start',
-	},
-
-	groupLabel: {
-		// fontWeight: theme.typography.weights.bold,
-		fontSize: 20,
-	},
-
-	groupContent: {
-		display: 'flex',
-		gap: 10,
-		flexDirection: 'column',
-		justifyContent: 'flex-start',
-	},
-
-
-	sidebarToggler: {
-		padding: [8, 12],
-		position: 'absolute',
-		bottom: 0,
-		display: 'flex',
-		alignItems: 'center',
-		left: '100%',
-		top: 0,
-		cursor: 'pointer',
-		color: theme.text.muted,
-		//backgroundColor: theme.background.default,
-		opacity: 0,
-		'&:hover': {
-			color: theme.textButton.notable.color,
-			opacity: 1
-		}
-	},
-
-	footer: {
-		display: 'flex',
-		flexDirection: 'column',
-		gap: 8,
-		flexGrow: 1,
-		justifyContent: 'flex-end'
-	}
-
 
 }),{name: 'presenter-sidebar'})

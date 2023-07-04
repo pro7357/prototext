@@ -2,6 +2,7 @@
 import { createUseStyles } from 'react-jss'
 import requestElectronApi from 'globalUtils/requestElectronApi'
 import clsx from 'clsx'
+import handleImageClick from './utils/handleImageClick'
 
 
 export default props => {
@@ -21,6 +22,9 @@ export default props => {
 			}}
 			draggable
 			data-role='image'
+			onDoubleClick={ e => {
+				handleImageClick(props)
+			}}
 			onDragStart={ e => {
 				e.preventDefault()
 				requestElectronApi('dragImageStart',src)

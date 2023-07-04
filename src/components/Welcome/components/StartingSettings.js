@@ -35,7 +35,7 @@ export default connect(mapStateToProps)(props => {
 					switchFullscreenWelcomeMode(!isFSStartingMode)
 					requestElectronApi('switchFullscreen', !isFSStartingMode)
 				}}
-				isActive={isFSStartingMode}
+				value={isFSStartingMode}
 				className={classes.switch}
 				withoutPadding
 				isNotable
@@ -48,7 +48,7 @@ export default connect(mapStateToProps)(props => {
 					setSettingsProperty('autoSaveMode', !autoSaveMode)
 					requestElectronApi('hitMenuItem', 'auto-save')
 				}}
-				isActive={autoSaveMode}
+				value={autoSaveMode}
 				className={classes.switch}
 				withoutPadding
 				isNotable

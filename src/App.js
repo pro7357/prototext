@@ -9,14 +9,15 @@ import Layout from './components/Layout'
 import connectAppToElectron from 'globalUtils/connectAppToElectron'
 import checkForUpdates from 'globalUtils/checkForUpdates'
 import handleAppCrash from 'globalUtils/handleAppCrash'
-import { showEditor, togglePresenter } from 'layoutActions'
+import { showEditor } from 'layoutActions'
 import { toogleTopbar } from 'topbarActions'
 import {
 	deactivateAiPromptMode,
 	deactivateDndMode,
 	deactivateLinkMode,
 	resetBlockSelection
- } from 'editorActions'
+} from 'editorActions'
+
 
 export default () => {
 

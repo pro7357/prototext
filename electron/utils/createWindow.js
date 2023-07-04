@@ -2,7 +2,7 @@
 const log = require('electron-log')
 const { BrowserWindow, Menu, shell, dialog, webFrame } = require('electron')
 const path = require('path')
-const isMac = process.platform === 'darwin'
+const { isMac } = require('./os')
 
 const menuTemplate = require('./getMenu')
 const handlePtxtFileOpenByClick = require('./handlePtxtFileOpenByClick')

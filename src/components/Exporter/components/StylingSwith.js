@@ -19,7 +19,7 @@ export default connect(mapStateToProps)(props => {
 			<Switch
 				label='Block styles'
 				onClick={() => setAllowBlockStyles(!allowBlockStyles)}
-				isActive={allowBlockStyles}
+				value={allowBlockStyles}
 				withoutPadding
 			/>
 		</UIBlock>

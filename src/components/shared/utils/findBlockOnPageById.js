@@ -11,11 +11,15 @@ export default props => {
 
 	for (let i = 0; i < content.length; i++) {
 		const block = content[i]
-		if(block.id === blockId) {
+		if(block && block.id === blockId) {
 			targetBlock = block
 			targetBlockIndex = i
 			break
 		}
+	}
+
+	if(!targetBlock) {
+		return
 	}
 
 	return {

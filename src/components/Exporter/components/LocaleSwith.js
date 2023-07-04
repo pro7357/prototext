@@ -19,7 +19,7 @@ export default connect(mapStateToProps)(props => {
 			<Switch
 				label='Localizations'
 				onClick={() => setAllowLocales(!allowLocales)}
-				isActive={allowLocales}
+				value={allowLocales}
 				withoutPadding
 			/>
 		</UIBlock>

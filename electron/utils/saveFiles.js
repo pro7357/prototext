@@ -2,6 +2,7 @@
 const fsPromises = require('fs').promises
 const isExists = require('./isExists')
 const createDir = require('./createDir')
+const convertFile = require('./convertFile')
 
 /*
 
@@ -34,6 +35,7 @@ module.exports = async (files, dst, src) => {
 		let {
 			name,
 			ext,
+			convertTo,
 			encoding,
 			data,
 			subDir
@@ -58,7 +60,24 @@ module.exports = async (files, dst, src) => {
 
 			if(!await isExists(outputAbsPath)) {
 				throw new Error('unableToSaveFile')
-				return false
+			}
+
+			if(convertTo) {
+
+				let convertedFullFilename = `${name}.${convertTo}`
+				let convertedOutputAbsPath = `${outputDir}/${convertedFullFilename}`
+
+				// Convert the current file.
+				await convertFile({
+					src: outputAbsPath,
+					dst: convertedOutputAbsPath,
+					srcExt: ext,
+					dstExt: convertTo
+				})
+
+				// Remove the original.
+				fsPromises.unlink(outputAbsPath)
+
 			}
 
 

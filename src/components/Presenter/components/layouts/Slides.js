@@ -3,6 +3,7 @@ import { useState } from 'preact/hooks'
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
+import TextButton from 'sharedComponents/TextButton'
 import Block from './components/Block'
 import handleSlideKeyDown from './utils/handleSlideKeyDown'
 
@@ -13,10 +14,11 @@ export default props => {
 		presenterProps,
 		currentDoc,
 		content,
+		targetBlockIndex,
 		className,
 	} = props
 
-	const [slideIndex, setSlideIndex] = useState(0)
+	const [slideIndex, setSlideIndex] = useState(targetBlockIndex || 0)
 	const slidesAmount = content && content.length
 
 	// console.log('Slides content',content)
@@ -53,6 +55,39 @@ export default props => {
 				currentDoc={currentDoc}
 			/>
 
+			{/* <div className={classes.controls}>
+				<TextButton
+					isNotable
+					onClick={(e) => {
+						handleSlideKeyDown({
+							e: {
+								key: 'ArrowLeft'
+							},
+							slideIndex,
+							slidesAmount,
+							setSlideIndex
+						})
+					}}
+				>
+					←
+				</TextButton>
+				<TextButton
+					isNotable
+					onClick={(e) => {
+						handleSlideKeyDown({
+							e: {
+								key: 'ArrowRight'
+							},
+							slideIndex,
+							slidesAmount,
+							setSlideIndex
+						})
+					}}
+				>
+					→
+				</TextButton>
+			</div> */}
+
 		</div>
 	)
 
@@ -76,13 +111,31 @@ const useStyles = createUseStyles(theme => ({
 		outline: 'none',
 		overflowX: 'hidden',
 		overflowY: 'scroll',
-		...theme.hiddenScrollbar
+		...theme.hiddenScrollbar,
+		'&:hover': {
+			'& $controls': {
+				display: 'flex'
+			}
+		}
 	},
 
 
 	withVisibleScrollbars: {
 		...theme.scrollbar
 	},
+
+	// controls: {
+	// 	position: 'fixed',
+	// 	display: 'none',
+	// 	bottom: 24,
+	// 	right: 20,
+	// 	gap: 4,
+	// 	'&>div': {
+	// 		backgroundColor: theme.button.glass.background,
+	// 		padding: [2,6],
+	// 		borderRadius: theme.rounded
+	// 	}
+	// },
 
 
 }),{name: 'presenter-slides-layout'})

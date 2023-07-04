@@ -67,6 +67,9 @@ export default props => {
 					label={content}
 					filePath={link.filePath}
 					currentDoc={currentDoc}
+					pageIndex={pageIndex}
+					localeIndex={localeIndex}
+					blockIndex={blockIndex}
 				/>
 			)}
 

@@ -6,6 +6,7 @@ const handlersIds = [
 	'refresh',
 	'updLocaleOption',
 	'setPageWidth',
+	'setLastActionIndex',
 	'toggleCompactMenuMode',
 	'switchPageView',
 	'switchSideFocus',
@@ -60,7 +61,7 @@ const initialState = {
 	targetLocaleIndex: 0,
 	targetBlockIndex:0,
 
-	leftSideFocus: isDesktopBuild ? 0 : 0,
+	leftSideFocus: isDesktopBuild ? 0 : 4,
 
 	// RightSide –
 	// is the second page index in the 'Two Pages' mode
@@ -103,11 +104,14 @@ const initialState = {
 	// The mode of creating links between blocks.
 	linkMode: false,
 
-	// The mode of creating AI request between blocks.
+	// The mode of creating AI request between blocks (prompt consisting of two parts).
 	aiPromptMode: false,
 
 	// Search tools, etc.
 	topbarMode: isDesktopBuild ? false : true,
+
+	// The index of the last initialized action in the target card.
+	lastActionIndex: undefined,
 
 }
 

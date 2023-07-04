@@ -28,7 +28,7 @@ export const isYouTubeVideo = (isWebLink, content) => {
 
 
 
-export const isFileLink = link => link && link.filePath
+export const isFileLink = link => link && Boolean(link.filePath)
 
 export const isAssetLink = (isFileLink, link) => isFileLink && link.filePath.slice(0,8) === './assets'
 

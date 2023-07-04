@@ -3,6 +3,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from '@redux-devtools/extension'
 import requestElectronApi from 'globalUtils/requestElectronApi'
 import deepClone from 'globalUtils/deepClone'
+import migrateSettings from 'globalUtils/migrateSettings'
 import prepareStateToSave from 'globalUtils/prepareStateToSave'
 import rootReducer from './reducers/root'
 import { setHistorySteps } from './actions/hystory'
@@ -125,17 +126,20 @@ const stateMiddleware = store => next => action => {
 }
 
 
-function initializeGlobalState(initialState) {
+function initializeGlobalState(initialState = {}) {
 
 	store = createStore(
 		rootReducer,
-		isDesktopBuild ? {} : initialState || {},
-		composeWithDevTools(applyMiddleware(stateMiddleware))
+		initialState,
+		composeWithDevTools(
+			applyMiddleware(stateMiddleware)
+		)
 	)
 
 	return store
 
 }
+
 
 if(!store) {
 
@@ -145,6 +149,7 @@ if(!store) {
 	let allowKeepAllStateInLS = false
 
 	if(allowKeepAllStateInLS) {
+
 		let savedState = localStorage.getItem('state')
 
 		try {
@@ -156,8 +161,11 @@ if(!store) {
 		store = initializeGlobalState(savedState)
 	}
 
+	// Migrate settings.
+	let initialState = migrateSettings({})
+
 	// Initialization from scratch.
-	store = initializeGlobalState()
+	store = initializeGlobalState(initialState)
 
 }
 

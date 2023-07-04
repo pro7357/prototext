@@ -74,7 +74,7 @@ const collectContentRecursivelly = props => {
 
 				const style = normalizedBlock.style
 				const link = normalizedBlock.link
-				const blockContent = localizedBlock.content
+				const blockContent = localizedBlock && localizedBlock.content
 				const type = recognizeAll(style, link, blockContent)
 
 				// Keep information about the type of link inside the block.

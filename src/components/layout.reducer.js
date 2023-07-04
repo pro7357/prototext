@@ -9,7 +9,7 @@ const layoutIds = [
 	'settings',  // 6
 ]
 
-const initialState = isDesktopBuild ? 0 : 0
+const initialState = isDesktopBuild ? 0 : 1
 
 export default (state = initialState, action) => {
 

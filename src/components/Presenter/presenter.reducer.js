@@ -1,23 +1,9 @@
 
 import presentationModels from '../Presenter/models/presentation'
 
-/*
-
-	text: {
-		heading: {
-			align: 'center',
-			size: 40,
-		},
-		normal: {
-			align: 'left',
-			size: 18,
-		},
-	}
-*/
 
 let initialState = {
 	sidebarMode: true,
-	// targetSlideIndex: 0,
 }
 
 presentationModels.allIds.forEach((id) => {
@@ -37,7 +23,7 @@ export default (state = initialState, action) => {
 			}
 
 
-		case 'switchPresenterMode': {
+		case 'setPresenterProperty': {
 			return {
 				...state,
 				[action.key]: action.value
@@ -45,7 +31,7 @@ export default (state = initialState, action) => {
 		}
 
 
-		case 'togglePresenterMode': {
+		case 'togglePresenterProperty': {
 			return {
 				...state,
 				[action.key]: !state[action.key]
@@ -58,14 +44,6 @@ export default (state = initialState, action) => {
 				...state,
 				locale: action.payload
 			}
-
-
-		// case 'setPresenterSlideIndex':
-		// 	return {
-		// 		...state,
-		// 		targetSlideIndex: action.payload
-		// 	}
-
 
 		default:
 			return state

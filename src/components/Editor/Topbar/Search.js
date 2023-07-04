@@ -64,7 +64,7 @@ export default connect(mapStateToProps)(props => {
 					dataType='text'
 					resettable
 					onReset={resetSearchText}
-					autoFocus={true}
+					autoFocus={!true}
 					value={searchText}
 					onInput={setSearchText}
 					placeholder='Enter any text or a card styling symbol'

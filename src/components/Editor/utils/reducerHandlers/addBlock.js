@@ -33,7 +33,9 @@ export default (initialState, state, action) => {
 		payload = [payload]
 	}
 
-	let actionPosition = action.position
+	// let actionPosition = action.position
+	let actionTargetPageIndex = action.targetPageIndex
+	let actionTargetBlockIndex = action.targetBlockIndex
 
 	const blocksAmount = content[tpi].content[0].content.length
 
@@ -42,11 +44,13 @@ export default (initialState, state, action) => {
 		timestamp: getTimestamp(),
 		content: iteratePageBlocks({
 			content,
-			targetPageIndex: tpi,
+			targetPageIndex: typeof actionTargetPageIndex !== 'undefined'
+				? actionTargetPageIndex
+				: tpi,
 			handler: (locale, localeIndex, blocks, block, blockIndex) => {
 
-				let position = typeof actionPosition !== 'undefined'
-					? actionPosition
+				let position = typeof actionTargetBlockIndex !== 'undefined'
+					? actionTargetBlockIndex
 					: tbi
 
 				let insertAtEnd = position === blocksAmount &&

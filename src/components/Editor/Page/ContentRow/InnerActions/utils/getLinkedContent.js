@@ -1,15 +1,13 @@
 
+import { store } from 'store'
 import { recognizeAll, isTextBlock, isMuted } from 'sharedUtils/blockTypes'
 import findPageById from 'sharedUtils/findPageById'
 
 
-export default props => {
+export default block => {
 
-	const {
-		block,
-		localeIndex = 0,
-		allEditorContent
-	} = props
+	const localeIndex = 0
+	const allEditorContent = store.getState().editor.content
 
 	const blockType = recognizeAll(
 		block.style,

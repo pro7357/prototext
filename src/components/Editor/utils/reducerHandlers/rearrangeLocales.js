@@ -50,7 +50,7 @@ export default (initialState, state, action) => {
 						locale.content = locale.content.reduce((blocks, block, blockIndex) => {
 
 							let originalBlock = originalLocale.content[blockIndex]
-							let originalBlockStyle = originalBlock.style
+							let originalBlockStyle = originalBlock && originalBlock.style
 							let isText = isTextBlock(originalBlockStyle)
 
 							return blocks.concat({
@@ -75,7 +75,7 @@ export default (initialState, state, action) => {
 
 							srcLocale.content = srcLocale.content.reduce((blocks, block, blockIndex) => {
 
-								let curBlockStyle = block.style
+								let curBlockStyle = block && block.style
 								let isText = isTextBlock(curBlockStyle)
 
 								return blocks.concat({

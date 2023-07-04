@@ -8,17 +8,19 @@ import isContentRowHidden from 'sharedUtils/isContentRowHidden'
 import ContentRow from './ContentRow/ContentRow'
 import Block from './Block/Block'
 import MidDropArea from '../MidDropArea'
-import GlvrdHint from './GlvrdHint'
 import PageFooter from './PageFooter'
 import createBlock from 'editorUtils/createBlock'
 
 import { localesDict } from 'globalUtils/allLocaleOptions'
 
 
-let prevFocus = {
-	left: null,
-	right: null
+let prevYScrollPagesPos = {
+	left: {},
+	right: {},
+	center: {},
+	localization: {}
 }
+
 
 
 export default connect(mapStateToProps)(props => {
@@ -31,6 +33,7 @@ export default connect(mapStateToProps)(props => {
 		// Parental Props.
 		sharedEditorProps,
 		page,
+		pageId,
 		pageIndex,
 		isTargetPage,
 		targetLocaleIndex,
@@ -91,18 +94,19 @@ export default connect(mapStateToProps)(props => {
 				topbarMode && classes.withTopbar,
 				scrollbarsMode && classes.withVisibleScrollbars
 			)}
+			onScroll={e => {
+				setTimeout(() => {
+					prevYScrollPagesPos[side][pageId] = e.target.scrollTop
+				}, 0)
+			}}
 			ref={node => {
 				if(node) {
-
-					if(prevFocus[side] !== null && pageIndex !== prevFocus[side]) {
-						node.scrollTo({
-							top: 0,
-							left: 0,
+					setTimeout(() => {
+						node.scroll({
+							top: prevYScrollPagesPos[side][pageId] || 0,
+							behavior: 'auto'
 						})
-					}
-
-					prevFocus[side] = pageIndex
-
+					}, 0)
 				}
 			}}
 		>
@@ -210,8 +214,6 @@ export default connect(mapStateToProps)(props => {
 					/>
 				)}
 
-				<GlvrdHint/>
-
 			</div>
 		</div>
 	)
@@ -238,7 +240,7 @@ const useStyles = createUseStyles(theme => ({
 		padding: [32,16,0,16],
 		overflowX: 'hidden',
 		overflowY: 'scroll',
-		transition: 'padding-top 500ms ease',
+		//transition: 'padding-top 500ms ease',
 		...theme.hiddenScrollbar
 	},
 

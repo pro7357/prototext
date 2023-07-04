@@ -82,8 +82,8 @@ export default props => {
 
 		// Try to find the block  by the identifier in link.
 		_fr = findBlockOnPageById({blockId: linkedBlockId, content: linkedPageBlocks})
-		linkedBlock = _fr.block
-		linkedBlockIndex = _fr.blockIndex
+		linkedBlock = _fr?.block
+		linkedBlockIndex = _fr?.blockIndex
 
 		if(!linkedBlock) {
 
@@ -93,28 +93,23 @@ export default props => {
 				blockId: linkedBlockId
 			})
 
-			linkedPage = _fr.page
-			linkedPageIndex = _fr.pageIndex
-			linkedBlock = _fr.block
-			linkedBlockIndex = _fr.blockIndex
+			linkedPage = _fr?.page
+			linkedPageIndex = _fr?.pageIndex
+			linkedBlock = _fr?.block
+			linkedBlockIndex = _fr?.blockIndex
 
 			// If the block is not found, then redirect the link to the first block of the page where it was previously.
 			if(!linkedBlock) {
-				if(linkedPage) {
-					alert('Linked block not found. You will be redirected to the first block of the linked page.')
-					linkedBlock = linkedPage.content[linkedLocaleIndex] &&
-						linkedPage.content[linkedLocaleIndex].content[0]
-					linkedBlockIndex = 0
-				} else {
-					alert('Linked block not found.')
-				}
+				alert('Linked card not found.')
 			}
 
 		}
 	}
 
+	let isLinkWorking = linkedPage && linkedBlock
 
 	// Update the coordinates in the block-link if they were incorrect.
+	// Or remove the link if the blocked linked was not found.
 	if(
 		initialLinkedPageIndex !== linkedPageIndex ||
 		initialLinkedBlockIndex !== linkedBlockIndex
@@ -122,17 +117,24 @@ export default props => {
 		updBlock(
 			{
 				...block,
-				link: {
-					...block.link,
-					indices:[linkedPageIndex,linkedBlockIndex],
-					ids: [linkedPage.id, linkedBlock.id],
-				}
+				style: isLinkWorking ? block.style : 5,
+				link: isLinkWorking
+					? {
+						...block.link,
+						indices:[linkedPageIndex,linkedBlockIndex],
+						ids: [linkedPage.id, linkedBlock.id],
+					}
+					: undefined
 			},
-			false,
+			!isLinkWorking,
 			targetPageIndex,
 			targetLocaleIndex,
 			targetBlockIndex,
 		)
+	}
+
+	if(!isLinkWorking) {
+		return
 	}
 
 

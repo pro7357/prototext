@@ -6,12 +6,18 @@ import TextButton from 'sharedComponents/TextButton'
 import LinkedImage from './LinkedImage'
 import LinkedAudio from './LinkedAudio'
 import LinkedVideo from './LinkedVideo'
-import revealFileInFinder from './utils/revealFileInFinder'
+import revealFileInFinder from 'globalUtils/revealFileInFinder'
 import * as fileTypes from 'globalUtils/fileTypes'
 import normalizeFilePath from 'globalUtils/normalizeFilePath'
 
 
 export default props => {
+
+	const {
+		pageIndex,
+		localeIndex,
+		blockIndex
+	} = props
 
 	// Make the path to the file absolute and convert it to Unix format.
 	const src = normalizeFilePath(props.filePath, props.currentDoc, true)
@@ -34,6 +40,9 @@ export default props => {
 			{isImage && (
 				<LinkedImage
 					src={src}
+					pageIndex={pageIndex}
+					localeIndex={localeIndex}
+					blockIndex={blockIndex}
 				/>
 			)}
 

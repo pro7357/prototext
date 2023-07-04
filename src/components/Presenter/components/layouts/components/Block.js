@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import normalizeFilePath from 'globalUtils/normalizeFilePath'
 import Image from './Image'
 import Video from 'sharedComponents/Video'
+import Audio from 'sharedComponents/Audio'
 
 
 export default props => {
@@ -34,6 +35,7 @@ export default props => {
 		isTextBlock,
 		isFileLink,
 		isImage,
+		isAudioFile,
 		isVideoFile,
 		isYouTubeVideo,
 		isInternalLink,
@@ -48,7 +50,7 @@ export default props => {
 		filePath = normalizeFilePath(link.filePath, currentDoc)
 	}
 
-	const classes = useStyles()
+	const classes = useStyles(presenterProps)
 
 	return (
 		<div
@@ -66,6 +68,13 @@ export default props => {
 					fitImgMode={fitImgMode}
 					fullWidthImgMode={fullWidthImgMode}
 					sharpImgMode={sharpImgMode}
+				/>
+			)}
+
+			{isAudioFile && (
+				<Audio
+					src={filePath}
+					//className={classes.root}
 				/>
 			)}
 
@@ -121,6 +130,12 @@ const useStyles = createUseStyles(theme => ({
 		justifyContent: 'center',
 		'& $textBlock': {
 			marginTop: -24,
+		},
+		'& $textBlockStyle-6': {
+			textAlign: 'center'
+		},
+		'& $textBlockStyle-7': {
+			textAlign: 'center'
 		}
 	},
 
@@ -128,22 +143,23 @@ const useStyles = createUseStyles(theme => ({
 		display: 'grid'
 	},
 
-	textBlock: {
-		maxWidth: 600,
-	},
+	textBlock: props =>({
+		maxWidth: `${props.textWidthLimit}%`,
+		fontSize: props.textNormalSize
+	}),
 
 	// Sub heading
-	'textBlockStyle-6': {
+	'textBlockStyle-6': props => ({
 		fontWeight: theme.typography.weights.bold,
-		fontSize: 24,
+		fontSize: props.textSubheadingSize,
 		marginTop: 20,
-	},
+	}),
 
 	// Heading
-	'textBlockStyle-7': {
+	'textBlockStyle-7': props => ({
 		fontWeight: theme.typography.weights.bold,
-		fontSize: 40,
-	},
+		fontSize: props.textHeadingSize,
+	}),
 
 	brokenLink: {
 		color: 'red'

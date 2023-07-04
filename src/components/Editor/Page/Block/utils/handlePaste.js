@@ -86,7 +86,8 @@ export default props => {
 				// Create a series of blocks from the contents of the clipboard.
 				addBlock(
 					newBlocks,
-					undefined, // position
+					undefined,
+					undefined,
 					true // replaceTargetBlock
 				)
 				return

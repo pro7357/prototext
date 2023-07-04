@@ -1,6 +1,7 @@
 
 import { connect } from 'react-redux'
 import requestElectronApi from 'globalUtils/requestElectronApi'
+import revealFileInFinder from 'globalUtils/revealFileInFinder'
 
 import { switchPageView } from 'editorActions'
 import { toogleTopbar } from 'topbarActions'
@@ -8,7 +9,8 @@ import {
 	showExporter,
 	showProtector,
 	togglePresenter,
-	showSettings
+	showSettings,
+	showHelper
 } from 'layoutActions'
 import { toggleTheme } from 'theme/theme.actions'
 import { themeIds } from 'theme/themes'
@@ -112,6 +114,14 @@ export default connect(mapStateToProps)(props => {
 						Settings
 					</TextButton>
 
+					<TextButton
+						onClick={() => {
+							showHelper()
+						}}
+					>
+						Help
+					</TextButton>
+
 				</>)}
 
 				{(autoSaveMode && !currentDoc) && (
@@ -133,7 +143,18 @@ export default connect(mapStateToProps)(props => {
 
 				{currentDoc && (
 					<MutedTextLine>
-						{encryption && <LockIcon/>}<span title={currentDoc.fullPath}>{currentDoc.base}</span>
+						{encryption && <LockIcon/>}
+						<span
+							title={currentDoc.fullPath}
+							style={{
+								cursor: 'pointer'
+							}}
+							onClick={e => {
+								revealFileInFinder(currentDoc.fullPath)
+							}}
+						>
+							{currentDoc.base}
+						</span>
 					</MutedTextLine>
 				)}
 

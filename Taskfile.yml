@@ -54,6 +54,7 @@ tasks:
     cmds:
       - rm -rf ./electron/releases/ProtoText-darwin-x64
       - cd electron && npm run build:macIntel
+      - rm -f ./electron/releases/ProtoText-darwin-x64/ProtoText.app/Contents/Resources/app/utils/bin/ffmpeg.exe
 
 
   buildAppWin64:
@@ -61,6 +62,7 @@ tasks:
     cmds:
       - rm -rf ./electron/releases/ProtoText-win32-x64
       - cd electron && npm run build:win64
+      - rm -f ./electron/releases/ProtoText-win32-x64/resources/app/utils/bin/ffmpeg
 
 
   logApp:

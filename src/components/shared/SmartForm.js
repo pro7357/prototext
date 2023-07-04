@@ -1,11 +1,11 @@
 
 import { useState } from 'preact/hooks'
-import { createUseStyles } from 'react-jss'
 import Form from './Form'
 import UIBlock from './UIBlock'
 import UIBlockSection from './UIBlockSection'
 import UIBlockLabel from './UIBlockLabel'
 import UIBlockHint from './UIBlockHint'
+import SmartFormSlots from './SmartFormSlots'
 import Input from './Input'
 import Textarea from './Textarea'
 import Switch from './Switch'
@@ -18,7 +18,8 @@ const fieldComponentsByType = {
 	input: Input,
 	textarea: Textarea,
 	switch: Switch,
-	select: Select
+	select: Select,
+	slots: SmartFormSlots
 }
 
 export default props => {
@@ -27,33 +28,46 @@ export default props => {
 		models,
 		state,
 		onInput,
+		withSecrets,
+		isNestedForm,
 	} = props
 
 	const [showSecrets, setShowSecrets] = useState(false)
 
-	let secondaryActions =secondaryActions = [].concat(
-		{
-			label: 'Toggle protected data preview',
-			isNotable: true,
-			action: () => {
-				setShowSecrets(!showSecrets)
-			}
-		},
-		props.secondaryActions
-	)
+	let secondaryActions = props.secondaryActions
 
-	const classes = useStyles()
+	if(withSecrets) {
+		secondaryActions = [].concat(
+			{
+				label: 'Toggle protected data preview',
+				isNotable: true,
+				action: () => {
+					setShowSecrets(!showSecrets)
+				}
+			},
+			secondaryActions
+		)
+	}
+
+	let groups = models.byGroups ||
+		[{
+			label: null,
+			content: models.allIds
+		}]
+
 
 	return (
 		<Form
 			{...props}
 			secondaryActions={secondaryActions}
 		>
-			{models.byGroups.map((group, groupIndex) => {
+			{groups.map((group, groupIndex) => {
 				return (
 					<UIBlock
-						label={<b>{group.label}</b>}
+						label={group.label ? <b>{group.label}</b> : null}
 						secondaryActions={null}
+						isSuperCompact={isNestedForm}
+						isTransparent={isNestedForm}
 					>
 						{group.content.map((fieldId, fieldIndex) => {
 
@@ -64,6 +78,10 @@ export default props => {
 							}
 
 							const type = field.type
+
+							if(type === 'hidden') {
+								return
+							}
 
 							if(!type) {
 								return 'Undefinded field type: '+type
@@ -81,41 +99,79 @@ export default props => {
 								hint,
 								defValue,
 								keepInLS,
-								displayCondition
+								displayCondition,
+								displayAsLink,
 							} = field
 
 							let value = state[fieldId]
 
 							if(displayCondition) {
-								if(
-									!displayCondition.fieldValues.includes(
-										state[displayCondition.fieldId])
-									) {
-										return null
+
+								const refFieldModel = models.byId[displayCondition.fieldId]
+
+								if(refFieldModel) {
+
+									const refFieldDefValue = refFieldModel.defValue
+									const refFieldValue = state[displayCondition.fieldId]
+
+									const refFieldFinalValue = typeof refFieldValue === 'undefined'
+										? refFieldDefValue
+										: refFieldValue
+
+									if(
+										!displayCondition.fieldValues.includes(
+											refFieldFinalValue
+										)
+										) {
+											return null
+									}
+								} else {
+									console.log('Error. There is no reference field!')
 								}
+
 							}
 
 							if(typeof value === 'undefined') {
 								value = defValue
 							}
 
+							let withoutLabel = type === 'switch'
+
+							let fieldActions = null
+
+							if(displayAsLink && value) {
+								fieldActions = [{
+									label: 'Follow link',
+									action: () => {
+										window.open(value, '_blank')
+									}
+								}]
+							}
+
 							return (
 								<UIBlockSection>
 
-									{label && (
-										<UIBlockLabel>
+									{(label && !withoutLabel) && (
+										<UIBlockLabel
+											hint={isNestedForm ? hint : null}
+											isCompact={isNestedForm}
+											secondaryActions={fieldActions}
+										>
 											{label}
 										</UIBlockLabel>
 									)}
 
 									<FieldComponent
 										{...field}
+										id={fieldId}
 										value={value}
 										showSecrets={showSecrets}
-										insideUIBlock
+										insideUIBlock={!isNestedForm}
 										onInput={(newValue) => {
 
-											newValue = normalizeFiledValue(newValue, field)
+											newValue = type === 'slots'
+												? newValue
+												: normalizeFiledValue(newValue, field)
 
 											onInput(
 												fieldId,
@@ -125,7 +181,7 @@ export default props => {
 										}}
 									/>
 
-									{hint && (
+									{(hint && !isNestedForm) && (
 										<UIBlockHint>
 											{hint}
 										</UIBlockHint>
@@ -142,13 +198,3 @@ export default props => {
 	)
 
 }
-
-
-const useStyles = createUseStyles(theme => ({
-
-	root: {
-
-	},
-
-
-}),{name: 'smart-form'})

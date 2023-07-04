@@ -131,17 +131,10 @@ export default connect(mapStateToProps)(props => {
 								itemIndex
 							})
 						}}
-						onMouseDown={e=>{
-							if(isAlone || !draggable) return
-							handleDrag({e,moment: 'hold',isLocalizationView})
-						}}
-						onMouseUp={e=>{
-							if(isAlone) return
-							handleDrag({e,moment: 'unhold'})
-						}}
 						draggable={draggable}
 						onDragStart={e=>{
 							if(isAlone || !draggable) return
+							handleDrag({e,moment: 'hold',isLocalizationView})
 							handleDrag({
 								e,
 								moment: 'start',

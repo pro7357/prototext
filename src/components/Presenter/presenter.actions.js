@@ -9,17 +9,17 @@ export const setPresenterState = payload => {
 	})
 }
 
-export const switchPresenterMode = (key,value) => {
+export const setPresenterProperty = (key,value) => {
 	store.dispatch({
-		type: 'switchPresenterMode',
+		type: 'setPresenterProperty',
 		key,
 		value
 	})
 }
 
-export const togglePresenterMode = key => {
+export const togglePresenterProperty = key => {
 	store.dispatch({
-		type: 'togglePresenterMode',
+		type: 'togglePresenterProperty',
 		key
 	})
 }

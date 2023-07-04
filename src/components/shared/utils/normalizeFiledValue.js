@@ -1,23 +1,29 @@
 
-export default (rawValue, field) => {
+export default function formatInputValue(rawValue, field) {
 
-	const {
-		// type, filedType, e.g. select, input, switch
-		dataType,
-		defVal,
-		min,
-		max
-	} = field
+	const { dataType, defVal, min, max } = field
 
-	return dataType === 'number'
-		? typeof rawValue === 'undefined'
+	if (dataType === 'number') {
+		return rawValue === undefined
 			? defVal
-			: limitNumber(Number(rawValue), min, max)
-		: ['text','string','password'].includes(dataType)
-			? String(rawValue) || defVal
-			: typeof val === 'undefined'
-				? defVal
-				: rawValue
+			: (min !== undefined && max !== undefined)
+				? limitNumber(Number(rawValue), min, max)
+				: Number(rawValue)
+	}
+
+	if (['text', 'string', 'password'].includes(dataType)) {
+		return String(rawValue) || defVal
+	}
+
+	if (dataType === 'boolean') {
+		return Boolean(rawValue)
+	}
+
+	if (val === undefined) {
+		return defVal
+	}
+
+	return rawValue
 
 }
 

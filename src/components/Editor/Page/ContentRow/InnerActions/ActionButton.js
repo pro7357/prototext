@@ -1,11 +1,13 @@
 
 import TextButton from 'sharedComponents/TextButton'
+import Spinner from 'sharedComponents/Spinner'
 
 export default props => {
 
 	const {
-		label,
-		action,
+		children,
+		isLoading,
+		onClick,
 	} = props
 
 	return (
@@ -14,11 +16,12 @@ export default props => {
 			isMuted
 			onClick={e => {
 				setTimeout(() => {
-					action(e)
+					onClick(e)
 				}, 0)
 			}}
 		>
-			{label}
+			{children}
+			{isLoading && <Spinner isSmall/>}
 		</TextButton>
 	)
 

@@ -23,6 +23,7 @@ export default props => {
 				className
 			)}
 			controls={controls}
+			{...extraProps}
 		>
   			<source src={src} type='audio/mpeg' />
 		</audio>
@@ -34,6 +35,7 @@ const useStyles = createUseStyles(theme => ({
 
 	root: {
 		width: '100%',
+		maxWidth: 600,
 		outline: 'none',
 		'&::-webkit-media-controls-panel': {
 			backgroundColor: [theme.tag.background, '!important'],

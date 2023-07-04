@@ -145,6 +145,9 @@ export default i => ({
 				background: palette.red.lv,
 			}
 		},
+		glass: {
+			background: 'rgba(255,255,255,0.08)'
+		}
 	},
 
 

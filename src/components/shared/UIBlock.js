@@ -13,6 +13,7 @@ export default props => {
 		isInline,
 		isCompact,
 		isSuperCompact,
+		isTransparent,
 		className
 	} = props
 
@@ -22,16 +23,18 @@ export default props => {
 		<div
 			className={clsx(
 				classes.root,
-				isInline && classes.isInline,
-				isCompact && classes.isCompact,
-				isSuperCompact && classes.isSuperCompact,
+				isInline && classes.inline,
+				isCompact && classes.compact,
+				isSuperCompact && classes.superCompact,
+				isTransparent && classes.transparent,
 				className
-			)}>
-				{label && (
-					<UIBlockLabel secondaryActions={secondaryActions}>
-						{label}
-					</UIBlockLabel>
-				)}
+			)}
+		>
+			{label && (
+				<UIBlockLabel secondaryActions={secondaryActions}>
+					{label}
+				</UIBlockLabel>
+			)}
 			{children}
 		</div>
 	)
@@ -57,7 +60,7 @@ const useStyles = createUseStyles(theme => ({
 		position: 'relative'
 	},
 
-	isInline: {
+	inline: {
 		height: 'auto',
 		display: 'flex',
 		flexDirection: 'row',
@@ -65,12 +68,16 @@ const useStyles = createUseStyles(theme => ({
 		justifyContent: 'space-between',
 	},
 
-	isCompact: {
+	compact: {
 		padding: [16, 20],
 	},
 
-	isSuperCompact: {
+	superCompact: {
 		padding: 0,
+	},
+
+	transparent: {
+		backgroundColor: 'transparent'
 	}
 
 }),{name: 'ui-block'})

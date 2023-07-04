@@ -2,22 +2,12 @@
 import { createUseStyles } from 'react-jss'
 import clsx from 'clsx'
 
-import {
-	isTextBlock,
-	isInternalLink,
-	isAiResponse,
-	isLink
-} from 'sharedUtils/blockTypes'
+import allActionFieldModels from 'settingsModels/cardActions/cardAction'
+import { isAiResponse } from 'sharedUtils/blockTypes'
 import Spinner from 'sharedComponents/Spinner'
+import handleActionClick from './utils/handleActionClick'
 import ActionButton from './ActionButton'
-import translate from './utils/translate'
-import glvrdTextAnalysys from './utils/glvrdTextAnalysys'
-import askAi from './utils/askAi'
-import textToSpeech from './utils/textToSpeech'
 
-import {
-	switchUserFocus
-} from 'editorActions'
 
 
 export default props => {
@@ -30,127 +20,98 @@ export default props => {
 		localeIndex,
 		block = {},
 		localizedBlock,
-		twoColsMode,
-		singlePageMode,
 	} = props
 
 	const {
-		localeOptions,
-		aiPromptMode: promptable,
-		selMode,
-		isOpenAIEnabled,
-		isElevenlabsEnabled,
+		currentDoc,
+		appSettings,
+		pageView,
 	} = sharedEditorProps
 
-	const {
-		link,
-		style
-	} = block
+	const cardActions = appSettings.cardActions
 
-	let isLoading = localizedBlock && typeof localizedBlock.isLoading !== 'undefined'
+	let localizationMode = pageView == 2
+	let isLoading = localizationMode
 		? localizedBlock.isLoading
 		: block.isLoading
 
-	let showLoadingSpinner = isLoading && !isAiResponse(style)
-	let showTranslate = !isLoading && twoColsMode && localizedBlock && !promptable && !selMode
-	let showAi = isOpenAIEnabled === 'yes' &&
-		!isLoading &&
-		!showTranslate &&
-		!promptable &&
-		!selMode &&
-		(isTextBlock(style) || isInternalLink(link))
-
-	let showElevenlabs = isElevenlabsEnabled === 'yes' && !isLink(style)
-
-	// An unused feature for now.
-	// let showGlvrd = !isLoading &&
-	// 	singlePageMode &&
-	// 	localeOptions[0] === 'ru' &&
-	// 	!promptable && !selMode
-
-	let showGlvrd = false
+	let showLoadingSpinner = isLoading && !isAiResponse(block.style)
 
 	const classes = useStyles()
 
 	return (
-		<div
-			className={clsx(classes.root, className)}
-			onClick={() => {
-				switchUserFocus(
-					pageIndex,
-					localeIndex,
-					blockIndex,
-				)
-			}}
-		>
+		<div className={clsx(classes.root, className)} >
+
 			{showLoadingSpinner && (
 				<Spinner isSmall/>
 			)}
 
-			{showTranslate && (
-				<ActionButton
-					label='Translate'
-					action={e => {
-						translate({
-							e,
-							localizedBlock,
-							srcLang: localeOptions[0],
-							dstLang: localeOptions[localeIndex],
-							pageIndex,
-							blockIndex,
-							localeIndex,
-						})
-					}}
-				/>
-			)}
+			{!showLoadingSpinner && cardActions.map((cardAction, cardActionIndex) => {
 
-			{showGlvrd && (
-				<ActionButton
-					label='Glvrd'
-					action={e => {
-						glvrdTextAnalysys({
-							pageIndex,
-							localeIndex,
-							blockIndex,
-							node: e.target.parentNode.parentElement.children[0].children[1]
-						})
-					}}
-				/>
-			)}
+				const status = cardAction.status !== undefined
+					? cardAction.status
+					: allActionFieldModels.byId.status.defValue
 
-			{showElevenlabs && (
-				<ActionButton
-					label='Speech'
-					action={() => {
-						textToSpeech({
-							pageIndex,
-							blockIndex
-						})
-					}}
-				/>
-			)}
+				const engine = cardAction.engine !== undefined
+					? cardAction.engine
+					: allActionFieldModels.byId.engine.defValue
 
-			{showAi && (
-				<ActionButton
-					label='AI'
-					action={askAi}
-				/>
-			)}
+				const isLocalizationAction = engine.includes('translator')
+
+				if(
+					status === 'disabled' ||
+					(localizationMode && localizedBlock && !isLocalizationAction) ||
+					(!localizationMode && isLocalizationAction) ||
+					(localizationMode && (!isLocalizationAction || !localizedBlock))
+				) {
+					return null
+				}
+
+				const promptMode = cardAction.promptMode !== undefined
+					? cardAction.promptMode
+					: allActionFieldModels.byId.promptMode.defValue
+
+				const button = cardAction.button !== undefined
+					? cardAction.button
+					: allActionFieldModels.byId.button.defValue
+
+				return (
+					<ActionButton
+						onClick={e => {
+							handleActionClick({
+								sharedEditorProps,
+								cardActionIndex,
+								engine,
+								currentDoc,
+								pageIndex,
+								localeIndex,
+								blockIndex,
+								cardAction,
+								promptMode,
+							})
+						}}
+					>
+						{button}
+					</ActionButton>
+				)
+
+			})}
 
 		</div>
 	)
 }
+
 
 const useStyles = createUseStyles(theme => ({
 
 	root: {
 		display: 'flex',
 		position: 'absolute',
-		top: 4,
+		top: 2,
 		right: 12,
 		width: 'auto !important',
 		flexDirection: 'row',
-		alignItems: 'flex-start',
+		alignItems: 'center',
 		justifyContent: 'flex-start',
 		gap: 6,
 	}

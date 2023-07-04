@@ -26,7 +26,7 @@ export default props => {
 			blockId
 		})
 
-		if(_fr.block) {
+		if(_fr && _fr.block) {
 			targetPage = page
 			targetPageIndex = i
 			targetBlock = _fr.block
@@ -34,6 +34,10 @@ export default props => {
 			break
 		}
 
+	}
+
+	if(!targetBlock) {
+		return
 	}
 
 	return {

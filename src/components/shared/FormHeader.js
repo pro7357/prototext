@@ -1,6 +1,6 @@
 
 import { createUseStyles } from 'react-jss'
-
+import clsx from 'clsx'
 import Button from './Button'
 import TextButton from './TextButton'
 
@@ -12,6 +12,7 @@ export default props => {
 		primaryAction,
 		secondaryActions,
 		secondaryActionsForPrinting,
+		isNestedForm
 	} = props
 
 	const classes = useStyles()
@@ -19,7 +20,12 @@ export default props => {
 	return (
 		<div className={classes.root}>
 
-			<div className={classes.title}>
+			<div
+				className={clsx(
+					classes.title,
+					isNestedForm && classes.nestedFormTitle
+				)}
+			>
 				{title}
 			</div>
 
@@ -77,9 +83,14 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	title: {
-		fontSize: 21,
+		fontSize: 22,
 		lineHeight: 1,
 		color: theme.text.active
+	},
+
+	nestedFormTitle: {
+		fontSize: 20,
+		width: '100%'
 	},
 
 	inlineBtns: {

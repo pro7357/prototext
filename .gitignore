@@ -17,7 +17,16 @@ _*
 electron/releases
 electron/models
 website/dst
+electron/utils/bin/ffmpeg*
 website/src/assets/videos
 size-plugin.json
 package-lock.json
 .env
+.vscode
+
+# Extras
+extras/coqui-tts/*
+!extras/coqui-tts/readme.md
+
+extras/llama-cpp/*
+!extras/llama-cpp/readme.md

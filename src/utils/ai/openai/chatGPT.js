@@ -7,44 +7,44 @@ import { getApiInstance } from './openai'
 const models = {
 	byId: {
 		'text-davinci-003': {
-			title: 'GPT-3.5 (text-davinci-003)',
+			title: 'Text Davinci',
 			maxTokens: 4000
 		},
 		'gpt-3.5-turbo': {
-			title: 'GPT-3.5 Turbo',
-			maxTokens: 4000
+			title: 'GPT-3.5 Turbo - Default',
+			maxTokens: 4000,
+			isChatFormat: true
+		},
+		'gpt-3.5-turbo-16k': {
+			title: 'GPT-3.5 Turbo 16K',
+			maxTokens: 16000,
+			isChatFormat: true
 		},
 		'gpt-4': {
 			title: 'GPT-4',
-			maxTokens: 8000
-		},
-		'gpt-4-0314': {
-			title: 'gpt-4-0314',
-			maxTokens: 8000
+			maxTokens: 8000,
+			isChatFormat: true
 		},
 		'gpt-4-32k': {
 			title: 'GPT-4 32K',
-			maxTokens: 32000
+			maxTokens: 32000,
+			isChatFormat: true
 		},
-		'gpt-4-32k-0314': {
-			title: 'gpt-4-32k-0314',
-			maxTokens: 32000
-		}
 	},
 	allIds: [
 		'text-davinci-003',
 		'gpt-3.5-turbo',
+		'gpt-3.5-turbo-16k',
 		'gpt-4',
-		// 'gpt-4-0314',
 		'gpt-4-32k',
-		// 'gpt-4-32k-0314'
-	]
+	],
+	defId: 'gpt-3.5-turbo'
 }
 
 
 const askChatGPT = async (props) => {
 
-	const defModelId = models.allIds[0]
+	const defModelId = models.defId
 
 	const {
 		imitationMode,
@@ -56,7 +56,8 @@ const askChatGPT = async (props) => {
 		limitTokens = 0,
 		stream,
 		onProgress,
-		onDone
+		onDone,
+		onError
 	} = props
 
 	if (!apiKey) {
@@ -77,14 +78,14 @@ const askChatGPT = async (props) => {
 	try {
 
 		let completion
-		const isChatFormat = modelId !== defModelId
+		const model = models.byId[modelId]
+		const isChatFormat = model.isChatFormat
 
 		if (imitationMode) {
 			await sleep(2000)
 			completion = require('./demo/chatGPTResponse').default
 		} else {
 
-			const model = models.byId[modelId]
 			const modelMaxTokes = model.maxTokens
 
 			let allowedTokenNumber = limitTokens || modelMaxTokes
@@ -94,7 +95,7 @@ const askChatGPT = async (props) => {
 					'calculateGPTTokens',
 					prompt
 				)
-				: prompt / 4
+				: Math.floor(prompt.length / 4) || 1
 
 			console.log('promptTokensNumber',promptTokensNumber)
 
@@ -108,7 +109,7 @@ const askChatGPT = async (props) => {
 				allowedTokenNumber -= 10
 			}
 
-			console.log('allowedTokenNumber',allowedTokenNumber)
+			// console.log('allowedTokenNumber',allowedTokenNumber)
 
 			let streamOptions = (stream && onProgress) && {
 				responseType: 'stream',
@@ -160,8 +161,6 @@ const askChatGPT = async (props) => {
 
 	} catch (error) {
 
-		console.error(error.message)
-
 		if (error.response) {
 
 			let reqErrorMessage = error.message || ``
@@ -169,12 +168,12 @@ const askChatGPT = async (props) => {
 				error.response.data.error &&
 				error.response.data.error.message || ``
 
-			throw new Error(
+			onError(
 				`${reqErrorMessage}. ${serviceErrorMessage}`
 			)
 
 		} else {
-			throw new Error(error.message)
+			onError(error.message)
 		}
 
 	}
@@ -216,8 +215,6 @@ const extractTextFromChank = (data, isChatFormat) => {
 				id = completion.id
 			}
 		} catch (error) {
-			console.error(error.message)
-			console.log('Stream message',message)
 			throw new Error('Could not parse stream message.')
 		}
 

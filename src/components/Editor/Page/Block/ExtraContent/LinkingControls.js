@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import TextButton from 'sharedComponents/TextButton'
 
 import linkFile from './utils/linkFile'
+import recordAudio from './utils/recordAudio'
 import {
 	activateLinkMode,
 	deactivateLinkMode
@@ -72,6 +73,19 @@ export default props => {
 					isNotable
 				>
 					Add assets
+				</TextButton>
+
+				<TextButton
+					extraProps={{'data-depth':5}}
+					onClick={e => {
+						recordAudio({
+							...props,
+							e,
+						})
+					}}
+					isNotable
+				>
+					Record audio
 				</TextButton>
 
 			</>)}

@@ -19,7 +19,7 @@ export default connect(mapStateToProps)(props => {
 			<Switch
 				label='Merge pages'
 				onClick={() => setAllowMergePages(!allowMergePages)}
-				isActive={allowMergePages}
+				value={allowMergePages}
 				withoutPadding
 			/>
 		</UIBlock>

@@ -22,11 +22,11 @@
     "electron-packager": "15.5.0"
   },
   "dependencies": {
-    "@llama-node/llama-cpp": "^0.1.6",
     "bing-translate-api": "^2.8.0",
     "crypto": "^1.0.1",
     "electron-log": "^5.0.0-beta.19",
+    "fluent-ffmpeg": "^2.1.2",
     "gpt-3-encoder": "^1.1.4",
-    "llama-node": "^0.1.6"
+    "sharp": "^0.32.1"
   }
 }

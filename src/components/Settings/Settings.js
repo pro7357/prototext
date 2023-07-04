@@ -32,7 +32,7 @@ export default connect(mapStateToProps)(props => {
 			]}
 			scrollbarsMode={scrollbarsMode}
 			className={classes.root}
-			//sectionsClassName={classes.sectionsClassName}
+			sectionsClassName={classes.sections}
 			withFixedColumnWidth
 			withWideColumnGap
 			models={models}
@@ -62,5 +62,10 @@ const useStyles = createUseStyles(theme => ({
 		textAlign: 'left',
 		fontSize: 16,
 	},
+
+	sections: {
+		flexDirection: 'column',
+	},
+
 
 }),{name: 'settings'})

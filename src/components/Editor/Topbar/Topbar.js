@@ -40,7 +40,7 @@ const useStyles = createUseStyles(theme => ({
 		padding: [28,24,16,24],
 		boxShadow: `0 0 45px 8px ${theme.shadow.default}`,
 		backgroundColor: theme.background.default,
-		animation: `$slideIn 500ms ease`,
+		//animation: `$slideIn 500ms ease`,
 		borderRadius: [0,0,theme.rounded,theme.rounded],
 	},
 

@@ -9,7 +9,7 @@ export default props => {
 		label,
 		onClick,
 		onInput,
-		isActive,
+		value,
 		isNotable,
 		isDisabled,
 		children,
@@ -31,9 +31,9 @@ export default props => {
 			onClick={() => {
 				if(isDisabled) return null
 				if(onClick) {
-					onClick(!isActive)
+					onClick(!value)
 				} else if(onInput) {
-					onInput(!isActive)
+					onInput(!value)
 				}
 			}}
 		>
@@ -51,7 +51,7 @@ export default props => {
 				className={clsx(
 					classes.switch,
 					isSmall && classes.smallSwitch,
-					(isActive && !isDisabled) && classes.isActive,
+					(value && !isDisabled) && classes.isActive,
 					isDisabled && classes.isDisabled
 				)}
 			/>
@@ -68,14 +68,15 @@ const useStyles = createUseStyles(theme => ({
 		cursor: 'pointer',
 		display: 'flex',
 		width: '100%',
-		padding: [10,12],
+		padding: 12,
+		backgroundColor: theme.block.background,
+		borderRadius: theme.rounded,
 		gap: 4,
 		alignItems: 'center',
 		justifyContent: 'space-between',
 		'&:hover':{
 			'& $switch': {
 				backgroundColor: theme.switch.focused.background,
-
 			},
 			'& $isActive': {
 				backgroundColor:[ theme.switch.active.background,'!important'],

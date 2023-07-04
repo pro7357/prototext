@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import Sidebar from './components/Sidebar'
 import Slides from './components/layouts/Slides'
 import Flow from './components/layouts/Flow'
+import SecondaryControls from './components/SecondaryControls'
 import parseFilePath from 'globalUtils/parseFilePath'
 import collectContent from './utils/collectContent'
 
@@ -25,6 +26,7 @@ export default connect(mapStateToProps)(props => {
 		allPagesMode,
 		tagFilterMode,
 		slideMode,
+		sidebarMode,
 		groupBlocksMode,
 		contrastDarkMode,
 		locale,
@@ -35,6 +37,7 @@ export default connect(mapStateToProps)(props => {
 		content: allEditorContent,
 		leftSideFocus,
 		targetPageIndex,
+		targetBlockIndex,
 		pageView,
 	} = editorProps
 
@@ -86,9 +89,16 @@ export default connect(mapStateToProps)(props => {
 				scrollbarsMode={scrollbarsMode}
 				currentDoc={currentDoc}
 				content={content}
+				targetBlockIndex={targetBlockIndex}
 				className={clsx(
 					contrastDarkMode && classes.darkMode
 				)}
+			/>
+
+			<SecondaryControls
+				sidebarMode={sidebarMode}
+				slideMode={slideMode}
+				contrastDarkMode={contrastDarkMode}
 			/>
 
 		</div>

@@ -1,25 +1,24 @@
 
 import { Configuration, OpenAIApi } from 'openai'
 
-let apiInstance
+class CustomFormData extends FormData {
+	getHeaders() {
+		 return {}
+	}
+}
 
 const getApiInstance = props => {
-
-	if(apiInstance) {
-		return apiInstance
-	}
 
 	const {
 		apiKey,
 	} = props
 
 	const configuration = new Configuration({
-		apiKey
+		apiKey,
+		formDataCtor: CustomFormData
 	})
 
-	apiInstance = apiKey && new OpenAIApi(configuration)
-
-	return apiInstance
+	return apiKey && new OpenAIApi(configuration)
 
 }
 

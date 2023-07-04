@@ -25,6 +25,8 @@ export default props => {
 
 	const classes = useStyles()
 
+	let depth = extraProps['data-depth']
+
 	return (
 		<div
 			id={id}
@@ -39,9 +41,10 @@ export default props => {
 				isDisabled && classes.isDisabled,
 				className
 			)}
-			{...extraProps}
+			data-depth={depth}
 		>
 			<div
+				data-depth={depth ? depth + 1 : undefined}
 				onClick={e => {
 
 					if(!onClick || isDisabled) return false
@@ -61,7 +64,10 @@ export default props => {
 			</div>
 
 			{hint && (
-				<div className={classes.hint}>
+				<div
+					className={classes.hint}
+					data-depth={depth ? depth + 1 : undefined}
+				>
 					{hint}
 				</div>
 			)}

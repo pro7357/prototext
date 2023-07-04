@@ -35,8 +35,10 @@ export default props => {
 		selMode,
 		linkMode,
 		aiPromptMode,
+		lastActionIndex,
 		selRange,
 		currentDoc,
+		appSettings,
 	} = sharedEditorProps
 
 	let isTextBlockDndMode = dndMode === 'block'
@@ -112,9 +114,12 @@ export default props => {
 					twoColsMode,
 					linkMode,
 					aiPromptMode,
+					lastActionIndex,
 					selRange,
 					isTextBlockDndMode,
-					currentDoc
+					currentDoc,
+					appSettings,
+					sharedEditorProps,
 				})
 			}}
 			draggable={!isAlone}
@@ -172,17 +177,19 @@ export default props => {
 
 			{!selMode && <OuterActions className={classes.outerActions}/>}
 
-			<InnerActions
-				className={classes.innerActions}
-				sharedEditorProps={sharedEditorProps}
-				pageIndex={pageIndex}
-				localizedBlock={localizedBlock}
-				blockIndex={blockIndex}
-				localeIndex={localeIndex}
-				block={block}
-				twoColsMode={twoColsMode}
-				singlePageMode={singlePageMode}
-			/>
+			{(!selMode && !aiPromptMode) && (
+				<InnerActions
+					className={classes.innerActions}
+					sharedEditorProps={sharedEditorProps}
+					pageIndex={pageIndex}
+					localizedBlock={localizedBlock}
+					blockIndex={blockIndex}
+					localeIndex={localeIndex}
+					block={block}
+					twoColsMode={twoColsMode}
+					singlePageMode={singlePageMode}
+				/>
+			)}
 
 		</div>
 	)

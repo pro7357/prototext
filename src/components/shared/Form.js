@@ -13,7 +13,9 @@ export default props => {
 		secondaryActions,
 		secondaryActionsForPrinting,
 		scrollbarsMode,
+		isNestedForm,
 		className,
+		titleClassName,
 		sectionsClassName,
 		sectionsClassNames
 	} = props
@@ -25,17 +27,19 @@ export default props => {
 			className={clsx(
 				classes.root,
 				scrollbarsMode && classes.withVisibleScrollbars,
+				isNestedForm && classes.nestedRoot,
 				className
 			)}
 		>
-			<div className={classes.form}>
+			<div className={classes.content}>
 
-				<FormHeader
+				{title && <FormHeader
 					title={title}
 					primaryAction={primaryAction}
 					secondaryActions={secondaryActions}
 					secondaryActionsForPrinting={secondaryActionsForPrinting}
-				/>
+					isNestedForm={isNestedForm}
+				/>}
 
 				<div
 					className={clsx(
@@ -77,11 +81,17 @@ const useStyles = createUseStyles(theme => ({
 		...theme.hiddenScrollbar
 	},
 
+	nestedRoot: {
+		padding: 0,
+		cursor: 'default',
+		height: '100%'
+	},
+
 	withVisibleScrollbars: {
 		...theme.scrollbar
 	},
 
-	form: {
+	content: {
 		minHeight: '100%',
 		margin: '0 auto',
 		display: 'flex',
@@ -103,7 +113,6 @@ const useStyles = createUseStyles(theme => ({
 
 	bodySection: {
 		width: '100%',
-		// margin: '0 auto',
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'stretch',
