@@ -61,12 +61,12 @@
                 "style": 7
               },
               {
-                "content": "Interact with built-in ChatGPT to generate content from scratch.\nCombine and apply your favorite tasks to your content\nto receive more advanced responses from the AI.",
+                "content": "Interact with built-in OpenAI products or connect your favorite APIs\nto compose texts, create images, synthesize or recognize speech, generate anything\nusing the most advanced neural networks.",
                 "id": "gjtrb9",
                 "style": 6
               },
               {
-                "content": "Three ways to interact with ChatGPT inside the ProtoText:\n(A tutorial video on YouTube – 3:40 min)[https://youtu.be/Udo38jdK6u4]",
+                "content": "Combine and apply your frequently used tasks to your content to receive desired AI's answers faster.\nThree ways to interact with ChatGPT inside the ProtoText:\n(A tutorial video on YouTube – 3:40 min)[https://youtu.be/Udo38jdK6u4]",
                 "id": "nr619p"
               }
             ]
@@ -234,6 +234,30 @@
             ]
           }
         ]
+      },
+      {
+        "id": "a5hy1r",
+        "content": [
+          {
+            "id": "bg7wx5",
+            "content": [
+              {
+                "content": "Integrations",
+                "id": "bnm16v",
+                "style": 7
+              },
+              {
+                "content": "Integrate and interact with any AI online services or local APIs.",
+                "id": "95f0sf",
+                "style": 6
+              },
+              {
+                "content": "Three ways to interact with ChatGPT inside the ProtoText:\n(A tutorial video on YouTube – 3:40 min)[https://youtu.be/Udo38jdK6u4]",
+                "id": "teu0m9"
+              }
+            ]
+          }
+        ]
       }
     ],
     "localeOptions": [
@@ -261,7 +285,11 @@
     "fitImgMode": true,
     "fullWidthImgMode": false,
     "contrastDarkMode": false,
-    "sharpImgMode": true
+    "sharpImgMode": true,
+    "textHeadingSize": 100,
+    "textSubheadingSize": 48,
+    "textNormalSize": 28,
+    "textWidthLimit": 50
   },
   "encryption": null
 }

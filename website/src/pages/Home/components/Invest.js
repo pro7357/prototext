@@ -180,19 +180,19 @@ const useStyles = createUseStyles(theme => ({
 
 	completedTaskTags: {
 		[theme.desktop]: {
-			opacity: .55,
-			'&:hover': {
-				opacity: 1
-			}
+			// opacity: .55,
+			// '&:hover': {
+			// 	opacity: 1
+			// }
 		}
 	},
 
 	expansesTags: {
 		[theme.desktop]: {
-			opacity: .35,
-			'&:hover': {
-				opacity: 1
-			}
+			// opacity: .35,
+			// '&:hover': {
+			// 	opacity: 1
+			// }
 		}
 	},
 
