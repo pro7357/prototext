@@ -56,6 +56,9 @@ export default props => {
 					? cardAction.engine
 					: allActionFieldModels.byId.engine.defValue
 
+				const promptModeModel = allActionFieldModels.byId.promptMode
+				const promptModeCondition = promptModeModel.displayCondition.fieldValues
+
 				const isLocalizationAction = engine.includes('translator')
 
 				if(
@@ -67,9 +70,11 @@ export default props => {
 					return null
 				}
 
-				const promptMode = cardAction.promptMode !== undefined
-					? cardAction.promptMode
-					: allActionFieldModels.byId.promptMode.defValue
+				const promptMode = promptModeCondition.includes(engine) && (
+					cardAction.promptMode !== undefined
+						? cardAction.promptMode
+						: allActionFieldModels.byId.promptMode.defValue
+					)
 
 				const button = cardAction.button !== undefined
 					? cardAction.button

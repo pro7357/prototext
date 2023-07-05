@@ -38,7 +38,7 @@ export default connect(mapStateToProps)(props => {
 				data={templates}
 				dir={dir+'/templates'}
 				isNarrow
-				isDownloadable
+				isBuiltIn
 				className={classes.templates}
 				renderExtraItem={() => (
 					<div className={classes.sharedDocsDiscord}>
@@ -77,9 +77,9 @@ const useStyles = createUseStyles(theme => ({
 	},
 
 	templates: {
-		'& > div:last-child': {
-			width: '100%',
-		}
+		// '& > div:last-child': {
+		// 	width: '100%',
+		// }
 	},
 
 	sharedDocsDiscord: {
@@ -89,8 +89,8 @@ const useStyles = createUseStyles(theme => ({
 		alignItems: 'center',
 		justifyContent: 'center',
 		width: '100%',
-		// height: '100%',
-		height: 250,
+		height: '100%',
+		// height: 250,
 		borderRadius: theme.rounded * 2,
 		boxShadow: `0 10px 30px ${theme.shadow.default}`,
 		padding: [48, 8],

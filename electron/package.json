@@ -1,7 +1,7 @@
 {
   "name": "prototext",
   "productName": "ProtoText",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "A minimal Text Editing application",
   "keywords": [
     "text editor",

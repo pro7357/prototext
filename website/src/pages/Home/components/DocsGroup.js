@@ -18,6 +18,7 @@ export default props => {
 		data,
 		isNarrow,
 		isDownloadable,
+		isBuiltIn,
 		renderExtraItem,
 		className
 	} = props
@@ -72,6 +73,10 @@ export default props => {
 				<div className={classes.exampleHeading}>
 
 					<Subheading>{exampleTitle}</Subheading>
+
+					{isBuiltIn && (
+						<div>Built-in</div>
+					)}
 
 					{isDownloadable && (
 						<Link

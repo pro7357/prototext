@@ -70,7 +70,7 @@ export default props => {
 						width={200}
 						src={`assets/${targetCoin.wallet}.png`}
 					/>
-					<Textarea value={targetCoin.wallet}/>
+					<Textarea value={targetCoin.wallet} className={classes.textarea}/>
 					<img
 						width={200}
 						src={`assets/artemy-bw.jpg`}
@@ -172,6 +172,10 @@ const useStyles = createUseStyles(theme => ({
 		[theme.desktop]: {
 			flexWrap: 'nowrap'
 		}
+	},
+
+	textarea: {
+		background: theme.background.default
 	},
 
 	bottomBlock: {

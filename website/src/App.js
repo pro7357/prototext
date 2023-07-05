@@ -10,6 +10,8 @@ import Home from './pages/Home/Home'
 
 export default () => {
 
+	console.log('dummyTextToAvoidBuildCache')
+
 	window.addEventListener('DOMContentLoaded', () => {
 
 		let spinnerNode = document.getElementById('website-loading-spinner')
